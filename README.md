@@ -28,7 +28,7 @@ python3 edge/placement_edge.py edge/runs/NEW   # placement policies with the mea
 
 - `edge/harness/`: the agent loop, BFCL simulators, tools and checker used for every run (BFCL parts under Apache 2.0, see `NOTICE`).
 - `edge/runs/full/`: the reported run: Qwen3 8B (4-bit, Ollama, temperature 0, thinking off, 16k context) on an Apple M5 with 34 GB, on AC power, low-power mode off. `power.txt` holds the combined CPU, GPU and neural-engine power samples (0.5 s) for the run window; `baseline_start`/`baseline_end` mark a 2-minute idle window; `timing_edge.jsonl` holds each request's wall-clock window and token counts.
-- Large-tier energy is not measured: `placement_edge.py` bounds it at 3 to 4 J per output token (Samsi et al., HPEC 2023, LLaMA 65B on A100/V100).
+- Large-tier energy is not measured: `placement_edge.py` uses a published estimate of 3 to 4 J per output token (Samsi et al., HPEC 2023, LLaMA 65B on 8 to 32 V100 GPUs, GPU power only), not a bound for the hosted model.
 
 ## What the data is
 
@@ -53,7 +53,7 @@ The logs contain task identifiers and usage counters only, not BFCL task text or
 | Cache repair | billing of later steps only | exact for cost |
 | Escalation, restart | small-model prefix, then the large model's recorded run | exact up to sampling |
 | Escalation, full-history handoff | small prefix, cold cache write, large model's later turns | bounded counterfactual |
-| Energy break-even | token footprint by tier under stated weights | parametric; no energy was measured |
+| Energy break-even | token footprint by tier under stated weights | parametric (`placement.py`); `edge/` replaces the edge tier with measured energy, the cloud tier stays a published estimate |
 
 ## Limitations
 
