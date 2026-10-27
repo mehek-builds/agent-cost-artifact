@@ -3,8 +3,8 @@
 python3 edge/placement_edge.py edge/runs/full  -> prints the table, writes placement_edge.json in the run folder
 
 Edge energy per request is measured (edge/energy.py method). Large-tier energy is not measurable on a hosted
-API; it is bounded by 3 to 4 J per output token, the range Samsi et al. (HPEC 2023) measured for LLaMA 65B on
-A100/V100 servers, applied to the large model's recorded output tokens.
+API; it uses a published estimate of 3 to 4 J per output token, the range Samsi et al. (HPEC 2023) measured for
+LLaMA 65B on 8 to 32 V100 GPUs (GPU power only), applied to the large model's recorded output tokens.
 """
 import json
 import sys
