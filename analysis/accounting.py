@@ -60,6 +60,12 @@ def summarize(steps, tasks):
     for s in steps:
         if s["step"] == 0:
             first[s["task_id"]] = prompt(s["usage"])
+    repeated, prev = 0, {}
+    for s in sorted(steps, key=lambda x: (x["task_id"], x["step"])):
+        p, o = prompt(s["usage"]), s["usage"]["output_tokens"]
+        if s["task_id"] in prev:
+            repeated += min(p, prev[s["task_id"]])
+        prev[s["task_id"]] = p + o
     lat = [s["latency_s"] for s in steps]
     cost = sum(t["cost_usd"] for t in tasks)
     by_step = {}
@@ -80,9 +86,10 @@ def summarize(steps, tasks):
         "input_share_of_tokens": inp / total,
         "input_mix": {k: tok[k] / inp for k in KINDS[:3]},
         "first_request_share_of_input": sum(first.values()) / inp,
-        # input outside each task's first request; it includes the 2-3% of genuinely new content
-        # (later turns, tool results, outputs), so the share that repeats earlier context is about 89%
+        # input outside each task's first request (new content plus repeated context)
         "later_requests_share_of_input": 1 - sum(first.values()) / inp,
+        # input that repeats what the task already sent: per request, min(prompt, previous prompt + previous output)
+        "repeated_share_of_input": repeated / inp,
         "median_step_latency_s": st.median(lat),
         "latency_per_success_s": sum(lat) / succ,
         "usd_per_task": cost / n,
@@ -107,7 +114,7 @@ def main():
         lo, hi = r["success_wilson95"]
         print(f"{name:12s} succ {r['successes']}/50 [{lo:.2f},{hi:.2f}]  tokens/task {r['tokens_per_task']:,.0f}  "
               f"tokens/succ {r['tokens_per_success']:,.0f}  input {r['input_share_of_tokens']:.3f}  "
-              f"later-requests {r['later_requests_share_of_input']:.3f}  cache-read {r['input_mix']['cache_read_tokens']:.3f}")
+              f"repeated {r['repeated_share_of_input']:.3f}  cache-read {r['input_mix']['cache_read_tokens']:.3f}")
         print(f"{'':12s} $/task {r['usd_per_task']:.4f}  $/succ {r['usd_per_success']:.4f}  latency/succ {r['latency_per_success_s']:.1f}s  "
               f"failed-task share {r['failed_task_cost_share']:.2f}  $-share {({k.replace('_tokens', ''): round(v, 3) for k, v in r['dollar_share_by_kind'].items()})}")
     for a, b in [("small", "small+cache"), ("large", "large+cache")]:

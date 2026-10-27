@@ -24,7 +24,7 @@ for label, col in (("small+cache (5-call cap)", "#F58518"), ("large+cache", "#4C
             color=col, lw=1.4, ls="--", label=f"{name}: compress cached prefix once")
     rb = L[label]["compression_break_even_r"]
     ax.plot([rb], [1], "o", color=col, ms=3.5)
-    ax.annotate(f"{rb:.0%}", (rb, 1), textcoords="offset points", xytext=(-22, 6) if name == "Small" else (4, 6), fontsize=7, color=col)
+    ax.annotate(f"{rb:.0%}", (rb, 1), textcoords="offset points", xytext=(-30, -12) if name == "Small" else (6, 4), fontsize=7, color=col)
 ax.axhline(1, color="#888", lw=0.7)
 ax.set_xlabel("fraction of prompt tokens removed", fontsize=7.5)
 ax.set_ylabel("cost / cached baseline", fontsize=7.5)

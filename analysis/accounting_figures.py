@@ -63,7 +63,7 @@ def tokens_cps():
 
 def tokens_dollars_cps():
     """Three panels: tokens per task and share of dollars (both by billing category), and USD per success."""
-    fig, ax = plt.subplots(1, 3, figsize=(7.1, 1.95), gridspec_kw={"width_ratios": [1.1, 1.1, 1]})
+    fig, ax = plt.subplots(1, 3, figsize=(7.1, 2.0), gridspec_kw={"width_ratios": [1, 1, 1.3]})
     y = list(range(len(ORDER)))
     for panel, unit in ((0, "tokens"), (1, "usd")):
         left = [0.0] * len(ORDER)
@@ -85,7 +85,7 @@ def tokens_dollars_cps():
     ax[2].barh(y, cps, color="#888", height=0.6,
                xerr=[[c - l for c, l in zip(cps, lo)], [h - c for c, h in zip(cps, hi)]], capsize=2)
     ax[2].set_xscale("log")
-    ax[2].set_xlim(0.0015, 1.2)
+    ax[2].set_xlim(0.0015, 2.5)
     ax[2].set_xlabel("USD per success (log)", fontsize=7.5)
     for i, (c, h) in enumerate(zip(cps, hi)):
         ax[2].text(h * 1.25, i, f"${c:.4f}", va="center", fontsize=7)

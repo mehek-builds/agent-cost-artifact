@@ -1,0 +1,250 @@
+{
+ "large+cache": {
+  "q=0.5 reactive": {
+   "budget": 0.023114000000000003,
+   "success": 0.52,
+   "stopped": 22,
+   "half_applied_turns": 12,
+   "tasks_over_budget": 26,
+   "max_overshoot_usd": 0.003167599999999996,
+   "median_overshoot_share": 0.0421389633988058,
+   "saving": 0.1350126010480538
+  },
+  "q=0.5 transactional": {
+   "budget": 0.023114000000000003,
+   "success": 0.32,
+   "stopped": 33,
+   "half_applied_turns": 0,
+   "tasks_over_budget": 6,
+   "max_overshoot_usd": 0.0036720999999999976,
+   "median_overshoot_share": 0.10521978021978012,
+   "saving": 0.25910548040036574
+  },
+  "q=0.75 reactive": {
+   "budget": 0.028590400000000002,
+   "success": 0.68,
+   "stopped": 13,
+   "half_applied_turns": 7,
+   "tasks_over_budget": 15,
+   "max_overshoot_usd": 0.0020276999999999934,
+   "median_overshoot_share": 0.031566539817561155,
+   "saving": 0.05799669413934161
+  },
+  "q=0.75 transactional": {
+   "budget": 0.028590400000000002,
+   "success": 0.48,
+   "stopped": 23,
+   "half_applied_turns": 0,
+   "tasks_over_budget": 0,
+   "max_overshoot_usd": 0.0,
+   "median_overshoot_share": 0.0,
+   "saving": 0.18228064647573816
+  },
+  "q=0.9 reactive": {
+   "budget": 0.035040699999999994,
+   "success": 0.82,
+   "stopped": 3,
+   "half_applied_turns": 1,
+   "tasks_over_budget": 5,
+   "max_overshoot_usd": 0.0022271000000000027,
+   "median_overshoot_share": 0.03022770663828092,
+   "saving": 0.011388049196160765
+  },
+  "q=0.9 transactional": {
+   "budget": 0.035040699999999994,
+   "success": 0.68,
+   "stopped": 13,
+   "half_applied_turns": 0,
+   "tasks_over_budget": 0,
+   "max_overshoot_usd": 0.0,
+   "median_overshoot_share": 0.0,
+   "saving": 0.12218165278793547
+  }
+ },
+ "small+cache": {
+  "q=0.5 reactive": {
+   "budget": 0.00154455,
+   "success": 0.34,
+   "stopped": 27,
+   "half_applied_turns": 19,
+   "tasks_over_budget": 30,
+   "max_overshoot_usd": 0.00026177000000000014,
+   "median_overshoot_share": 0.05072998608008798,
+   "saving": 0.15992034716530223
+  },
+  "q=0.5 transactional": {
+   "budget": 0.00154455,
+   "success": 0.2,
+   "stopped": 36,
+   "half_applied_turns": 0,
+   "tasks_over_budget": 7,
+   "max_overshoot_usd": 0.00061641,
+   "median_overshoot_share": 0.11836457220549673,
+   "saving": 0.30859520861357925
+  },
+  "q=0.75 reactive": {
+   "budget": 0.0019448249999999999,
+   "success": 0.52,
+   "stopped": 13,
+   "half_applied_turns": 9,
+   "tasks_over_budget": 18,
+   "max_overshoot_usd": 0.00036672500000000004,
+   "median_overshoot_share": 0.049008265525175856,
+   "saving": 0.05783312803737384
+  },
+  "q=0.75 transactional": {
+   "budget": 0.0019448249999999999,
+   "success": 0.34,
+   "stopped": 24,
+   "half_applied_turns": 0,
+   "tasks_over_budget": 3,
+   "max_overshoot_usd": 0.0002161350000000001,
+   "median_overshoot_share": 0.07218901443574625,
+   "saving": 0.1865553658309459
+  },
+  "q=0.9 reactive": {
+   "budget": 0.001985385,
+   "success": 0.52,
+   "stopped": 13,
+   "half_applied_turns": 9,
+   "tasks_over_budget": 14,
+   "max_overshoot_usd": 0.0003261649999999998,
+   "median_overshoot_share": 0.03879600178302943,
+   "saving": 0.0566242291029152
+  },
+  "q=0.9 transactional": {
+   "budget": 0.001985385,
+   "success": 0.34,
+   "stopped": 23,
+   "half_applied_turns": 0,
+   "tasks_over_budget": 2,
+   "max_overshoot_usd": 0.00017557499999999986,
+   "median_overshoot_share": 0.0693593434019094,
+   "saving": 0.17846411577216925
+  }
+ },
+ "large": {
+  "q=0.5 reactive": {
+   "budget": 0.11948399999999998,
+   "success": 0.54,
+   "stopped": 21,
+   "half_applied_turns": 12,
+   "tasks_over_budget": 27,
+   "max_overshoot_usd": 0.01636000000000004,
+   "median_overshoot_share": 0.05563924876970989,
+   "saving": 0.15433963698351894
+  },
+  "q=0.5 transactional": {
+   "budget": 0.11948399999999998,
+   "success": 0.44,
+   "stopped": 24,
+   "half_applied_turns": 0,
+   "tasks_over_budget": 8,
+   "max_overshoot_usd": 0.052868000000000026,
+   "median_overshoot_share": 0.14268856081148962,
+   "saving": 0.2543243098425171
+  },
+  "q=0.75 reactive": {
+   "budget": 0.15487599999999999,
+   "success": 0.74,
+   "stopped": 7,
+   "half_applied_turns": 5,
+   "tasks_over_budget": 12,
+   "max_overshoot_usd": 0.015848000000000056,
+   "median_overshoot_share": 0.06304398357395609,
+   "saving": 0.056398582924817475
+  },
+  "q=0.75 transactional": {
+   "budget": 0.15487599999999999,
+   "success": 0.64,
+   "stopped": 12,
+   "half_applied_turns": 0,
+   "tasks_over_budget": 4,
+   "max_overshoot_usd": 0.021542000000000006,
+   "median_overshoot_share": 0.12450605645806975,
+   "saving": 0.11084046315380247
+  },
+  "q=0.9 reactive": {
+   "budget": 0.17596599999999998,
+   "success": 0.78,
+   "stopped": 4,
+   "half_applied_turns": 3,
+   "tasks_over_budget": 6,
+   "max_overshoot_usd": 0.01324800000000001,
+   "median_overshoot_share": 0.04130343361785806,
+   "saving": 0.03418326276202577
+  },
+  "q=0.9 transactional": {
+   "budget": 0.17596599999999998,
+   "success": 0.76,
+   "stopped": 6,
+   "half_applied_turns": 0,
+   "tasks_over_budget": 2,
+   "max_overshoot_usd": 0.04198200000000005,
+   "median_overshoot_share": 0.12057442915108617,
+   "saving": 0.057814162776729905
+  }
+ },
+ "small": {
+  "q=0.5 reactive": {
+   "budget": 0.0056208000000000004,
+   "success": 0.38,
+   "stopped": 28,
+   "half_applied_turns": 21,
+   "tasks_over_budget": 36,
+   "max_overshoot_usd": 0.0006807999999999988,
+   "median_overshoot_share": 0.054236051807571906,
+   "saving": 0.21074643291166806
+  },
+  "q=0.5 transactional": {
+   "budget": 0.0056208000000000004,
+   "success": 0.32,
+   "stopped": 31,
+   "half_applied_turns": 0,
+   "tasks_over_budget": 9,
+   "max_overshoot_usd": 0.0020251999999999996,
+   "median_overshoot_share": 0.08059350982066599,
+   "saving": 0.323998728824781
+  },
+  "q=0.75 reactive": {
+   "budget": 0.0068146000000000005,
+   "success": 0.46,
+   "stopped": 15,
+   "half_applied_turns": 11,
+   "tasks_over_budget": 22,
+   "max_overshoot_usd": 0.0008141000000000008,
+   "median_overshoot_share": 0.04834473043172009,
+   "saving": 0.11043187589563463
+  },
+  "q=0.75 transactional": {
+   "budget": 0.0068146000000000005,
+   "success": 0.4,
+   "stopped": 23,
+   "half_applied_turns": 0,
+   "tasks_over_budget": 5,
+   "max_overshoot_usd": 0.0021598999999999993,
+   "median_overshoot_share": 0.12200275878261371,
+   "saving": 0.20915775814125948
+  },
+  "q=0.9 reactive": {
+   "budget": 0.009331400000000002,
+   "success": 0.54,
+   "stopped": 4,
+   "half_applied_turns": 3,
+   "tasks_over_budget": 5,
+   "max_overshoot_usd": 0.0004221999999999993,
+   "median_overshoot_share": 0.03669331504383028,
+   "saving": 0.03126561382756188
+  },
+  "q=0.9 transactional": {
+   "budget": 0.009331400000000002,
+   "success": 0.54,
+   "stopped": 6,
+   "half_applied_turns": 0,
+   "tasks_over_budget": 2,
+   "max_overshoot_usd": 0.0013727999999999987,
+   "median_overshoot_share": 0.07393853012409693,
+   "saving": 0.05732205753833386
+  }
+ }
+}

@@ -13,6 +13,7 @@ python3 figures.py                      # escalation figures -> results/fig-cost
 python3 analysis/rigor.py               # routing baselines, held-out trigger selection, run pairings, tool cap, energy with prefill -> results/rigor.json
 python3 analysis/rigor2.py              # matched-success frontier, in-run failure predictor, cascade gap, edge-fit intervals, held-out budget -> results/rigor2.json
 python3 analysis/rigor2_figure.py       # trigger frontier figure -> results/fig-trigger-frontier.pdf
+python3 analysis/transactional_stop.py  # where budget stops land relative to tool-calling turns -> results/transactional_stop.json
 python3 analysis/levers.py              # efficiency levers per success: model size, reasoning effort, caching, compression break-even -> results/levers.json
 python3 analysis/levers_figure.py       # compression break-even figure -> results/fig-compression.pdf
 ```
