@@ -1,0 +1,178 @@
+{
+ "frontier": {
+  "policies": {
+   "small": {
+    "success": 0.58,
+    "cost_per_success": 0.002992035862068966,
+    "cost_per_task": 0.0017353808000000002
+   },
+   "large": {
+    "success": 0.86,
+    "cost_per_success": 0.02809105581395349,
+    "cost_per_task": 0.024158308000000003
+   },
+   "('err', 1)": {
+    "success": 0.76,
+    "cost_per_success": 0.01396935105263158,
+    "cost_per_task": 0.0106167068
+   },
+   "('err', 2)": {
+    "success": 0.62,
+    "cost_per_success": 0.007583549999999999,
+    "cost_per_task": 0.004701800999999999
+   },
+   "('err_by', 2)": {
+    "success": 0.64,
+    "cost_per_success": 0.00560607796875,
+    "cost_per_task": 0.0035878899
+   },
+   "('err_by', 4)": {
+    "success": 0.7,
+    "cost_per_success": 0.007813659285714286,
+    "cost_per_task": 0.005469561500000001
+   },
+   "('err_by', 6)": {
+    "success": 0.72,
+    "cost_per_success": 0.008082279444444444,
+    "cost_per_task": 0.0058192412
+   },
+   "('err_by', 8)": {
+    "success": 0.74,
+    "cost_per_success": 0.010847665810810812,
+    "cost_per_task": 0.008027272700000001
+   },
+   "('steps', 6)": {
+    "success": 0.84,
+    "cost_per_success": 0.027221077500000006,
+    "cost_per_task": 0.02286570510000001
+   },
+   "('steps', 8)": {
+    "success": 0.84,
+    "cost_per_success": 0.025418574523809516,
+    "cost_per_task": 0.02135160259999999
+   },
+   "('steps', 10)": {
+    "success": 0.76,
+    "cost_per_success": 0.019224008815789475,
+    "cost_per_task": 0.014610246700000001
+   },
+   "('steps', 12)": {
+    "success": 0.64,
+    "cost_per_success": 0.011833749375,
+    "cost_per_task": 0.0075735996000000005
+   },
+   "('steps', 16)": {
+    "success": 0.58,
+    "cost_per_success": 0.005118093793103449,
+    "cost_per_task": 0.0029684944
+   },
+   "('err_or_steps', 8)": {
+    "success": 0.86,
+    "cost_per_success": 0.025901202209302324,
+    "cost_per_task": 0.022275033899999998
+   },
+   "('err_or_steps', 12)": {
+    "success": 0.78,
+    "cost_per_success": 0.015712020512820512,
+    "cost_per_task": 0.012255376
+   },
+   "('err_or_steps', 16)": {
+    "success": 0.76,
+    "cost_per_success": 0.01396935105263158,
+    "cost_per_task": 0.0106167068
+   }
+  },
+  "cheapest_at_target": {
+   "0.7": {
+    "policy": "('err_by', 4)",
+    "success": 0.7,
+    "cost_per_success": 0.007813659285714286,
+    "cost_per_task": 0.005469561500000001
+   },
+   "0.76": {
+    "policy": "('err', 1)",
+    "success": 0.76,
+    "cost_per_success": 0.01396935105263158,
+    "cost_per_task": 0.0106167068
+   },
+   "0.8": {
+    "policy": "('steps', 8)",
+    "success": 0.84,
+    "cost_per_success": 0.025418574523809516,
+    "cost_per_task": 0.02135160259999999
+   },
+   "0.86": {
+    "policy": "('err_or_steps', 8)",
+    "success": 0.86,
+    "cost_per_success": 0.025901202209302324,
+    "cost_per_task": 0.022275033899999998
+   }
+  },
+  "matched_success_random_mix": {
+   "large_share": 0.642857142857143,
+   "success": 0.76,
+   "cost_per_success": 0.021250157518797
+  }
+ },
+ "in_run_predictor": {
+  "after_step_2": {
+   "success": 0.74,
+   "cost_per_success": 0.021190937027027023,
+   "escalated": 30
+  },
+  "after_step_3": {
+   "success": 0.76,
+   "cost_per_success": 0.019366086842105265,
+   "escalated": 29
+  },
+  "after_step_4": {
+   "success": 0.82,
+   "cost_per_success": 0.02039580085365853,
+   "escalated": 33
+  }
+ },
+ "cascade_gap": {
+  "escalated_tasks": 19,
+  "median_remaining_share": 0.55,
+  "extra_cascade_usd_total": 0.0179605,
+  "extra_as_share_of_large_usd_on_those_tasks": 0.038873286138379856,
+  "large_to_small_cost_per_step": 14.548716190030008
+ },
+ "edge_fit_ci": {
+  "j_per_fresh_prompt_token_ci95": [
+   0.006059485963139313,
+   0.014360137908920056
+  ],
+  "j_per_output_token_ci95": [
+   0.2923520915631345,
+   0.4688078897046634
+  ],
+  "j_per_request_ci95": [
+   4.206770347935039,
+   11.048541731299283
+  ],
+  "idle_w": 6.714544186046512,
+  "idle_w_sample_range": [
+   4.214,
+   16.279
+  ]
+ },
+ "heldout_budget_S1": {
+  "success_p2.5_50_97.5": [
+   0.76,
+   0.82,
+   0.82
+  ],
+  "saving_p2.5_50_97.5": [
+   0.008550019314266466,
+   0.011388049196160543,
+   0.024484643129808564
+  ],
+  "overshoot_tasks_p2.5_50_97.5": [
+   2.9750000000000005,
+   5.0,
+   7.025000000000006
+  ],
+  "baseline_success": 0.86
+ }
+}
