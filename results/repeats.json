@@ -1,0 +1,214 @@
+{
+ "multi_turn": {
+  "small": {
+   "rollouts": 3,
+   "pooled_success": 0.5933333333333334,
+   "ci95_task_clustered": [
+    0.4666666666666667,
+    0.7133333333333334
+   ],
+   "per_run_success": [
+    0.58,
+    0.58,
+    0.62
+   ],
+   "tasks_same_outcome_every_run": 39,
+   "tasks_by_successes": {
+    "0": 15,
+    "1": 5,
+    "2": 6,
+    "3": 24
+   },
+   "mean_task_success_probability": 0.5933333333333334
+  },
+  "large": {
+   "rollouts": 3,
+   "pooled_success": 0.84,
+   "ci95_task_clustered": [
+    0.74,
+    0.9266666666666666
+   ],
+   "per_run_success": [
+    0.84,
+    0.86,
+    0.82
+   ],
+   "tasks_same_outcome_every_run": 47,
+   "tasks_by_successes": {
+    "0": 7,
+    "1": 0,
+    "2": 3,
+    "3": 40
+   },
+   "mean_task_success_probability": 0.84
+  },
+  "small_without_capped_run": {
+   "rollouts": 2,
+   "pooled_success": 0.6,
+   "ci95_task_clustered": [
+    0.47,
+    0.72
+   ],
+   "per_run_success": [
+    0.58,
+    0.62
+   ],
+   "tasks_same_outcome_every_run": 44,
+   "tasks_by_successes": {
+    "0": 17,
+    "1": 6,
+    "2": 27
+   },
+   "mean_task_success_probability": 0.6
+  },
+  "gap_large_minus_small": {
+   "mean_gap": 0.24666666666666667,
+   "ci95": [
+    0.14666666666666667,
+    0.35333333333333333
+   ],
+   "tasks_b_better": 18,
+   "tasks_a_better": 0,
+   "sign_test_p": 7.62939453125e-06
+  },
+  "first_error_nine_pairings": {
+   "pairings": {
+    "small x large": {
+     "successes": 37,
+     "cost_per_success": 0.07284951081081081,
+     "same_billing": true
+    },
+    "small x large+cache": {
+     "successes": 37,
+     "cost_per_success": 0.01819794594594595,
+     "same_billing": false
+    },
+    "small x large low effort": {
+     "successes": 35,
+     "cost_per_success": 0.07659171142857142,
+     "same_billing": true
+    },
+    "small+cache (capped) x large": {
+     "successes": 38,
+     "cost_per_success": 0.07545843526315792,
+     "same_billing": false
+    },
+    "small+cache (capped) x large+cache": {
+     "successes": 38,
+     "cost_per_success": 0.01396935105263158,
+     "same_billing": true
+    },
+    "small+cache (capped) x large low effort": {
+     "successes": 36,
+     "cost_per_success": 0.07865201500000002,
+     "same_billing": false
+    },
+    "small low effort x large": {
+     "successes": 39,
+     "cost_per_success": 0.07190025128205128,
+     "same_billing": true
+    },
+    "small low effort x large+cache": {
+     "successes": 39,
+     "cost_per_success": 0.01724275641025641,
+     "same_billing": false
+    },
+    "small low effort x large low effort": {
+     "successes": 37,
+     "cost_per_success": 0.07571567027027029,
+     "same_billing": true
+    }
+   },
+   "successes_min_median_max": [
+    35,
+    37,
+    39
+   ],
+   "pooled_success": 0.7466666666666667,
+   "ci95_task_clustered": [
+    0.6333333333333333,
+    0.8533333333333334
+   ]
+  },
+  "first_error_minus_large": {
+   "mean_gap": -0.09333333333333334,
+   "ci95": [
+    -0.17333333333333334,
+    -0.02666666666666667
+   ],
+   "tasks_large_better": 6,
+   "tasks_policy_better": 0,
+   "sign_test_p": 0.03125
+  }
+ },
+ "single_turn": {
+  "large": {
+   "rollouts": 5,
+   "pooled_success": 0.9066666666666666,
+   "ci95_task_clustered": [
+    0.8613333333333333,
+    0.948
+   ],
+   "per_run_success": [
+    0.8933333333333333,
+    0.9066666666666666,
+    0.8933333333333333,
+    0.9266666666666666,
+    0.9133333333333333
+   ],
+   "tasks_same_outcome_every_run": 142,
+   "tasks_by_successes": {
+    "0": 10,
+    "1": 0,
+    "2": 5,
+    "3": 2,
+    "4": 1,
+    "5": 132
+   },
+   "mean_task_success_probability": 0.9066666666666666,
+   "run_cost_cv": 0.0195096856843761
+  },
+  "small": {
+   "rollouts": 8,
+   "pooled_success": 0.91,
+   "ci95_task_clustered": [
+    0.8666666666666667,
+    0.9508333333333333
+   ],
+   "per_run_success": [
+    0.9133333333333333,
+    0.9066666666666666,
+    0.92,
+    0.9133333333333333,
+    0.9,
+    0.9,
+    0.9133333333333333,
+    0.9133333333333333
+   ],
+   "tasks_same_outcome_every_run": 141,
+   "tasks_by_successes": {
+    "0": 10,
+    "1": 1,
+    "2": 0,
+    "3": 1,
+    "4": 2,
+    "5": 1,
+    "6": 1,
+    "7": 3,
+    "8": 131
+   },
+   "mean_task_success_probability": 0.91,
+   "run_cost_cv": 0.034112895628355504
+  },
+  "gap_large_minus_small": {
+   "mean_gap": -0.0033333333333333327,
+   "ci95": [
+    -0.027666666666666666,
+    0.020666666666666667
+   ],
+   "tasks_b_better": 8,
+   "tasks_a_better": 7,
+   "sign_test_p": 1.0
+  }
+ }
+}

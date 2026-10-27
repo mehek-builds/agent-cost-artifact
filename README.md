@@ -14,6 +14,7 @@ python3 analysis/rigor.py               # routing baselines, held-out trigger se
 python3 analysis/rigor2.py              # matched-success frontier, in-run failure predictor, cascade gap, edge-fit intervals, held-out budget -> results/rigor2.json
 python3 analysis/rigor2_figure.py       # trigger frontier figure -> results/fig-trigger-frontier.pdf
 python3 analysis/transactional_stop.py  # where budget stops land relative to tool-calling turns -> results/transactional_stop.json
+python3 analysis/repeats.py             # the runs as repeated rollouts: pooled success, agreement, nine-pairing escalation -> results/repeats.json
 python3 analysis/levers.py              # efficiency levers per success: model size, reasoning effort, caching, compression break-even -> results/levers.json
 python3 analysis/levers_figure.py       # compression break-even figure -> results/fig-compression.pdf
 ```
@@ -64,7 +65,7 @@ The logs contain task identifiers and usage counters only, not BFCL task text or
 
 ## Limitations
 
-One benchmark category, one provider family, 50 tasks, one run per task. Paired runs bound the variation: the large model's cached and uncached runs agree on 49 of 50 tasks; 8 small-model tasks flip between its two runs with equal totals. Production observations reported in the papers are aggregates from provider usage records and are not part of this package, because the underlying records contain user data.
+One benchmark category, one provider family, 50 multi-turn tasks with three rollouts per model (uncached, cached, low effort; `analysis/repeats.py` pools them), and 150 single-turn tasks with five (large) and eight (small) rollouts in `logs/single_turn/` (task records only, model outputs removed). Production observations reported in the papers are aggregates from provider usage records and are not part of this package, because the underlying records contain user data.
 
 ## License
 
