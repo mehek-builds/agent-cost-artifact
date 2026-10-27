@@ -1,6 +1,6 @@
 # Agent cost artifact: recorded multi-turn tool-calling runs and their cost analyses
 
-This package recomputes every benchmark number and figure in the accompanying papers from recorded agent runs. It makes no API calls and needs only Python 3.10+ and matplotlib.
+This package recomputes every benchmark number and figure reported from these recorded agent runs. It makes no API calls and needs only Python 3.10+ and matplotlib.
 
 ```bash
 pip install -r requirements.txt
