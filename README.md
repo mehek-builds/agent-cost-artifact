@@ -38,7 +38,7 @@ python3 edge/placement_edge.py edge/runs/NEW   # placement policies with the mea
   - Configs: `small`, `small_cache_budget` (cached small model; this run also capped tool calls at five per turn), `frontier`, `frontier_cache`.
 - `prices.json`: list prices per million tokens, verified on the run date (2026-10-14), including the small model's prompt-length price tiers.
 
-The logs contain task identifiers and usage counters only, not BFCL task text or model outputs. Costs are token counts times list prices; they are not reconciled against invoices. Tools in BFCL are simulated, so tool charges are zero.
+The logs contain task identifiers and usage counters only, not BFCL task text or model outputs. Costs are token counts times list prices. Checked against the provider's billing console for the study's dedicated API key, all logged runs (including runs not in this package) account for 95.8% of the billed amount, with cache-write and cache-read dollars within 0.4%; the remainder is one run whose step log was cut short and one stopped by a credit limit. Tools in BFCL are simulated, so tool charges are zero.
 
 ## Checks
 
@@ -57,7 +57,7 @@ The logs contain task identifiers and usage counters only, not BFCL task text or
 
 ## Limitations
 
-One benchmark category, one provider family, 50 tasks, one run per task. Production observations reported in the papers are aggregates from provider usage records and are not part of this package, because the underlying records contain user data.
+One benchmark category, one provider family, 50 tasks, one run per task. Paired runs bound the variation: the large model's cached and uncached runs agree on 49 of 50 tasks; 8 small-model tasks flip between its two runs with equal totals. Production observations reported in the papers are aggregates from provider usage records and are not part of this package, because the underlying records contain user data.
 
 ## License
 
