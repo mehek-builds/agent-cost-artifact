@@ -1,0 +1,7 @@
+{
+  "model": "qwen3:8b",
+  "num_ctx": 16384,
+  "temperature": 0,
+  "max_steps_per_turn": 20,
+  "max_tool_calls": 12
+}

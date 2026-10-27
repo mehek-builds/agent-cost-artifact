@@ -14,6 +14,22 @@ python3 figures.py                      # escalation figures -> results/fig-cost
 
 Results from a reference run are included in `results/`. Rerunning reproduces them exactly, except the measured per-step overhead in `escalation.py`, which depends on the machine.
 
+## Measured edge run
+
+`edge/` replays the same 50 tasks with an open-weight model on a local device and measures its energy.
+
+```bash
+ollama pull qwen3:8b
+sudo powermetrics --samplers cpu_power,gpu_power,ane_power -i 500 -o edge/runs/NEW/power.txt   # in another terminal
+python3 edge/run_edge.py --model qwen3:8b --max-tasks 50 --run-id NEW
+python3 edge/energy.py edge/runs/NEW           # joules per request, token and success
+python3 edge/placement_edge.py edge/runs/NEW   # placement policies with the measured edge tier
+```
+
+- `edge/harness/`: the agent loop, BFCL simulators, tools and checker used for every run (BFCL parts under Apache 2.0, see `NOTICE`).
+- `edge/runs/full/`: the reported run: Qwen3 8B (4-bit, Ollama, temperature 0, thinking off, 16k context) on an Apple M5 with 34 GB, on AC power, low-power mode off. `power.txt` holds the combined CPU, GPU and neural-engine power samples (0.5 s) for the run window; `baseline_start`/`baseline_end` mark a 2-minute idle window; `timing_edge.jsonl` holds each request's wall-clock window and token counts.
+- Large-tier energy is not measured: `placement_edge.py` bounds it at 3 to 4 J per output token (Samsi et al., HPEC 2023, LLaMA 65B on A100/V100).
+
 ## What the data is
 
 - `logs/`: 50 tasks from the Berkeley Function Calling Leaderboard (BFCL) v4, `multi_turn_base` category, at a pinned repository commit, sampled with seed 42. Each task was run once by a small model (Claude Haiku 5.5) and once by a large model (Claude Sonnet 5.5), each with and without prompt caching: 200 runs, 2,029 model requests.

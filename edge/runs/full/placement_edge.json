@@ -1,0 +1,42 @@
+{
+ "edge": {
+  "successes": 11,
+  "escalations": 0,
+  "edge_joules": 18014.100473049883,
+  "large_usd": 0.0,
+  "large_output_tokens": 0.0,
+  "joules_per_success_low": 1637.6454975499894,
+  "joules_per_success_high": 1637.6454975499894,
+  "usd_per_success": 0.0
+ },
+ "large": {
+  "successes": 43,
+  "escalations": 0,
+  "edge_joules": 0.0,
+  "large_usd": 1.2079154,
+  "large_output_tokens": 46765.0,
+  "joules_per_success_low": 3262.6744186046512,
+  "joules_per_success_high": 4350.232558139535,
+  "usd_per_success": 0.02809105581395349
+ },
+ "first_error": {
+  "successes": 38,
+  "escalations": 34,
+  "edge_joules": 11660.019126259323,
+  "large_usd": 0.7974497999999999,
+  "large_output_tokens": 31025.0,
+  "joules_per_success_low": 2756.1847138489297,
+  "joules_per_success_high": 3572.6320822699818,
+  "usd_per_success": 0.020985521052631576
+ },
+ "oracle": {
+  "successes": 43,
+  "escalations": 39,
+  "edge_joules": 4136.368930496454,
+  "large_usd": 0.9543269999999999,
+  "large_output_tokens": 37682.0,
+  "joules_per_success_low": 2725.1713704766617,
+  "joules_per_success_high": 3601.4969518720104,
+  "usd_per_success": 0.022193651162790696
+ }
+}
