@@ -10,6 +10,9 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
+plt.rcParams["pdf.fonttype"] = 42  # embed TrueType fonts (IEEE PDF eXpress rejects Type 3)
+plt.rcParams["ps.fonttype"] = 42
+
 ROOT = Path(__file__).resolve().parent.parent
 RES = ROOT / "results"
 P = json.load(open(RES / "placement.json"))
