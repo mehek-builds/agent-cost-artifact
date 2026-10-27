@@ -1,0 +1,32 @@
+
+=== cached ===
+  static_small                 succ 58% [44%,71%]  $0.0017/task  $0.0030/succ CI [0.0023,0.0041]
+  static_large                 succ 86% [74%,93%]  $0.0242/task  $0.0281/succ CI [0.0240,0.0332]
+  oracle router                succ 86%  $0.0123/task  $0.0143/succ
+  first_error/restart          succ 76%  $0.0106/task  $0.0140/succ(best)  fired 19  handoff $0.0000 CI [0.0094,0.0196] McNemar {'large_only': 5, 'policy_only': 0, 'p': 0.0625}
+  first_error/full             succ [58%,76%] q:64%-66%  $0.0130/task  $0.0171/succ(best)  fired 19  handoff $0.0154
+  second_error/restart         succ 62%  $0.0047/task  $0.0076/succ(best)  fired 6  handoff $0.0000 CI [0.0041,0.0119] McNemar {'large_only': 12, 'policy_only': 0, 'p': 0.00048828125}
+  second_error/full            succ [58%,62%] q:59%-60%  $0.0056/task  $0.0090/succ(best)  fired 6  handoff $0.0161
+  fixed_half/restart           succ 86%  $0.0251/task  $0.0292/succ(best)  fired 50  handoff $0.0000 CI [0.0250,0.0346] McNemar {'large_only': 0, 'policy_only': 0, 'p': 1.0}
+  fixed_half/full              succ [58%,86%] q:68%-71%  $0.0330/task  $0.0383/succ(best)  fired 50  handoff $0.0152
+  composite                    succ 70%  $0.0095/task  $0.0135/succ(best)  fired 19  handoff $0.0000 CI [0.0090,0.0195] McNemar {'large_only': 8, 'policy_only': 0, 'p': 0.0078125}
+  tally {'restart': 17, 'full': 2} succ [74%,76%] q:75%-75%  $0.0105/task  $0.0138/succ(best)  fired 19  handoff $0.0015
+  triggers: {'first_error': {'fired': 19, 'small_failures': 21, 'true_alarms': 12, 'recall': 0.57, 'precision': 0.63, 'fired_on_small_successes': 7}, 'second_error': {'fired': 6, 'small_failures': 21, 'true_alarms': 2, 'recall': 0.1, 'precision': 0.33, 'fired_on_small_successes': 4}}
+  handoff at error steps: n=25 median 64% max 178% of a large task, median history 6329 tokens
+
+=== uncached ===
+  static_small                 succ 58% [44%,71%]  $0.0068/task  $0.0117/succ CI [0.0090,0.0163]
+  static_large                 succ 84% [71%,92%]  $0.1284/task  $0.1529/succ CI [0.1287,0.1834]
+  oracle router                succ 86%  $0.0667/task  $0.0775/succ
+  first_error/restart          succ 74%  $0.0539/task  $0.0728/succ(best)  fired 17  handoff $0.0000 CI [0.0469,0.1027] McNemar {'large_only': 6, 'policy_only': 1, 'p': 0.125}
+  first_error/full             succ [58%,74%] q:64%-66%  $0.0391/task  $0.0529/succ(best)  fired 17  handoff $0.0000
+  second_error/restart         succ 62%  $0.0266/task  $0.0430/succ(best)  fired 5  handoff $0.0000 CI [0.0183,0.0739] McNemar {'large_only': 12, 'policy_only': 1, 'p': 0.00341796875}
+  second_error/full            succ [58%,62%] q:59%-60%  $0.0206/task  $0.0332/succ(best)  fired 5  handoff $0.0000
+  fixed_half/restart           succ 84%  $0.1314/task  $0.1564/succ(best)  fired 50  handoff $0.0000 CI [0.1318,0.1877] McNemar {'large_only': 0, 'policy_only': 0, 'p': 1.0}
+  fixed_half/full              succ [58%,86%] q:68%-71%  $0.1028/task  $0.1195/succ(best)  fired 50  handoff $0.0000
+  composite                    succ 66%  $0.0485/task  $0.0735/succ(best)  fired 17  handoff $0.0000 CI [0.0459,0.1105] McNemar {'large_only': 10, 'policy_only': 1, 'p': 0.01171875}
+  tally {'restart': 6, 'full': 11} succ [64%,74%] q:68%-69%  $0.0391/task  $0.0529/succ(best)  fired 17  handoff $0.0000
+  triggers: {'first_error': {'fired': 17, 'small_failures': 21, 'true_alarms': 10, 'recall': 0.48, 'precision': 0.59, 'fired_on_small_successes': 7}, 'second_error': {'fired': 5, 'small_failures': 21, 'true_alarms': 2, 'recall': 0.1, 'precision': 0.4, 'fired_on_small_successes': 3}}
+  handoff at error steps: n=23 median 0% max 0% of a large task, median history 6314 tokens
+
+RQ5 overhead: {'loop_seconds_per_step': 3.7294937009596476e-07, 'median_model_call_latency_s': 1.092233419418335, 'overhead_share_of_call': 3.41455739648195e-07, 'llm_tokens_spent_by_loop': 0, 'steps_timed': 103200}

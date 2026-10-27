@@ -1,0 +1,60 @@
+tasks: 50   step sums vs task cost (max abs err): {'large': 5.551115123125783e-17, 'large+cache': 6.938893903907228e-18, 'small': 1.734723475976807e-18, 'small+cache': 4.999999999970306e-09}
+uncached re-pricing vs recorded (max abs err): {'large': 5.551115123125783e-17, 'small': 1.734723475976807e-18}
+
+RQ1 budget guard
+  large        baseline  succ 84%  $0.1284/task  $0.1529/succ  median cost success $0.1213 failure $0.1474
+    B=p50  $0.1195 reactive   succ 54% (-15, p=0.000)  $0.1086/task (+15%)  $0.2011/succ  violations 27 max over $0.0164
+    B=p50  $0.1195 predictive succ 42% (-21, p=0.000)  $0.1004/task (+22%)  $0.2389/succ  violations 0 max over $0.0000
+    B=p75  $0.1549 reactive   succ 74% (-5, p=0.062)  $0.1212/task (+6%)  $0.1637/succ  violations 12 max over $0.0158
+    B=p75  $0.1549 predictive succ 62% (-11, p=0.001)  $0.1170/task (+9%)  $0.1888/succ  violations 0 max over $0.0000
+    B=p90  $0.1760 reactive   succ 78% (-3, p=0.250)  $0.1240/task (+3%)  $0.1590/succ  violations 6 max over $0.0132
+    B=p90  $0.1760 predictive succ 78% (-3, p=0.250)  $0.1224/task (+5%)  $0.1569/succ  violations 1 max over $0.0005
+    B=p100 $0.2542 reactive   succ 84% (-0, p=1.000)  $0.1284/task (+0%)  $0.1529/succ  violations 0 max over $0.0000
+    B=p100 $0.2542 predictive succ 82% (-1, p=1.000)  $0.1280/task (+0%)  $0.1561/succ  violations 0 max over $0.0000
+  large+cache  baseline  succ 86%  $0.0242/task  $0.0281/succ  median cost success $0.0231 failure $0.0320
+    B=p50  $0.0231 reactive   succ 52% (-17, p=0.000)  $0.0209/task (+14%)  $0.0402/succ  violations 26 max over $0.0032
+    B=p50  $0.0231 predictive succ 34% (-26, p=0.000)  $0.0175/task (+27%)  $0.0515/succ  violations 0 max over $0.0000
+    B=p75  $0.0295 reactive   succ 74% (-6, p=0.031)  $0.0231/task (+4%)  $0.0312/succ  violations 14 max over $0.0020
+    B=p75  $0.0295 predictive succ 62% (-12, p=0.000)  $0.0204/task (+15%)  $0.0330/succ  violations 0 max over $0.0000
+    B=p90  $0.0350 reactive   succ 82% (-2, p=0.500)  $0.0239/task (+1%)  $0.0291/succ  violations 5 max over $0.0022
+    B=p90  $0.0350 predictive succ 74% (-6, p=0.031)  $0.0229/task (+5%)  $0.0310/succ  violations 0 max over $0.0000
+    B=p100 $0.0439 reactive   succ 86% (-0, p=1.000)  $0.0242/task (+0%)  $0.0281/succ  violations 0 max over $0.0000
+    B=p100 $0.0439 predictive succ 86% (-0, p=1.000)  $0.0242/task (+0%)  $0.0281/succ  violations 0 max over $0.0000
+  small        baseline  succ 58%  $0.0068/task  $0.0117/succ  median cost success $0.0057 failure $0.0076
+    B=p50  $0.0057 reactive   succ 38% (-10, p=0.002)  $0.0055/task (+20%)  $0.0143/succ  violations 35 max over $0.0009
+    B=p50  $0.0057 predictive succ 28% (-15, p=0.000)  $0.0049/task (+28%)  $0.0175/succ  violations 0 max over $0.0000
+    B=p75  $0.0068 reactive   succ 46% (-6, p=0.031)  $0.0060/task (+11%)  $0.0131/succ  violations 22 max over $0.0008
+    B=p75  $0.0068 predictive succ 44% (-7, p=0.016)  $0.0057/task (+16%)  $0.0129/succ  violations 0 max over $0.0000
+    B=p90  $0.0093 reactive   succ 54% (-2, p=0.500)  $0.0066/task (+3%)  $0.0122/succ  violations 4 max over $0.0004
+    B=p90  $0.0093 predictive succ 52% (-3, p=0.250)  $0.0065/task (+5%)  $0.0125/succ  violations 0 max over $0.0000
+    B=p100 $0.0129 reactive   succ 58% (-0, p=1.000)  $0.0068/task (+0%)  $0.0117/succ  violations 0 max over $0.0000
+    B=p100 $0.0129 predictive succ 58% (-0, p=1.000)  $0.0068/task (+0%)  $0.0117/succ  violations 0 max over $0.0000
+  small+cache  baseline  succ 58%  $0.0017/task  $0.0030/succ  median cost success $0.0016 failure $0.0022
+    B=p50  $0.0016 reactive   succ 34% (-12, p=0.000)  $0.0015/task (+15%)  $0.0044/succ  violations 29 max over $0.0002
+    B=p50  $0.0016 predictive succ 26% (-16, p=0.000)  $0.0013/task (+26%)  $0.0049/succ  violations 0 max over $0.0000
+    B=p75  $0.0019 reactive   succ 52% (-3, p=0.250)  $0.0016/task (+6%)  $0.0031/succ  violations 18 max over $0.0004
+    B=p75  $0.0019 predictive succ 44% (-7, p=0.016)  $0.0016/task (+10%)  $0.0036/succ  violations 0 max over $0.0000
+    B=p90  $0.0022 reactive   succ 54% (-2, p=0.500)  $0.0017/task (+3%)  $0.0031/succ  violations 11 max over $0.0002
+    B=p90  $0.0022 predictive succ 52% (-3, p=0.250)  $0.0016/task (+5%)  $0.0032/succ  violations 1 max over $0.0001
+    B=p100 $0.0027 reactive   succ 58% (-0, p=1.000)  $0.0017/task (+0%)  $0.0030/succ  violations 1 max over $0.0001
+    B=p100 $0.0027 predictive succ 58% (-0, p=1.000)  $0.0017/task (+0%)  $0.0030/succ  violations 0 max over $0.0000
+
+RQ4 cache-health monitor
+  large+cache  healthy $0.0242/task
+    ignored  no monitor $0.1294 (5.4x)
+      k=1 $0.0511 (2.12x) recovered 74%  alarm step 1.0  false alarms 0
+      k=2 $0.0614 (2.54x) recovered 65%  alarm step 2  false alarms 0
+      k=3 $0.0718 (2.97x) recovered 55%  alarm step 3  false alarms 0
+    thrash   no monitor $0.1594 (6.6x)
+      k=1 $0.0564 (2.34x) recovered 76%  alarm step 1.0  false alarms 0
+      k=2 $0.0694 (2.87x) recovered 67%  alarm step 2  false alarms 0
+      k=3 $0.0826 (3.42x) recovered 57%  alarm step 3  false alarms 0
+  small+cache  healthy $0.0017/task
+    ignored  no monitor $0.0070 (4.0x)
+      k=1 $0.0030 (1.74x) recovered 75%  alarm step 1.0  false alarms 0
+      k=2 $0.0035 (2.03x) recovered 66%  alarm step 2  false alarms 0
+      k=3 $0.0040 (2.31x) recovered 56%  alarm step 3  false alarms 0
+    thrash   no monitor $0.0086 (4.9x)
+      k=1 $0.0033 (1.89x) recovered 77%  alarm step 1.0  false alarms 0
+      k=2 $0.0039 (2.26x) recovered 68%  alarm step 2  false alarms 0
+      k=3 $0.0046 (2.63x) recovered 59%  alarm step 3  false alarms 0

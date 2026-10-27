@@ -1,0 +1,1243 @@
+{
+  "n_tasks": 50,
+  "check_steps_sum_to_task_cost_max_abs_err": {
+    "large": 5.551115123125783e-17,
+    "large+cache": 6.938893903907228e-18,
+    "small": 1.734723475976807e-18,
+    "small+cache": 4.999999999970306e-09
+  },
+  "check_uncached_reprice_max_abs_err": {
+    "large": 5.551115123125783e-17,
+    "small": 1.734723475976807e-18
+  },
+  "rq1_budget_guard": {
+    "large": {
+      "baseline": {
+        "success": 0.84,
+        "successes": 42,
+        "wilson95": [
+          0.7148551903823401,
+          0.9166267863791231
+        ],
+        "cost_per_task": 0.12839968,
+        "cost_per_task_ci95": [
+          0.11476624,
+          0.14227552
+        ],
+        "cost_per_success": 0.1528567619047619,
+        "cost_per_success_ci95": [
+          0.12870676595744684,
+          0.18344752631578945
+        ]
+      },
+      "median_cost_success": 0.12134699999999998,
+      "median_cost_failure": 0.14742299999999997,
+      "budgets": [
+        {
+          "quantile_of_success_cost": 0.5,
+          "budget_usd": 0.11948399999999998,
+          "mode": "reactive",
+          "success": 0.54,
+          "successes": 27,
+          "wilson95": [
+            0.40398634328388083,
+            0.6703056539821737
+          ],
+          "cost_per_task": 0.10858252,
+          "cost_per_task_ci95": [
+            0.10080468,
+            0.11570891999999999
+          ],
+          "cost_per_success": 0.20107874074074075,
+          "cost_per_success_ci95": [
+            0.15206052941176476,
+            0.2807001000000001
+          ],
+          "violations": 27,
+          "violation_rate": 0.54,
+          "median_overshoot_usd": 0.006648000000000015,
+          "max_overshoot_usd": 0.01636000000000004,
+          "successes_lost": 15,
+          "mcnemar_p_vs_baseline": 6.103515625e-05,
+          "stopped_tasks": 21,
+          "saving_vs_baseline": 0.15433963698351882
+        },
+        {
+          "quantile_of_success_cost": 0.5,
+          "budget_usd": 0.11948399999999998,
+          "mode": "predictive",
+          "success": 0.42,
+          "successes": 21,
+          "wilson95": [
+            0.2937479723456693,
+            0.5576680331222217
+          ],
+          "cost_per_task": 0.10035668,
+          "cost_per_task_ci95": [
+            0.09393316,
+            0.10603831999999999
+          ],
+          "cost_per_success": 0.23894447619047618,
+          "cost_per_success_ci95": [
+            0.17262829629629634,
+            0.3694611428571429
+          ],
+          "violations": 0,
+          "violation_rate": 0.0,
+          "median_overshoot_usd": 0.0,
+          "max_overshoot_usd": 0.0,
+          "successes_lost": 21,
+          "mcnemar_p_vs_baseline": 9.5367431640625e-07,
+          "stopped_tasks": 27,
+          "saving_vs_baseline": 0.21840397110023935
+        },
+        {
+          "quantile_of_success_cost": 0.75,
+          "budget_usd": 0.15487599999999999,
+          "mode": "reactive",
+          "success": 0.74,
+          "successes": 37,
+          "wilson95": [
+            0.6044657801100008,
+            0.8412862034863262
+          ],
+          "cost_per_task": 0.12115812,
+          "cost_per_task_ci95": [
+            0.11051724,
+            0.1315126
+          ],
+          "cost_per_success": 0.16372718918918916,
+          "cost_per_success_ci95": [
+            0.1338228095238095,
+            0.20607319999999996
+          ],
+          "violations": 12,
+          "violation_rate": 0.24,
+          "median_overshoot_usd": 0.009764000000000023,
+          "max_overshoot_usd": 0.015848000000000056,
+          "successes_lost": 5,
+          "mcnemar_p_vs_baseline": 0.0625,
+          "stopped_tasks": 7,
+          "saving_vs_baseline": 0.05639858292481725
+        },
+        {
+          "quantile_of_success_cost": 0.75,
+          "budget_usd": 0.15487599999999999,
+          "mode": "predictive",
+          "success": 0.62,
+          "successes": 31,
+          "wilson95": [
+            0.4815019502239357,
+            0.7413740415742278
+          ],
+          "cost_per_task": 0.11703836,
+          "cost_per_task_ci95": [
+            0.1074798,
+            0.12615012
+          ],
+          "cost_per_success": 0.18877154838709678,
+          "cost_per_success_ci95": [
+            0.14627400000000004,
+            0.25339303999999996
+          ],
+          "violations": 0,
+          "violation_rate": 0.0,
+          "median_overshoot_usd": 0.0,
+          "max_overshoot_usd": 0.0,
+          "successes_lost": 11,
+          "mcnemar_p_vs_baseline": 0.0009765625,
+          "stopped_tasks": 13,
+          "saving_vs_baseline": 0.08848402114397791
+        },
+        {
+          "quantile_of_success_cost": 0.9,
+          "budget_usd": 0.17596599999999998,
+          "mode": "reactive",
+          "success": 0.78,
+          "successes": 39,
+          "wilson95": [
+            0.6475818431054045,
+            0.8724621377569771
+          ],
+          "cost_per_task": 0.12401055999999999,
+          "cost_per_task_ci95": [
+            0.11231652,
+            0.135437
+          ],
+          "cost_per_success": 0.15898789743589742,
+          "cost_per_success_ci95": [
+            0.1312986976744186,
+            0.19741030303030302
+          ],
+          "violations": 6,
+          "violation_rate": 0.12,
+          "median_overshoot_usd": 0.0072680000000000106,
+          "max_overshoot_usd": 0.01324800000000001,
+          "successes_lost": 3,
+          "mcnemar_p_vs_baseline": 0.25,
+          "stopped_tasks": 4,
+          "saving_vs_baseline": 0.034183262762025546
+        },
+        {
+          "quantile_of_success_cost": 0.9,
+          "budget_usd": 0.17596599999999998,
+          "mode": "predictive",
+          "success": 0.78,
+          "successes": 39,
+          "wilson95": [
+            0.6475818431054045,
+            0.8724621377569771
+          ],
+          "cost_per_task": 0.12237508,
+          "cost_per_task_ci95": [
+            0.11132088,
+            0.13326512
+          ],
+          "cost_per_success": 0.15689112820512818,
+          "cost_per_success_ci95": [
+            0.13020195348837213,
+            0.19362884848484851
+          ],
+          "violations": 1,
+          "violation_rate": 0.02,
+          "median_overshoot_usd": 0.0004519999999999802,
+          "max_overshoot_usd": 0.0004519999999999802,
+          "successes_lost": 3,
+          "mcnemar_p_vs_baseline": 0.25,
+          "stopped_tasks": 5,
+          "saving_vs_baseline": 0.04692067768393182
+        },
+        {
+          "quantile_of_success_cost": 1.0,
+          "budget_usd": 0.25419400000000003,
+          "mode": "reactive",
+          "success": 0.84,
+          "successes": 42,
+          "wilson95": [
+            0.7148551903823401,
+            0.9166267863791231
+          ],
+          "cost_per_task": 0.12839968,
+          "cost_per_task_ci95": [
+            0.11476624,
+            0.14227552
+          ],
+          "cost_per_success": 0.1528567619047619,
+          "cost_per_success_ci95": [
+            0.12870676595744684,
+            0.18344752631578945
+          ],
+          "violations": 0,
+          "violation_rate": 0.0,
+          "median_overshoot_usd": 0.0,
+          "max_overshoot_usd": 0.0,
+          "successes_lost": 0,
+          "mcnemar_p_vs_baseline": 1.0,
+          "stopped_tasks": 0,
+          "saving_vs_baseline": 0.0
+        },
+        {
+          "quantile_of_success_cost": 1.0,
+          "budget_usd": 0.25419400000000003,
+          "mode": "predictive",
+          "success": 0.82,
+          "successes": 41,
+          "wilson95": [
+            0.6920368054529739,
+            0.902299172675462
+          ],
+          "cost_per_task": 0.12804052,
+          "cost_per_task_ci95": [
+            0.1146392,
+            0.14166763999999998
+          ],
+          "cost_per_success": 0.1561469756097561,
+          "cost_per_success_ci95": [
+            0.12996928888888884,
+            0.19141252941176462
+          ],
+          "violations": 0,
+          "violation_rate": 0.0,
+          "median_overshoot_usd": 0.0,
+          "max_overshoot_usd": 0.0,
+          "successes_lost": 1,
+          "mcnemar_p_vs_baseline": 1.0,
+          "stopped_tasks": 1,
+          "saving_vs_baseline": 0.002797203232905221
+        }
+      ]
+    },
+    "large+cache": {
+      "baseline": {
+        "success": 0.86,
+        "successes": 43,
+        "wilson95": [
+          0.738135428014719,
+          0.9304925473797714
+        ],
+        "cost_per_task": 0.024158308,
+        "cost_per_task_ci95": [
+          0.021872356,
+          0.026471338
+        ],
+        "cost_per_success": 0.02809105581395349,
+        "cost_per_success_ci95": [
+          0.02403920869565217,
+          0.03324906944444445
+        ]
+      },
+      "median_cost_success": 0.023114000000000003,
+      "median_cost_failure": 0.031968699999999996,
+      "budgets": [
+        {
+          "quantile_of_success_cost": 0.5,
+          "budget_usd": 0.023114000000000003,
+          "mode": "reactive",
+          "success": 0.52,
+          "successes": 26,
+          "wilson95": [
+            0.3851151225880844,
+            0.6520308760449429
+          ],
+          "cost_per_task": 0.020896632000000002,
+          "cost_per_task_ci95": [
+            0.019534952,
+            0.022162278
+          ],
+          "cost_per_success": 0.04018583076923076,
+          "cost_per_success_ci95": [
+            0.030518427272727272,
+            0.05723498421052633
+          ],
+          "violations": 26,
+          "violation_rate": 0.52,
+          "median_overshoot_usd": 0.0009739999999999974,
+          "max_overshoot_usd": 0.003167599999999996,
+          "successes_lost": 17,
+          "mcnemar_p_vs_baseline": 1.52587890625e-05,
+          "stopped_tasks": 22,
+          "saving_vs_baseline": 0.13501260104805346
+        },
+        {
+          "quantile_of_success_cost": 0.5,
+          "budget_usd": 0.023114000000000003,
+          "mode": "predictive",
+          "success": 0.34,
+          "successes": 17,
+          "wilson95": [
+            0.2243676963506106,
+            0.47846431458517147
+          ],
+          "cost_per_task": 0.017526474,
+          "cost_per_task_ci95": [
+            0.016379996,
+            0.018661118
+          ],
+          "cost_per_success": 0.051548452941176465,
+          "cost_per_success_ci95": [
+            0.036136904000000004,
+            0.0850427181818182
+          ],
+          "violations": 0,
+          "violation_rate": 0.0,
+          "median_overshoot_usd": 0.0,
+          "max_overshoot_usd": 0.0,
+          "successes_lost": 26,
+          "mcnemar_p_vs_baseline": 2.9802322387695312e-08,
+          "stopped_tasks": 31,
+          "saving_vs_baseline": 0.27451566558386453
+        },
+        {
+          "quantile_of_success_cost": 0.75,
+          "budget_usd": 0.0295111,
+          "mode": "reactive",
+          "success": 0.74,
+          "successes": 37,
+          "wilson95": [
+            0.6044657801100008,
+            0.8412862034863262
+          ],
+          "cost_per_task": 0.023080444000000002,
+          "cost_per_task_ci95": [
+            0.021189142,
+            0.024927032000000002
+          ],
+          "cost_per_success": 0.031189789189189184,
+          "cost_per_success_ci95": [
+            0.025503993023255823,
+            0.03944650967741934
+          ],
+          "violations": 14,
+          "violation_rate": 0.28,
+          "median_overshoot_usd": 0.0011002000000000026,
+          "max_overshoot_usd": 0.002042300000000004,
+          "successes_lost": 6,
+          "mcnemar_p_vs_baseline": 0.03125,
+          "stopped_tasks": 10,
+          "saving_vs_baseline": 0.044616700805370835
+        },
+        {
+          "quantile_of_success_cost": 0.75,
+          "budget_usd": 0.0295111,
+          "mode": "predictive",
+          "success": 0.62,
+          "successes": 31,
+          "wilson95": [
+            0.4815019502239357,
+            0.7413740415742278
+          ],
+          "cost_per_task": 0.020449000000000002,
+          "cost_per_task_ci95": [
+            0.018833458,
+            0.022029214000000002
+          ],
+          "cost_per_success": 0.03298225806451612,
+          "cost_per_success_ci95": [
+            0.026491786486486493,
+            0.04355476666666667
+          ],
+          "violations": 0,
+          "violation_rate": 0.0,
+          "median_overshoot_usd": 0.0,
+          "max_overshoot_usd": 0.0,
+          "successes_lost": 12,
+          "mcnemar_p_vs_baseline": 0.00048828125,
+          "stopped_tasks": 16,
+          "saving_vs_baseline": 0.15354171326899213
+        },
+        {
+          "quantile_of_success_cost": 0.9,
+          "budget_usd": 0.035040699999999994,
+          "mode": "reactive",
+          "success": 0.82,
+          "successes": 41,
+          "wilson95": [
+            0.6920368054529739,
+            0.902299172675462
+          ],
+          "cost_per_task": 0.023883192,
+          "cost_per_task_ci95": [
+            0.021735008,
+            0.02604347
+          ],
+          "cost_per_success": 0.02912584390243902,
+          "cost_per_success_ci95": [
+            0.024492371739130436,
+            0.03545884166666666
+          ],
+          "violations": 5,
+          "violation_rate": 0.1,
+          "median_overshoot_usd": 0.0010592000000000101,
+          "max_overshoot_usd": 0.0022271000000000027,
+          "successes_lost": 2,
+          "mcnemar_p_vs_baseline": 0.5,
+          "stopped_tasks": 3,
+          "saving_vs_baseline": 0.011388049196160543
+        },
+        {
+          "quantile_of_success_cost": 0.9,
+          "budget_usd": 0.035040699999999994,
+          "mode": "predictive",
+          "success": 0.74,
+          "successes": 37,
+          "wilson95": [
+            0.6044657801100008,
+            0.8412862034863262
+          ],
+          "cost_per_task": 0.02290307,
+          "cost_per_task_ci95": [
+            0.020865464,
+            0.024928508
+          ],
+          "cost_per_success": 0.030950094594594586,
+          "cost_per_success_ci95": [
+            0.0253102488372093,
+            0.039094763333333345
+          ],
+          "violations": 0,
+          "violation_rate": 0.0,
+          "median_overshoot_usd": 0.0,
+          "max_overshoot_usd": 0.0,
+          "successes_lost": 6,
+          "mcnemar_p_vs_baseline": 0.03125,
+          "stopped_tasks": 7,
+          "saving_vs_baseline": 0.05195885407206491
+        },
+        {
+          "quantile_of_success_cost": 1.0,
+          "budget_usd": 0.0438791,
+          "mode": "reactive",
+          "success": 0.86,
+          "successes": 43,
+          "wilson95": [
+            0.738135428014719,
+            0.9304925473797714
+          ],
+          "cost_per_task": 0.024158308,
+          "cost_per_task_ci95": [
+            0.021872356,
+            0.026471338
+          ],
+          "cost_per_success": 0.02809105581395349,
+          "cost_per_success_ci95": [
+            0.02403920869565217,
+            0.03324906944444445
+          ],
+          "violations": 0,
+          "violation_rate": 0.0,
+          "median_overshoot_usd": 0.0,
+          "max_overshoot_usd": 0.0,
+          "successes_lost": 0,
+          "mcnemar_p_vs_baseline": 1.0,
+          "stopped_tasks": 0,
+          "saving_vs_baseline": 0.0
+        },
+        {
+          "quantile_of_success_cost": 1.0,
+          "budget_usd": 0.0438791,
+          "mode": "predictive",
+          "success": 0.86,
+          "successes": 43,
+          "wilson95": [
+            0.738135428014719,
+            0.9304925473797714
+          ],
+          "cost_per_task": 0.024158308,
+          "cost_per_task_ci95": [
+            0.021872356,
+            0.026471338
+          ],
+          "cost_per_success": 0.02809105581395349,
+          "cost_per_success_ci95": [
+            0.02403920869565217,
+            0.03324906944444445
+          ],
+          "violations": 0,
+          "violation_rate": 0.0,
+          "median_overshoot_usd": 0.0,
+          "max_overshoot_usd": 0.0,
+          "successes_lost": 0,
+          "mcnemar_p_vs_baseline": 1.0,
+          "stopped_tasks": 0,
+          "saving_vs_baseline": 0.0
+        }
+      ]
+    },
+    "small": {
+      "baseline": {
+        "success": 0.58,
+        "successes": 29,
+        "wilson95": [
+          0.4423319668777783,
+          0.7062520276543307
+        ],
+        "cost_per_task": 0.00679686,
+        "cost_per_task_ci95": [
+          0.006102678,
+          0.00750417
+        ],
+        "cost_per_success": 0.011718724137931038,
+        "cost_per_success_ci95": [
+          0.008951721621621622,
+          0.01625101818181818
+        ]
+      },
+      "median_cost_success": 0.005699500000000001,
+      "median_cost_failure": 0.007567399999999999,
+      "budgets": [
+        {
+          "quantile_of_success_cost": 0.5,
+          "budget_usd": 0.005699500000000001,
+          "mode": "reactive",
+          "success": 0.38,
+          "successes": 19,
+          "wilson95": [
+            0.2586259584257722,
+            0.5184980497760643
+          ],
+          "cost_per_task": 0.00545221,
+          "cost_per_task_ci95": [
+            0.0050976120000000005,
+            0.00575928
+          ],
+          "cost_per_success": 0.014347921052631581,
+          "cost_per_success_ci95": [
+            0.010044580769230768,
+            0.023156916666666666
+          ],
+          "violations": 35,
+          "violation_rate": 0.7,
+          "median_overshoot_usd": 0.0003273999999999994,
+          "max_overshoot_usd": 0.0008711999999999991,
+          "successes_lost": 10,
+          "mcnemar_p_vs_baseline": 0.001953125,
+          "stopped_tasks": 28,
+          "saving_vs_baseline": 0.1978339998175629
+        },
+        {
+          "quantile_of_success_cost": 0.5,
+          "budget_usd": 0.005699500000000001,
+          "mode": "predictive",
+          "success": 0.28,
+          "successes": 14,
+          "wilson95": [
+            0.17474014357680362,
+            0.4166538714598967
+          ],
+          "cost_per_task": 0.004886014,
+          "cost_per_task_ci95": [
+            0.004610194,
+            0.005118574
+          ],
+          "cost_per_success": 0.017450050000000005,
+          "cost_per_success_ci95": [
+            0.011505190476190478,
+            0.0317729125
+          ],
+          "violations": 0,
+          "violation_rate": 0.0,
+          "median_overshoot_usd": 0.0,
+          "max_overshoot_usd": 0.0,
+          "successes_lost": 15,
+          "mcnemar_p_vs_baseline": 6.103515625e-05,
+          "stopped_tasks": 36,
+          "saving_vs_baseline": 0.28113658365774785
+        },
+        {
+          "quantile_of_success_cost": 0.75,
+          "budget_usd": 0.0068146000000000005,
+          "mode": "reactive",
+          "success": 0.46,
+          "successes": 23,
+          "wilson95": [
+            0.3296943460178263,
+            0.5960136567161192
+          ],
+          "cost_per_task": 0.00604627,
+          "cost_per_task_ci95": [
+            0.0055948840000000005,
+            0.006460878
+          ],
+          "cost_per_success": 0.013144065217391303,
+          "cost_per_success_ci95": [
+            0.009514186666666665,
+            0.0197521
+          ],
+          "violations": 22,
+          "violation_rate": 0.44,
+          "median_overshoot_usd": 0.0003294499999999998,
+          "max_overshoot_usd": 0.0008141000000000008,
+          "successes_lost": 6,
+          "mcnemar_p_vs_baseline": 0.03125,
+          "stopped_tasks": 15,
+          "saving_vs_baseline": 0.11043187589563408
+        },
+        {
+          "quantile_of_success_cost": 0.75,
+          "budget_usd": 0.0068146000000000005,
+          "mode": "predictive",
+          "success": 0.44,
+          "successes": 22,
+          "wilson95": [
+            0.3116198721023534,
+            0.5769421319985648
+          ],
+          "cost_per_task": 0.00569696,
+          "cost_per_task_ci95": [
+            0.005310802,
+            0.0060426640000000005
+          ],
+          "cost_per_success": 0.012947636363636363,
+          "cost_per_success_ci95": [
+            0.009360133333333336,
+            0.01948458125
+          ],
+          "violations": 0,
+          "violation_rate": 0.0,
+          "median_overshoot_usd": 0.0,
+          "max_overshoot_usd": 0.0,
+          "successes_lost": 7,
+          "mcnemar_p_vs_baseline": 0.015625,
+          "stopped_tasks": 22,
+          "saving_vs_baseline": 0.16182472494651945
+        },
+        {
+          "quantile_of_success_cost": 0.9,
+          "budget_usd": 0.0093385,
+          "mode": "reactive",
+          "success": 0.54,
+          "successes": 27,
+          "wilson95": [
+            0.40398634328388083,
+            0.6703056539821737
+          ],
+          "cost_per_task": 0.006584352,
+          "cost_per_task_ci95": [
+            0.0059891580000000005,
+            0.007161448
+          ],
+          "cost_per_success": 0.012193244444444444,
+          "cost_per_success_ci95": [
+            0.00913169090909091,
+            0.017413028571428575
+          ],
+          "violations": 4,
+          "violation_rate": 0.08,
+          "median_overshoot_usd": 0.00037100000000000067,
+          "max_overshoot_usd": 0.0004151000000000016,
+          "successes_lost": 2,
+          "mcnemar_p_vs_baseline": 0.5,
+          "stopped_tasks": 4,
+          "saving_vs_baseline": 0.031265613827561545
+        },
+        {
+          "quantile_of_success_cost": 0.9,
+          "budget_usd": 0.0093385,
+          "mode": "predictive",
+          "success": 0.52,
+          "successes": 26,
+          "wilson95": [
+            0.3851151225880844,
+            0.6520308760449429
+          ],
+          "cost_per_task": 0.006479688,
+          "cost_per_task_ci95": [
+            0.005917168,
+            0.0070228420000000005
+          ],
+          "cost_per_success": 0.012460938461538463,
+          "cost_per_success_ci95": [
+            0.009256335294117646,
+            0.018033352631578944
+          ],
+          "violations": 0,
+          "violation_rate": 0.0,
+          "median_overshoot_usd": 0.0,
+          "max_overshoot_usd": 0.0,
+          "successes_lost": 3,
+          "mcnemar_p_vs_baseline": 0.25,
+          "stopped_tasks": 6,
+          "saving_vs_baseline": 0.04666448919059685
+        },
+        {
+          "quantile_of_success_cost": 1.0,
+          "budget_usd": 0.012930600000000002,
+          "mode": "reactive",
+          "success": 0.58,
+          "successes": 29,
+          "wilson95": [
+            0.4423319668777783,
+            0.7062520276543307
+          ],
+          "cost_per_task": 0.00679686,
+          "cost_per_task_ci95": [
+            0.006102678,
+            0.00750417
+          ],
+          "cost_per_success": 0.011718724137931038,
+          "cost_per_success_ci95": [
+            0.008951721621621622,
+            0.01625101818181818
+          ],
+          "violations": 0,
+          "violation_rate": 0.0,
+          "median_overshoot_usd": 0.0,
+          "max_overshoot_usd": 0.0,
+          "successes_lost": 0,
+          "mcnemar_p_vs_baseline": 1.0,
+          "stopped_tasks": 0,
+          "saving_vs_baseline": 0.0
+        },
+        {
+          "quantile_of_success_cost": 1.0,
+          "budget_usd": 0.012930600000000002,
+          "mode": "predictive",
+          "success": 0.58,
+          "successes": 29,
+          "wilson95": [
+            0.4423319668777783,
+            0.7062520276543307
+          ],
+          "cost_per_task": 0.00679686,
+          "cost_per_task_ci95": [
+            0.006102678,
+            0.00750417
+          ],
+          "cost_per_success": 0.011718724137931038,
+          "cost_per_success_ci95": [
+            0.008951721621621622,
+            0.01625101818181818
+          ],
+          "violations": 0,
+          "violation_rate": 0.0,
+          "median_overshoot_usd": 0.0,
+          "max_overshoot_usd": 0.0,
+          "successes_lost": 0,
+          "mcnemar_p_vs_baseline": 1.0,
+          "stopped_tasks": 0,
+          "saving_vs_baseline": 0.0
+        }
+      ]
+    },
+    "small+cache": {
+      "baseline": {
+        "success": 0.58,
+        "successes": 29,
+        "wilson95": [
+          0.4423319668777783,
+          0.7062520276543307
+        ],
+        "cost_per_task": 0.0017353808,
+        "cost_per_task_ci95": [
+          0.0015813983,
+          0.0018873662
+        ],
+        "cost_per_success": 0.002992035862068966,
+        "cost_per_success_ci95": [
+          0.0023198487500000003,
+          0.004085824545454545
+        ]
+      },
+      "median_cost_success": 0.0015818249999999996,
+      "median_cost_failure": 0.00215967,
+      "budgets": [
+        {
+          "quantile_of_success_cost": 0.5,
+          "budget_usd": 0.0015818249999999996,
+          "mode": "reactive",
+          "success": 0.34,
+          "successes": 17,
+          "wilson95": [
+            0.2243676963506106,
+            0.47846431458517147
+          ],
+          "cost_per_task": 0.0014793061,
+          "cost_per_task_ci95": [
+            0.0013927435999999999,
+            0.0015586235
+          ],
+          "cost_per_success": 0.004350900294117647,
+          "cost_per_success_ci95": [
+            0.0030143683333333344,
+            0.007244918181818181
+          ],
+          "violations": 29,
+          "violation_rate": 0.58,
+          "median_overshoot_usd": 9.323000000000035e-05,
+          "max_overshoot_usd": 0.00022449500000000055,
+          "successes_lost": 12,
+          "mcnemar_p_vs_baseline": 0.00048828125,
+          "stopped_tasks": 25,
+          "saving_vs_baseline": 0.14756110013433366
+        },
+        {
+          "quantile_of_success_cost": 0.5,
+          "budget_usd": 0.0015818249999999996,
+          "mode": "predictive",
+          "success": 0.26,
+          "successes": 13,
+          "wilson95": [
+            0.15871379651367384,
+            0.3955342198899992
+          ],
+          "cost_per_task": 0.0012808221,
+          "cost_per_task_ci95": [
+            0.0011955689999999998,
+            0.0013623607
+          ],
+          "cost_per_success": 0.004926238846153847,
+          "cost_per_success_ci95": [
+            0.003234904499999998,
+            0.009289175
+          ],
+          "violations": 0,
+          "violation_rate": 0.0,
+          "median_overshoot_usd": 0.0,
+          "max_overshoot_usd": 0.0,
+          "successes_lost": 16,
+          "mcnemar_p_vs_baseline": 3.0517578125e-05,
+          "stopped_tasks": 31,
+          "saving_vs_baseline": 0.2619359969869437
+        },
+        {
+          "quantile_of_success_cost": 0.75,
+          "budget_usd": 0.0019448249999999999,
+          "mode": "reactive",
+          "success": 0.52,
+          "successes": 26,
+          "wilson95": [
+            0.3851151225880844,
+            0.6520308760449429
+          ],
+          "cost_per_task": 0.0016350183,
+          "cost_per_task_ci95": [
+            0.001514163,
+            0.0017502252999999999
+          ],
+          "cost_per_success": 0.003144265961538461,
+          "cost_per_success_ci95": [
+            0.002386277424242424,
+            0.004439769210526317
+          ],
+          "violations": 18,
+          "violation_rate": 0.36,
+          "median_overshoot_usd": 9.531250000000013e-05,
+          "max_overshoot_usd": 0.00036672500000000004,
+          "successes_lost": 3,
+          "mcnemar_p_vs_baseline": 0.25,
+          "stopped_tasks": 13,
+          "saving_vs_baseline": 0.05783312803737373
+        },
+        {
+          "quantile_of_success_cost": 0.75,
+          "budget_usd": 0.0019448249999999999,
+          "mode": "predictive",
+          "success": 0.44,
+          "successes": 22,
+          "wilson95": [
+            0.3116198721023534,
+            0.5769421319985648
+          ],
+          "cost_per_task": 0.0015668531,
+          "cost_per_task_ci95": [
+            0.0014616843,
+            0.0016654174
+          ],
+          "cost_per_success": 0.0035610297727272726,
+          "cost_per_success_ci95": [
+            0.002606228214285714,
+            0.005369973333333333
+          ],
+          "violations": 0,
+          "violation_rate": 0.0,
+          "median_overshoot_usd": 0.0,
+          "max_overshoot_usd": 0.0,
+          "successes_lost": 7,
+          "mcnemar_p_vs_baseline": 0.015625,
+          "stopped_tasks": 18,
+          "saving_vs_baseline": 0.09711280659553223
+        },
+        {
+          "quantile_of_success_cost": 0.9,
+          "budget_usd": 0.00218335,
+          "mode": "reactive",
+          "success": 0.54,
+          "successes": 27,
+          "wilson95": [
+            0.40398634328388083,
+            0.6703056539821737
+          ],
+          "cost_per_task": 0.0016851302,
+          "cost_per_task_ci95": [
+            0.001550532,
+            0.0018159995
+          ],
+          "cost_per_success": 0.0031206114814814807,
+          "cost_per_success_ci95": [
+            0.0023810315151515144,
+            0.004331872749999998
+          ],
+          "violations": 11,
+          "violation_rate": 0.22,
+          "median_overshoot_usd": 8.06750000000001e-05,
+          "max_overshoot_usd": 0.0002380949999999998,
+          "successes_lost": 2,
+          "mcnemar_p_vs_baseline": 0.5,
+          "stopped_tasks": 9,
+          "saving_vs_baseline": 0.028956526429242513
+        },
+        {
+          "quantile_of_success_cost": 0.9,
+          "budget_usd": 0.00218335,
+          "mode": "predictive",
+          "success": 0.52,
+          "successes": 26,
+          "wilson95": [
+            0.3851151225880844,
+            0.6520308760449429
+          ],
+          "cost_per_task": 0.0016476508,
+          "cost_per_task_ci95": [
+            0.0015235962,
+            0.0017675743
+          ],
+          "cost_per_success": 0.0031685592307692306,
+          "cost_per_success_ci95": [
+            0.0024004590909090908,
+            0.004477158157894735
+          ],
+          "violations": 1,
+          "violation_rate": 0.02,
+          "median_overshoot_usd": 6.733e-05,
+          "max_overshoot_usd": 6.733e-05,
+          "successes_lost": 3,
+          "mcnemar_p_vs_baseline": 0.25,
+          "stopped_tasks": 12,
+          "saving_vs_baseline": 0.050553745898306635
+        },
+        {
+          "quantile_of_success_cost": 1.0,
+          "budget_usd": 0.00270709,
+          "mode": "reactive",
+          "success": 0.58,
+          "successes": 29,
+          "wilson95": [
+            0.4423319668777783,
+            0.7062520276543307
+          ],
+          "cost_per_task": 0.0017353808,
+          "cost_per_task_ci95": [
+            0.0015813983,
+            0.0018873662
+          ],
+          "cost_per_success": 0.002992035862068966,
+          "cost_per_success_ci95": [
+            0.0023198487500000003,
+            0.004085824545454545
+          ],
+          "violations": 1,
+          "violation_rate": 0.02,
+          "median_overshoot_usd": 9.178499999999961e-05,
+          "max_overshoot_usd": 9.178499999999961e-05,
+          "successes_lost": 0,
+          "mcnemar_p_vs_baseline": 1.0,
+          "stopped_tasks": 0,
+          "saving_vs_baseline": 0.0
+        },
+        {
+          "quantile_of_success_cost": 1.0,
+          "budget_usd": 0.00270709,
+          "mode": "predictive",
+          "success": 0.58,
+          "successes": 29,
+          "wilson95": [
+            0.4423319668777783,
+            0.7062520276543307
+          ],
+          "cost_per_task": 0.0017280792,
+          "cost_per_task_ci95": [
+            0.0015775649,
+            0.0018761252
+          ],
+          "cost_per_success": 0.002979446896551724,
+          "cost_per_success_ci95": [
+            0.0023120435714285713,
+            0.0040589052173913035
+          ],
+          "violations": 0,
+          "violation_rate": 0.0,
+          "median_overshoot_usd": 0.0,
+          "max_overshoot_usd": 0.0,
+          "successes_lost": 0,
+          "mcnemar_p_vs_baseline": 1.0,
+          "stopped_tasks": 2,
+          "saving_vs_baseline": 0.0042074915200167595
+        }
+      ]
+    }
+  },
+  "rq4_cache_monitor": {
+    "large+cache": {
+      "healthy_cost_per_task": 0.024158308,
+      "faults": {
+        "ignored": {
+          "no_monitor_cost_per_task": 0.12936804,
+          "no_monitor_x_healthy": 5.355012445408014,
+          "monitored": [
+            {
+              "k": 1,
+              "cost_per_task": 0.051103806,
+              "cost_per_task_ci95": [
+                0.047986572,
+                0.054157330000000004
+              ],
+              "x_healthy": 2.115371904356878,
+              "excess_recovered": 0.7438877802673235,
+              "tasks_alarmed": 50,
+              "median_alarm_step": 1.0,
+              "false_alarms_on_healthy_traces": 0,
+              "fleet_cost_per_task": 0.02469721796
+            },
+            {
+              "k": 2,
+              "cost_per_task": 0.061412324,
+              "cost_per_task_ci95": [
+                0.057653433999999996,
+                0.065015614
+              ],
+              "x_healthy": 2.5420788575093916,
+              "excess_recovered": 0.6459071295799899,
+              "tasks_alarmed": 49,
+              "median_alarm_step": 2,
+              "false_alarms_on_healthy_traces": 0,
+              "fleet_cost_per_task": 0.02490338832
+            },
+            {
+              "k": 3,
+              "cost_per_task": 0.071771728,
+              "cost_per_task_ci95": [
+                0.067256024,
+                0.07603098800000001
+              ],
+              "x_healthy": 2.970892166785853,
+              "excess_recovered": 0.5474428164116985,
+              "tasks_alarmed": 49,
+              "median_alarm_step": 3,
+              "false_alarms_on_healthy_traces": 0,
+              "fleet_cost_per_task": 0.0251105764
+            }
+          ]
+        },
+        "thrash": {
+          "no_monitor_cost_per_task": 0.1593718,
+          "no_monitor_x_healthy": 6.59697690748872,
+          "monitored": [
+            {
+              "k": 1,
+              "cost_per_task": 0.056411396,
+              "cost_per_task_ci95": [
+                0.053061532,
+                0.059674322
+              ],
+              "x_healthy": 2.3350723072162176,
+              "excess_recovered": 0.7614654608580037,
+              "tasks_alarmed": 50,
+              "median_alarm_step": 1.0,
+              "false_alarms_on_healthy_traces": 0,
+              "fleet_cost_per_task": 0.02480336976
+            },
+            {
+              "k": 2,
+              "cost_per_task": 0.069433864,
+              "cost_per_task_ci95": [
+                0.065257336,
+                0.0733965
+              ],
+              "x_healthy": 2.8741194954547313,
+              "excess_recovered": 0.6651550423681092,
+              "tasks_alarmed": 49,
+              "median_alarm_step": 2,
+              "false_alarms_on_healthy_traces": 0,
+              "fleet_cost_per_task": 0.02506381912
+            },
+            {
+              "k": 3,
+              "cost_per_task": 0.082585048,
+              "cost_per_task_ci95": [
+                0.077475548,
+                0.087339696
+              ],
+              "x_healthy": 3.4184947058378423,
+              "excess_recovered": 0.56789267745559,
+              "tasks_alarmed": 49,
+              "median_alarm_step": 3,
+              "false_alarms_on_healthy_traces": 0,
+              "fleet_cost_per_task": 0.0253268428
+            }
+          ]
+        }
+      }
+    },
+    "small+cache": {
+      "healthy_cost_per_task": 0.0017353808,
+      "faults": {
+        "ignored": {
+          "no_monitor_cost_per_task": 0.0069737900000000005,
+          "no_monitor_x_healthy": 4.0185934983261316,
+          "monitored": [
+            {
+              "k": 1,
+              "cost_per_task": 0.0030210264,
+              "cost_per_task_ci95": [
+                0.0028176598,
+                0.0032176962
+              ],
+              "x_healthy": 1.7408435082375004,
+              "excess_recovered": 0.7545732777042314,
+              "tasks_alarmed": 50,
+              "median_alarm_step": 1.0,
+              "false_alarms_on_healthy_traces": 0,
+              "fleet_cost_per_task": 0.001761093712
+            },
+            {
+              "k": 2,
+              "cost_per_task": 0.0035151522,
+              "cost_per_task_ci95": [
+                0.0032835185,
+                0.0037365418
+              ],
+              "x_healthy": 2.02557974595547,
+              "excess_recovered": 0.6602458242475597,
+              "tasks_alarmed": 49,
+              "median_alarm_step": 2,
+              "false_alarms_on_healthy_traces": 0,
+              "fleet_cost_per_task": 0.001770976228
+            },
+            {
+              "k": 3,
+              "cost_per_task": 0.0040155233000000005,
+              "cost_per_task_ci95": [
+                0.0037478722000000003,
+                0.004268378
+              ],
+              "x_healthy": 2.3139147903445747,
+              "excess_recovered": 0.5647261577045184,
+              "tasks_alarmed": 49,
+              "median_alarm_step": 3,
+              "false_alarms_on_healthy_traces": 0,
+              "fleet_cost_per_task": 0.0017809836499999999
+            }
+          ]
+        },
+        "thrash": {
+          "no_monitor_cost_per_task": 0.00855679,
+          "no_monitor_x_healthy": 4.930785220166087,
+          "monitored": [
+            {
+              "k": 1,
+              "cost_per_task": 0.0032879489,
+              "cost_per_task_ci95": [
+                0.0030740660000000003,
+                0.0034955984
+              ],
+              "x_healthy": 1.8946555706966448,
+              "excess_recovered": 0.7723977473745454,
+              "tasks_alarmed": 50,
+              "median_alarm_step": 1.0,
+              "false_alarms_on_healthy_traces": 0,
+              "fleet_cost_per_task": 0.0017664321619999999
+            },
+            {
+              "k": 2,
+              "cost_per_task": 0.0039193932,
+              "cost_per_task_ci95": [
+                0.0036681709000000004,
+                0.0041589018
+              ],
+              "x_healthy": 2.2585205506480195,
+              "excess_recovered": 0.6798297337154323,
+              "tasks_alarmed": 49,
+              "median_alarm_step": 2,
+              "false_alarms_on_healthy_traces": 0,
+              "fleet_cost_per_task": 0.001779061048
+            },
+            {
+              "k": 3,
+              "cost_per_task": 0.0045622418,
+              "cost_per_task_ci95": [
+                0.0042645049,
+                0.0048408795
+              ],
+              "x_healthy": 2.6289571718207325,
+              "excess_recovered": 0.5855898807536718,
+              "tasks_alarmed": 49,
+              "median_alarm_step": 3,
+              "false_alarms_on_healthy_traces": 0,
+              "fleet_cost_per_task": 0.00179191802
+            }
+          ]
+        }
+      }
+    }
+  }
+}

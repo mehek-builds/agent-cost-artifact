@@ -1,0 +1,876 @@
+{
+  "n_tasks": 50,
+  "q_handoff": [
+    0.36,
+    0.47
+  ],
+  "pairs": {
+    "cached": {
+      "static_small": {
+        "cost_per_task": 0.0017353808,
+        "cost_per_task_ci95": [
+          0.0015813983,
+          0.0018873662
+        ],
+        "success": 0.58,
+        "wilson95": [
+          0.4423319668777783,
+          0.7062520276543307
+        ],
+        "cost_per_success": 0.002992035862068966,
+        "cost_per_success_ci95": [
+          0.0023198487500000003,
+          0.004085824545454545
+        ]
+      },
+      "static_large": {
+        "cost_per_task": 0.024158308,
+        "cost_per_task_ci95": [
+          0.021872356,
+          0.026471338
+        ],
+        "success": 0.86,
+        "wilson95": [
+          0.738135428014719,
+          0.9304925473797714
+        ],
+        "cost_per_success": 0.02809105581395349,
+        "cost_per_success_ci95": [
+          0.02403920869565217,
+          0.03324906944444445
+        ]
+      },
+      "oracle": {
+        "cost_per_task": 0.0123024554,
+        "success": 0.86,
+        "cost_per_success": 0.014305180697674414
+      },
+      "policies": {
+        "first_error/restart": {
+          "cost_per_task": 0.0106167068,
+          "cost_per_task_ci95": [
+            0.0072873725,
+            0.0142450487
+          ],
+          "success_lo": 0.76,
+          "success_hi": 0.76,
+          "success_q": [
+            0.76,
+            0.76
+          ],
+          "cost_per_success_hi": 0.01396935105263158,
+          "cost_per_success_lo": 0.01396935105263158,
+          "fired": 19,
+          "handoff_usd_mean_when_fired": 0.0,
+          "wilson95": [
+            0.6258705062480763,
+            0.8570274759812779
+          ],
+          "cost_per_success_ci95": [
+            0.009400923452380952,
+            0.019585133571428572
+          ],
+          "mcnemar_vs_large": {
+            "large_only": 5,
+            "policy_only": 0,
+            "p": 0.0625
+          }
+        },
+        "first_error/full": {
+          "cost_per_task": 0.013017152799999999,
+          "cost_per_task_ci95": [
+            0.0088753731,
+            0.0174738241
+          ],
+          "success_lo": 0.58,
+          "success_hi": 0.76,
+          "success_q": [
+            0.6448,
+            0.6646
+          ],
+          "cost_per_success_hi": 0.017127832631578944,
+          "cost_per_success_lo": 0.02244336689655172,
+          "fired": 19,
+          "handoff_usd_mean_when_fired": 0.015358815789473684
+        },
+        "second_error/restart": {
+          "cost_per_task": 0.004701801,
+          "cost_per_task_ci95": [
+            0.0025100646,
+            0.0074457518999999995
+          ],
+          "success_lo": 0.62,
+          "success_hi": 0.62,
+          "success_q": [
+            0.62,
+            0.62
+          ],
+          "cost_per_success_hi": 0.007583549999999999,
+          "cost_per_success_lo": 0.007583549999999999,
+          "fired": 6,
+          "handoff_usd_mean_when_fired": 0.0,
+          "wilson95": [
+            0.4815019502239357,
+            0.7413740415742278
+          ],
+          "cost_per_success_ci95": [
+            0.004062040344827587,
+            0.011943476666666666
+          ],
+          "mcnemar_vs_large": {
+            "large_only": 12,
+            "policy_only": 0,
+            "p": 0.00048828125
+          }
+        },
+        "second_error/full": {
+          "cost_per_task": 0.005593197,
+          "cost_per_task_ci95": [
+            0.0027870457,
+            0.0091078392
+          ],
+          "success_lo": 0.58,
+          "success_hi": 0.62,
+          "success_q": [
+            0.5943999999999999,
+            0.5988
+          ],
+          "cost_per_success_hi": 0.00902128548387097,
+          "cost_per_success_lo": 0.009643443103448278,
+          "fired": 6,
+          "handoff_usd_mean_when_fired": 0.016067916666666668
+        },
+        "fixed_half/restart": {
+          "cost_per_task": 0.0251020033,
+          "cost_per_task_ci95": [
+            0.0227370806,
+            0.0274878354
+          ],
+          "success_lo": 0.86,
+          "success_hi": 0.86,
+          "success_q": [
+            0.86,
+            0.86
+          ],
+          "cost_per_success_hi": 0.029188375930232564,
+          "cost_per_success_lo": 0.029188375930232564,
+          "fired": 50,
+          "handoff_usd_mean_when_fired": 0.0,
+          "wilson95": [
+            0.738135428014719,
+            0.9304925473797714
+          ],
+          "cost_per_success_ci95": [
+            0.024968650000000002,
+            0.034552654054054055
+          ],
+          "mcnemar_vs_large": {
+            "large_only": 0,
+            "policy_only": 0,
+            "p": 1.0
+          }
+        },
+        "fixed_half/full": {
+          "cost_per_task": 0.0329606493,
+          "cost_per_task_ci95": [
+            0.0305007845,
+            0.0355706826
+          ],
+          "success_lo": 0.58,
+          "success_hi": 0.86,
+          "success_q": [
+            0.6808,
+            0.7116
+          ],
+          "cost_per_success_hi": 0.03832633639534884,
+          "cost_per_success_lo": 0.05682870568965517,
+          "fired": 50,
+          "handoff_usd_mean_when_fired": 0.0151775
+        }
+      },
+      "composite_restart_guard_p90": {
+        "budget_usd": 0.0321184,
+        "cost_per_task": 0.0094735388,
+        "cost_per_task_ci95": [
+          0.0066378123,
+          0.0124798004
+        ],
+        "success_lo": 0.7,
+        "success_hi": 0.7,
+        "success_q": [
+          0.7,
+          0.7
+        ],
+        "cost_per_success_hi": 0.013533626857142858,
+        "cost_per_success_lo": 0.013533626857142858,
+        "fired": 19,
+        "handoff_usd_mean_when_fired": 0.0,
+        "wilson95": [
+          0.562493877226366,
+          0.8089661091039063
+        ],
+        "cost_per_success_ci95": [
+          0.009028056666666668,
+          0.01954250586206897
+        ],
+        "mcnemar_vs_large": {
+          "large_only": 8,
+          "policy_only": 0,
+          "p": 0.0078125
+        }
+      },
+      "tally_priced_choice": {
+        "choices": {
+          "restart": 17,
+          "full": 2
+        },
+        "cost_per_task": 0.0104931208,
+        "cost_per_task_ci95": [
+          0.0072243388,
+          0.0140689861
+        ],
+        "success_lo": 0.74,
+        "success_hi": 0.76,
+        "success_q": [
+          0.7472,
+          0.7494
+        ],
+        "cost_per_success_hi": 0.013806737894736841,
+        "cost_per_success_lo": 0.014179892972972973,
+        "fired": 19,
+        "handoff_usd_mean_when_fired": 0.0014994736842105262
+      },
+      "trigger_quality": {
+        "first_error": {
+          "fired": 19,
+          "small_failures": 21,
+          "true_alarms": 12,
+          "recall": 0.5714285714285714,
+          "precision": 0.631578947368421,
+          "fired_on_small_successes": 7
+        },
+        "second_error": {
+          "fired": 6,
+          "small_failures": 21,
+          "true_alarms": 2,
+          "recall": 0.09523809523809523,
+          "precision": 0.3333333333333333,
+          "fired_on_small_successes": 4
+        }
+      },
+      "handoff_vs_position": {
+        "n_error_steps": 25,
+        "median_share_of_large_task": 0.6363180054969688,
+        "max_share_of_large_task": 1.784448249910014,
+        "median_history_tokens": 6329,
+        "points": [
+          {
+            "task": "multi_turn_base_11",
+            "position": 0.0,
+            "history_tokens": 6544,
+            "handoff_usd": 0.01636,
+            "share_of_large_task": 1.784448249910014
+          },
+          {
+            "task": "multi_turn_base_197",
+            "position": 0.42857142857142855,
+            "history_tokens": 7015,
+            "handoff_usd": 0.0175375,
+            "share_of_large_task": 0.758739292203859
+          },
+          {
+            "task": "multi_turn_base_23",
+            "position": 0.0,
+            "history_tokens": 5602,
+            "handoff_usd": 0.014005,
+            "share_of_large_task": 0.6256281968238369
+          },
+          {
+            "task": "multi_turn_base_26",
+            "position": 0.0,
+            "history_tokens": 4008,
+            "handoff_usd": 0.01002,
+            "share_of_large_task": 0.9782481352755104
+          },
+          {
+            "task": "multi_turn_base_26",
+            "position": 0.6666666666666666,
+            "history_tokens": 4998,
+            "handoff_usd": 0.012495,
+            "share_of_large_task": 1.2198812824618266
+          },
+          {
+            "task": "multi_turn_base_28",
+            "position": 0.6666666666666666,
+            "history_tokens": 7408,
+            "handoff_usd": 0.01852,
+            "share_of_large_task": 0.579316644092503
+          },
+          {
+            "task": "multi_turn_base_35",
+            "position": 0.09090909090909091,
+            "history_tokens": 6714,
+            "handoff_usd": 0.016785,
+            "share_of_large_task": 0.8345556246115601
+          },
+          {
+            "task": "multi_turn_base_39",
+            "position": 0.3333333333333333,
+            "history_tokens": 4569,
+            "handoff_usd": 0.0114225,
+            "share_of_large_task": 0.7286477038586912
+          },
+          {
+            "task": "multi_turn_base_55",
+            "position": 0.14285714285714285,
+            "history_tokens": 5980,
+            "handoff_usd": 0.01495,
+            "share_of_large_task": 0.36669029509370843
+          },
+          {
+            "task": "multi_turn_base_55",
+            "position": 0.2857142857142857,
+            "history_tokens": 6329,
+            "handoff_usd": 0.0158225,
+            "share_of_large_task": 0.38809078221539806
+          },
+          {
+            "task": "multi_turn_base_56",
+            "position": 0.6,
+            "history_tokens": 5223,
+            "handoff_usd": 0.0130575,
+            "share_of_large_task": 0.6363180054969688
+          },
+          {
+            "task": "multi_turn_base_59",
+            "position": 0.5,
+            "history_tokens": 7834,
+            "handoff_usd": 0.019585,
+            "share_of_large_task": 0.6097750821958754
+          },
+          {
+            "task": "multi_turn_base_59",
+            "position": 0.625,
+            "history_tokens": 8183,
+            "handoff_usd": 0.0204575,
+            "share_of_large_task": 0.6369401962737871
+          },
+          {
+            "task": "multi_turn_base_6",
+            "position": 0.8,
+            "history_tokens": 5977,
+            "handoff_usd": 0.0149425,
+            "share_of_large_task": 0.577626329787234
+          },
+          {
+            "task": "multi_turn_base_62",
+            "position": 0.5384615384615384,
+            "history_tokens": 6802,
+            "handoff_usd": 0.017005,
+            "share_of_large_task": 0.4392921725652285
+          },
+          {
+            "task": "multi_turn_base_67",
+            "position": 0.5714285714285714,
+            "history_tokens": 6320,
+            "handoff_usd": 0.0158,
+            "share_of_large_task": 0.721296507646656
+          },
+          {
+            "task": "multi_turn_base_67",
+            "position": 0.7142857142857143,
+            "history_tokens": 6673,
+            "handoff_usd": 0.0166825,
+            "share_of_large_task": 0.7615841132161605
+          },
+          {
+            "task": "multi_turn_base_70",
+            "position": 0.25,
+            "history_tokens": 4751,
+            "handoff_usd": 0.0118775,
+            "share_of_large_task": 0.6266917114711886
+          },
+          {
+            "task": "multi_turn_base_71",
+            "position": 0.6,
+            "history_tokens": 5419,
+            "handoff_usd": 0.0135475,
+            "share_of_large_task": 0.5642487650875893
+          },
+          {
+            "task": "multi_turn_base_86",
+            "position": 0.1111111111111111,
+            "history_tokens": 6985,
+            "handoff_usd": 0.0174625,
+            "share_of_large_task": 0.48372710173712385
+          },
+          {
+            "task": "multi_turn_base_87",
+            "position": 0.36363636363636365,
+            "history_tokens": 4948,
+            "handoff_usd": 0.01237,
+            "share_of_large_task": 0.6658592383259321
+          },
+          {
+            "task": "multi_turn_base_87",
+            "position": 0.45454545454545453,
+            "history_tokens": 5279,
+            "handoff_usd": 0.0131975,
+            "share_of_large_task": 0.7104023684564662
+          },
+          {
+            "task": "multi_turn_base_88",
+            "position": 0.6666666666666666,
+            "history_tokens": 7849,
+            "handoff_usd": 0.0196225,
+            "share_of_large_task": 0.9063635985718047
+          },
+          {
+            "task": "multi_turn_base_97",
+            "position": 0.42105263157894735,
+            "history_tokens": 6779,
+            "handoff_usd": 0.0169475,
+            "share_of_large_task": 0.5616106519621163
+          },
+          {
+            "task": "multi_turn_base_97",
+            "position": 0.5263157894736842,
+            "history_tokens": 7101,
+            "handoff_usd": 0.0177525,
+            "share_of_large_task": 0.5882869508161953
+          }
+        ]
+      }
+    },
+    "uncached": {
+      "static_small": {
+        "cost_per_task": 0.00679686,
+        "cost_per_task_ci95": [
+          0.006102678,
+          0.00750417
+        ],
+        "success": 0.58,
+        "wilson95": [
+          0.4423319668777783,
+          0.7062520276543307
+        ],
+        "cost_per_success": 0.011718724137931038,
+        "cost_per_success_ci95": [
+          0.008951721621621622,
+          0.01625101818181818
+        ]
+      },
+      "static_large": {
+        "cost_per_task": 0.12839968,
+        "cost_per_task_ci95": [
+          0.11476624,
+          0.14227552
+        ],
+        "success": 0.84,
+        "wilson95": [
+          0.7148551903823401,
+          0.9166267863791231
+        ],
+        "cost_per_success": 0.1528567619047619,
+        "cost_per_success_ci95": [
+          0.12870676595744684,
+          0.18344752631578945
+        ]
+      },
+      "oracle": {
+        "cost_per_task": 0.066650002,
+        "success": 0.86,
+        "cost_per_success": 0.07750000232558141
+      },
+      "policies": {
+        "first_error/restart": {
+          "cost_per_task": 0.053908637999999995,
+          "cost_per_task_ci95": [
+            0.034045597999999996,
+            0.07518114599999999
+          ],
+          "success_lo": 0.74,
+          "success_hi": 0.74,
+          "success_q": [
+            0.74,
+            0.74
+          ],
+          "cost_per_success_hi": 0.07284951081081081,
+          "cost_per_success_lo": 0.07284951081081081,
+          "fired": 17,
+          "handoff_usd_mean_when_fired": 0.0,
+          "wilson95": [
+            0.6044657801100008,
+            0.8412862034863262
+          ],
+          "cost_per_success_ci95": [
+            0.046873813888888886,
+            0.10268497297297294
+          ],
+          "mcnemar_vs_large": {
+            "large_only": 6,
+            "policy_only": 1,
+            "p": 0.125
+          }
+        },
+        "first_error/full": {
+          "cost_per_task": 0.039149478,
+          "cost_per_task_ci95": [
+            0.025119296,
+            0.054309826
+          ],
+          "success_lo": 0.58,
+          "success_hi": 0.74,
+          "success_q": [
+            0.6376,
+            0.6552
+          ],
+          "cost_per_success_hi": 0.052904699999999985,
+          "cost_per_success_lo": 0.06749909999999998,
+          "fired": 17,
+          "handoff_usd_mean_when_fired": 0.0
+        },
+        "second_error/restart": {
+          "cost_per_task": 0.026646716,
+          "cost_per_task_ci95": [
+            0.011015678,
+            0.046082068
+          ],
+          "success_lo": 0.62,
+          "success_hi": 0.62,
+          "success_q": [
+            0.62,
+            0.62
+          ],
+          "cost_per_success_hi": 0.042978574193548384,
+          "cost_per_success_lo": 0.042978574193548384,
+          "fired": 5,
+          "handoff_usd_mean_when_fired": 0.0,
+          "wilson95": [
+            0.4815019502239357,
+            0.7413740415742278
+          ],
+          "cost_per_success_ci95": [
+            0.018347460000000003,
+            0.07386681034482757
+          ],
+          "mcnemar_vs_large": {
+            "large_only": 12,
+            "policy_only": 1,
+            "p": 0.00341796875
+          }
+        },
+        "second_error/full": {
+          "cost_per_task": 0.020577476,
+          "cost_per_task_ci95": [
+            0.009416474000000001,
+            0.034972482
+          ],
+          "success_lo": 0.58,
+          "success_hi": 0.62,
+          "success_q": [
+            0.5943999999999999,
+            0.5988
+          ],
+          "cost_per_success_hi": 0.03318947741935484,
+          "cost_per_success_lo": 0.035478406896551726,
+          "fired": 5,
+          "handoff_usd_mean_when_fired": 0.0
+        },
+        "fixed_half/restart": {
+          "cost_per_task": 0.131404994,
+          "cost_per_task_ci95": [
+            0.117515908,
+            0.145563076
+          ],
+          "success_lo": 0.84,
+          "success_hi": 0.84,
+          "success_q": [
+            0.84,
+            0.84
+          ],
+          "cost_per_success_hi": 0.15643451666666658,
+          "cost_per_success_lo": 0.15643451666666658,
+          "fired": 50,
+          "handoff_usd_mean_when_fired": 0.0,
+          "wilson95": [
+            0.7148551903823401,
+            0.9166267863791231
+          ],
+          "cost_per_success_ci95": [
+            0.13180147021276592,
+            0.18769633684210515
+          ],
+          "mcnemar_vs_large": {
+            "large_only": 0,
+            "policy_only": 0,
+            "p": 1.0
+          }
+        },
+        "fixed_half/full": {
+          "cost_per_task": 0.102792114,
+          "cost_per_task_ci95": [
+            0.09230293,
+            0.11376684199999999
+          ],
+          "success_lo": 0.58,
+          "success_hi": 0.86,
+          "success_q": [
+            0.6808,
+            0.7116
+          ],
+          "cost_per_success_hi": 0.11952571395348836,
+          "cost_per_success_lo": 0.17722778275862067,
+          "fired": 50,
+          "handoff_usd_mean_when_fired": 0.0
+        }
+      },
+      "composite_restart_guard_p90": {
+        "budget_usd": 0.17072400000000004,
+        "cost_per_task": 0.048490478,
+        "cost_per_task_ci95": [
+          0.031710564000000004,
+          0.06612538999999999
+        ],
+        "success_lo": 0.66,
+        "success_hi": 0.66,
+        "success_q": [
+          0.66,
+          0.66
+        ],
+        "cost_per_success_hi": 0.07347042121212122,
+        "cost_per_success_lo": 0.07347042121212122,
+        "fired": 17,
+        "handoff_usd_mean_when_fired": 0.0,
+        "wilson95": [
+          0.5215356854148285,
+          0.7756323036493895
+        ],
+        "cost_per_success_ci95": [
+          0.04593301388888888,
+          0.11048470714285714
+        ],
+        "mcnemar_vs_large": {
+          "large_only": 10,
+          "policy_only": 1,
+          "p": 0.01171875
+        }
+      },
+      "tally_priced_choice": {
+        "choices": {
+          "restart": 6,
+          "full": 11
+        },
+        "cost_per_task": 0.039149478,
+        "cost_per_task_ci95": [
+          0.025119296,
+          0.054309826
+        ],
+        "success_lo": 0.64,
+        "success_hi": 0.74,
+        "success_q": [
+          0.6759999999999999,
+          0.687
+        ],
+        "cost_per_success_hi": 0.052904699999999985,
+        "cost_per_success_lo": 0.06117105937499998,
+        "fired": 17,
+        "handoff_usd_mean_when_fired": 0.0
+      },
+      "trigger_quality": {
+        "first_error": {
+          "fired": 17,
+          "small_failures": 21,
+          "true_alarms": 10,
+          "recall": 0.47619047619047616,
+          "precision": 0.5882352941176471,
+          "fired_on_small_successes": 7
+        },
+        "second_error": {
+          "fired": 5,
+          "small_failures": 21,
+          "true_alarms": 2,
+          "recall": 0.09523809523809523,
+          "precision": 0.4,
+          "fired_on_small_successes": 3
+        }
+      },
+      "handoff_vs_position": {
+        "n_error_steps": 23,
+        "median_share_of_large_task": 0.0,
+        "max_share_of_large_task": 0.0,
+        "median_history_tokens": 6314,
+        "points": [
+          {
+            "task": "multi_turn_base_1",
+            "position": 0.21428571428571427,
+            "history_tokens": 4255,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_11",
+            "position": 0.0,
+            "history_tokens": 6552,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_197",
+            "position": 0.42857142857142855,
+            "history_tokens": 6998,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_23",
+            "position": 0.0,
+            "history_tokens": 5602,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_26",
+            "position": 0.0,
+            "history_tokens": 4008,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_28",
+            "position": 0.6666666666666666,
+            "history_tokens": 7430,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_55",
+            "position": 0.13333333333333333,
+            "history_tokens": 6017,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_55",
+            "position": 0.26666666666666666,
+            "history_tokens": 6314,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_56",
+            "position": 0.6363636363636364,
+            "history_tokens": 5310,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_59",
+            "position": 0.5714285714285714,
+            "history_tokens": 7949,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_59",
+            "position": 0.7142857142857143,
+            "history_tokens": 8273,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_6",
+            "position": 0.8,
+            "history_tokens": 5702,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_67",
+            "position": 0.38461538461538464,
+            "history_tokens": 6035,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_67",
+            "position": 0.6923076923076923,
+            "history_tokens": 6486,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_67",
+            "position": 0.8461538461538461,
+            "history_tokens": 6793,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_70",
+            "position": 0.18181818181818182,
+            "history_tokens": 4785,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_70",
+            "position": 0.2727272727272727,
+            "history_tokens": 5068,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_71",
+            "position": 0.6,
+            "history_tokens": 5426,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_86",
+            "position": 0.1,
+            "history_tokens": 6903,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_87",
+            "position": 0.45454545454545453,
+            "history_tokens": 5120,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_88",
+            "position": 0.6,
+            "history_tokens": 7842,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_97",
+            "position": 0.4117647058823529,
+            "history_tokens": 6620,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          },
+          {
+            "task": "multi_turn_base_97",
+            "position": 0.5294117647058824,
+            "history_tokens": 6910,
+            "handoff_usd": 0.0,
+            "share_of_large_task": 0.0
+          }
+        ]
+      }
+    }
+  },
+  "rq5_overhead": {
+    "loop_seconds_per_step": 3.7294937009596476e-07,
+    "median_model_call_latency_s": 1.092233419418335,
+    "overhead_share_of_call": 3.41455739648195e-07,
+    "llm_tokens_spent_by_loop": 0,
+    "steps_timed": 103200
+  }
+}

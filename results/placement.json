@@ -1,0 +1,272 @@
+{
+ "cached_alpha1_beta1": {
+  "small": {
+   "successes": 29,
+   "escalations": 0,
+   "usd_per_task": 0.0017353807999999995,
+   "usd_per_success": 0.002992035862068965,
+   "latency_per_success_s": 21.84139609336853,
+   "footprint_small_per_task": 64603.58,
+   "footprint_large_per_task": 0.0,
+   "large_share": 0.0,
+   "break_even_rho": 1.5718261014572974
+  },
+  "large": {
+   "successes": 43,
+   "escalations": 0,
+   "usd_per_task": 0.024158308000000003,
+   "usd_per_success": 0.02809105581395349,
+   "latency_per_success_s": 17.61645672487658,
+   "footprint_small_per_task": 0.0,
+   "footprint_large_per_task": 60942.82,
+   "large_share": 1.0
+  },
+  "first_error_restart": {
+   "successes": 38,
+   "escalations": 19,
+   "usd_per_task": 0.010616706800000002,
+   "usd_per_success": 0.013969351052631581,
+   "latency_per_success_s": 21.26914285986047,
+   "footprint_small_per_task": 47737.44,
+   "footprint_large_per_task": 26615.44,
+   "large_share": 0.3579611173097801,
+   "break_even_rho": 1.7524110795896242
+  },
+  "oracle": {
+   "successes": 43,
+   "escalations": 21,
+   "usd_per_task": 0.012302455400000002,
+   "usd_per_success": 0.014305180697674422,
+   "latency_per_success_s": 16.576022408729376,
+   "footprint_small_per_task": 34075.9,
+   "footprint_large_per_task": 29603.54,
+   "large_share": 0.4648837992293902,
+   "break_even_rho": 1.0873223635003741
+  }
+ },
+ "cached_alpha0.1_beta1": {
+  "small": {
+   "successes": 29,
+   "escalations": 0,
+   "usd_per_task": 0.0017353807999999995,
+   "usd_per_success": 0.002992035862068965,
+   "latency_per_success_s": 21.84139609336853,
+   "footprint_small_per_task": 11224.148000000001,
+   "footprint_large_per_task": 0.0,
+   "large_share": 0.0,
+   "break_even_rho": 1.6247945375639103
+  },
+  "large": {
+   "successes": 43,
+   "escalations": 0,
+   "usd_per_task": 0.024158308000000003,
+   "usd_per_success": 0.02809105581395349,
+   "latency_per_success_s": 17.61645672487658,
+   "footprint_small_per_task": 0.0,
+   "footprint_large_per_task": 10242.957999999999,
+   "large_share": 1.0
+  },
+  "first_error_restart": {
+   "successes": 38,
+   "escalations": 19,
+   "usd_per_task": 0.010616706800000002,
+   "usd_per_success": 0.013969351052631581,
+   "latency_per_success_s": 21.26914285986047,
+   "footprint_small_per_task": 8885.898,
+   "footprint_large_per_task": 4106.296,
+   "large_share": 0.3160587041726748,
+   "break_even_rho": 1.7967205995310604
+  },
+  "oracle": {
+   "successes": 43,
+   "escalations": 21,
+   "usd_per_task": 0.012302455400000002,
+   "usd_per_success": 0.014305180697674422,
+   "latency_per_success_s": 16.576022408729376,
+   "footprint_small_per_task": 5980.203999999999,
+   "footprint_large_per_task": 4829.978,
+   "large_share": 0.4467989530611048,
+   "break_even_rho": 1.1047895983358522
+  }
+ },
+ "cached_alpha0.1_beta5": {
+  "small": {
+   "successes": 29,
+   "escalations": 0,
+   "usd_per_task": 0.0017353807999999995,
+   "usd_per_success": 0.002992035862068965,
+   "latency_per_success_s": 21.84139609336853,
+   "footprint_small_per_task": 16358.468,
+   "footprint_large_per_task": 0.0,
+   "large_share": 0.0,
+   "break_even_rho": 1.7345098252090592
+  },
+  "large": {
+   "successes": 43,
+   "escalations": 0,
+   "usd_per_task": 0.024158308000000003,
+   "usd_per_success": 0.02809105581395349,
+   "latency_per_success_s": 17.61645672487658,
+   "footprint_small_per_task": 0.0,
+   "footprint_large_per_task": 13984.157999999998,
+   "large_share": 1.0
+  },
+  "first_error_restart": {
+   "successes": 38,
+   "escalations": 19,
+   "usd_per_task": 0.010616706800000002,
+   "usd_per_success": 0.013969351052631581,
+   "latency_per_success_s": 21.26914285986047,
+   "footprint_small_per_task": 12874.297999999999,
+   "footprint_large_per_task": 5563.416,
+   "large_share": 0.30174109436777247,
+   "break_even_rho": 1.8947622940249855
+  },
+  "oracle": {
+   "successes": 43,
+   "escalations": 21,
+   "usd_per_task": 0.012302455400000002,
+   "usd_per_success": 0.014305180697674422,
+   "latency_per_success_s": 16.576022408729376,
+   "footprint_small_per_task": 8553.723999999998,
+   "footprint_large_per_task": 6671.338000000001,
+   "large_share": 0.4381813354848736,
+   "break_even_rho": 1.169688847804267
+  }
+ },
+ "uncached_alpha1_beta1": {
+  "small": {
+   "successes": 29,
+   "escalations": 0,
+   "usd_per_task": 0.006796859999999999,
+   "usd_per_success": 0.011718724137931033,
+   "latency_per_success_s": 22.767716054258674,
+   "footprint_small_per_task": 62883.16,
+   "footprint_large_per_task": 0.0,
+   "large_share": 0.0,
+   "break_even_rho": 1.5066319140739055
+  },
+  "large": {
+   "successes": 42,
+   "escalations": 0,
+   "usd_per_task": 0.12839968,
+   "usd_per_success": 0.15285676190476188,
+   "latency_per_success_s": 17.527279445103236,
+   "footprint_small_per_task": 0.0,
+   "footprint_large_per_task": 60447.52,
+   "large_share": 1.0
+  },
+  "first_error_restart": {
+   "successes": 37,
+   "escalations": 17,
+   "usd_per_task": 0.05390863799999998,
+   "usd_per_success": 0.07284951081081079,
+   "latency_per_success_s": 22.096668456051802,
+   "footprint_small_per_task": 47733.1,
+   "footprint_large_per_task": 23054.92,
+   "large_share": 0.3256895728966568,
+   "break_even_rho": 1.5807511695628846
+  },
+  "oracle": {
+   "successes": 43,
+   "escalations": 21,
+   "usd_per_task": 0.06665000199999997,
+   "usd_per_success": 0.07750000232558137,
+   "latency_per_success_s": 16.028692312018816,
+   "footprint_small_per_task": 32060.5,
+   "footprint_large_per_task": 29655.42,
+   "large_share": 0.48051491414208847,
+   "break_even_rho": 0.9946999802883282
+  }
+ },
+ "uncached_alpha0.1_beta1": {
+  "small": {
+   "successes": 29,
+   "escalations": 0,
+   "usd_per_task": 0.006796859999999999,
+   "usd_per_success": 0.011718724137931033,
+   "latency_per_success_s": 22.767716054258674,
+   "footprint_small_per_task": 62883.16,
+   "footprint_large_per_task": 0.0,
+   "large_share": 0.0,
+   "break_even_rho": 1.5066319140739055
+  },
+  "large": {
+   "successes": 42,
+   "escalations": 0,
+   "usd_per_task": 0.12839968,
+   "usd_per_success": 0.15285676190476188,
+   "latency_per_success_s": 17.527279445103236,
+   "footprint_small_per_task": 0.0,
+   "footprint_large_per_task": 60447.52,
+   "large_share": 1.0
+  },
+  "first_error_restart": {
+   "successes": 37,
+   "escalations": 17,
+   "usd_per_task": 0.05390863799999998,
+   "usd_per_success": 0.07284951081081079,
+   "latency_per_success_s": 22.096668456051802,
+   "footprint_small_per_task": 47733.1,
+   "footprint_large_per_task": 23054.92,
+   "large_share": 0.3256895728966568,
+   "break_even_rho": 1.5807511695628846
+  },
+  "oracle": {
+   "successes": 43,
+   "escalations": 21,
+   "usd_per_task": 0.06665000199999997,
+   "usd_per_success": 0.07750000232558137,
+   "latency_per_success_s": 16.028692312018816,
+   "footprint_small_per_task": 32060.5,
+   "footprint_large_per_task": 29655.42,
+   "large_share": 0.48051491414208847,
+   "break_even_rho": 0.9946999802883282
+  }
+ },
+ "uncached_alpha0.1_beta5": {
+  "small": {
+   "successes": 29,
+   "escalations": 0,
+   "usd_per_task": 0.006796859999999999,
+   "usd_per_success": 0.011718724137931033,
+   "latency_per_success_s": 22.767716054258674,
+   "footprint_small_per_task": 67968.6,
+   "footprint_large_per_task": 0.0,
+   "large_share": 0.0,
+   "break_even_rho": 1.5332948299967835
+  },
+  "large": {
+   "successes": 42,
+   "escalations": 0,
+   "usd_per_task": 0.12839968,
+   "usd_per_success": 0.15285676190476188,
+   "latency_per_success_s": 17.527279445103236,
+   "footprint_small_per_task": 0.0,
+   "footprint_large_per_task": 64199.84,
+   "large_share": 1.0
+  },
+  "first_error_restart": {
+   "successes": 37,
+   "escalations": 17,
+   "usd_per_task": 0.05390863799999998,
+   "usd_per_success": 0.07284951081081079,
+   "latency_per_success_s": 22.096668456051802,
+   "footprint_small_per_task": 51815.18,
+   "footprint_large_per_task": 24363.56,
+   "large_share": 0.3198209894256587,
+   "break_even_rho": 1.6094948826312274
+  },
+  "oracle": {
+   "successes": 43,
+   "escalations": 21,
+   "usd_per_task": 0.06665000199999997,
+   "usd_per_success": 0.07750000232558137,
+   "latency_per_success_s": 16.028692312018816,
+   "footprint_small_per_task": 34457.22,
+   "footprint_large_per_task": 31602.14,
+   "large_share": 0.47839004192592843,
+   "break_even_rho": 1.009697878028937
+  }
+ }
+}
