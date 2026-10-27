@@ -1,0 +1,137 @@
+{
+ "small": {
+  "successes": 29,
+  "wilson95": [
+   0.4423319668777783,
+   0.7062520276543307
+  ],
+  "cost_per_task": 0.006796859999999999,
+  "cost_per_success": 0.011718724137931033,
+  "dollars": {
+   "input": 0.308059,
+   "cache_write": 0.0,
+   "cache_read": 0.0,
+   "output": 0.03178400000000001,
+   "prompt_at_fresh_price": 0.308059
+  },
+  "dollar_share": {
+   "input": 0.9064744602654756,
+   "cache_write": 0.0,
+   "cache_read": 0.0,
+   "output": 0.09352553973452449
+  }
+ },
+ "small, low effort": {
+  "successes": 31,
+  "wilson95": [
+   0.4815019502239357,
+   0.7413740415742278
+  ],
+  "cost_per_task": 0.006657280000000001,
+  "cost_per_success": 0.010737548387096776,
+  "dollars": {
+   "input": 0.3040445000000004,
+   "cache_write": 0.0,
+   "cache_read": 0.0,
+   "output": 0.02881950000000002,
+   "prompt_at_fresh_price": 0.3040445000000004
+  },
+  "dollar_share": {
+   "input": 0.9134195947894637,
+   "cache_write": 0.0,
+   "cache_read": 0.0,
+   "output": 0.08658040521053639
+  }
+ },
+ "small+cache (5-call cap)": {
+  "successes": 29,
+  "wilson95": [
+   0.4423319668777783,
+   0.7062520276543307
+  ],
+  "cost_per_task": 0.0017353799999999997,
+  "cost_per_success": 0.00299203448275862,
+  "dollars": {
+   "input": 0.00014080000000000077,
+   "cache_write": 0.024883499999999968,
+   "cache_read": 0.02965523999999999,
+   "output": 0.03208950000000003,
+   "prompt_at_fresh_price": 0.3165999999999997
+  },
+  "dollar_share": {
+   "input": 0.0016226986030962287,
+   "cache_write": 0.28677855603795976,
+   "cache_read": 0.3417721343926358,
+   "output": 0.36982661096630814
+  },
+  "compression_break_even_r": 0.8272914087176247,
+  "cache_preserving_max_saving_at_50pct": 0.3142753452152978
+ },
+ "large": {
+  "successes": 42,
+  "wilson95": [
+   0.7148551903823401,
+   0.9166267863791231
+  ],
+  "cost_per_task": 0.12839968,
+  "cost_per_success": 0.15285676190476188,
+  "dollars": {
+   "input": 5.950944,
+   "cache_write": 0.0,
+   "cache_read": 0.0,
+   "output": 0.4690400000000001,
+   "prompt_at_fresh_price": 5.950944
+  },
+  "dollar_share": {
+   "input": 0.9269406278894153,
+   "cache_write": 0.0,
+   "cache_read": 0.0,
+   "output": 0.07305937211058472
+  }
+ },
+ "large, low effort": {
+  "successes": 41,
+  "wilson95": [
+   0.6920368054529739,
+   0.902299172675462
+  ],
+  "cost_per_task": 0.12846375999999998,
+  "cost_per_success": 0.15666312195121948
+ },
+ "large+cache": {
+  "successes": 43,
+  "wilson95": [
+   0.738135428014719,
+   0.9304925473797714
+  ],
+  "cost_per_task": 0.024158308000000003,
+  "cost_per_success": 0.02809105581395349,
+  "dollars": {
+   "input": 0.0027720000000000275,
+   "cache_write": 0.4558275000000006,
+   "cache_read": 0.28166589999999986,
+   "output": 0.46765000000000034,
+   "prompt_at_fresh_price": 6.000751999999994
+  },
+  "dollar_share": {
+   "input": 0.0022948627031330383,
+   "cache_write": 0.37736707388613494,
+   "cache_read": 0.2331834663255387,
+   "output": 0.3871545970851932
+  },
+  "compression_break_even_r": 0.8766378947171952,
+  "cache_preserving_max_saving_at_50pct": 0.3052752701058368
+ },
+ "effort small": {
+  "medium_only": 2,
+  "low_only": 4,
+  "mcnemar_p": 0.6875,
+  "cost_change": -0.020535953366701443
+ },
+ "effort large": {
+  "medium_only": 2,
+  "low_only": 1,
+  "mcnemar_p": 1.0,
+  "cost_change": 0.0004990666643405195
+ }
+}

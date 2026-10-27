@@ -10,6 +10,9 @@ python3 analysis/placement.py           # small-first placement, footprint by ti
 python3 replay.py                       # budget guard and cache-health monitor -> results/replay_numbers.json (about 3 min)
 python3 escalation.py                   # escalation triggers, handoff pricing, overhead -> results/escalation_numbers.json
 python3 figures.py                      # escalation figures -> results/fig-cost-success.pdf, results/fig-task39.pdf
+python3 analysis/rigor.py               # routing baselines, held-out trigger selection, run pairings, tool cap, energy with prefill -> results/rigor.json
+python3 analysis/levers.py              # efficiency levers per success: model size, reasoning effort, caching, compression break-even -> results/levers.json
+python3 analysis/levers_figure.py       # compression break-even figure -> results/fig-compression.pdf
 ```
 
 Results from a reference run are included in `results/`. Rerunning reproduces them exactly, except the measured per-step overhead in `escalation.py`, which depends on the machine.
@@ -35,7 +38,7 @@ python3 edge/placement_edge.py edge/runs/NEW   # placement policies with the mea
 - `logs/`: 50 tasks from the Berkeley Function Calling Leaderboard (BFCL) v4, `multi_turn_base` category, at a pinned repository commit, sampled with seed 42. Each task was run once by a small model (Claude Haiku 5.5) and once by a large model (Claude Sonnet 5.5), each with and without prompt caching: 200 runs, 2,029 model requests.
   - `steps_<config>.jsonl`: one record per model request: task, turn, step, model, the four provider-reported token counters (fresh input, cache write, cache read, output), cost, tool calls, tool errors, latency.
   - `tasks_<config>.jsonl`: one record per task: BFCL checker verdict, failure point, turns, steps, cost.
-  - Configs: `small`, `small_cache_budget` (cached small model; this run also capped tool calls at five per turn), `frontier`, `frontier_cache`.
+  - Configs: `small`, `small_cache_budget` (cached small model; this run also capped tool calls at five per turn), `frontier`, `frontier_cache`. `small_low` and `frontier_low` repeat the uncached runs at low reasoning effort; the `frontier_low` step log was cut short (74 of about 500 steps), so only its task-level records are complete.
 - `prices.json`: list prices per million tokens, verified on the run date (2026-10-14), including the small model's prompt-length price tiers.
 
 The logs contain task identifiers and usage counters only, not BFCL task text or model outputs. Costs are token counts times list prices. Checked against the provider's billing console for the study's dedicated API key, all logged runs (including runs not in this package) account for 95.8% of the billed amount, with cache-write and cache-read dollars within 0.4%; the remainder is one run whose step log was cut short and one stopped by a credit limit. Tools in BFCL are simulated, so tool charges are zero.

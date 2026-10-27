@@ -26,11 +26,11 @@ CPS_CI = {"small": (0.0090, 0.0163), "small+cache": (0.0023, 0.0041), "large": (
 
 def style(ax):
     ax.spines[["top", "right"]].set_visible(False)
-    ax.tick_params(labelsize=6)
+    ax.tick_params(labelsize=7)
 
 
 def tokens_cps():
-    fig, ax = plt.subplots(1, 2, figsize=(3.5, 2.05), gridspec_kw={"width_ratios": [1.15, 1]})
+    fig, ax = plt.subplots(1, 2, figsize=(3.5, 2.45), gridspec_kw={"width_ratios": [1.15, 1]})
     y = range(len(ORDER))
     left = [0.0] * len(ORDER)
     for k in KINDS:
@@ -41,8 +41,8 @@ def tokens_cps():
     ax[0].set_yticks(list(y))
     ax[0].set_yticklabels([n for n, _ in ORDER])
     ax[0].invert_yaxis()
-    ax[0].set_xlabel("k tokens per task", fontsize=6)
-    ax[0].legend(fontsize=5.5, frameon=False, loc="upper left", bbox_to_anchor=(-0.45, 1.32), ncol=4, handlelength=0.8, columnspacing=0.6)
+    ax[0].set_xlabel("k tokens per task", fontsize=7)
+    ax[0].legend(fontsize=6.5, frameon=False, loc="upper left", bbox_to_anchor=(-0.5, 1.36), ncol=2, handlelength=0.8, columnspacing=0.8)
     cps = [A[c]["usd_per_success"] for _, c in ORDER]
     lo = [CPS_CI[c][0] for _, c in ORDER]
     hi = [CPS_CI[c][1] for _, c in ORDER]
@@ -52,9 +52,9 @@ def tokens_cps():
     ax[1].set_yticks(list(y))
     ax[1].set_yticklabels([])
     ax[1].invert_yaxis()
-    ax[1].set_xlabel("USD per success (log)", fontsize=6)
+    ax[1].set_xlabel("USD per success (log)", fontsize=7)
     for i, c in enumerate(cps):
-        ax[1].text(c * 1.4, i, f"${c:.4f}", va="center", fontsize=5.5)
+        ax[1].text(c * 1.4, i, f"${c:.4f}", va="center", fontsize=6.5)
     for a in ax:
         style(a)
     plt.tight_layout()

@@ -1,0 +1,169 @@
+{
+ "baselines": {
+  "small": {
+   "success": 0.58,
+   "successes": 29,
+   "wilson95": [
+    0.4423319668777783,
+    0.7062520276543307
+   ],
+   "cost_per_task": 0.0017353807999999995,
+   "cost_per_success": 0.002992035862068965,
+   "cost_per_success_ci95": [
+    0.002307461428571428,
+    0.004079213913043476
+   ]
+  },
+  "large": {
+   "success": 0.86,
+   "successes": 43,
+   "wilson95": [
+    0.738135428014719,
+    0.9304925473797714
+   ],
+   "cost_per_task": 0.024158308000000003,
+   "cost_per_success": 0.02809105581395349,
+   "cost_per_success_ci95": [
+    0.024047351111111108,
+    0.033320464864864854
+   ]
+  },
+  "random_router": {
+   "rate": 0.38,
+   "success": 0.6864,
+   "cost_per_task": 0.010256093136000004,
+   "cost_per_success": 0.014941860629370635
+  },
+  "learned_router_loo": {
+   "success": 0.72,
+   "successes": 36,
+   "wilson95": [
+    0.5833461285401034,
+    0.8252598564231963
+   ],
+   "cost_per_task": 0.014803353500000003,
+   "cost_per_success": 0.020560213194444447,
+   "cost_per_success_ci95": [
+    0.015123786527777775,
+    0.027206478030303027
+   ],
+   "routed_large": "27"
+  },
+  "cascade_error_check": {
+   "success": 0.76,
+   "successes": 38,
+   "wilson95": [
+    0.6258705062480763,
+    0.8570274759812779
+   ],
+   "cost_per_task": 0.0109759168,
+   "cost_per_success": 0.014441995789473685,
+   "cost_per_success_ci95": [
+    0.009632477093023258,
+    0.02033730924242424
+   ],
+   "reruns": 19
+  },
+  "cascade_perfect_check": {
+   "success": 0.86,
+   "successes": 43,
+   "wilson95": [
+    0.738135428014719,
+    0.9304925473797714
+   ],
+   "cost_per_task": 0.013127468800000009,
+   "cost_per_success": 0.015264498604651172,
+   "cost_per_success_ci95": [
+    0.009905481931818184,
+    0.021729900540540536
+   ],
+   "reruns": 21
+  },
+  "first_error": {
+   "success": 0.76,
+   "successes": 38,
+   "wilson95": [
+    0.6258705062480763,
+    0.8570274759812779
+   ],
+   "cost_per_task": 0.010616706800000002,
+   "cost_per_success": 0.013969351052631581,
+   "cost_per_success_ci95": [
+    0.009318908837209306,
+    0.019682691562500004
+   ],
+   "escalated": 19
+  }
+ },
+ "heldout_trigger": {
+  "success_p2.5_50_97.5": [
+   0.7,
+   0.74,
+   0.76
+  ],
+  "cost_per_success_p2.5_50_97.5": [
+   0.011221701138690476,
+   0.013144576486486486,
+   0.014836877441678525
+  ],
+  "mean_success": 0.7376,
+  "mean_cost_per_success": 0.01319900422139047,
+  "trigger_picks": {
+   "('err', 1)": 337,
+   "('err_or_steps', 12)": 314,
+   "('err_by', 8)": 212,
+   "('err_by', 6)": 89,
+   "('err_by', 4)": 45,
+   "('steps', 8)": 3
+  },
+  "splits": 200,
+  "folds": 5
+ },
+ "pairings": {
+  "first_error_by_pairing": {
+   "small x large": {
+    "successes": 37,
+    "escalated": 17
+   },
+   "small x large+cache": {
+    "successes": 37,
+    "escalated": 17
+   },
+   "small+cache x large": {
+    "successes": 38,
+    "escalated": 19
+   },
+   "small+cache x large+cache": {
+    "successes": 38,
+    "escalated": 19
+   }
+  },
+  "large_runs_agree": 49,
+  "small_runs_agree": 42,
+  "trigger_decision_agree_across_small_runs": 46
+ },
+ "tool_cap": {
+  "tasks_where_cap_bound": 10,
+  "capped_success_cached": 3,
+  "capped_success_uncapped_run": 5,
+  "first_error_fires_on_capped": 10
+ },
+ "energy_with_prefill": {
+  "w_fresh_prompt_per_output_token": 0.026940365852191884,
+  "alpha=0.0": {
+   "break_even_j_per_output_token": 1.0056976322040083,
+   "cloud_weight_per_task_large": 1034.2880638653435
+  },
+  "alpha=0.1": {
+   "break_even_j_per_output_token": 0.9062083577566891,
+   "cloud_weight_per_task_large": 1186.0517117470806
+  },
+  "alpha=1.0": {
+   "break_even_j_per_output_token": 0.47939144247004367,
+   "cloud_weight_per_task_large": 2551.924542682723
+  },
+  "output_only": {
+   "break_even_j_per_output_token": 1.1317979264532345
+  }
+ }
+}
