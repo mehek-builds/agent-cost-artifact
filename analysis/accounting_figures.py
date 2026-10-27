@@ -61,6 +61,45 @@ def tokens_cps():
     plt.savefig(RES / "fig-tokens-cps.pdf")
 
 
+def tokens_dollars_cps():
+    """Three panels: tokens per task and share of dollars (both by billing category), and USD per success."""
+    fig, ax = plt.subplots(1, 3, figsize=(7.1, 1.95), gridspec_kw={"width_ratios": [1.1, 1.1, 1]})
+    y = list(range(len(ORDER)))
+    for panel, unit in ((0, "tokens"), (1, "usd")):
+        left = [0.0] * len(ORDER)
+        for k in KINDS:
+            if unit == "tokens":
+                v = [A[c]["tokens_per_task"] * (A[c]["input_share_of_tokens"] * A[c]["input_mix"][k] if k != "output_tokens"
+                     else 1 - A[c]["input_share_of_tokens"]) / 1000 for _, c in ORDER]
+            else:
+                v = [A[c]["dollar_share_by_kind"][k] * 100 for _, c in ORDER]
+            ax[panel].barh(y, v, left=left, color=COLS[k], label=NAMES[k], height=0.6)
+            left = [a + b for a, b in zip(left, v)]
+    ax[0].set_xlabel("k tokens per task", fontsize=7.5)
+    ax[1].set_xlabel("share of dollars (%)", fontsize=7.5)
+    ax[1].set_xlim(0, 100)
+    ax[0].legend(fontsize=7, frameon=False, loc="lower left", bbox_to_anchor=(0.0, 1.0), ncol=4, handlelength=0.9, columnspacing=0.9)
+    cps = [A[c]["usd_per_success"] for _, c in ORDER]
+    lo = [CPS_CI[c][0] for _, c in ORDER]
+    hi = [CPS_CI[c][1] for _, c in ORDER]
+    ax[2].barh(y, cps, color="#888", height=0.6,
+               xerr=[[c - l for c, l in zip(cps, lo)], [h - c for c, h in zip(cps, hi)]], capsize=2)
+    ax[2].set_xscale("log")
+    ax[2].set_xlim(0.0015, 1.2)
+    ax[2].set_xlabel("USD per success (log)", fontsize=7.5)
+    for i, (c, h) in enumerate(zip(cps, hi)):
+        ax[2].text(h * 1.25, i, f"${c:.4f}", va="center", fontsize=7)
+    for i, a in enumerate(ax):
+        a.set_yticks(y)
+        a.set_yticklabels([n for n, _ in ORDER] if i == 0 else [])
+        a.invert_yaxis()
+        style(a)
+        a.tick_params(labelsize=7)
+    plt.tight_layout()
+    plt.subplots_adjust(top=0.84)
+    plt.savefig(RES / "fig-tokens-dollars-cps.pdf")
+
+
 def prompt_growth():
     fig, ax = plt.subplots(figsize=(3.4, 1.9))
     for c, lab, col in [("large+cache", "Large+cache", "#4C78A8"), ("small+cache", "Small+cache", "#F58518")]:
@@ -102,5 +141,6 @@ def spend_mix():
 
 if __name__ == "__main__":
     tokens_cps()
+    tokens_dollars_cps()
     prompt_growth()
     spend_mix()

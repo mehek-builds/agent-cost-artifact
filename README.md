@@ -27,6 +27,7 @@ sudo powermetrics --samplers cpu_power,gpu_power,ane_power -i 500 -o edge/runs/N
 python3 edge/run_edge.py --model qwen3:8b --max-tasks 50 --run-id NEW
 python3 edge/energy.py edge/runs/NEW           # joules per request, token and success
 python3 edge/placement_edge.py edge/runs/NEW   # placement policies with the measured edge tier
+python3 edge/sustainability.py edge/runs/NEW   # energy with cloud PUE, carbon, device amortization, latency per success
 ```
 
 - `edge/harness/`: the agent loop, BFCL simulators, tools and checker used for every run (BFCL parts under Apache 2.0, see `NOTICE`).

@@ -1,0 +1,107 @@
+{
+ "edge": {
+  "successes": 11,
+  "seconds_per_success": 93.47040690075268,
+  "api_usd_per_success": 0.0,
+  "device_usd_per_success": {
+   "util=0.1": 0.01580761151712374,
+   "util=0.5": 0.003161522303424748
+  },
+  "energy": {
+   "J=3.0,PUE=1.1": {
+    "j_per_success": 1637.6454975499894,
+    "gco2_per_success@50": 0.022745076354860963,
+    "gco2_per_success@400": 0.1819606108388877,
+    "gco2_per_success@700": 0.3184310689680535
+   },
+   "J=3.0,PUE=1.6": {
+    "j_per_success": 1637.6454975499894,
+    "gco2_per_success@50": 0.022745076354860963,
+    "gco2_per_success@400": 0.1819606108388877,
+    "gco2_per_success@700": 0.3184310689680535
+   },
+   "J=4.0,PUE=1.1": {
+    "j_per_success": 1637.6454975499894,
+    "gco2_per_success@50": 0.022745076354860963,
+    "gco2_per_success@400": 0.1819606108388877,
+    "gco2_per_success@700": 0.3184310689680535
+   },
+   "J=4.0,PUE=1.6": {
+    "j_per_success": 1637.6454975499894,
+    "gco2_per_success@50": 0.022745076354860963,
+    "gco2_per_success@400": 0.1819606108388877,
+    "gco2_per_success@700": 0.3184310689680535
+   }
+  }
+ },
+ "large": {
+  "successes": 43,
+  "seconds_per_success": 17.61645672487658,
+  "api_usd_per_success": 0.02809105581395349,
+  "device_usd_per_success": {
+   "util=0.1": 0.0,
+   "util=0.5": 0.0
+  },
+  "energy": {
+   "J=3.0,PUE=1.1": {
+    "j_per_success": 3588.9418604651164,
+    "gco2_per_success@50": 0.049846414728682176,
+    "gco2_per_success@400": 0.3987713178294574,
+    "gco2_per_success@700": 0.6978498062015505
+   },
+   "J=3.0,PUE=1.6": {
+    "j_per_success": 5220.279069767442,
+    "gco2_per_success@50": 0.07250387596899226,
+    "gco2_per_success@400": 0.580031007751938,
+    "gco2_per_success@700": 1.0150542635658915
+   },
+   "J=4.0,PUE=1.1": {
+    "j_per_success": 4785.255813953489,
+    "gco2_per_success@50": 0.06646188630490958,
+    "gco2_per_success@400": 0.5316950904392767,
+    "gco2_per_success@700": 0.9304664082687342
+   },
+   "J=4.0,PUE=1.6": {
+    "j_per_success": 6960.372093023256,
+    "gco2_per_success@50": 0.096671834625323,
+    "gco2_per_success@400": 0.773374677002584,
+    "gco2_per_success@700": 1.353405684754522
+   }
+  }
+ },
+ "first_error": {
+  "successes": 38,
+  "seconds_per_success": 31.138081230615313,
+  "api_usd_per_success": 0.020985521052631576,
+  "device_usd_per_success": {
+   "util=0.1": 0.0029186496940723553,
+   "util=0.5": 0.0005837299388144711
+  },
+  "energy": {
+   "J=3.0,PUE=1.1": {
+    "j_per_success": 3001.118924375246,
+    "gco2_per_success@50": 0.04168220728298953,
+    "gco2_per_success@400": 0.3334576582639162,
+    "gco2_per_success@700": 0.5835509019618534
+   },
+   "J=3.0,PUE=1.6": {
+    "j_per_success": 4225.789977006824,
+    "gco2_per_success@50": 0.058691527458428115,
+    "gco2_per_success@400": 0.4695322196674249,
+    "gco2_per_success@700": 0.8216813844179935
+   },
+   "J=4.0,PUE=1.1": {
+    "j_per_success": 3899.211029638403,
+    "gco2_per_success@50": 0.054155708744977826,
+    "gco2_per_success@400": 0.4332456699598226,
+    "gco2_per_success@700": 0.7581799224296896
+   },
+   "J=4.0,PUE=1.6": {
+    "j_per_success": 5532.1057664805085,
+    "gco2_per_success@50": 0.07683480231222929,
+    "gco2_per_success@400": 0.6146784184978343,
+    "gco2_per_success@700": 1.0756872323712101
+   }
+  }
+ }
+}

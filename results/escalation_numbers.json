@@ -867,9 +867,9 @@
     }
   },
   "rq5_overhead": {
-    "loop_seconds_per_step": 3.7294937009596476e-07,
+    "loop_seconds_per_step": 1.859702034246505e-07,
     "median_model_call_latency_s": 1.092233419418335,
-    "overhead_share_of_call": 3.41455739648195e-07,
+    "overhead_share_of_call": 1.702659890444373e-07,
     "llm_tokens_spent_by_loop": 0,
     "steps_timed": 103200
   }
