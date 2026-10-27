@@ -75,20 +75,19 @@ def prompt_growth():
 
 
 def spend_mix():
-    # The production row comes from a provider cost report (output 65% of one day's token spend),
-    # which splits only output from input; it is an aggregate, not part of these logs.
+    # The production row is the deployed agent's 90-day dollar split by billing category, from the
+    # provider's daily cost records (2026-07-30 to 2026-10-27); it is an aggregate, not part of these logs.
+    production = {"input_tokens": 0.24, "cache_write_tokens": 0.18, "cache_read_tokens": 0.01, "output_tokens": 0.57}
     fig, ax = plt.subplots(figsize=(3.4, 1.7))
     rows = [("Benchmark, large+cache", "large+cache"), ("Benchmark, small+cache", "small+cache")]
-    for i, (_, c) in enumerate(rows):
+    shares = [A[c]["dollar_share_by_kind"] for _, c in rows] + [production]
+    for i, share in enumerate(shares):
         left = 0.0
         for k in KINDS:
-            v = A[c]["dollar_share_by_kind"][k]
-            ax.barh(i, v, left=left, color=COLS[k], height=0.6, label=NAMES[k] if i == 0 else None)
-            left += v
-    ax.barh(2, 0.35, color="#BBBBBB", height=0.6, label="all input kinds (not split)")
-    ax.barh(2, 0.65, left=0.35, color=COLS["output_tokens"], height=0.6)
+            ax.barh(i, share[k], left=left, color=COLS[k], height=0.6, label=NAMES[k] if i == 0 else None)
+            left += share[k]
     ax.set_yticks(range(3))
-    ax.set_yticklabels([r for r, _ in rows] + ["Production agent, one day"], fontsize=6)
+    ax.set_yticklabels([r for r, _ in rows] + ["Production agent, 90 days"], fontsize=6)
     ax.invert_yaxis()
     ax.set_xlim(0, 1)
     ax.set_xlabel("share of token spend", fontsize=6)
