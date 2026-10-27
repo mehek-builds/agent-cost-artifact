@@ -18,7 +18,7 @@
    "cache_read_tokens": 0.0
   },
   "first_request_share_of_input": 0.08484024164202311,
-  "resent_share_of_input": 0.9151597583579769,
+  "later_requests_share_of_input": 0.9151597583579769,
   "median_step_latency_s": 1.081233024597168,
   "latency_per_success_s": 22.767716054258674,
   "usd_per_task": 0.006796859999999999,
@@ -147,7 +147,7 @@
    "cache_read_tokens": 0.936678458622868
   },
   "first_request_share_of_input": 0.08255148452305748,
-  "resent_share_of_input": 0.9174485154769425,
+  "later_requests_share_of_input": 0.9174485154769425,
   "median_step_latency_s": 1.092233419418335,
   "latency_per_success_s": 21.84139609336853,
   "usd_per_task": 0.0017353799999999997,
@@ -286,7 +286,7 @@
    "cache_read_tokens": 0.0
   },
   "first_request_share_of_input": 0.08783749267343131,
-  "resent_share_of_input": 0.9121625073265687,
+  "later_requests_share_of_input": 0.9121625073265687,
   "median_step_latency_s": 1.2863633632659912,
   "latency_per_success_s": 17.527279445103236,
   "usd_per_task": 0.12839968,
@@ -415,7 +415,7 @@
    "cache_read_tokens": 0.9387686743261511
   },
   "first_request_share_of_input": 0.0871084157452266,
-  "resent_share_of_input": 0.9128915842547733,
+  "later_requests_share_of_input": 0.9128915842547733,
   "median_step_latency_s": 1.334395408630371,
   "latency_per_success_s": 17.61645672487658,
   "usd_per_task": 0.024158308000000003,

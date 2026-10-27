@@ -34,7 +34,7 @@ from escalation import escalate, trigger_step  # noqa: E402
 from replay import CONFIGS, boot_ratio_ci, load, step_cost, wilson  # noqa: E402
 
 RUNS = {label: load(log) for label, (log, _) in CONFIGS.items()}
-IDS = sorted(RUNS["small"], key=lambda i: int(i.rsplit("_", 1)[1]))
+IDS = sorted(RUNS["small"])  # same order as replay.py and escalation.py, so bootstrap intervals match
 N = len(IDS)
 SMALL, LARGE = RUNS["small+cache"], RUNS["large+cache"]
 cost = lambda t: sum(step_cost(s) for s in t["steps"])  # noqa: E731
@@ -252,15 +252,42 @@ def energy_with_prefill():
     return out
 
 
+def paired_tests(seed=3, reps=10000):
+    """Paired bootstrap over tasks of First-error's cost per success minus each baseline's. Random routing is
+    paired by drawing, in every bootstrap sample, a fresh random assignment at the policy's rate."""
+    fe = replay_trigger(("err", 1), IDS)
+    S, L = SMALL, LARGE
+    flag = {i: any(s["n_errors"] > 0 for s in S[i]["steps"]) for i in IDS}
+    pol = {"cascade_error_check": [(cost(S[i]) + (cost(L[i]) if flag[i] else 0), int(L[i]["success"] if flag[i] else S[i]["success"])) for i in IDS],
+           "oracle": [(cost(S[i]), 1) if S[i]["success"] else (cost(L[i]), int(L[i]["success"])) for i in IDS],
+           "learned_router_loo": [(r[0], r[1]) for r in learned_router()],
+           "large": [(cost(L[i]), int(L[i]["success"])) for i in IDS]}
+    cps = lambda r, smp: sum(r[k][0] for k in smp) / max(1e-12, sum(r[k][1] for k in smp))  # noqa: E731
+    rng, out = random.Random(seed), {}
+    for name, r in list(pol.items()) + [("random_router", None)]:
+        diffs = []
+        for _ in range(reps):
+            smp = [rng.randrange(N) for _ in range(N)]
+            if r is None:
+                rr = [(cost(L[IDS[k]]), int(L[IDS[k]]["success"])) if rng.random() < 19 / N else (cost(S[IDS[k]]), int(S[IDS[k]]["success"])) for k in range(N)]
+            else:
+                rr = r
+            diffs.append(cps(fe, smp) - cps(rr, smp))
+        diffs.sort()
+        out[name] = {"mean_diff": sum(diffs) / reps, "ci95": [diffs[int(0.025 * reps)], diffs[int(0.975 * reps) - 1]],
+                     "share_of_samples_policy_not_cheaper": sum(d >= 0 for d in diffs) / reps}
+    return out
+
+
 def main():
     b = baselines(rate=19 / N)
     res = {"baselines": b, "heldout_trigger": heldout(), "pairings": pairings(), "tool_cap": tool_cap(),
-           "energy_with_prefill": energy_with_prefill()}
+           "energy_with_prefill": energy_with_prefill(), "paired_tests": paired_tests()}
     (ROOT / "results" / "rigor.json").write_text(json.dumps(res, indent=1, default=str))
     for k, v in b.items():
         cps = v.get("cost_per_success")
         print(f"{k:24s} success {v['success']:.2f}  $/success {cps:.4f}" + (f"  CI {v['cost_per_success_ci95'][0]:.4f}-{v['cost_per_success_ci95'][1]:.4f}" if "cost_per_success_ci95" in v else ""))
-    for k in ("heldout_trigger", "pairings", "tool_cap", "energy_with_prefill"):
+    for k in ("heldout_trigger", "pairings", "tool_cap", "energy_with_prefill", "paired_tests"):
         print(k, json.dumps(res[k], default=str)[:900])
 
 
