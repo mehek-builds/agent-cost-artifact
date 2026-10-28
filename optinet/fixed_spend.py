@@ -30,7 +30,7 @@ TABLE_FRACS = [0.20, 0.40, 0.80, 1.00]
 PAIRS = {"cached": ("small_cache_budget", "frontier_cache"), "uncached": ("small", "frontier")}
 # frontier_low is excluded: its step log was cut short (74 of about 500 steps; see the artifact README).
 SMALL_RUNS, LARGE_RUNS = ["small", "small_cache_budget", "small_low"], ["frontier", "frontier_cache"]
-POLICIES = ["small", "large", "stop", "admit", "route", "random-paced", "paced", "paced-abandon", "paced+cap", "hybrid", "oracle-paced"]
+POLICIES = ["small", "large", "stop", "stop-fallback", "admit", "route", "random-paced", "paced", "paced-abandon", "paced+cap", "hybrid", "oracle-paced"]
 # Processed tokens (prompt incl. cache reads and writes, plus output) of the steps that ran, by model.
 TOK = {"small": 0, "large": 0}
 
@@ -67,6 +67,28 @@ def loo_estimates(small, large, ids):
     return {i: ((ts - cs[i]) / (n - 1), (tl - cl[i]) / (n - 1)) for i in ids}
 
 
+class OnlineEst:
+    """Causal cost estimates, as BudgetPacer's CostEstimator keeps them: start from priors
+    and use the running mean cost of tasks already finished in this batch on each model."""
+
+    def __init__(self, prior_small, prior_large):
+        self.prior = {"small": prior_small, "large": prior_large}
+        self.sum, self.n = {"small": 0.0, "large": 0.0}, {"small": 0, "large": 0}
+
+    def fresh(self):
+        return OnlineEst(self.prior["small"], self.prior["large"])
+
+    def mean(self, m):
+        return self.sum[m] / self.n[m] if self.n[m] else self.prior[m]
+
+    def __getitem__(self, tid):
+        return self.mean("small"), self.mean("large")
+
+    def observe(self, m, cost):
+        self.sum[m] += cost
+        self.n[m] += 1
+
+
 def fires(S):
     j = trigger_step(S, "first_error")
     return j if j is not None and j != len(S["steps"]) - 1 else None
@@ -75,6 +97,8 @@ def fires(S):
 def simulate(policy, order, small, large, B, est, rng=None, rate=0.38):
     pool, succ, lat = B, 0, 0.0
     TOK["small"] = TOK["large"] = 0
+    if isinstance(est, OnlineEst):
+        est = est.fresh()
     reasons = {"pool": 0, "cap": 0, "model": 0, "unstarted": 0}
     esc, n = 0, len(order)
     for pos, tid in enumerate(order):
@@ -84,15 +108,22 @@ def simulate(policy, order, small, large, B, est, rng=None, rate=0.38):
             continue
         S, L = small[tid], large[tid]
         e_s, e_l = est[tid]
+        fm, att = "small", None
         if policy == "small":
             sp, la, done, why = run_steps(S["steps"], pool)
             ok = done and S["success"]
         elif policy == "large":
             sp, la, done, why = run_steps(L["steps"], pool)
-            ok = done and L["success"]
+            ok, fm = done and L["success"], "large"
         elif policy == "stop":  # early stopping only: paced per-task cap on the large model
             sp, la, done, why = run_steps(L["steps"], pool, pool / (k_after + 1))
-            ok = done and L["success"]
+            ok, fm = done and L["success"], "large"
+        elif policy == "stop-fallback":  # the same cap, but a capped task reruns on the small model
+            sp, la, done, why = run_steps(L["steps"], pool, pool / (k_after + 1))
+            ok, fm = done and L["success"], "large"
+            if why == "cap" and pool - sp > 0:
+                sp2, la2, done, why = run_steps(S["steps"], pool - sp)
+                ok, fm, att, sp, la = done and S["success"], "small", sp2, sp + sp2, la + la2
         elif policy in ("admit", "random-paced", "oracle-paced"):  # pre-run assignment, same pacing gate
             # admit: admission control, large model whenever the pool can afford it after
             # reserving the small model for every remaining task, small model otherwise
@@ -102,14 +133,14 @@ def simulate(policy, order, small, large, B, est, rng=None, rate=0.38):
             if want and room >= e_l:
                 esc += 1
                 sp, la, done, why = run_steps(L["steps"], pool, room)
-                ok = done and L["success"]
+                ok, fm = done and L["success"], "large"
             else:
                 sp, la, done, why = run_steps(S["steps"], pool)
                 ok = done and S["success"]
         elif policy == "hybrid" and pool >= (k_after + 1) * e_l:  # pool covers large for every task left
             esc += 1
             sp, la, done, why = run_steps(L["steps"], pool, pool - k_after * e_s)
-            ok = done and L["success"]
+            ok, fm = done and L["success"], "large"
         else:  # routing policies start on the small model (hybrid falls through to paced + cap)
             j = fires(S)
             if j is None:
@@ -125,13 +156,16 @@ def simulate(policy, order, small, large, B, est, rng=None, rate=0.38):
                         esc += 1
                         cap = None if policy in ("route", "paced") else max(room, 0.0)  # paced+cap, hybrid
                         sp2, la2, done, why = run_steps(L["steps"], pool - pre, cap)
-                        ok = done and L["success"]
+                        ok, fm = done and L["success"], "large"
                     elif policy == "paced-abandon":  # refused escalation: stop the task here
                         sp2, la2, done, why, ok = 0.0, 0.0, False, "cap", False
                     else:  # anti-thrash: no escalation, finish on the small model
                         sp2, la2, done, why = run_steps(S["steps"][j + 1:], pool - pre)
                         ok = done and S["success"]
                     sp, la = pre + sp2, la1 + la2
+                    att = sp2 if fm == "large" else sp
+        if isinstance(est, OnlineEst) and why is None:  # cost of the attempt that finished
+            est.observe(fm, sp if att is None else att)
         pool -= sp
         lat += la
         succ += int(bool(ok))
@@ -153,8 +187,20 @@ def setup(sl, ll):
     return small, large, ids, loo_estimates(small, large, ids), rate
 
 
-def sweep(sl, ll, fracs, orders_n, policies):
+def out_of_sample_prior(prior_runs):
+    """Causal estimator whose priors are the mean task costs of a different pair of
+    recorded runs (other rollouts, other billing), so no cost of the batch under test is
+    known in advance."""
+    ps, pl = (replay.load(r) for r in prior_runs)
+    ms = statistics.mean(task_cost(t) for t in ps.values())
+    ml = statistics.mean(task_cost(t) for t in pl.values())
+    return OnlineEst(ms, ml)
+
+
+def sweep(sl, ll, fracs, orders_n, policies, est_override=None):
     small, large, ids, est, rate = setup(sl, ll)
+    if est_override is not None:
+        est = est_override
     full_large = sum(task_cost(large[i]) for i in ids)
     rng = random.Random(SEED)
     orders = [rng.sample(ids, len(ids)) for _ in range(orders_n)]
@@ -180,10 +226,12 @@ def sweep(sl, ll, fracs, orders_n, policies):
     return {"meta": meta, "rows": rows}
 
 
-def bootstrap(sl, ll):
+def bootstrap(sl, ll, est_override=None):
     """Resample tasks with replacement (one random order per resample) to put task-level
     95% intervals on solved tasks, and on paired differences against the baselines."""
     small, large, ids, est, rate = setup(sl, ll)
+    if est_override is not None:
+        est = est_override
     full_large = sum(task_cost(large[i]) for i in ids)
     out = {}
     for f in TABLE_FRACS:
@@ -197,7 +245,7 @@ def bootstrap(sl, ll):
         ci = {p: (pct(v, 0.025), pct(v, 0.975)) for p, v in draws.items()}
         diff = {}
         for ours in ["paced+cap", "hybrid"]:
-            for base in ["large", "admit", "route", "random-paced", "stop", "paced+cap"]:
+            for base in ["large", "admit", "route", "random-paced", "stop", "stop-fallback", "paced-abandon", "paced+cap"]:
                 if base == ours:
                     continue
                 d = [a - b for a, b in zip(draws[ours], draws[base])]
@@ -232,6 +280,22 @@ def main():
     out["bootstrap_cached"] = bootstrap(*PAIRS["cached"])
     print("===== bootstrap (cached)")
     print(json.dumps(out["bootstrap_cached"], indent=1))
+    # Causal estimates with out-of-sample priors: the cached batch starts from the uncached
+    # runs' mean task costs and vice versa, then learns only from tasks already finished.
+    prior_runs = {"cached": ("small", "frontier"), "uncached": ("small_cache_budget", "frontier_cache")}
+    causal_pols = ["large", "admit", "random-paced", "paced+cap", "hybrid", "oracle-paced", "paced", "paced-abandon"]
+    for name, (sl, ll) in PAIRS.items():
+        prior = out_of_sample_prior(prior_runs[name])
+        out[f"causal_{name}"] = sweep(sl, ll, FRACS, ORDERS, causal_pols, est_override=prior)
+        out[f"causal_{name}"]["prior"] = prior.prior
+        print(f"===== causal {name}, prior {prior.prior}")
+        for r in out[f"causal_{name}"]["rows"]:
+            if r["frac"] in TABLE_FRACS:
+                print(f"{r['frac']:>5.2f} {r['policy']:>13} {r['succ_mean']:6.2f} [{r['succ_p05']}, {r['succ_p95']}] "
+                      f"unstarted {r['reasons']['unstarted']:.2f} overdraw {r['overdraw_max']:.4f}")
+    out["bootstrap_causal_cached"] = bootstrap(*PAIRS["cached"], est_override=out_of_sample_prior(prior_runs["cached"]))
+    print("===== bootstrap (causal, cached)")
+    print(json.dumps(out["bootstrap_causal_cached"], indent=1))
     out["pairings"] = pairings()
     print("===== six pairings: solved (mean over 200 orders)")
     for f in TABLE_FRACS:

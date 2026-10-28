@@ -129,7 +129,9 @@ class TaskRun:
     def before_step(self) -> Action:
         if self.stop_reason:
             return Action.STOP
-        if self.pacer.balance <= 0:
+        with self.pacer._lock:
+            balance = self.pacer.balance
+        if balance <= 0:
             self.stop_reason = "pool"
         elif self.cap is not None and self._prev is not None and self.spent + self._prev > self.cap:
             self.stop_reason = "cap"
@@ -140,6 +142,7 @@ class TaskRun:
         self.spent += cost_usd
         self.total += cost_usd
         self._prev = cost_usd
+        # escalation needs a tool error on the small model, before the task's final step
         if self.model == SMALL and tool_error and not self.decided and not final and self.pacer.route:
             self.decided = True
             p = self.pacer
@@ -152,7 +155,9 @@ class TaskRun:
         return Action.CONTINUE
 
     def finish(self, success: bool | None = None) -> None:
+        """Release the task. A task that ran to its end (solved or not) updates the cost
+        estimates with the cost of its final attempt; a stopped task does not."""
         with self.pacer._lock:
             self.pacer.in_flight -= 1
-        if self.stop_reason is None:
-            self.pacer.estimator.observe(self.model, self.spent)
+            if self.stop_reason is None:
+                self.pacer.estimator.observe(self.model, self.spent)

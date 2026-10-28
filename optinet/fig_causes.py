@@ -7,8 +7,11 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 HERE = Path(__file__).resolve().parent
-rows = json.loads((HERE / "results" / "fixed_spend.json").read_text())["cached"]["rows"]
-POL = [("large", "Large"), ("stop", "Stop"), ("route", "Route"), ("paced+cap", "Paced")]
+data = json.loads((HERE / "results" / "fixed_spend.json").read_text())
+# the paced policy is drawn with causal estimates (out-of-sample priors), the rest need none
+rows = ([r for r in data["cached"]["rows"] if r["policy"] != "hybrid"]
+        + [r for r in data["causal_cached"]["rows"] if r["policy"] == "hybrid"])
+POL = [("large", "Large"), ("stop", "Stop"), ("route", "Route"), ("hybrid", "Paced+SD")]
 FR = [0.2, 0.4, 1.0]
 CAT = [("solved", "Solved", "#1f77b4"), ("model", "Model failed", "#9ecae1"), ("cap", "Stopped by policy", "#c0392b"),
        ("pool", "Pool ran out mid-task", "#e08e0b"), ("unstarted", "Never started", "#bbbbbb")]

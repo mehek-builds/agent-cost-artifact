@@ -35,7 +35,7 @@ Early Stopping for LLM Agent Inference". No API calls; Python 3.10+ and matplotl
   recorded traces through `BudgetPacer` reproduces `fixed_spend.py` exactly.
 
 ```bash
-python3 -m unittest discover -s optinet -p 'test_*.py'   # 10 tests, under a second
+python3 -m unittest discover -s optinet -p 'test_*.py'   # 11 tests, under a second
 python3 optinet/fixed_spend.py   # budget sweep, baselines, bootstrap, rollout pairings -> optinet/results/fixed_spend.json (about 10 min)
 python3 optinet/extras.py        # estimate error, other model price pairs, single-turn rollouts -> optinet/results/extras.json
 python3 optinet/fig_curve.py     # Fig. 1 -> optinet/results/fig-budget-curve.pdf
@@ -44,7 +44,10 @@ python3 optinet/example_agent_loop.py
 ```
 
 `frontier_low` is excluded from step-level replay because its step log is incomplete.
-Re-priced runs keep the recorded models' outcomes; only prices change.
+Re-priced runs keep the recorded models' outcomes; only prices change. The paper's main
+setting uses causal cost estimates (`OnlineEst` in `fixed_spend.py`, `CostEstimator` in the
+library) whose priors come from a different pair of runs and which learn only from tasks
+already finished; leave-one-out estimates are reported where the paper says so.
 
 ## Measured edge run
 

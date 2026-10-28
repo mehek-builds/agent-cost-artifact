@@ -3,6 +3,7 @@
  0.05  0.0604         small  20.04   17   23  0.0605    8.8   0.0  0.0009 tok/solved  112.3k L0.00  pool=0.9 cap=0.0 model=14.3 unstarted=14.7
  0.05  0.0604         large   1.85    1    3  0.0634    0.8   0.0  0.0179 tok/solved   82.4k L1.00  pool=0.9 cap=0.0 model=0.3 unstarted=46.9
  0.05  0.0604          stop   0.00    0    0  0.0668    0.3   0.0  0.0172 tok/solved 25139.2k L1.00  pool=1.0 cap=8.4 model=0.0 unstarted=40.6
+ 0.05  0.0604 stop-fallback   3.77    1    6  0.0652    2.0   0.0  0.0183 tok/solved  126.7k L0.08  pool=1.0 cap=0.0 model=2.8 unstarted=42.4
  0.05  0.0604         admit  20.04   17   23  0.0605    8.8   0.0  0.0009 tok/solved  112.3k L0.00  pool=0.9 cap=0.0 model=14.3 unstarted=14.7
  0.05  0.0604         route   4.38    1    9  0.0623    2.1   2.6  0.0166 tok/solved  107.3k L0.31  pool=0.9 cap=0.0 model=1.5 unstarted=43.2
  0.05  0.0604  random-paced  20.04   17   23  0.0605    8.8   0.0  0.0009 tok/solved  112.3k L0.00  pool=0.9 cap=0.0 model=14.3 unstarted=14.7
@@ -14,6 +15,7 @@
  0.08  0.0966         small  29.00   29   29  0.0868   12.7   0.0  0.0000 tok/solved  111.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.08  0.0966         large   3.10    1    5  0.0992    1.2   0.0  0.0160 tok/solved   78.0k L1.00  pool=0.9 cap=0.0 model=0.5 unstarted=45.5
  0.08  0.0966          stop   0.00    0    0  0.1032    0.5   0.0  0.0182 tok/solved 38552.6k L1.00  pool=1.0 cap=13.4 model=0.0 unstarted=35.6
+ 0.08  0.0966 stop-fallback   6.26    3   10  0.1015    3.1   0.0  0.0179 tok/solved  121.8k L0.08  pool=1.0 cap=0.0 model=4.4 unstarted=38.3
  0.08  0.0966         admit  29.00   29   29  0.0868   12.7   0.0  0.0000 tok/solved  111.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.08  0.0966         route   6.91    3   12  0.0985    3.1   3.9  0.0168 tok/solved  104.2k L0.33  pool=0.9 cap=0.0 model=2.2 unstarted=39.9
  0.08  0.0966  random-paced  29.00   29   29  0.0868   12.7   0.0  0.0000 tok/solved  111.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
@@ -25,6 +27,7 @@
  0.10  0.1208         small  29.00   29   29  0.0868   12.7   0.0  0.0000 tok/solved  111.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.10  0.1208         large   3.93    2    6  0.1235    1.5   0.0  0.0174 tok/solved   76.9k L1.00  pool=0.9 cap=0.0 model=0.7 unstarted=44.5
  0.10  0.1208          stop   0.00    0    0  0.1274    0.6   0.0  0.0184 tok/solved 47772.8k L1.00  pool=1.0 cap=16.8 model=0.0 unstarted=32.2
+ 0.10  0.1208 stop-fallback   7.87    5   11  0.1259    3.9   0.0  0.0175 tok/solved  121.3k L0.08  pool=1.0 cap=0.0 model=5.6 unstarted=35.6
  0.10  0.1208         admit  29.14   28   30  0.1110   12.7   1.2  0.0005 tok/solved  110.4k L0.02  pool=0.1 cap=0.2 model=20.6 unstarted=0.0
  0.10  0.1208         route   8.59    4   14  0.1225    3.9   4.8  0.0159 tok/solved  103.2k L0.34  pool=0.9 cap=0.0 model=2.8 unstarted=37.7
  0.10  0.1208  random-paced  29.17   28   30  0.1110   12.7   1.1  0.0005 tok/solved  110.3k L0.02  pool=0.0 cap=0.2 model=20.6 unstarted=0.0
@@ -36,6 +39,7 @@
  0.15  0.1812         small  29.00   29   29  0.0868   12.7   0.0  0.0000 tok/solved  111.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.15  0.1812         large   6.01    4    8  0.1841    2.3   0.0  0.0183 tok/solved   75.8k L1.00  pool=0.9 cap=0.0 model=1.1 unstarted=42.0
  0.15  0.1812          stop   0.00    0    0  0.1875    1.0   0.0  0.0175 tok/solved 77087.6k L1.00  pool=1.0 cap=24.8 model=0.0 unstarted=24.2
+ 0.15  0.1812 stop-fallback  11.58    8   15  0.1864    5.8   0.0  0.0175 tok/solved  122.6k L0.09  pool=1.0 cap=0.0 model=8.3 unstarted=29.2
  0.15  0.1812         admit  29.86   29   31  0.1721   12.8   3.9  0.0005 tok/solved  107.2k L0.07  pool=0.0 cap=0.3 model=19.8 unstarted=0.0
  0.15  0.1812         route  12.89    7   18  0.1831    5.6   6.9  0.0174 tok/solved  100.7k L0.35  pool=0.9 cap=0.0 model=4.0 unstarted=32.2
  0.15  0.1812  random-paced  29.84   29   31  0.1716   12.8   3.9  0.0003 tok/solved  107.3k L0.07  pool=0.0 cap=0.2 model=19.9 unstarted=0.0
@@ -47,6 +51,7 @@
  0.20  0.2416         small  29.00   29   29  0.0868   12.7   0.0  0.0000 tok/solved  111.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.20  0.2416         large   8.28    6   11  0.2443    3.0   0.0  0.0180 tok/solved   73.6k L1.00  pool=0.9 cap=0.0 model=1.4 unstarted=39.4
  0.20  0.2416          stop   0.00    0    0  0.2481    1.4   0.0  0.0173 tok/solved 116151.7k L1.00  pool=1.0 cap=31.6 model=0.0 unstarted=17.4
+ 0.20  0.2416 stop-fallback  15.06   11   19  0.2468    7.7   0.0  0.0178 tok/solved  123.5k L0.10  pool=1.0 cap=0.0 model=10.7 unstarted=23.3
  0.20  0.2416         admit  30.60   29   32  0.2323   13.0   6.5  0.0004 tok/solved  104.4k L0.12  pool=0.0 cap=0.3 model=19.1 unstarted=0.0
  0.20  0.2416         route  17.11   11   23  0.2437    7.5   9.1  0.0167 tok/solved  100.2k L0.35  pool=0.9 cap=0.0 model=5.3 unstarted=26.7
  0.20  0.2416  random-paced  30.53   29   32  0.2311   12.9   6.5  0.0006 tok/solved  104.5k L0.12  pool=0.0 cap=0.3 model=19.1 unstarted=0.0
@@ -58,6 +63,7 @@
  0.30  0.3624         small  29.00   29   29  0.0868   12.7   0.0  0.0000 tok/solved  111.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.30  0.3624         large  12.54   10   15  0.3649    4.6   0.0  0.0165 tok/solved   72.9k L1.00  pool=0.9 cap=0.0 model=2.0 unstarted=34.5
  0.30  0.3624          stop   0.00    0    0  0.3687    2.7   0.0  0.0182 tok/solved 222328.1k L1.00  pool=1.0 cap=41.7 model=0.0 unstarted=7.3
+ 0.30  0.3624 stop-fallback  20.62   18   24  0.3675   11.2   0.0  0.0184 tok/solved  128.8k L0.13  pool=1.0 cap=0.0 model=14.9 unstarted=13.5
  0.30  0.3624         admit  32.03   30   34  0.3528   13.2  11.9  0.0007 tok/solved   99.0k L0.23  pool=0.1 cap=0.2 model=17.6 unstarted=0.0
  0.30  0.3624         route  25.37   20   30  0.3644   11.0  13.4  0.0162 tok/solved   99.7k L0.36  pool=0.9 cap=0.0 model=7.9 unstarted=15.8
  0.30  0.3624  random-paced  32.08   30   34  0.3512   13.2  11.9  0.0002 tok/solved   99.0k L0.23  pool=0.0 cap=0.2 model=17.7 unstarted=0.0
@@ -69,6 +75,7 @@
  0.40  0.4832         small  29.00   29   29  0.0868   12.7   0.0  0.0000 tok/solved  111.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.40  0.4832         large  16.79   14   20  0.4856    6.1   0.0  0.0174 tok/solved   72.5k L1.00  pool=0.9 cap=0.0 model=2.7 unstarted=29.6
  0.40  0.4832          stop   1.52    0    3  0.4889    4.3   0.0  0.0182 tok/solved  474.9k L1.00  pool=0.9 cap=45.9 model=0.0 unstarted=1.6
+ 0.40  0.4832 stop-fallback  24.51   22   27  0.4881   14.1   0.0  0.0183 tok/solved  134.5k L0.18  pool=1.0 cap=0.0 model=17.7 unstarted=6.8
  0.40  0.4832         admit  33.50   31   36  0.4731   13.5  17.2  0.0006 tok/solved   94.1k L0.33  pool=0.1 cap=0.3 model=16.2 unstarted=0.0
  0.40  0.4832         route  33.70   30   37  0.4850   14.6  17.7  0.0167 tok/solved   99.7k L0.36  pool=0.9 cap=0.0 model=10.6 unstarted=4.8
  0.40  0.4832  random-paced  33.46   31   36  0.4552   13.4  16.5  0.0008 tok/solved   94.5k L0.32  pool=0.0 cap=0.1 model=16.4 unstarted=0.0
@@ -80,6 +87,7 @@
  0.45  0.5436         small  29.00   29   29  0.0868   12.7   0.0  0.0000 tok/solved  111.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.45  0.5436         large  18.98   16   22  0.5461    6.8   0.0  0.0172 tok/solved   72.2k L1.00  pool=0.9 cap=0.0 model=3.1 unstarted=27.0
  0.45  0.5436          stop   2.99    2    4  0.5476    5.2   0.0  0.0178 tok/solved  293.7k L1.00  pool=0.7 cap=45.9 model=0.0 unstarted=0.4
+ 0.45  0.5436 stop-fallback  26.37   24   29  0.5488   15.4   0.0  0.0180 tok/solved  135.2k L0.20  pool=1.0 cap=0.0 model=18.5 unstarted=4.1
  0.45  0.5436         admit  34.31   32   37  0.5334   13.6  19.9  0.0006 tok/solved   91.6k L0.39  pool=0.0 cap=0.2 model=15.4 unstarted=0.0
  0.45  0.5436         route  38.00   38   38  0.5308   16.2  19.0  0.0000 tok/solved   97.8k L0.36  pool=0.0 cap=0.0 model=12.0 unstarted=0.0
  0.45  0.5436  random-paced  33.98   32   37  0.4890   13.5  17.9  0.0001 tok/solved   93.0k L0.35  pool=0.0 cap=0.1 model=15.9 unstarted=0.0
@@ -91,6 +99,7 @@
  0.50  0.6040         small  29.00   29   29  0.0868   12.7   0.0  0.0000 tok/solved  111.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.50  0.6040         large  21.18   18   24  0.6066    7.6   0.0  0.0173 tok/solved   72.0k L1.00  pool=0.9 cap=0.0 model=3.4 unstarted=24.5
  0.50  0.6040          stop   3.94    3    4  0.6043    6.1   0.0  0.0116 tok/solved  264.4k L1.00  pool=0.4 cap=45.7 model=0.0 unstarted=0.0
+ 0.50  0.6040 stop-fallback  27.90   26   30  0.6092   16.5   0.0  0.0182 tok/solved  136.5k L0.22  pool=1.0 cap=0.0 model=19.1 unstarted=2.0
  0.50  0.6040         admit  35.03   32   38  0.5939   13.7  22.6  0.0006 tok/solved   89.4k L0.44  pool=0.0 cap=0.3 model=14.6 unstarted=0.0
  0.50  0.6040         route  38.00   38   38  0.5308   16.2  19.0  0.0000 tok/solved   97.8k L0.36  pool=0.0 cap=0.0 model=12.0 unstarted=0.0
  0.50  0.6040  random-paced  34.21   32   37  0.5053   13.6  18.7  0.0000 tok/solved   92.3k L0.36  pool=0.0 cap=0.0 model=15.7 unstarted=0.0
@@ -102,6 +111,7 @@
  0.60  0.7247         small  29.00   29   29  0.0868   12.7   0.0  0.0000 tok/solved  111.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.60  0.7247         large  25.52   23   28  0.7273    9.1   0.0  0.0167 tok/solved   71.7k L1.00  pool=0.9 cap=0.0 model=4.1 unstarted=19.5
  0.60  0.7247          stop   7.99    6   10  0.7141    7.8   0.0  0.0010 tok/solved  173.0k L1.00  pool=0.0 cap=41.6 model=0.4 unstarted=0.0
+ 0.60  0.7247 stop-fallback  29.44   29   30  0.7272   18.5   0.0  0.0167 tok/solved  142.3k L0.28  pool=0.8 cap=0.0 model=19.7 unstarted=0.1
  0.60  0.7247         admit  36.62   34   39  0.7153   14.0  28.1  0.0006 tok/solved   85.0k L0.55  pool=0.0 cap=0.2 model=13.1 unstarted=0.0
  0.60  0.7247         route  38.00   38   38  0.5308   16.2  19.0  0.0000 tok/solved   97.8k L0.36  pool=0.0 cap=0.0 model=12.0 unstarted=0.0
  0.60  0.7247  random-paced  34.33   32   37  0.5129   13.6  19.0  0.0000 tok/solved   92.0k L0.37  pool=0.0 cap=0.0 model=15.7 unstarted=0.0
@@ -113,6 +123,7 @@
  0.70  0.8455         small  29.00   29   29  0.0868   12.7   0.0  0.0000 tok/solved  111.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.70  0.8455         large  29.79   27   33  0.8481   10.6   0.0  0.0165 tok/solved   71.6k L1.00  pool=0.9 cap=0.0 model=4.8 unstarted=14.5
  0.70  0.8455          stop  14.09   11   17  0.8151    9.3   0.0  0.0008 tok/solved  120.3k L1.00  pool=0.0 cap=34.4 model=1.5 unstarted=0.0
+ 0.70  0.8455 stop-fallback  32.05   31   34  0.8366   18.9   0.0  0.0016 tok/solved  132.4k L0.36  pool=0.1 cap=0.0 model=17.8 unstarted=0.0
  0.70  0.8455         admit  38.12   36   40  0.8354   14.3  33.5  0.0006 tok/solved   81.2k L0.66  pool=0.0 cap=0.3 model=11.6 unstarted=0.0
  0.70  0.8455         route  38.00   38   38  0.5308   16.2  19.0  0.0000 tok/solved   97.8k L0.36  pool=0.0 cap=0.0 model=12.0 unstarted=0.0
  0.70  0.8455  random-paced  34.33   32   37  0.5130   13.6  19.0  0.0000 tok/solved   92.0k L0.37  pool=0.0 cap=0.0 model=15.7 unstarted=0.0
@@ -124,6 +135,7 @@
  0.80  0.9663         small  29.00   29   29  0.0868   12.7   0.0  0.0000 tok/solved  111.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.80  0.9663         large  34.01   32   36  0.9692   12.1   0.0  0.0176 tok/solved   71.6k L1.00  pool=0.9 cap=0.0 model=5.5 unstarted=9.6
  0.80  0.9663          stop  20.86   18   24  0.9045   10.7   0.0  0.0000 tok/solved   95.3k L1.00  pool=0.0 cap=26.9 model=2.2 unstarted=0.0
+ 0.80  0.9663 stop-fallback  35.52   34   37  0.9292   18.2   0.0  0.0020 tok/solved  112.9k L0.47  pool=0.0 cap=0.0 model=14.5 unstarted=0.0
  0.80  0.9663         admit  39.74   37   42  0.9557   14.6  38.8  0.0002 tok/solved   77.5k L0.77  pool=0.0 cap=0.2 model=10.0 unstarted=0.0
  0.80  0.9663         route  38.00   38   38  0.5308   16.2  19.0  0.0000 tok/solved   97.8k L0.36  pool=0.0 cap=0.0 model=12.0 unstarted=0.0
  0.80  0.9663  random-paced  34.33   32   37  0.5130   13.6  19.0  0.0000 tok/solved   92.0k L0.37  pool=0.0 cap=0.0 model=15.7 unstarted=0.0
@@ -135,6 +147,7 @@
  0.85  1.0267         small  29.00   29   29  0.0868   12.7   0.0  0.0000 tok/solved  111.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.85  1.0267         large  36.08   34   38  1.0291   12.9   0.0  0.0163 tok/solved   71.7k L1.00  pool=0.9 cap=0.0 model=5.9 unstarted=7.1
  0.85  1.0267          stop  23.63   21   27  0.9443   11.3   0.0  0.0000 tok/solved   89.8k L1.00  pool=0.0 cap=23.7 model=2.6 unstarted=0.0
+ 0.85  1.0267 stop-fallback  36.33   35   38  0.9698   18.0   0.0  0.0000 tok/solved  107.9k L0.52  pool=0.0 cap=0.0 model=13.7 unstarted=0.0
  0.85  1.0267         admit  40.50   39   42  1.0162   14.7  41.4  0.0005 tok/solved   75.8k L0.82  pool=0.0 cap=0.2 model=9.3 unstarted=0.0
  0.85  1.0267         route  38.00   38   38  0.5308   16.2  19.0  0.0000 tok/solved   97.8k L0.36  pool=0.0 cap=0.0 model=12.0 unstarted=0.0
  0.85  1.0267  random-paced  34.33   32   37  0.5130   13.6  19.0  0.0000 tok/solved   92.0k L0.37  pool=0.0 cap=0.0 model=15.7 unstarted=0.0
@@ -146,6 +159,7 @@
  0.88  1.0630         small  29.00   29   29  0.0868   12.7   0.0  0.0000 tok/solved  111.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.88  1.0630         large  37.40   35   39  1.0655   13.3   0.0  0.0180 tok/solved   71.7k L1.00  pool=0.9 cap=0.0 model=6.1 unstarted=5.6
  0.88  1.0630          stop  25.31   22   29  0.9674   11.7   0.0  0.0000 tok/solved   87.0k L1.00  pool=0.0 cap=21.8 model=2.9 unstarted=0.0
+ 0.88  1.0630 stop-fallback  36.74   35   38  0.9919   17.8   0.0  0.0000 tok/solved  104.8k L0.55  pool=0.0 cap=0.0 model=13.3 unstarted=0.0
  0.88  1.0630         admit  40.96   39   43  1.0516   14.8  43.0  0.0002 tok/solved   74.8k L0.86  pool=0.0 cap=0.2 model=8.8 unstarted=0.0
  0.88  1.0630         route  38.00   38   38  0.5308   16.2  19.0  0.0000 tok/solved   97.8k L0.36  pool=0.0 cap=0.0 model=12.0 unstarted=0.0
  0.88  1.0630  random-paced  34.33   32   37  0.5130   13.6  19.0  0.0000 tok/solved   92.0k L0.37  pool=0.0 cap=0.0 model=15.7 unstarted=0.0
@@ -157,6 +171,7 @@
  0.90  1.0871         small  29.00   29   29  0.0868   12.7   0.0  0.0000 tok/solved  111.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.90  1.0871         large  38.21   37   40  1.0895   13.6   0.0  0.0184 tok/solved   71.7k L1.00  pool=0.9 cap=0.0 model=6.2 unstarted=4.6
  0.90  1.0871          stop  26.39   23   30  0.9817   11.9   0.0  0.0000 tok/solved   85.3k L1.00  pool=0.0 cap=20.4 model=3.2 unstarted=0.0
+ 0.90  1.0871 stop-fallback  37.02   36   39  1.0059   17.6   0.0  0.0000 tok/solved  102.7k L0.57  pool=0.0 cap=0.0 model=13.0 unstarted=0.0
  0.90  1.0871         admit  41.26   39   43  1.0759   14.8  44.0  0.0002 tok/solved   74.2k L0.88  pool=0.0 cap=0.2 model=8.5 unstarted=0.0
  0.90  1.0871         route  38.00   38   38  0.5308   16.2  19.0  0.0000 tok/solved   97.8k L0.36  pool=0.0 cap=0.0 model=12.0 unstarted=0.0
  0.90  1.0871  random-paced  34.33   32   37  0.5130   13.6  19.0  0.0000 tok/solved   92.0k L0.37  pool=0.0 cap=0.0 model=15.7 unstarted=0.0
@@ -168,6 +183,7 @@
  0.95  1.1475         small  29.00   29   29  0.0868   12.7   0.0  0.0000 tok/solved  111.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.95  1.1475         large  40.42   39   42  1.1501   14.4   0.0  0.0179 tok/solved   71.6k L1.00  pool=0.9 cap=0.0 model=6.6 unstarted=2.1
  0.95  1.1475          stop  29.09   26   32  1.0155   12.4   0.0  0.0000 tok/solved   81.3k L1.00  pool=0.0 cap=17.3 model=3.6 unstarted=0.0
+ 0.95  1.1475 stop-fallback  37.70   36   39  1.0387   17.3   0.0  0.0000 tok/solved   98.2k L0.62  pool=0.0 cap=0.0 model=12.3 unstarted=0.0
  0.95  1.1475         admit  41.96   41   43  1.1367   15.0  46.8  0.0002 tok/solved   72.7k L0.94  pool=0.0 cap=0.2 model=7.8 unstarted=0.0
  0.95  1.1475         route  38.00   38   38  0.5308   16.2  19.0  0.0000 tok/solved   97.8k L0.36  pool=0.0 cap=0.0 model=12.0 unstarted=0.0
  0.95  1.1475  random-paced  34.33   32   37  0.5130   13.6  19.0  0.0000 tok/solved   92.0k L0.37  pool=0.0 cap=0.0 model=15.7 unstarted=0.0
@@ -179,6 +195,7 @@
  1.00  1.2079         small  29.00   29   29  0.0868   12.7   0.0  0.0000 tok/solved  111.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  1.00  1.2079         large  43.00   43   43  1.2079   15.2   0.0  0.0000 tok/solved   70.9k L1.00  pool=0.0 cap=0.0 model=7.0 unstarted=0.0
  1.00  1.2079          stop  31.76   29   35  1.0463   12.9   0.0  0.0000 tok/solved   77.8k L1.00  pool=0.0 cap=14.2 model=4.0 unstarted=0.0
+ 1.00  1.2079 stop-fallback  38.51   37   40  1.0675   16.9   0.0  0.0000 tok/solved   93.4k L0.68  pool=0.0 cap=0.0 model=11.5 unstarted=0.0
  1.00  1.2079         admit  42.63   42   43  1.1977   15.1  49.4  0.0000 tok/solved   71.4k L0.99  pool=0.0 cap=0.3 model=7.1 unstarted=0.0
  1.00  1.2079         route  38.00   38   38  0.5308   16.2  19.0  0.0000 tok/solved   97.8k L0.36  pool=0.0 cap=0.0 model=12.0 unstarted=0.0
  1.00  1.2079  random-paced  34.33   32   37  0.5130   13.6  19.0  0.0000 tok/solved   92.0k L0.37  pool=0.0 cap=0.0 model=15.7 unstarted=0.0
@@ -190,6 +207,7 @@
  1.10  1.3287         small  29.00   29   29  0.0868   12.7   0.0  0.0000 tok/solved  111.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  1.10  1.3287         large  43.00   43   43  1.2079   15.2   0.0  0.0000 tok/solved   70.9k L1.00  pool=0.0 cap=0.0 model=7.0 unstarted=0.0
  1.10  1.3287          stop  35.15   32   38  1.0998   13.6   0.0  0.0000 tok/solved   75.7k L1.00  pool=0.0 cap=10.0 model=4.8 unstarted=0.0
+ 1.10  1.3287 stop-fallback  39.44   38   41  1.1164   16.5   0.0  0.0000 tok/solved   87.7k L0.76  pool=0.0 cap=0.0 model=10.6 unstarted=0.0
  1.10  1.3287         admit  43.00   43   43  1.2079   15.2  50.0  0.0000 tok/solved   70.9k L1.00  pool=0.0 cap=0.0 model=7.0 unstarted=0.0
  1.10  1.3287         route  38.00   38   38  0.5308   16.2  19.0  0.0000 tok/solved   97.8k L0.36  pool=0.0 cap=0.0 model=12.0 unstarted=0.0
  1.10  1.3287  random-paced  34.33   32   37  0.5130   13.6  19.0  0.0000 tok/solved   92.0k L0.37  pool=0.0 cap=0.0 model=15.7 unstarted=0.0
@@ -203,6 +221,7 @@
  0.05  0.3210         small  27.06   25   29  0.3213   12.5   0.0  0.0010 tok/solved  109.8k L0.00  pool=0.9 cap=0.0 model=19.6 unstarted=2.4
  0.05  0.3210         large   1.82    1    3  0.3276    0.8   0.0  0.0176 tok/solved   84.6k L1.00  pool=0.9 cap=0.0 model=0.3 unstarted=47.0
  0.05  0.3210          stop   0.00    0    0  0.3272    0.9   0.0  0.0144 tok/solved 76311.1k L1.00  pool=1.0 cap=27.6 model=0.0 unstarted=21.4
+ 0.05  0.3210 stop-fallback  10.15    7   13  0.3246    5.1   0.0  0.0138 tok/solved  117.0k L0.08  pool=1.0 cap=0.0 model=7.0 unstarted=31.9
  0.05  0.3210         admit  27.06   25   29  0.3213   12.5   0.0  0.0010 tok/solved  109.8k L0.00  pool=0.9 cap=0.0 model=19.6 unstarted=2.4
  0.05  0.3210         route   4.56    1    9  0.3272    2.2   2.6  0.0167 tok/solved  105.4k L0.29  pool=0.9 cap=0.0 model=1.8 unstarted=42.8
  0.05  0.3210  random-paced  27.06   25   29  0.3213   12.5   0.0  0.0010 tok/solved  109.8k L0.00  pool=0.9 cap=0.0 model=19.6 unstarted=2.4
@@ -214,6 +233,7 @@
  0.08  0.5136         small  29.00   29   29  0.3398   13.2   0.0  0.0000 tok/solved  108.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.08  0.5136         large   3.06    1    5  0.5203    1.2   0.0  0.0182 tok/solved   80.1k L1.00  pool=0.9 cap=0.0 model=0.6 unstarted=45.5
  0.08  0.5136          stop   0.00    0    0  0.5193    1.4   0.0  0.0149 tok/solved 121085.9k L1.00  pool=1.0 cap=44.4 model=0.0 unstarted=4.6
+ 0.08  0.5136 stop-fallback  16.23   13   19  0.5176    8.2   0.0  0.0143 tok/solved  117.7k L0.08  pool=1.0 cap=0.0 model=11.5 unstarted=21.3
  0.08  0.5136         admit  29.17   28   30  0.4694   13.2   1.1  0.0009 tok/solved  107.5k L0.02  pool=0.0 cap=0.2 model=20.6 unstarted=0.0
  0.08  0.5136         route   7.12    3   12  0.5192    3.3   3.7  0.0174 tok/solved  101.7k L0.30  pool=0.9 cap=0.0 model=2.6 unstarted=39.4
  0.08  0.5136  random-paced  29.12   28   30  0.4670   13.2   1.1  0.0007 tok/solved  107.6k L0.02  pool=0.0 cap=0.2 model=20.6 unstarted=0.0
@@ -225,6 +245,7 @@
  0.10  0.6420         small  29.00   29   29  0.3398   13.2   0.0  0.0000 tok/solved  108.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.10  0.6420         large   3.87    2    6  0.6490    1.5   0.0  0.0187 tok/solved   78.8k L1.00  pool=0.9 cap=0.0 model=0.8 unstarted=44.5
  0.10  0.6420          stop   0.16    0    1  0.6361    1.7   0.0  0.0012 tok/solved 1903.2k L1.00  pool=0.0 cap=49.8 model=0.0 unstarted=0.0
+ 0.10  0.6420 stop-fallback  20.33   17   23  0.6455   10.3   0.0  0.0143 tok/solved  117.6k L0.08  pool=1.0 cap=0.0 model=14.4 unstarted=14.3
  0.10  0.6420         admit  29.36   28   30  0.5977   13.2   2.1  0.0008 tok/solved  106.6k L0.04  pool=0.0 cap=0.2 model=20.3 unstarted=0.0
  0.10  0.6420         route   8.83    4   15  0.6483    4.1   4.5  0.0178 tok/solved  100.5k L0.31  pool=0.9 cap=0.0 model=3.1 unstarted=37.1
  0.10  0.6420  random-paced  29.37   28   31  0.5927   13.2   2.1  0.0007 tok/solved  106.7k L0.04  pool=0.0 cap=0.2 model=20.4 unstarted=0.0
@@ -236,6 +257,7 @@
  0.15  0.9630         small  29.00   29   29  0.3398   13.2   0.0  0.0000 tok/solved  108.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.15  0.9630         large   5.90    4    8  0.9700    2.2   0.0  0.0167 tok/solved   77.3k L1.00  pool=0.9 cap=0.0 model=1.2 unstarted=42.0
  0.15  0.9630          stop   0.97    1    1  0.9568    2.5   0.0  0.0024 tok/solved  461.4k L1.00  pool=0.0 cap=49.0 model=0.0 unstarted=0.0
+ 0.15  0.9630 stop-fallback  28.10   27   29  0.9667   14.5   0.0  0.0140 tok/solved  119.5k L0.09  pool=1.0 cap=0.0 model=20.4 unstarted=0.6
  0.15  0.9630         admit  29.99   28   32  0.9174   13.3   4.8  0.0007 tok/solved  104.2k L0.09  pool=0.1 cap=0.3 model=19.7 unstarted=0.0
  0.15  0.9630         route  13.04    7   19  0.9689    5.9   6.5  0.0164 tok/solved   98.9k L0.32  pool=0.9 cap=0.0 model=4.5 unstarted=31.5
  0.15  0.9630  random-paced  29.95   28   32  0.9141   13.3   4.7  0.0008 tok/solved  104.3k L0.09  pool=0.1 cap=0.2 model=19.7 unstarted=0.0
@@ -247,6 +269,7 @@
  0.20  1.2840         small  29.00   29   29  0.3398   13.2   0.0  0.0000 tok/solved  108.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.20  1.2840         large   8.03    5   11  1.2908    3.0   0.0  0.0175 tok/solved   75.7k L1.00  pool=0.9 cap=0.0 model=1.6 unstarted=39.5
  0.20  1.2840          stop   1.05    1    2  1.2771    3.3   0.0  0.0020 tok/solved  566.7k L1.00  pool=0.0 cap=48.9 model=0.0 unstarted=0.0
+ 0.20  1.2840 stop-fallback  28.67   28   29  1.2832   15.6   0.0  0.0014 tok/solved  124.2k L0.12  pool=0.6 cap=0.0 model=20.7 unstarted=0.0
  0.20  1.2840         admit  30.62   29   33  1.2376   13.4   7.4  0.0008 tok/solved  101.8k L0.14  pool=0.1 cap=0.2 model=19.0 unstarted=0.0
  0.20  1.2840         route  17.23   11   23  1.2901    7.8   8.5  0.0180 tok/solved   98.5k L0.33  pool=0.9 cap=0.0 model=5.9 unstarted=25.9
  0.20  1.2840  random-paced  30.54   29   32  1.2333   13.4   7.4  0.0007 tok/solved  102.1k L0.14  pool=0.1 cap=0.2 model=19.2 unstarted=0.0
@@ -258,6 +281,7 @@
  0.30  1.9260         small  29.00   29   29  0.3398   13.2   0.0  0.0000 tok/solved  108.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.30  1.9260         large  12.26   10   15  1.9327    4.4   0.0  0.0176 tok/solved   74.2k L1.00  pool=0.9 cap=0.0 model=2.3 unstarted=34.5
  0.30  1.9260          stop   1.62    1    3  1.9182    4.9   0.0  0.0032 tok/solved  553.5k L1.00  pool=0.0 cap=48.3 model=0.0 unstarted=0.0
+ 0.30  1.9260 stop-fallback  28.77   28   29  1.9243   17.2   0.0  0.0014 tok/solved  134.2k L0.19  pool=0.4 cap=0.0 model=20.8 unstarted=0.0
  0.30  1.9260         admit  31.90   29   34  1.8789   13.5  12.6  0.0008 tok/solved   97.2k L0.25  pool=0.1 cap=0.3 model=17.7 unstarted=0.0
  0.30  1.9260         route  25.70   20   31  1.9318   11.6  12.6  0.0165 tok/solved   97.7k L0.33  pool=0.9 cap=0.0 model=8.9 unstarted=14.5
  0.30  1.9260  random-paced  32.07   30   35  1.8503   13.6  12.4  0.0007 tok/solved   97.0k L0.24  pool=0.0 cap=0.2 model=17.7 unstarted=0.0
@@ -269,6 +293,7 @@
  0.40  2.5680         small  29.00   29   29  0.3398   13.2   0.0  0.0000 tok/solved  108.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.40  2.5680         large  16.42   14   19  2.5750    5.9   0.0  0.0176 tok/solved   73.8k L1.00  pool=0.9 cap=0.0 model=3.1 unstarted=29.6
  0.40  2.5680          stop   3.02    2    4  2.5571    6.5   0.0  0.0025 tok/solved  395.4k L1.00  pool=0.0 cap=46.9 model=0.0 unstarted=0.0
+ 0.40  2.5680 stop-fallback  28.80   28   29  2.5654   18.5   0.0  0.0027 tok/solved  143.8k L0.25  pool=0.4 cap=0.0 model=20.8 unstarted=0.0
  0.40  2.5680         admit  33.19   31   36  2.5181   13.7  17.9  0.0008 tok/solved   93.1k L0.35  pool=0.0 cap=0.2 model=16.5 unstarted=0.0
  0.40  2.5680         route  34.36   31   37  2.5734   15.5  16.6  0.0165 tok/solved   97.5k L0.33  pool=0.9 cap=0.0 model=12.0 unstarted=2.7
  0.40  2.5680  random-paced  32.94   30   36  2.2633   13.7  15.8  0.0007 tok/solved   94.2k L0.31  pool=0.0 cap=0.1 model=17.0 unstarted=0.0
@@ -280,6 +305,7 @@
  0.45  2.8890         small  29.00   29   29  0.3398   13.2   0.0  0.0000 tok/solved  108.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.45  2.8890         large  18.52   16   22  2.8958    6.6   0.0  0.0174 tok/solved   73.6k L1.00  pool=0.9 cap=0.0 model=3.5 unstarted=27.1
  0.45  2.8890          stop   4.52    3    6  2.8752    7.3   0.0  0.0025 tok/solved  297.4k L1.00  pool=0.0 cap=45.4 model=0.0 unstarted=0.0
+ 0.45  2.8890 stop-fallback  28.72   28   29  2.8864   19.3   0.0  0.0017 tok/solved  149.2k L0.28  pool=0.5 cap=0.0 model=20.7 unstarted=0.0
  0.45  2.8890         admit  33.95   31   37  2.8414   13.8  20.5  0.0006 tok/solved   90.9k L0.40  pool=0.1 cap=0.2 model=15.7 unstarted=0.0
  0.45  2.8890         route  37.00   37   37  2.6954   16.4  17.0  0.0000 tok/solved   95.7k L0.33  pool=0.0 cap=0.0 model=13.0 unstarted=0.0
  0.45  2.8890  random-paced  33.22   30   36  2.3549   13.7  16.6  0.0008 tok/solved   93.4k L0.32  pool=0.0 cap=0.0 model=16.7 unstarted=0.0
@@ -291,6 +317,7 @@
  0.50  3.2100         small  29.00   29   29  0.3398   13.2   0.0  0.0000 tok/solved  108.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.50  3.2100         large  20.65   18   24  3.2170    7.4   0.0  0.0181 tok/solved   73.4k L1.00  pool=0.9 cap=0.0 model=3.9 unstarted=24.6
  0.50  3.2100          stop   6.72    5    9  3.1924    8.0   0.0  0.0027 tok/solved  222.2k L1.00  pool=0.0 cap=43.2 model=0.0 unstarted=0.0
+ 0.50  3.2100 stop-fallback  28.79   28   29  3.2059   19.8   0.0  0.0017 tok/solved  151.5k L0.31  pool=0.4 cap=0.0 model=20.8 unstarted=0.0
  0.50  3.2100         admit  34.70   32   38  3.1597   13.9  23.1  0.0008 tok/solved   88.7k L0.46  pool=0.1 cap=0.2 model=15.0 unstarted=0.0
  0.50  3.2100         route  37.00   37   37  2.6954   16.4  17.0  0.0000 tok/solved   95.7k L0.33  pool=0.0 cap=0.0 model=13.0 unstarted=0.0
  0.50  3.2100  random-paced  33.32   30   36  2.3890   13.8  16.9  0.0008 tok/solved   93.1k L0.33  pool=0.0 cap=0.0 model=16.7 unstarted=0.0
@@ -302,6 +329,7 @@
  0.60  3.8520         small  29.00   29   29  0.3398   13.2   0.0  0.0000 tok/solved  108.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.60  3.8520         large  24.87   22   28  3.8589    8.8   0.0  0.0176 tok/solved   73.1k L1.00  pool=0.9 cap=0.0 model=4.7 unstarted=19.6
  0.60  3.8520          stop  10.51    9   12  3.8186    9.5   0.0  0.0006 tok/solved  170.1k L1.00  pool=0.0 cap=39.2 model=0.3 unstarted=0.0
+ 0.60  3.8520 stop-fallback  28.83   28   29  3.8434   20.7   0.0  0.0016 tok/solved  156.5k L0.37  pool=0.4 cap=0.0 model=20.8 unstarted=0.0
  0.60  3.8520         admit  36.07   34   39  3.8022   14.0  28.4  0.0009 tok/solved   85.0k L0.56  pool=0.1 cap=0.2 model=13.6 unstarted=0.0
  0.60  3.8520         route  37.00   37   37  2.6954   16.4  17.0  0.0000 tok/solved   95.7k L0.33  pool=0.0 cap=0.0 model=13.0 unstarted=0.0
  0.60  3.8520  random-paced  33.35   30   36  2.3955   13.8  16.9  0.0000 tok/solved   93.0k L0.33  pool=0.0 cap=0.0 model=16.7 unstarted=0.0
@@ -313,6 +341,7 @@
  0.70  4.4940         small  29.00   29   29  0.3398   13.2   0.0  0.0000 tok/solved  108.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.70  4.4940         large  29.05   26   32  4.5007   10.3   0.0  0.0169 tok/solved   72.9k L1.00  pool=0.9 cap=0.0 model=5.5 unstarted=14.6
  0.70  4.4940          stop  14.36   12   17  4.4212   10.9   0.0  0.0005 tok/solved  144.3k L1.00  pool=0.0 cap=34.7 model=1.0 unstarted=0.0
+ 0.70  4.4940 stop-fallback  29.10   28   30  4.4684   21.5   0.0  0.0008 tok/solved  159.9k L0.42  pool=0.2 cap=0.0 model=20.7 unstarted=0.0
  0.70  4.4940         admit  37.39   35   40  4.4440   14.2  33.7  0.0008 tok/solved   81.7k L0.67  pool=0.0 cap=0.2 model=12.3 unstarted=0.0
  0.70  4.4940         route  37.00   37   37  2.6954   16.4  17.0  0.0000 tok/solved   95.7k L0.33  pool=0.0 cap=0.0 model=13.0 unstarted=0.0
  0.70  4.4940  random-paced  33.35   30   36  2.3955   13.8  16.9  0.0000 tok/solved   93.0k L0.33  pool=0.0 cap=0.0 model=16.7 unstarted=0.0
@@ -324,6 +353,7 @@
  0.80  5.1360         small  29.00   29   29  0.3398   13.2   0.0  0.0000 tok/solved  108.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.80  5.1360         large  33.17   31   36  5.1428   11.8   0.0  0.0184 tok/solved   73.0k L1.00  pool=0.9 cap=0.0 model=6.3 unstarted=9.6
  0.80  5.1360          stop  20.46   17   23  4.9711   12.0   0.0  0.0000 tok/solved  114.0k L1.00  pool=0.0 cap=27.6 model=1.9 unstarted=0.0
+ 0.80  5.1360 stop-fallback  30.68   29   32  5.0508   20.9   0.0  0.0009 tok/solved  147.6k L0.50  pool=0.1 cap=0.0 model=19.3 unstarted=0.0
  0.80  5.1360         admit  38.85   37   41  5.0839   14.4  38.9  0.0009 tok/solved   78.3k L0.78  pool=0.0 cap=0.2 model=10.9 unstarted=0.0
  0.80  5.1360         route  37.00   37   37  2.6954   16.4  17.0  0.0000 tok/solved   95.7k L0.33  pool=0.0 cap=0.0 model=13.0 unstarted=0.0
  0.80  5.1360  random-paced  33.35   30   36  2.3955   13.8  16.9  0.0000 tok/solved   93.0k L0.33  pool=0.0 cap=0.0 model=16.7 unstarted=0.0
@@ -335,6 +365,7 @@
  0.85  5.4570         small  29.00   29   29  0.3398   13.2   0.0  0.0000 tok/solved  108.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.85  5.4570         large  35.23   33   38  5.4637   12.5   0.0  0.0178 tok/solved   73.0k L1.00  pool=0.9 cap=0.0 model=6.8 unstarted=7.1
  0.85  5.4570          stop  23.49   20   26  5.2150   12.5   0.0  0.0000 tok/solved  104.2k L1.00  pool=0.0 cap=24.1 model=2.5 unstarted=0.0
+ 0.85  5.4570 stop-fallback  32.15   30   34  5.3074   20.4   0.0  0.0007 tok/solved  137.5k L0.54  pool=0.0 cap=0.0 model=17.8 unstarted=0.0
  0.85  5.4570         admit  39.59   38   41  5.4021   14.5  41.5  0.0007 tok/solved   76.8k L0.83  pool=0.0 cap=0.2 model=10.2 unstarted=0.0
  0.85  5.4570         route  37.00   37   37  2.6954   16.4  17.0  0.0000 tok/solved   95.7k L0.33  pool=0.0 cap=0.0 model=13.0 unstarted=0.0
  0.85  5.4570  random-paced  33.35   30   36  2.3955   13.8  16.9  0.0000 tok/solved   93.0k L0.33  pool=0.0 cap=0.0 model=16.7 unstarted=0.0
@@ -346,6 +377,7 @@
  0.88  5.6496         small  29.00   29   29  0.3398   13.2   0.0  0.0000 tok/solved  108.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.88  5.6496         large  36.46   34   38  5.6562   13.0   0.0  0.0176 tok/solved   73.0k L1.00  pool=0.9 cap=0.0 model=7.0 unstarted=5.7
  0.88  5.6496          stop  25.46   22   28  5.3461   12.8   0.0  0.0000 tok/solved   98.6k L1.00  pool=0.0 cap=21.7 model=2.8 unstarted=0.0
+ 0.88  5.6496 stop-fallback  33.07   31   35  5.4453   20.0   0.0  0.0006 tok/solved  130.8k L0.57  pool=0.0 cap=0.0 model=16.9 unstarted=0.0
  0.88  5.6496         admit  40.01   38   42  5.5962   14.5  43.1  0.0008 tok/solved   75.9k L0.86  pool=0.0 cap=0.2 model=9.8 unstarted=0.0
  0.88  5.6496         route  37.00   37   37  2.6954   16.4  17.0  0.0000 tok/solved   95.7k L0.33  pool=0.0 cap=0.0 model=13.0 unstarted=0.0
  0.88  5.6496  random-paced  33.35   30   36  2.3955   13.8  16.9  0.0000 tok/solved   93.0k L0.33  pool=0.0 cap=0.0 model=16.7 unstarted=0.0
@@ -357,6 +389,7 @@
  0.90  5.7780         small  29.00   29   29  0.3398   13.2   0.0  0.0000 tok/solved  108.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.90  5.7780         large  37.34   35   39  5.7847   13.3   0.0  0.0173 tok/solved   72.9k L1.00  pool=0.9 cap=0.0 model=7.1 unstarted=4.7
  0.90  5.7780          stop  26.60   24   30  5.4292   12.9   0.0  0.0000 tok/solved   95.8k L1.00  pool=0.0 cap=20.2 model=3.2 unstarted=0.0
+ 0.90  5.7780 stop-fallback  33.73   31   36  5.5305   19.7   0.0  0.0003 tok/solved  126.3k L0.59  pool=0.0 cap=0.0 model=16.3 unstarted=0.0
  0.90  5.7780         admit  40.35   39   42  5.7242   14.5  44.1  0.0004 tok/solved   75.2k L0.88  pool=0.0 cap=0.2 model=9.5 unstarted=0.0
  0.90  5.7780         route  37.00   37   37  2.6954   16.4  17.0  0.0000 tok/solved   95.7k L0.33  pool=0.0 cap=0.0 model=13.0 unstarted=0.0
  0.90  5.7780  random-paced  33.35   30   36  2.3955   13.8  16.9  0.0000 tok/solved   93.0k L0.33  pool=0.0 cap=0.0 model=16.7 unstarted=0.0
@@ -368,6 +401,7 @@
  0.95  6.0990         small  29.00   29   29  0.3398   13.2   0.0  0.0000 tok/solved  108.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  0.95  6.0990         large  39.45   38   41  6.1057   14.0   0.0  0.0186 tok/solved   72.9k L1.00  pool=0.9 cap=0.0 model=7.5 unstarted=2.1
  0.95  6.0990          stop  29.60   27   33  5.6151   13.3   0.0  0.0000 tok/solved   89.1k L1.00  pool=0.0 cap=16.7 model=3.7 unstarted=0.0
+ 0.95  6.0990 stop-fallback  35.33   33   38  5.7149   19.0   0.0  0.0000 tok/solved  115.6k L0.64  pool=0.0 cap=0.0 model=14.7 unstarted=0.0
  0.95  6.0990         admit  41.08   40   42  6.0439   14.6  46.8  0.0007 tok/solved   73.7k L0.94  pool=0.0 cap=0.2 model=8.7 unstarted=0.0
  0.95  6.0990         route  37.00   37   37  2.6954   16.4  17.0  0.0000 tok/solved   95.7k L0.33  pool=0.0 cap=0.0 model=13.0 unstarted=0.0
  0.95  6.0990  random-paced  33.35   30   36  2.3955   13.8  16.9  0.0000 tok/solved   93.0k L0.33  pool=0.0 cap=0.0 model=16.7 unstarted=0.0
@@ -379,6 +413,7 @@
  1.00  6.4200         small  29.00   29   29  0.3398   13.2   0.0  0.0000 tok/solved  108.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  1.00  6.4200         large  42.00   42   42  6.4200   14.7   0.0  0.0000 tok/solved   72.0k L1.00  pool=0.0 cap=0.0 model=8.0 unstarted=0.0
  1.00  6.4200          stop  31.73   29   35  5.7706   13.6   0.0  0.0000 tok/solved   85.5k L1.00  pool=0.0 cap=13.9 model=4.3 unstarted=0.0
+ 1.00  6.4200 stop-fallback  36.55   34   39  5.8662   18.4   0.0  0.0000 tok/solved  108.1k L0.68  pool=0.0 cap=0.0 model=13.4 unstarted=0.0
  1.00  6.4200         admit  41.72   41   42  6.3633   14.7  49.4  0.0000 tok/solved   72.5k L0.99  pool=0.0 cap=0.2 model=8.1 unstarted=0.0
  1.00  6.4200         route  37.00   37   37  2.6954   16.4  17.0  0.0000 tok/solved   95.7k L0.33  pool=0.0 cap=0.0 model=13.0 unstarted=0.0
  1.00  6.4200  random-paced  33.35   30   36  2.3955   13.8  16.9  0.0000 tok/solved   93.0k L0.33  pool=0.0 cap=0.0 model=16.7 unstarted=0.0
@@ -390,6 +425,7 @@
  1.10  7.0620         small  29.00   29   29  0.3398   13.2   0.0  0.0000 tok/solved  108.4k L0.00  pool=0.0 cap=0.0 model=21.0 unstarted=0.0
  1.10  7.0620         large  42.00   42   42  6.4200   14.7   0.0  0.0000 tok/solved   72.0k L1.00  pool=0.0 cap=0.0 model=8.0 unstarted=0.0
  1.10  7.0620          stop  35.05   32   38  6.0088   14.0   0.0  0.0000 tok/solved   80.6k L1.00  pool=0.0 cap=9.2 model=5.8 unstarted=0.0
+ 1.10  7.0620 stop-fallback  38.41   36   41  6.0839   17.3   0.0  0.0000 tok/solved   95.7k L0.77  pool=0.0 cap=0.0 model=11.6 unstarted=0.0
  1.10  7.0620         admit  42.00   42   42  6.4200   14.7  50.0  0.0000 tok/solved   72.0k L1.00  pool=0.0 cap=0.0 model=8.0 unstarted=0.0
  1.10  7.0620         route  37.00   37   37  2.6954   16.4  17.0  0.0000 tok/solved   95.7k L0.33  pool=0.0 cap=0.0 model=13.0 unstarted=0.0
  1.10  7.0620  random-paced  33.35   30   36  2.3955   13.8  16.9  0.0000 tok/solved   93.0k L0.33  pool=0.0 cap=0.0 model=16.7 unstarted=0.0
@@ -413,6 +449,10 @@
    "stop": [
     0,
     0
+   ],
+   "stop-fallback": [
+    9,
+    22
    ],
    "admit": [
     24,
@@ -488,6 +528,22 @@
     ],
     "share_le0": 0.0
    },
+   "paced+cap - stop-fallback": {
+    "mean": 16.7425,
+    "ci95": [
+     11,
+     23
+    ],
+    "share_le0": 0.0
+   },
+   "paced+cap - paced-abandon": {
+    "mean": 4.3615,
+    "ci95": [
+     1,
+     9
+    ],
+    "share_le0": 0.0215
+   },
    "hybrid - large": {
     "mean": 23.5195,
     "ci95": [
@@ -528,6 +584,22 @@
     ],
     "share_le0": 0.0
    },
+   "hybrid - stop-fallback": {
+    "mean": 16.741,
+    "ci95": [
+     11,
+     23
+    ],
+    "share_le0": 0.0
+   },
+   "hybrid - paced-abandon": {
+    "mean": 4.36,
+    "ci95": [
+     1,
+     9
+    ],
+    "share_le0": 0.0215
+   },
    "hybrid - paced+cap": {
     "mean": -0.0015,
     "ci95": [
@@ -551,6 +623,10 @@
    "stop": [
     0,
     5
+   ],
+   "stop-fallback": [
+    18,
+    32
    ],
    "admit": [
     27,
@@ -626,6 +702,22 @@
     ],
     "share_le0": 0.0
    },
+   "paced+cap - stop-fallback": {
+    "mean": 11.772,
+    "ci95": [
+     7,
+     17
+    ],
+    "share_le0": 0.0
+   },
+   "paced+cap - paced-abandon": {
+    "mean": 0.98,
+    "ci95": [
+     0,
+     4
+    ],
+    "share_le0": 0.505
+   },
    "hybrid - large": {
     "mean": 19.636,
     "ci95": [
@@ -666,6 +758,22 @@
     ],
     "share_le0": 0.0
    },
+   "hybrid - stop-fallback": {
+    "mean": 11.8255,
+    "ci95": [
+     7,
+     17
+    ],
+    "share_le0": 0.0
+   },
+   "hybrid - paced-abandon": {
+    "mean": 1.0335,
+    "ci95": [
+     0,
+     4
+    ],
+    "share_le0": 0.441
+   },
    "hybrid - paced+cap": {
     "mean": 0.0535,
     "ci95": [
@@ -689,6 +797,10 @@
    "stop": [
     14,
     28
+   ],
+   "stop-fallback": [
+    29,
+    42
    ],
    "admit": [
     34,
@@ -764,6 +876,22 @@
     ],
     "share_le0": 0.0
    },
+   "paced+cap - stop-fallback": {
+    "mean": 2.4495,
+    "ci95": [
+     -1,
+     6
+    ],
+    "share_le0": 0.1425
+   },
+   "paced+cap - paced-abandon": {
+    "mean": 0,
+    "ci95": [
+     0,
+     0
+    ],
+    "share_le0": 1.0
+   },
    "hybrid - large": {
     "mean": 6.794,
     "ci95": [
@@ -804,6 +932,22 @@
     ],
     "share_le0": 0.0
    },
+   "hybrid - stop-fallback": {
+    "mean": 5.3685,
+    "ci95": [
+     2,
+     10
+    ],
+    "share_le0": 0.003
+   },
+   "hybrid - paced-abandon": {
+    "mean": 2.919,
+    "ci95": [
+     0,
+     7
+    ],
+    "share_le0": 0.0495
+   },
    "hybrid - paced+cap": {
     "mean": 2.919,
     "ci95": [
@@ -827,6 +971,10 @@
    "stop": [
     25,
     39
+   ],
+   "stop-fallback": [
+    32,
+    44
    ],
    "admit": [
     37,
@@ -902,6 +1050,22 @@
     ],
     "share_le0": 0.0345
    },
+   "paced+cap - stop-fallback": {
+    "mean": -0.5625,
+    "ci95": [
+     -4,
+     3
+    ],
+    "share_le0": 0.713
+   },
+   "paced+cap - paced-abandon": {
+    "mean": 0,
+    "ci95": [
+     0,
+     0
+    ],
+    "share_le0": 1.0
+   },
    "hybrid - large": {
     "mean": 0.7105,
     "ci95": [
@@ -942,6 +1106,22 @@
     ],
     "share_le0": 0.0
    },
+   "hybrid - stop-fallback": {
+    "mean": 4.1185,
+    "ci95": [
+     1,
+     8
+    ],
+    "share_le0": 0.0105
+   },
+   "hybrid - paced-abandon": {
+    "mean": 4.681,
+    "ci95": [
+     1,
+     9
+    ],
+    "share_le0": 0.0075
+   },
    "hybrid - paced+cap": {
     "mean": 4.681,
     "ci95": [
@@ -949,6 +1129,755 @@
      9
     ],
     "share_le0": 0.0075
+   }
+  }
+ }
+}
+===== causal cached, prior {'small': 0.00679686, 'large': 0.12839968}
+ 0.20         large   8.28 [6, 11] unstarted 39.44 overdraw 0.0180
+ 0.20         admit  28.49 [21, 32] unstarted 3.34 overdraw 0.0009
+ 0.20  random-paced  30.40 [28, 32] unstarted 0.25 overdraw 0.0008
+ 0.20     paced+cap  31.54 [29, 34] unstarted 0.34 overdraw 0.0009
+ 0.20        hybrid  31.54 [29, 34] unstarted 0.34 overdraw 0.0009
+ 0.20  oracle-paced  32.33 [29, 34] unstarted 0.65 overdraw 0.0009
+ 0.40         large  16.79 [14, 20] unstarted 29.59 overdraw 0.0174
+ 0.40         admit  32.22 [27, 36] unstarted 1.83 overdraw 0.0009
+ 0.40  random-paced  33.43 [31, 36] unstarted 0.01 overdraw 0.0003
+ 0.40     paced+cap  36.67 [35, 38] unstarted 0.01 overdraw 0.0002
+ 0.40        hybrid  36.65 [35, 38] unstarted 0.01 overdraw 0.0002
+ 0.40  oracle-paced  39.05 [37, 41] unstarted 0.05 overdraw 0.0009
+ 0.80         large  34.01 [32, 36] unstarted 9.57 overdraw 0.0176
+ 0.80         admit  39.50 [37, 42] unstarted 0.08 overdraw 0.0004
+ 0.80  random-paced  34.33 [32, 37] unstarted 0.00 overdraw 0.0000
+ 0.80     paced+cap  38.00 [38, 38] unstarted 0.00 overdraw 0.0000
+ 0.80        hybrid  40.78 [39, 42] unstarted 0.00 overdraw 0.0000
+ 0.80  oracle-paced  43.00 [43, 43] unstarted 0.00 overdraw 0.0000
+ 1.00         large  43.00 [43, 43] unstarted 0.00 overdraw 0.0000
+ 1.00         admit  42.63 [42, 43] unstarted 0.00 overdraw 0.0000
+ 1.00  random-paced  34.33 [32, 37] unstarted 0.00 overdraw 0.0000
+ 1.00     paced+cap  38.00 [38, 38] unstarted 0.00 overdraw 0.0000
+ 1.00        hybrid  42.19 [41, 43] unstarted 0.00 overdraw 0.0000
+ 1.00  oracle-paced  43.00 [43, 43] unstarted 0.00 overdraw 0.0000
+===== causal uncached, prior {'small': 0.0017353808, 'large': 0.024158308}
+ 0.20         large   8.03 [5, 11] unstarted 39.50 overdraw 0.0175
+ 0.20         admit  18.73 [12, 25] unstarted 20.86 overdraw 0.0010
+ 0.20  random-paced  30.43 [28, 33] unstarted 0.26 overdraw 0.0009
+ 0.20     paced+cap  31.44 [29, 34] unstarted 0.50 overdraw 0.0008
+ 0.20        hybrid  31.24 [29, 33] unstarted 0.63 overdraw 0.0009
+ 0.20  oracle-paced  32.45 [29, 35] unstarted 0.92 overdraw 0.0009
+ 0.40         large  16.42 [14, 19] unstarted 29.58 overdraw 0.0176
+ 0.40         admit  25.45 [19, 32] unstarted 13.62 overdraw 0.0010
+ 0.40  random-paced  32.94 [30, 36] unstarted 0.01 overdraw 0.0005
+ 0.40     paced+cap  36.10 [35, 37] unstarted 0.01 overdraw 0.0007
+ 0.40        hybrid  35.93 [35, 37] unstarted 0.01 overdraw 0.0008
+ 0.40  oracle-paced  38.95 [37, 41] unstarted 0.09 overdraw 0.0010
+ 0.80         large  33.17 [31, 36] unstarted 9.62 overdraw 0.0184
+ 0.80         admit  37.79 [34, 41] unstarted 1.66 overdraw 0.0009
+ 0.80  random-paced  33.35 [30, 36] unstarted 0.00 overdraw 0.0000
+ 0.80     paced+cap  37.00 [37, 37] unstarted 0.00 overdraw 0.0000
+ 0.80        hybrid  39.79 [38, 42] unstarted 0.00 overdraw 0.0000
+ 0.80  oracle-paced  43.00 [43, 43] unstarted 0.00 overdraw 0.0000
+ 1.00         large  42.00 [42, 42] unstarted 0.00 overdraw 0.0000
+ 1.00         admit  41.72 [41, 42] unstarted 0.00 overdraw 0.0000
+ 1.00  random-paced  33.35 [30, 36] unstarted 0.00 overdraw 0.0000
+ 1.00     paced+cap  37.00 [37, 37] unstarted 0.00 overdraw 0.0000
+ 1.00        hybrid  41.04 [39, 42] unstarted 0.00 overdraw 0.0000
+ 1.00  oracle-paced  43.00 [43, 43] unstarted 0.00 overdraw 0.0000
+===== bootstrap (causal, cached)
+{
+ "0.2": {
+  "ci95": {
+   "small": [
+    22,
+    36
+   ],
+   "large": [
+    5,
+    11
+   ],
+   "stop": [
+    0,
+    0
+   ],
+   "stop-fallback": [
+    9,
+    22
+   ],
+   "admit": [
+    19,
+    37
+   ],
+   "route": [
+    9,
+    28
+   ],
+   "random-paced": [
+    24,
+    37
+   ],
+   "paced": [
+    24,
+    38
+   ],
+   "paced-abandon": [
+    20,
+    35
+   ],
+   "paced+cap": [
+    25,
+    38
+   ],
+   "hybrid": [
+    25,
+    38
+   ],
+   "oracle-paced": [
+    25,
+    40
+   ]
+  },
+  "diff": {
+   "paced+cap - large": {
+    "mean": 23.347,
+    "ci95": [
+     16,
+     30
+    ],
+    "share_le0": 0.0
+   },
+   "paced+cap - admit": {
+    "mean": 3.134,
+    "ci95": [
+     -2,
+     12
+    ],
+    "share_le0": 0.214
+   },
+   "paced+cap - route": {
+    "mean": 14.088,
+    "ci95": [
+     6,
+     22
+    ],
+    "share_le0": 0.0
+   },
+   "paced+cap - random-paced": {
+    "mean": 1.192,
+    "ci95": [
+     -2,
+     5
+    ],
+    "share_le0": 0.3425
+   },
+   "paced+cap - stop": {
+    "mean": 31.672,
+    "ci95": [
+     25,
+     38
+    ],
+    "share_le0": 0.0
+   },
+   "paced+cap - stop-fallback": {
+    "mean": 16.5685,
+    "ci95": [
+     10,
+     23
+    ],
+    "share_le0": 0.0
+   },
+   "paced+cap - paced-abandon": {
+    "mean": 4.148,
+    "ci95": [
+     0,
+     9
+    ],
+    "share_le0": 0.0365
+   },
+   "hybrid - large": {
+    "mean": 23.347,
+    "ci95": [
+     16,
+     30
+    ],
+    "share_le0": 0.0
+   },
+   "hybrid - admit": {
+    "mean": 3.134,
+    "ci95": [
+     -2,
+     12
+    ],
+    "share_le0": 0.214
+   },
+   "hybrid - route": {
+    "mean": 14.088,
+    "ci95": [
+     6,
+     22
+    ],
+    "share_le0": 0.0
+   },
+   "hybrid - random-paced": {
+    "mean": 1.192,
+    "ci95": [
+     -2,
+     5
+    ],
+    "share_le0": 0.342
+   },
+   "hybrid - stop": {
+    "mean": 31.672,
+    "ci95": [
+     25,
+     38
+    ],
+    "share_le0": 0.0
+   },
+   "hybrid - stop-fallback": {
+    "mean": 16.5685,
+    "ci95": [
+     10,
+     23
+    ],
+    "share_le0": 0.0
+   },
+   "hybrid - paced-abandon": {
+    "mean": 4.148,
+    "ci95": [
+     0,
+     9
+    ],
+    "share_le0": 0.036
+   },
+   "hybrid - paced+cap": {
+    "mean": 0,
+    "ci95": [
+     0,
+     0
+    ],
+    "share_le0": 0.999
+   }
+  }
+ },
+ "0.4": {
+  "ci95": {
+   "small": [
+    22,
+    36
+   ],
+   "large": [
+    13,
+    21
+   ],
+   "stop": [
+    0,
+    5
+   ],
+   "stop-fallback": [
+    18,
+    32
+   ],
+   "admit": [
+    24,
+    39
+   ],
+   "route": [
+    22,
+    42
+   ],
+   "random-paced": [
+    27,
+    40
+   ],
+   "paced": [
+    29,
+    43
+   ],
+   "paced-abandon": [
+    28,
+    42
+   ],
+   "paced+cap": [
+    30,
+    43
+   ],
+   "hybrid": [
+    30,
+    43
+   ],
+   "oracle-paced": [
+    31,
+    47
+   ]
+  },
+  "diff": {
+   "paced+cap - large": {
+    "mean": 19.574,
+    "ci95": [
+     14,
+     25
+    ],
+    "share_le0": 0.0
+   },
+   "paced+cap - admit": {
+    "mean": 4.2565,
+    "ci95": [
+     -1,
+     12
+    ],
+    "share_le0": 0.084
+   },
+   "paced+cap - route": {
+    "mean": 2.833,
+    "ci95": [
+     0,
+     11
+    ],
+    "share_le0": 0.394
+   },
+   "paced+cap - random-paced": {
+    "mean": 2.9855,
+    "ci95": [
+     -1,
+     8
+    ],
+    "share_le0": 0.1325
+   },
+   "paced+cap - stop": {
+    "mean": 34.9925,
+    "ci95": [
+     28,
+     41
+    ],
+    "share_le0": 0.0
+   },
+   "paced+cap - stop-fallback": {
+    "mean": 11.7635,
+    "ci95": [
+     7,
+     17
+    ],
+    "share_le0": 0.0
+   },
+   "paced+cap - paced-abandon": {
+    "mean": 0.9685,
+    "ci95": [
+     0,
+     4
+    ],
+    "share_le0": 0.5085
+   },
+   "hybrid - large": {
+    "mean": 19.6155,
+    "ci95": [
+     14,
+     25
+    ],
+    "share_le0": 0.0
+   },
+   "hybrid - admit": {
+    "mean": 4.298,
+    "ci95": [
+     -1,
+     12
+    ],
+    "share_le0": 0.0795
+   },
+   "hybrid - route": {
+    "mean": 2.8745,
+    "ci95": [
+     -1,
+     11
+    ],
+    "share_le0": 0.331
+   },
+   "hybrid - random-paced": {
+    "mean": 3.027,
+    "ci95": [
+     -1,
+     8
+    ],
+    "share_le0": 0.13
+   },
+   "hybrid - stop": {
+    "mean": 35.034,
+    "ci95": [
+     28,
+     42
+    ],
+    "share_le0": 0.0
+   },
+   "hybrid - stop-fallback": {
+    "mean": 11.805,
+    "ci95": [
+     7,
+     17
+    ],
+    "share_le0": 0.0
+   },
+   "hybrid - paced-abandon": {
+    "mean": 1.01,
+    "ci95": [
+     -1,
+     4
+    ],
+    "share_le0": 0.4475
+   },
+   "hybrid - paced+cap": {
+    "mean": 0.0415,
+    "ci95": [
+     -1,
+     1
+    ],
+    "share_le0": 0.9305
+   }
+  }
+ },
+ "0.8": {
+  "ci95": {
+   "small": [
+    22,
+    36
+   ],
+   "large": [
+    28,
+    41
+   ],
+   "stop": [
+    14,
+    28
+   ],
+   "stop-fallback": [
+    29,
+    42
+   ],
+   "admit": [
+    34,
+    45
+   ],
+   "route": [
+    32,
+    44
+   ],
+   "random-paced": [
+    28,
+    40
+   ],
+   "paced": [
+    32,
+    44
+   ],
+   "paced-abandon": [
+    32,
+    44
+   ],
+   "paced+cap": [
+    32,
+    44
+   ],
+   "hybrid": [
+    35,
+    46
+   ],
+   "oracle-paced": [
+    38,
+    47
+   ]
+  },
+  "diff": {
+   "paced+cap - large": {
+    "mean": 3.875,
+    "ci95": [
+     -1,
+     9
+    ],
+    "share_le0": 0.0955
+   },
+   "paced+cap - admit": {
+    "mean": -1.4125,
+    "ci95": [
+     -6,
+     3
+    ],
+    "share_le0": 0.798
+   },
+   "paced+cap - route": {
+    "mean": 0,
+    "ci95": [
+     0,
+     0
+    ],
+    "share_le0": 1.0
+   },
+   "paced+cap - random-paced": {
+    "mean": 3.7245,
+    "ci95": [
+     -1,
+     9
+    ],
+    "share_le0": 0.1035
+   },
+   "paced+cap - stop": {
+    "mean": 17.2245,
+    "ci95": [
+     10,
+     24
+    ],
+    "share_le0": 0.0
+   },
+   "paced+cap - stop-fallback": {
+    "mean": 2.4495,
+    "ci95": [
+     -1,
+     6
+    ],
+    "share_le0": 0.1425
+   },
+   "paced+cap - paced-abandon": {
+    "mean": 0,
+    "ci95": [
+     0,
+     0
+    ],
+    "share_le0": 1.0
+   },
+   "hybrid - large": {
+    "mean": 6.588,
+    "ci95": [
+     2,
+     11
+    ],
+    "share_le0": 0.0025
+   },
+   "hybrid - admit": {
+    "mean": 1.3005,
+    "ci95": [
+     -3,
+     5
+    ],
+    "share_le0": 0.348
+   },
+   "hybrid - route": {
+    "mean": 2.713,
+    "ci95": [
+     0,
+     6
+    ],
+    "share_le0": 0.062
+   },
+   "hybrid - random-paced": {
+    "mean": 6.4375,
+    "ci95": [
+     2,
+     12
+    ],
+    "share_le0": 0.007
+   },
+   "hybrid - stop": {
+    "mean": 19.9375,
+    "ci95": [
+     13,
+     27
+    ],
+    "share_le0": 0.0
+   },
+   "hybrid - stop-fallback": {
+    "mean": 5.1625,
+    "ci95": [
+     1,
+     9
+    ],
+    "share_le0": 0.004
+   },
+   "hybrid - paced-abandon": {
+    "mean": 2.713,
+    "ci95": [
+     0,
+     6
+    ],
+    "share_le0": 0.062
+   },
+   "hybrid - paced+cap": {
+    "mean": 2.713,
+    "ci95": [
+     0,
+     6
+    ],
+    "share_le0": 0.062
+   }
+  }
+ },
+ "1.0": {
+  "ci95": {
+   "small": [
+    22,
+    36
+   ],
+   "large": [
+    36,
+    47
+   ],
+   "stop": [
+    25,
+    39
+   ],
+   "stop-fallback": [
+    32,
+    44
+   ],
+   "admit": [
+    37,
+    47
+   ],
+   "route": [
+    32,
+    44
+   ],
+   "random-paced": [
+    28,
+    40
+   ],
+   "paced": [
+    32,
+    44
+   ],
+   "paced-abandon": [
+    32,
+    44
+   ],
+   "paced+cap": [
+    32,
+    44
+   ],
+   "hybrid": [
+    37,
+    47
+   ],
+   "oracle-paced": [
+    38,
+    47
+   ]
+  },
+  "diff": {
+   "paced+cap - large": {
+    "mean": -3.9705,
+    "ci95": [
+     -8,
+     0
+    ],
+    "share_le0": 0.9875
+   },
+   "paced+cap - admit": {
+    "mean": -4.48,
+    "ci95": [
+     -9,
+     -1
+    ],
+    "share_le0": 0.9995
+   },
+   "paced+cap - route": {
+    "mean": 0,
+    "ci95": [
+     0,
+     0
+    ],
+    "share_le0": 1.0
+   },
+   "paced+cap - random-paced": {
+    "mean": 3.7245,
+    "ci95": [
+     -1,
+     9
+    ],
+    "share_le0": 0.1035
+   },
+   "paced+cap - stop": {
+    "mean": 6.169,
+    "ci95": [
+     0,
+     12
+    ],
+    "share_le0": 0.0345
+   },
+   "paced+cap - stop-fallback": {
+    "mean": -0.5625,
+    "ci95": [
+     -4,
+     3
+    ],
+    "share_le0": 0.713
+   },
+   "paced+cap - paced-abandon": {
+    "mean": 0,
+    "ci95": [
+     0,
+     0
+    ],
+    "share_le0": 1.0
+   },
+   "hybrid - large": {
+    "mean": 0.0705,
+    "ci95": [
+     -3,
+     3
+    ],
+    "share_le0": 0.714
+   },
+   "hybrid - admit": {
+    "mean": -0.439,
+    "ci95": [
+     -3,
+     2
+    ],
+    "share_le0": 0.8585
+   },
+   "hybrid - route": {
+    "mean": 4.041,
+    "ci95": [
+     1,
+     8
+    ],
+    "share_le0": 0.017
+   },
+   "hybrid - random-paced": {
+    "mean": 7.7655,
+    "ci95": [
+     3,
+     13
+    ],
+    "share_le0": 0.0015
+   },
+   "hybrid - stop": {
+    "mean": 10.21,
+    "ci95": [
+     5,
+     16
+    ],
+    "share_le0": 0.0
+   },
+   "hybrid - stop-fallback": {
+    "mean": 3.4785,
+    "ci95": [
+     0,
+     7
+    ],
+    "share_le0": 0.034
+   },
+   "hybrid - paced-abandon": {
+    "mean": 4.041,
+    "ci95": [
+     1,
+     8
+    ],
+    "share_le0": 0.017
+   },
+   "hybrid - paced+cap": {
+    "mean": 4.041,
+    "ci95": [
+     1,
+     8
+    ],
+    "share_le0": 0.017
    }
   }
  }

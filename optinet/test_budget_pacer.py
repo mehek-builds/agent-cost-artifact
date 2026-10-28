@@ -102,6 +102,25 @@ class ReplayEquivalence(unittest.TestCase):
                     self.assertEqual(a["reasons"], b["reasons"], (frac, policy))
                     self.assertAlmostEqual(a["spent"], b["spent"], places=9)
 
+    def test_library_reproduces_the_replay_with_causal_estimates(self):
+        import fixed_spend as F
+        from pacer_replay import run_batch
+        from replay import step_cost
+        small, large, ids, est, rate = F.setup("small_cache_budget", "frontier_cache")
+        full = sum(F.task_cost(large[i]) for i in ids)
+        ms = sum(e[0] for e in est.values()) / len(est)
+        ml = sum(e[1] for e in est.values()) / len(est)
+        rng = random.Random(11)
+        for scale in (0.25, 1.0, 4.0):
+            online = F.OnlineEst(ms * scale, ml * scale)
+            for frac in (0.2, 0.4, 1.0):
+                for _ in range(10):
+                    order = rng.sample(ids, len(ids))
+                    a = F.simulate("hybrid", order, small, large, frac * full, online)
+                    b = run_batch(order, small, large, frac * full, est, step_cost,
+                                  online=True, prior_scale=scale)
+                    self.assertEqual((a["succ"], a["reasons"]), (b["succ"], b["reasons"]), (scale, frac))
+
 
 if __name__ == "__main__":
     unittest.main()

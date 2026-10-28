@@ -9,13 +9,17 @@ import matplotlib.pyplot as plt
 HERE = Path(__file__).resolve().parent
 data = json.loads((HERE / "results" / "fixed_spend.json").read_text())
 STYLE = {"large": ("Large, no policy", "#444444", "-"), "stop": ("Stop only (paced cap)", "#c0392b", "--"),
+         "stop-fallback": ("Stop + small fallback", "#e377c2", ":"),
          "route": ("Route only (first error)", "#e08e0b", "-."), "random-paced": ("Random escalation, paced", "#2ca02c", "--"),
          "oracle-paced": ("Oracle escalation, paced", "#000000", (0, (1, 1))),
          "admit": ("Admission control (large first)", "#8c564b", "-."),
          "paced+cap": ("Paced (ours)", "#1f77b4", "-"), "hybrid": ("Paced + spend-down (ours)", "#17becf", "--")}
 fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.0), sharey=True)
 for ax, name in zip(axes, ["cached", "uncached"]):
-    rows = data[name]["rows"]
+    # policies that use cost estimates are drawn with causal estimates (out-of-sample priors)
+    causal = {r["policy"] for r in data[f"causal_{name}"]["rows"]} - {"large"}
+    rows = ([r for r in data[name]["rows"] if r["policy"] not in causal]
+            + [r for r in data[f"causal_{name}"]["rows"] if r["policy"] in causal])
     n = 50
     for p, (label, color, ls) in STYLE.items():
         r = [x for x in rows if x["policy"] == p]
