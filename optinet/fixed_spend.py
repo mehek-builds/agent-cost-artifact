@@ -293,9 +293,10 @@ def main():
             if r["frac"] in TABLE_FRACS:
                 print(f"{r['frac']:>5.2f} {r['policy']:>13} {r['succ_mean']:6.2f} [{r['succ_p05']}, {r['succ_p95']}] "
                       f"unstarted {r['reasons']['unstarted']:.2f} overdraw {r['overdraw_max']:.4f}")
-    out["bootstrap_causal_cached"] = bootstrap(*PAIRS["cached"], est_override=out_of_sample_prior(prior_runs["cached"]))
-    print("===== bootstrap (causal, cached)")
-    print(json.dumps(out["bootstrap_causal_cached"], indent=1))
+    for name in PAIRS:
+        out[f"bootstrap_causal_{name}"] = bootstrap(*PAIRS[name], est_override=out_of_sample_prior(prior_runs[name]))
+        print(f"===== bootstrap (causal, {name})")
+        print(json.dumps(out[f"bootstrap_causal_{name}"], indent=1))
     out["pairings"] = pairings()
     print("===== six pairings: solved (mean over 200 orders)")
     for f in TABLE_FRACS:

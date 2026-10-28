@@ -16656,5 +16656,703 @@
     }
    ]
   }
- ]
+ ],
+ "bootstrap_causal_uncached": {
+  "0.2": {
+   "ci95": {
+    "small": [
+     22,
+     36
+    ],
+    "large": [
+     5,
+     11
+    ],
+    "stop": [
+     0,
+     3
+    ],
+    "stop-fallback": [
+     22,
+     35
+    ],
+    "admit": [
+     10,
+     28
+    ],
+    "route": [
+     9,
+     29
+    ],
+    "random-paced": [
+     24,
+     37
+    ],
+    "paced": [
+     22,
+     38
+    ],
+    "paced-abandon": [
+     20,
+     35
+    ],
+    "paced+cap": [
+     24,
+     38
+    ],
+    "hybrid": [
+     23,
+     38
+    ],
+    "oracle-paced": [
+     24,
+     41
+    ]
+   },
+   "diff": {
+    "paced+cap - large": {
+     "mean": 23.3515,
+     "ci95": [
+      16,
+      30
+     ],
+     "share_le0": 0.0
+    },
+    "paced+cap - admit": {
+     "mean": 13.0085,
+     "ci95": [
+      4,
+      22
+     ],
+     "share_le0": 0.001
+    },
+    "paced+cap - route": {
+     "mean": 13.5045,
+     "ci95": [
+      5,
+      23
+     ],
+     "share_le0": 0.0015
+    },
+    "paced+cap - random-paced": {
+     "mean": 0.8845,
+     "ci95": [
+      -4,
+      5
+     ],
+     "share_le0": 0.405
+    },
+    "paced+cap - stop": {
+     "mean": 30.5165,
+     "ci95": [
+      23,
+      38
+     ],
+     "share_le0": 0.0
+    },
+    "paced+cap - stop-fallback": {
+     "mean": 2.792,
+     "ci95": [
+      -2,
+      6
+     ],
+     "share_le0": 0.098
+    },
+    "paced+cap - paced-abandon": {
+     "mean": 3.777,
+     "ci95": [
+      0,
+      9
+     ],
+     "share_le0": 0.0635
+    },
+    "hybrid - large": {
+     "mean": 23.159,
+     "ci95": [
+      16,
+      30
+     ],
+     "share_le0": 0.0
+    },
+    "hybrid - admit": {
+     "mean": 12.816,
+     "ci95": [
+      4,
+      22
+     ],
+     "share_le0": 0.0025
+    },
+    "hybrid - route": {
+     "mean": 13.312,
+     "ci95": [
+      4,
+      23
+     ],
+     "share_le0": 0.001
+    },
+    "hybrid - random-paced": {
+     "mean": 0.692,
+     "ci95": [
+      -4,
+      4
+     ],
+     "share_le0": 0.433
+    },
+    "hybrid - stop": {
+     "mean": 30.324,
+     "ci95": [
+      22,
+      37
+     ],
+     "share_le0": 0.0
+    },
+    "hybrid - stop-fallback": {
+     "mean": 2.5995,
+     "ci95": [
+      -2,
+      6
+     ],
+     "share_le0": 0.12
+    },
+    "hybrid - paced-abandon": {
+     "mean": 3.5845,
+     "ci95": [
+      -1,
+      9
+     ],
+     "share_le0": 0.082
+    },
+    "hybrid - paced+cap": {
+     "mean": -0.1925,
+     "ci95": [
+      -4,
+      3
+     ],
+     "share_le0": 0.8405
+    }
+   }
+  },
+  "0.4": {
+   "ci95": {
+    "small": [
+     22,
+     36
+    ],
+    "large": [
+     12,
+     21
+    ],
+    "stop": [
+     0,
+     7
+    ],
+    "stop-fallback": [
+     22,
+     36
+    ],
+    "admit": [
+     17,
+     35
+    ],
+    "route": [
+     23,
+     42
+    ],
+    "random-paced": [
+     26,
+     40
+    ],
+    "paced": [
+     29,
+     42
+    ],
+    "paced-abandon": [
+     28,
+     42
+    ],
+    "paced+cap": [
+     29,
+     42
+    ],
+    "hybrid": [
+     29,
+     42
+    ],
+    "oracle-paced": [
+     31,
+     47
+    ]
+   },
+   "diff": {
+    "paced+cap - large": {
+     "mean": 19.248,
+     "ci95": [
+      13,
+      25
+     ],
+     "share_le0": 0.0
+    },
+    "paced+cap - admit": {
+     "mean": 10.274,
+     "ci95": [
+      3,
+      18
+     ],
+     "share_le0": 0.005
+    },
+    "paced+cap - route": {
+     "mean": 2.416,
+     "ci95": [
+      0,
+      11
+     ],
+     "share_le0": 0.4885
+    },
+    "paced+cap - random-paced": {
+     "mean": 2.7695,
+     "ci95": [
+      -2,
+      7
+     ],
+     "share_le0": 0.1705
+    },
+    "paced+cap - stop": {
+     "mean": 32.8955,
+     "ci95": [
+      26,
+      39
+     ],
+     "share_le0": 0.0
+    },
+    "paced+cap - stop-fallback": {
+     "mean": 7.103,
+     "ci95": [
+      3,
+      11
+     ],
+     "share_le0": 0.0
+    },
+    "paced+cap - paced-abandon": {
+     "mean": 0.8225,
+     "ci95": [
+      0,
+      4
+     ],
+     "share_le0": 0.5715
+    },
+    "hybrid - large": {
+     "mean": 19.2535,
+     "ci95": [
+      13,
+      25
+     ],
+     "share_le0": 0.0
+    },
+    "hybrid - admit": {
+     "mean": 10.2795,
+     "ci95": [
+      3,
+      18
+     ],
+     "share_le0": 0.0035
+    },
+    "hybrid - route": {
+     "mean": 2.4215,
+     "ci95": [
+      -1,
+      11
+     ],
+     "share_le0": 0.3625
+    },
+    "hybrid - random-paced": {
+     "mean": 2.775,
+     "ci95": [
+      -2,
+      7
+     ],
+     "share_le0": 0.1775
+    },
+    "hybrid - stop": {
+     "mean": 32.901,
+     "ci95": [
+      26,
+      39
+     ],
+     "share_le0": 0.0
+    },
+    "hybrid - stop-fallback": {
+     "mean": 7.1085,
+     "ci95": [
+      3,
+      11
+     ],
+     "share_le0": 0.0
+    },
+    "hybrid - paced-abandon": {
+     "mean": 0.828,
+     "ci95": [
+      -1,
+      4
+     ],
+     "share_le0": 0.471
+    },
+    "hybrid - paced+cap": {
+     "mean": 0.0055,
+     "ci95": [
+      -2,
+      2
+     ],
+     "share_le0": 0.798
+    }
+   }
+  },
+  "0.8": {
+   "ci95": {
+    "small": [
+     22,
+     36
+    ],
+    "large": [
+     27,
+     40
+    ],
+    "stop": [
+     12,
+     28
+    ],
+    "stop-fallback": [
+     23,
+     38
+    ],
+    "admit": [
+     31,
+     44
+    ],
+    "route": [
+     31,
+     43
+    ],
+    "random-paced": [
+     27,
+     40
+    ],
+    "paced": [
+     31,
+     43
+    ],
+    "paced-abandon": [
+     31,
+     43
+    ],
+    "paced+cap": [
+     31,
+     43
+    ],
+    "hybrid": [
+     34,
+     45
+    ],
+    "oracle-paced": [
+     38,
+     47
+    ]
+   },
+   "diff": {
+    "paced+cap - large": {
+     "mean": 3.631,
+     "ci95": [
+      -2,
+      10
+     ],
+     "share_le0": 0.1515
+    },
+    "paced+cap - admit": {
+     "mean": -0.9435,
+     "ci95": [
+      -7,
+      6
+     ],
+     "share_le0": 0.696
+    },
+    "paced+cap - route": {
+     "mean": 0,
+     "ci95": [
+      0,
+      0
+     ],
+     "share_le0": 1.0
+    },
+    "paced+cap - random-paced": {
+     "mean": 3.63,
+     "ci95": [
+      -1,
+      9
+     ],
+     "share_le0": 0.1225
+    },
+    "paced+cap - stop": {
+     "mean": 16.6625,
+     "ci95": [
+      9,
+      24
+     ],
+     "share_le0": 0.0
+    },
+    "paced+cap - stop-fallback": {
+     "mean": 6.354,
+     "ci95": [
+      2,
+      12
+     ],
+     "share_le0": 0.004
+    },
+    "paced+cap - paced-abandon": {
+     "mean": 0,
+     "ci95": [
+      0,
+      0
+     ],
+     "share_le0": 1.0
+    },
+    "hybrid - large": {
+     "mean": 6.2845,
+     "ci95": [
+      2,
+      11
+     ],
+     "share_le0": 0.011
+    },
+    "hybrid - admit": {
+     "mean": 1.71,
+     "ci95": [
+      -3,
+      8
+     ],
+     "share_le0": 0.363
+    },
+    "hybrid - route": {
+     "mean": 2.6535,
+     "ci95": [
+      -1,
+      7
+     ],
+     "share_le0": 0.1105
+    },
+    "hybrid - random-paced": {
+     "mean": 6.2835,
+     "ci95": [
+      1,
+      12
+     ],
+     "share_le0": 0.014
+    },
+    "hybrid - stop": {
+     "mean": 19.316,
+     "ci95": [
+      12,
+      27
+     ],
+     "share_le0": 0.0
+    },
+    "hybrid - stop-fallback": {
+     "mean": 9.0075,
+     "ci95": [
+      4,
+      15
+     ],
+     "share_le0": 0.001
+    },
+    "hybrid - paced-abandon": {
+     "mean": 2.6535,
+     "ci95": [
+      -1,
+      7
+     ],
+     "share_le0": 0.1105
+    },
+    "hybrid - paced+cap": {
+     "mean": 2.6535,
+     "ci95": [
+      -1,
+      7
+     ],
+     "share_le0": 0.1105
+    }
+   }
+  },
+  "1.0": {
+   "ci95": {
+    "small": [
+     22,
+     36
+    ],
+    "large": [
+     34,
+     47
+    ],
+    "stop": [
+     24,
+     39
+    ],
+    "stop-fallback": [
+     30,
+     43
+    ],
+    "admit": [
+     36,
+     47
+    ],
+    "route": [
+     31,
+     43
+    ],
+    "random-paced": [
+     27,
+     40
+    ],
+    "paced": [
+     31,
+     43
+    ],
+    "paced-abandon": [
+     31,
+     43
+    ],
+    "paced+cap": [
+     31,
+     43
+    ],
+    "hybrid": [
+     36,
+     46
+    ],
+    "oracle-paced": [
+     38,
+     47
+    ]
+   },
+   "diff": {
+    "paced+cap - large": {
+     "mean": -3.9145,
+     "ci95": [
+      -9,
+      2
+     ],
+     "share_le0": 0.9445
+    },
+    "paced+cap - admit": {
+     "mean": -4.495,
+     "ci95": [
+      -9,
+      0
+     ],
+     "share_le0": 0.9805
+    },
+    "paced+cap - route": {
+     "mean": 0,
+     "ci95": [
+      0,
+      0
+     ],
+     "share_le0": 1.0
+    },
+    "paced+cap - random-paced": {
+     "mean": 3.63,
+     "ci95": [
+      -1,
+      9
+     ],
+     "share_le0": 0.1225
+    },
+    "paced+cap - stop": {
+     "mean": 5.2445,
+     "ci95": [
+      -1,
+      12
+     ],
+     "share_le0": 0.0635
+    },
+    "paced+cap - stop-fallback": {
+     "mean": 0.572,
+     "ci95": [
+      -4,
+      5
+     ],
+     "share_le0": 0.501
+    },
+    "paced+cap - paced-abandon": {
+     "mean": 0,
+     "ci95": [
+      0,
+      0
+     ],
+     "share_le0": 1.0
+    },
+    "hybrid - large": {
+     "mean": 0.109,
+     "ci95": [
+      -3,
+      4
+     ],
+     "share_le0": 0.7045
+    },
+    "hybrid - admit": {
+     "mean": -0.4715,
+     "ci95": [
+      -4,
+      2
+     ],
+     "share_le0": 0.835
+    },
+    "hybrid - route": {
+     "mean": 4.0235,
+     "ci95": [
+      0,
+      9
+     ],
+     "share_le0": 0.055
+    },
+    "hybrid - random-paced": {
+     "mean": 7.6535,
+     "ci95": [
+      2,
+      13
+     ],
+     "share_le0": 0.004
+    },
+    "hybrid - stop": {
+     "mean": 9.268,
+     "ci95": [
+      4,
+      15
+     ],
+     "share_le0": 0.0005
+    },
+    "hybrid - stop-fallback": {
+     "mean": 4.5955,
+     "ci95": [
+      0,
+      10
+     ],
+     "share_le0": 0.032
+    },
+    "hybrid - paced-abandon": {
+     "mean": 4.0235,
+     "ci95": [
+      0,
+      9
+     ],
+     "share_le0": 0.055
+    },
+    "hybrid - paced+cap": {
+     "mean": 4.0235,
+     "ci95": [
+      0,
+      9
+     ],
+     "share_le0": 0.055
+    }
+   }
+  }
+ }
 }

@@ -1,0 +1,20 @@
+0.2 {'large': (5, 11), 'admit': (10, 28), 'paced+cap': (24, 38), 'hybrid': (23, 38), 'random-paced': (24, 37)}
+   hybrid - admit 12.8 (4, 22)
+   paced+cap - admit 13.0 (4, 22)
+   hybrid - large 23.2 (16, 30)
+   hybrid - random-paced 0.7 (-4, 4)
+0.4 {'large': (12, 21), 'admit': (17, 35), 'paced+cap': (29, 42), 'hybrid': (29, 42), 'random-paced': (26, 40)}
+   hybrid - admit 10.3 (3, 18)
+   paced+cap - admit 10.3 (3, 18)
+   hybrid - large 19.3 (13, 25)
+   hybrid - random-paced 2.8 (-2, 7)
+0.8 {'large': (27, 40), 'admit': (31, 44), 'paced+cap': (31, 43), 'hybrid': (34, 45), 'random-paced': (27, 40)}
+   hybrid - admit 1.7 (-3, 8)
+   paced+cap - admit -0.9 (-7, 6)
+   hybrid - large 6.3 (2, 11)
+   hybrid - random-paced 6.3 (1, 12)
+1.0 {'large': (34, 47), 'admit': (36, 47), 'paced+cap': (31, 43), 'hybrid': (36, 46), 'random-paced': (27, 40)}
+   hybrid - admit -0.5 (-4, 2)
+   paced+cap - admit -4.5 (-9, 0)
+   hybrid - large 0.1 (-3, 4)
+   hybrid - random-paced 7.7 (2, 13)
