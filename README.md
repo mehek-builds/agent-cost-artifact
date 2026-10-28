@@ -21,6 +21,31 @@ python3 analysis/levers_figure.py       # compression break-even figure -> resul
 
 Results from a reference run are included in `results/`. Rerunning reproduces them exactly, except the measured per-step overhead in `escalation.py`, which depends on the machine.
 
+## Budget pacing under a fixed spend (OPTINET 2026)
+
+`optinet/` holds a small library for agents that share one spend pool, and the analyses of
+the OPTINET 2026 paper "What Breaks First Under a Fixed Spend? Budget-Paced Routing and
+Early Stopping for LLM Agent Inference". No API calls; Python 3.10+ and matplotlib.
+
+- `optinet/budget_pacer.py`: `BudgetPacer`, the policy as an agent would use it (reserve,
+  first-error routing, cap and pool stops, spend-down, one-way escalation; thread-safe
+  ledger, online cost estimates). `optinet/example_agent_loop.py` wires it into a
+  tool-calling loop and runs offline with a scripted model.
+- `optinet/test_budget_pacer.py`: unit tests for every rule, plus a test that replaying the
+  recorded traces through `BudgetPacer` reproduces `fixed_spend.py` exactly.
+
+```bash
+python3 -m unittest discover -s optinet -p 'test_*.py'   # 10 tests, under a second
+python3 optinet/fixed_spend.py   # budget sweep, baselines, bootstrap, rollout pairings -> optinet/results/fixed_spend.json (about 10 min)
+python3 optinet/extras.py        # estimate error, other model price pairs, single-turn rollouts -> optinet/results/extras.json
+python3 optinet/fig_curve.py     # Fig. 1 -> optinet/results/fig-budget-curve.pdf
+python3 optinet/fig_causes.py    # Fig. 2 -> optinet/results/fig-causes.pdf
+python3 optinet/example_agent_loop.py
+```
+
+`frontier_low` is excluded from step-level replay because its step log is incomplete.
+Re-priced runs keep the recorded models' outcomes; only prices change.
+
 ## Measured edge run
 
 `edge/` replays the same 50 tasks with an open-weight model on a local device and measures its energy.
