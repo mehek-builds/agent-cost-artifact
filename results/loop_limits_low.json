@@ -1,0 +1,172 @@
+{
+ "small, low effort": {
+  "n_tasks": 50,
+  "success_unlimited": 0.62,
+  "usd_per_success_unlimited": 0.010737548387096776,
+  "settings": [
+   {
+    "setting": "turn_steps=3",
+    "success_points": -30.0,
+    "d_usd_per_task_pct": -32.09695250913286,
+    "d_usd_per_success_pct": 31.562154513555086,
+    "ci95_pct": [
+     1.2814572795586878,
+     90.48374745422595
+    ],
+    "excludes_zero": true,
+    "lost": 15,
+    "gained": 0,
+    "mcnemar_p": 6.103515625e-05
+   },
+   {
+    "setting": "turn_steps=4",
+    "success_points": -6.0,
+    "d_usd_per_task_pct": -11.568418333012897,
+    "d_usd_per_success_pct": -2.0936060115499977,
+    "ci95_pct": [
+     -12.90254451469561,
+     11.779370440716832
+    ],
+    "excludes_zero": false,
+    "lost": 3,
+    "gained": 0,
+    "mcnemar_p": 0.25
+   },
+   {
+    "setting": "turn_steps=6",
+    "success_points": 0.0,
+    "d_usd_per_task_pct": -3.4400535954624223,
+    "d_usd_per_success_pct": -3.4400535954624223,
+    "ci95_pct": [
+     -8.858733385410673,
+     0.0
+    ],
+    "excludes_zero": false,
+    "lost": 0,
+    "gained": 0,
+    "mcnemar_p": 1.0
+   },
+   {
+    "setting": "errors=1",
+    "success_points": -14.0,
+    "d_usd_per_task_pct": -24.297671120938304,
+    "d_usd_per_success_pct": -2.217825197878631,
+    "ci95_pct": [
+     -15.821154779981947,
+     16.708006699492934
+    ],
+    "excludes_zero": false,
+    "lost": 7,
+    "gained": 0,
+    "mcnemar_p": 0.015625
+   },
+   {
+    "setting": "errors=2",
+    "success_points": -8.0,
+    "d_usd_per_task_pct": -10.007991251682391,
+    "d_usd_per_success_pct": 3.324158192512794,
+    "ci95_pct": [
+     -7.935629974450002,
+     19.080844757566265
+    ],
+    "excludes_zero": false,
+    "lost": 4,
+    "gained": 0,
+    "mcnemar_p": 0.125
+   },
+   {
+    "setting": "deadline=p90",
+    "success_points": -4.0,
+    "d_usd_per_task_pct": -4.686538646414162,
+    "d_usd_per_success_pct": 1.8868035159020913,
+    "ci95_pct": [
+     -5.190448461419447,
+     12.636000031786216
+    ],
+    "excludes_zero": false,
+    "lost": 2,
+    "gained": 0,
+    "mcnemar_p": 0.5
+   },
+   {
+    "setting": "deadline=p75",
+    "success_points": -10.0,
+    "d_usd_per_task_pct": -10.567649250144218,
+    "d_usd_per_success_pct": 6.6308797402126585,
+    "ci95_pct": [
+     -5.715994755195274,
+     25.844292032826868
+    ],
+    "excludes_zero": false,
+    "lost": 5,
+    "gained": 0,
+    "mcnemar_p": 0.0625
+   },
+   {
+    "setting": "budget=p50",
+    "success_points": -22.0,
+    "d_usd_per_task_pct": -16.05872067871563,
+    "d_usd_per_success_pct": 30.108982947990782,
+    "ci95_pct": [
+     4.377264432684879,
+     74.43548136999549
+    ],
+    "excludes_zero": true,
+    "lost": 11,
+    "gained": 0,
+    "mcnemar_p": 0.0009765625
+   },
+   {
+    "setting": "budget=p75",
+    "success_points": -10.0,
+    "d_usd_per_task_pct": -8.253220534512607,
+    "d_usd_per_success_pct": 9.39039090115803,
+    "ci95_pct": [
+     -3.9085489806593183,
+     29.909546274239204
+    ],
+    "excludes_zero": false,
+    "lost": 5,
+    "gained": 0,
+    "mcnemar_p": 0.0625
+   },
+   {
+    "setting": "budget=p90",
+    "success_points": -4.0,
+    "d_usd_per_task_pct": -5.3095258123437965,
+    "d_usd_per_success_pct": 1.2208517178393885,
+    "ci95_pct": [
+     -6.11752871601669,
+     11.994478654999705
+    ],
+    "excludes_zero": false,
+    "lost": 2,
+    "gained": 0,
+    "mcnemar_p": 0.5
+   }
+  ]
+ },
+ "summary_hard_stops": {
+  "settings": 7,
+  "lowered_cost_per_task": 7,
+  "raised_cost_per_success": 4,
+  "lowered_cost_per_success": [
+   [
+    "turn_steps=4",
+    -2.1
+   ],
+   [
+    "turn_steps=6",
+    -3.4
+   ],
+   [
+    "errors=1",
+    -2.2
+   ]
+  ],
+  "ci_excludes_zero": 1,
+  "ci_excludes_zero_below": 0,
+  "max_d_usd_per_task_pct": -3.4400535954624223,
+  "min_d_usd_per_task_pct": -32.09695250913286
+ }
+}

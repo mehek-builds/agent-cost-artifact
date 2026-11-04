@@ -1,0 +1,98 @@
+{
+ "large": {
+  "successful_tasks": 42,
+  "max_turn_steps": {
+   "p90": 6,
+   "twice_p90": 12,
+   "max": 8,
+   "max_over_p90": 1.3333333333333333,
+   "twice_p90_clears_max": true
+  },
+  "wall_s": {
+   "p90": 18.235453128814697,
+   "twice_p90": 36.470906257629395,
+   "max": 36.14474439620972,
+   "max_over_p90": 1.982113860340312,
+   "twice_p90_clears_max": true
+  },
+  "cost_usd": {
+   "p90": 0.17596599999999998,
+   "twice_p90": 0.35193199999999997,
+   "max": 0.25419400000000003,
+   "max_over_p90": 1.444563154245707,
+   "twice_p90_clears_max": true
+  }
+ },
+ "large+cache": {
+  "successful_tasks": 43,
+  "max_turn_steps": {
+   "p90": 6,
+   "twice_p90": 12,
+   "max": 8,
+   "max_over_p90": 1.3333333333333333,
+   "twice_p90_clears_max": true
+  },
+  "wall_s": {
+   "p90": 23.380197048187256,
+   "twice_p90": 46.76039409637451,
+   "max": 36.002177476882935,
+   "max_over_p90": 1.5398577438283096,
+   "twice_p90_clears_max": true
+  },
+  "cost_usd": {
+   "p90": 0.035040699999999994,
+   "twice_p90": 0.07008139999999999,
+   "max": 0.0438791,
+   "max_over_p90": 1.2522324040330246,
+   "twice_p90_clears_max": true
+  }
+ },
+ "small": {
+  "successful_tasks": 29,
+  "max_turn_steps": {
+   "p90": 5,
+   "twice_p90": 10,
+   "max": 8,
+   "max_over_p90": 1.6,
+   "twice_p90_clears_max": true
+  },
+  "wall_s": {
+   "p90": 17.21166181564331,
+   "twice_p90": 34.42332363128662,
+   "max": 19.61060094833374,
+   "max_over_p90": 1.1393787048796233,
+   "twice_p90_clears_max": true
+  },
+  "cost_usd": {
+   "p90": 0.0093385,
+   "twice_p90": 0.018677,
+   "max": 0.012930600000000002,
+   "max_over_p90": 1.3846549231675325,
+   "twice_p90_clears_max": true
+  }
+ },
+ "small+cache": {
+  "successful_tasks": 29,
+  "max_turn_steps": {
+   "p90": 7,
+   "twice_p90": 14,
+   "max": 7,
+   "max_over_p90": 1.0,
+   "twice_p90_clears_max": true
+  },
+  "wall_s": {
+   "p90": 15.976434707641602,
+   "twice_p90": 31.952869415283203,
+   "max": 22.40912389755249,
+   "max_over_p90": 1.4026360891916707,
+   "twice_p90_clears_max": true
+  },
+  "cost_usd": {
+   "p90": 0.00218335,
+   "twice_p90": 0.0043667,
+   "max": 0.00270709,
+   "max_over_p90": 1.2398790848924817,
+   "twice_p90_clears_max": true
+  }
+ }
+}
