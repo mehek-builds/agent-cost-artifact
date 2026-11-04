@@ -51,7 +51,7 @@ def loop_limits():
     mks = ["o"] * 3 + ["s"] * 2 + ["^"] * 2
     xmax = 100
     with plt.rc_context({"font.size": 9, "axes.labelsize": 9, "xtick.labelsize": 8.5, "ytick.labelsize": 9}):
-        fig, axes = plt.subplots(1, 4, figsize=(7.0, 1.5), sharey=True, sharex=True)
+        fig, axes = plt.subplots(1, 4, figsize=(7.0, 1.8), sharey=True, sharex=True)
         for ax, cfg in zip(axes, ORDER):
             rows = [r for r in d[cfg] if not r["setting"].startswith("budget")]
             for i, (r, col, mk) in enumerate(zip(rows, cols, mks)):
@@ -63,13 +63,8 @@ def loop_limits():
                     ax.annotate("", xy=(xmax + 4, y), xytext=(xmax - 6, y),
                                 arrowprops=dict(arrowstyle="-|>", color=col, lw=0.9, mutation_scale=6), annotation_clip=False)
                     ax.text(xmax - 6, y - 0.2, f"{hi:.0f}", fontsize=8.5, ha="right", va="top", color=col)
-                ax.scatter(est, y, marker=mk, s=16, zorder=3, facecolor=col if r["excludes_zero"] else "white",
+                ax.scatter(est, y, marker=mk, s=30, zorder=3, facecolor=col if r["excludes_zero"] else "white",
                            edgecolor=col, linewidth=0.9)
-                if r["mcnemar_p"] < 0.05:  # McNemar exact test on the tasks lost
-                    if hi > xmax:
-                        ax.text(lo - 2, y - 0.15, "*", fontsize=10, ha="right", va="center", color="0.15")
-                    else:
-                        ax.text(hi + 2, y - 0.15, "*", fontsize=10, ha="left", va="center", color="0.15")
             ax.axvline(0, color="0.45", lw=0.7, zorder=1)
             ax.set_yticks(range(len(rows)))
             ax.set_yticklabels(names[::-1])
