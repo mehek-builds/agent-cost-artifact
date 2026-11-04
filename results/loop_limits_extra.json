@@ -1,0 +1,684 @@
+{
+ "large": {
+  "task_max_steps": {
+   "tasks": 42,
+   "p50": 3,
+   "p75": 4,
+   "p90": 6,
+   "max": 8,
+   "tasks_over_3": 19,
+   "tasks_over_4": 9,
+   "tasks_over_5": 5,
+   "tasks_over_6": 2
+  },
+  "steps_per_turn": {
+   "successful_tasks": {
+    "turns": 154,
+    "p50": 2,
+    "p75": 3,
+    "p90": 4,
+    "max": 8,
+    "turns_over_3": 22,
+    "turns_over_4": 10,
+    "turns_over_6": 2
+   },
+   "all_tasks": {
+    "turns": 188,
+    "p90": 4,
+    "max": 8,
+    "turns_over_6": 2
+   }
+  },
+  "stopped": [
+   {
+    "rule": "none",
+    "deadline_exact_s": null,
+    "stopped": 0,
+    "stopped_that_succeeded": 0,
+    "success_n": 42,
+    "usd_total": 6.4199839999999995,
+    "usd_per_task": 0.12839968,
+    "usd_per_success": 0.15285676190476188,
+    "d_usd_per_task_pct": 0.0,
+    "d_usd_per_success_pct": 0.0,
+    "d_success_points": 0.0
+   },
+   {
+    "rule": "turn_steps=3",
+    "deadline_exact_s": null,
+    "stopped": 22,
+    "stopped_that_succeeded": 19,
+    "success_n": 23,
+    "usd_total": 4.617478,
+    "usd_per_task": 0.09234956,
+    "usd_per_success": 0.20075991304347826,
+    "d_usd_per_task_pct": -28.07648741803718,
+    "d_usd_per_success_pct": 31.33858819314952,
+    "d_success_points": -38.0
+   },
+   {
+    "rule": "turn_steps=4",
+    "deadline_exact_s": null,
+    "stopped": 11,
+    "stopped_that_succeeded": 9,
+    "success_n": 33,
+    "usd_total": 5.659280000000001,
+    "usd_per_task": 0.11318560000000001,
+    "usd_per_success": 0.17149333333333336,
+    "d_usd_per_task_pct": -11.849001492838596,
+    "d_usd_per_success_pct": 12.192179918205426,
+    "d_success_points": -18.0
+   },
+   {
+    "rule": "turn_steps=6",
+    "deadline_exact_s": null,
+    "stopped": 2,
+    "stopped_that_succeeded": 2,
+    "success_n": 40,
+    "usd_total": 6.214127999999999,
+    "usd_per_task": 0.12428255999999997,
+    "usd_per_success": 0.15535319999999997,
+    "d_usd_per_task_pct": -3.2064877420255433,
+    "d_usd_per_success_pct": 1.6331878708731873,
+    "d_success_points": -4.0
+   },
+   {
+    "rule": "errors=1",
+    "deadline_exact_s": null,
+    "stopped": 13,
+    "stopped_that_succeeded": 11,
+    "success_n": 31,
+    "usd_total": 5.281298,
+    "usd_per_task": 0.10562595999999999,
+    "usd_per_success": 0.1703644516129032,
+    "d_usd_per_task_pct": -17.73658625940501,
+    "d_usd_per_success_pct": 11.453657325967415,
+    "d_success_points": -22.0
+   },
+   {
+    "rule": "errors=2",
+    "deadline_exact_s": null,
+    "stopped": 7,
+    "stopped_that_succeeded": 7,
+    "success_n": 35,
+    "usd_total": 5.828878,
+    "usd_per_task": 0.11657756,
+    "usd_per_success": 0.16653937142857142,
+    "d_usd_per_task_pct": -9.207281513474175,
+    "d_usd_per_success_pct": 8.951262183830998,
+    "d_success_points": -14.0
+   },
+   {
+    "rule": "deadline=18s",
+    "deadline_exact_s": 18.235453128814697,
+    "stopped": 6,
+    "stopped_that_succeeded": 4,
+    "success_n": 38,
+    "usd_total": 6.095111999999999,
+    "usd_per_task": 0.12190224,
+    "usd_per_success": 0.1603976842105263,
+    "d_usd_per_task_pct": -5.060324137879468,
+    "d_usd_per_success_pct": 4.93332595287006,
+    "d_success_points": -8.0
+   },
+   {
+    "rule": "deadline=16s",
+    "deadline_exact_s": 16.317445993423462,
+    "stopped": 9,
+    "stopped_that_succeeded": 7,
+    "success_n": 35,
+    "usd_total": 5.954904000000002,
+    "usd_per_task": 0.11909808000000004,
+    "usd_per_success": 0.17014011428571432,
+    "d_usd_per_task_pct": -7.244254814342177,
+    "d_usd_per_success_pct": 11.306894222789388,
+    "d_success_points": -14.0
+   }
+  ],
+  "failed_vs_ok": {
+   "median_failed_run_usd": 0.14742299999999997,
+   "median_successful_run_usd": 0.12134699999999998
+  },
+  "dollar_budgets": {
+   "q=0.5": {
+    "budget_usd": 0.11948399999999998,
+    "success": 0.54,
+    "stopped": 21,
+    "stopped_that_succeeded": 15,
+    "d_usd_per_task_pct": -15.433963698351905,
+    "d_usd_per_success_pct": 31.547167580341508
+   },
+   "q=0.75": {
+    "budget_usd": 0.15487599999999999,
+    "success": 0.74,
+    "stopped": 7,
+    "stopped_that_succeeded": 5,
+    "d_usd_per_task_pct": -5.639858292481737,
+    "d_usd_per_success_pct": 7.111512208534254
+   },
+   "q=0.9": {
+    "budget_usd": 0.17596599999999998,
+    "success": 0.78,
+    "stopped": 4,
+    "stopped_that_succeeded": 3,
+    "d_usd_per_task_pct": -3.4183262762025546,
+    "d_usd_per_success_pct": 4.01103324101264
+   }
+  }
+ },
+ "large+cache": {
+  "task_max_steps": {
+   "tasks": 43,
+   "p50": 3,
+   "p75": 5,
+   "p90": 6,
+   "max": 8,
+   "tasks_over_3": 19,
+   "tasks_over_4": 11,
+   "tasks_over_5": 6,
+   "tasks_over_6": 2
+  },
+  "steps_per_turn": {
+   "successful_tasks": {
+    "turns": 159,
+    "p50": 2,
+    "p75": 3,
+    "p90": 4,
+    "max": 8,
+    "turns_over_3": 22,
+    "turns_over_4": 12,
+    "turns_over_6": 2
+   },
+   "all_tasks": {
+    "turns": 188,
+    "p90": 4,
+    "max": 8,
+    "turns_over_6": 2
+   }
+  },
+  "stopped": [
+   {
+    "rule": "none",
+    "deadline_exact_s": null,
+    "stopped": 0,
+    "stopped_that_succeeded": 0,
+    "success_n": 43,
+    "usd_total": 1.2079154,
+    "usd_per_task": 0.024158308000000003,
+    "usd_per_success": 0.02809105581395349,
+    "d_usd_per_task_pct": 0.0,
+    "d_usd_per_success_pct": 0.0,
+    "d_success_points": 0.0
+   },
+   {
+    "rule": "turn_steps=3",
+    "deadline_exact_s": null,
+    "stopped": 22,
+    "stopped_that_succeeded": 19,
+    "success_n": 24,
+    "usd_total": 0.9601919,
+    "usd_per_task": 0.019203838,
+    "usd_per_success": 0.04000799583333333,
+    "d_usd_per_task_pct": -20.50834851513609,
+    "d_usd_per_success_pct": 42.42254224371451,
+    "d_success_points": -38.0
+   },
+   {
+    "rule": "turn_steps=4",
+    "deadline_exact_s": null,
+    "stopped": 12,
+    "stopped_that_succeeded": 11,
+    "success_n": 32,
+    "usd_total": 1.0951832,
+    "usd_per_task": 0.021903664,
+    "usd_per_success": 0.034224475,
+    "d_usd_per_task_pct": -9.332789365877792,
+    "d_usd_per_success_pct": 21.834064289601706,
+    "d_success_points": -22.0
+   },
+   {
+    "rule": "turn_steps=6",
+    "deadline_exact_s": null,
+    "stopped": 2,
+    "stopped_that_succeeded": 2,
+    "success_n": 41,
+    "usd_total": 1.1797931000000002,
+    "usd_per_task": 0.023595862000000002,
+    "usd_per_success": 0.02877544146341464,
+    "d_usd_per_task_pct": -2.328168015740184,
+    "d_usd_per_success_pct": 2.4363115932481083,
+    "d_success_points": -4.0
+   },
+   {
+    "rule": "errors=1",
+    "deadline_exact_s": null,
+    "stopped": 16,
+    "stopped_that_succeeded": 13,
+    "success_n": 30,
+    "usd_total": 1.0323721000000001,
+    "usd_per_task": 0.020647442000000002,
+    "usd_per_success": 0.034412403333333334,
+    "d_usd_per_task_pct": -14.532747906020571,
+    "d_usd_per_success_pct": 22.503061334703833,
+    "d_success_points": -26.0
+   },
+   {
+    "rule": "errors=2",
+    "deadline_exact_s": null,
+    "stopped": 8,
+    "stopped_that_succeeded": 8,
+    "success_n": 35,
+    "usd_total": 1.1241979999999998,
+    "usd_per_task": 0.022483959999999997,
+    "usd_per_success": 0.03211994285714285,
+    "d_usd_per_task_pct": -6.930733725226146,
+    "d_usd_per_success_pct": 14.34224142329359,
+    "d_success_points": -16.0
+   },
+   {
+    "rule": "deadline=23s",
+    "deadline_exact_s": 23.380197048187256,
+    "stopped": 5,
+    "stopped_that_succeeded": 4,
+    "success_n": 39,
+    "usd_total": 1.1833999,
+    "usd_per_task": 0.023667998,
+    "usd_per_success": 0.030343587179487177,
+    "d_usd_per_task_pct": -2.0295709451175314,
+    "d_usd_per_success_pct": 8.018678188716555,
+    "d_success_points": -8.0
+   },
+   {
+    "rule": "deadline=18s",
+    "deadline_exact_s": 17.90451169013977,
+    "stopped": 9,
+    "stopped_that_succeeded": 7,
+    "success_n": 36,
+    "usd_total": 1.1409513999999998,
+    "usd_per_task": 0.022819027999999998,
+    "usd_per_success": 0.03169309444444444,
+    "d_usd_per_task_pct": -5.54376573061327,
+    "d_usd_per_success_pct": 12.822724266211916,
+    "d_success_points": -14.0
+   }
+  ],
+  "failed_vs_ok": {
+   "median_failed_run_usd": 0.031968699999999996,
+   "median_successful_run_usd": 0.023114000000000003
+  },
+  "dollar_budgets": {
+   "q=0.5": {
+    "budget_usd": 0.023114000000000003,
+    "success": 0.52,
+    "stopped": 22,
+    "stopped_that_succeeded": 17,
+    "d_usd_per_task_pct": -13.501260104805347,
+    "d_usd_per_success_pct": 43.055608288206535
+   },
+   "q=0.75": {
+    "budget_usd": 0.028590400000000002,
+    "success": 0.68,
+    "stopped": 13,
+    "stopped_that_succeeded": 9,
+    "d_usd_per_task_pct": -5.799669413934138,
+    "d_usd_per_success_pct": 19.13571221178916
+   },
+   "q=0.9": {
+    "budget_usd": 0.035040699999999994,
+    "success": 0.82,
+    "stopped": 3,
+    "stopped_that_succeeded": 2,
+    "d_usd_per_task_pct": -1.1388049196160543,
+    "d_usd_per_success_pct": 3.6836924013782912
+   }
+  }
+ },
+ "small": {
+  "task_max_steps": {
+   "tasks": 29,
+   "p50": 3,
+   "p75": 4,
+   "p90": 5,
+   "max": 8,
+   "tasks_over_3": 10,
+   "tasks_over_4": 4,
+   "tasks_over_5": 2,
+   "tasks_over_6": 1
+  },
+  "steps_per_turn": {
+   "successful_tasks": {
+    "turns": 103,
+    "p50": 2,
+    "p75": 3,
+    "p90": 4,
+    "max": 8,
+    "turns_over_3": 11,
+    "turns_over_4": 4,
+    "turns_over_6": 1
+   },
+   "all_tasks": {
+    "turns": 188,
+    "p90": 4,
+    "max": 8,
+    "turns_over_6": 3
+   }
+  },
+  "stopped": [
+   {
+    "rule": "none",
+    "deadline_exact_s": null,
+    "stopped": 0,
+    "stopped_that_succeeded": 0,
+    "success_n": 29,
+    "usd_total": 0.33984299999999995,
+    "usd_per_task": 0.006796859999999999,
+    "usd_per_success": 0.011718724137931033,
+    "d_usd_per_task_pct": 0.0,
+    "d_usd_per_success_pct": 0.0,
+    "d_success_points": 0.0
+   },
+   {
+    "rule": "turn_steps=3",
+    "deadline_exact_s": null,
+    "stopped": 23,
+    "stopped_that_succeeded": 10,
+    "success_n": 19,
+    "usd_total": 0.23556630000000003,
+    "usd_per_task": 0.004711326000000001,
+    "usd_per_success": 0.012398226315789476,
+    "d_usd_per_task_pct": -30.68378633663189,
+    "d_usd_per_success_pct": 5.79843138093028,
+    "d_success_points": -20.0
+   },
+   {
+    "rule": "turn_steps=4",
+    "deadline_exact_s": null,
+    "stopped": 12,
+    "stopped_that_succeeded": 4,
+    "success_n": 25,
+    "usd_total": 0.29969399999999996,
+    "usd_per_task": 0.005993879999999999,
+    "usd_per_success": 0.011987759999999998,
+    "d_usd_per_task_pct": -11.813984692931733,
+    "d_usd_per_success_pct": 2.29577775619918,
+    "d_success_points": -8.0
+   },
+   {
+    "rule": "turn_steps=6",
+    "deadline_exact_s": null,
+    "stopped": 3,
+    "stopped_that_succeeded": 1,
+    "success_n": 28,
+    "usd_total": 0.32430709999999996,
+    "usd_per_task": 0.006486141999999999,
+    "usd_per_success": 0.011582396428571427,
+    "d_usd_per_task_pct": -4.571493307203623,
+    "d_usd_per_success_pct": -1.163332353889468,
+    "d_success_points": -2.0
+   },
+   {
+    "rule": "errors=1",
+    "deadline_exact_s": null,
+    "stopped": 17,
+    "stopped_that_succeeded": 7,
+    "success_n": 22,
+    "usd_total": 0.25907589999999997,
+    "usd_per_task": 0.0051815179999999995,
+    "usd_per_success": 0.011776177272727272,
+    "d_usd_per_task_pct": -23.766003713479456,
+    "d_usd_per_success_pct": 0.49026783223162784,
+    "d_success_points": -14.0
+   },
+   {
+    "rule": "errors=2",
+    "deadline_exact_s": null,
+    "stopped": 5,
+    "stopped_that_succeeded": 3,
+    "success_n": 26,
+    "usd_total": 0.31312579999999995,
+    "usd_per_task": 0.006262515999999999,
+    "usd_per_success": 0.012043299999999998,
+    "d_usd_per_task_pct": -7.861630223367855,
+    "d_usd_per_success_pct": 2.7697201354743184,
+    "d_success_points": -6.0
+   },
+   {
+    "rule": "deadline=17s",
+    "deadline_exact_s": 17.21166181564331,
+    "stopped": 5,
+    "stopped_that_succeeded": 1,
+    "success_n": 28,
+    "usd_total": 0.3263096,
+    "usd_per_task": 0.006526191999999999,
+    "usd_per_success": 0.011653914285714285,
+    "d_usd_per_task_pct": -3.9822506274956426,
+    "d_usd_per_success_pct": -0.5530452927633323,
+    "d_success_points": -2.0
+   },
+   {
+    "rule": "deadline=14s",
+    "deadline_exact_s": 13.773991823196411,
+    "stopped": 14,
+    "stopped_that_succeeded": 4,
+    "success_n": 25,
+    "usd_total": 0.3054842999999999,
+    "usd_per_task": 0.006109685999999998,
+    "usd_per_success": 0.012219371999999996,
+    "d_usd_per_task_pct": -10.110168518992612,
+    "d_usd_per_success_pct": 4.27220451796857,
+    "d_success_points": -8.0
+   }
+  ],
+  "failed_vs_ok": {
+   "median_failed_run_usd": 0.007567399999999999,
+   "median_successful_run_usd": 0.005699500000000001
+  },
+  "dollar_budgets": {
+   "q=0.5": {
+    "budget_usd": 0.0056208000000000004,
+    "success": 0.38,
+    "stopped": 28,
+    "stopped_that_succeeded": 10,
+    "d_usd_per_task_pct": -21.074643291166783,
+    "d_usd_per_success_pct": 20.46501813453492
+   },
+   "q=0.75": {
+    "budget_usd": 0.0068146000000000005,
+    "success": 0.46,
+    "stopped": 15,
+    "stopped_that_succeeded": 6,
+    "d_usd_per_task_pct": -11.04318758956342,
+    "d_usd_per_success_pct": 12.162937387072216
+   },
+   "q=0.9": {
+    "budget_usd": 0.009331400000000002,
+    "success": 0.54,
+    "stopped": 4,
+    "stopped_that_succeeded": 2,
+    "d_usd_per_task_pct": -3.1265613827561545,
+    "d_usd_per_success_pct": 4.049248885187828
+   }
+  }
+ },
+ "small+cache": {
+  "task_max_steps": {
+   "tasks": 29,
+   "p50": 4,
+   "p75": 4,
+   "p90": 7,
+   "max": 7,
+   "tasks_over_3": 16,
+   "tasks_over_4": 3,
+   "tasks_over_5": 3,
+   "tasks_over_6": 3
+  },
+  "steps_per_turn": {
+   "successful_tasks": {
+    "turns": 103,
+    "p50": 2,
+    "p75": 3,
+    "p90": 4,
+    "max": 7,
+    "turns_over_3": 18,
+    "turns_over_4": 3,
+    "turns_over_6": 3
+   },
+   "all_tasks": {
+    "turns": 188,
+    "p90": 4,
+    "max": 7,
+    "turns_over_6": 4
+   }
+  },
+  "stopped": [
+   {
+    "rule": "none",
+    "deadline_exact_s": null,
+    "stopped": 0,
+    "stopped_that_succeeded": 0,
+    "success_n": 29,
+    "usd_total": 0.08676903999999998,
+    "usd_per_task": 0.0017353807999999995,
+    "usd_per_success": 0.002992035862068965,
+    "d_usd_per_task_pct": 0.0,
+    "d_usd_per_success_pct": 0.0,
+    "d_success_points": 0.0
+   },
+   {
+    "rule": "turn_steps=3",
+    "deadline_exact_s": null,
+    "stopped": 30,
+    "stopped_that_succeeded": 16,
+    "success_n": 13,
+    "usd_total": 0.06143436499999998,
+    "usd_per_task": 0.0012286872999999995,
+    "usd_per_success": 0.004725720384615383,
+    "d_usd_per_task_pct": -29.197827934940857,
+    "d_usd_per_success_pct": 57.943306914362694,
+    "d_success_points": -32.0
+   },
+   {
+    "rule": "turn_steps=4",
+    "deadline_exact_s": null,
+    "stopped": 13,
+    "stopped_that_succeeded": 3,
+    "success_n": 26,
+    "usd_total": 0.07815520499999999,
+    "usd_per_task": 0.0015631040999999999,
+    "usd_per_success": 0.0030059694230769227,
+    "d_usd_per_task_pct": -9.92731393593842,
+    "d_usd_per_success_pct": 0.4656883022225111,
+    "d_success_points": -6.0
+   },
+   {
+    "rule": "turn_steps=6",
+    "deadline_exact_s": null,
+    "stopped": 4,
+    "stopped_that_succeeded": 3,
+    "success_n": 26,
+    "usd_total": 0.083886455,
+    "usd_per_task": 0.0016777291,
+    "usd_per_success": 0.0032264021153846152,
+    "d_usd_per_task_pct": -3.3221354068225017,
+    "d_usd_per_success_pct": 7.833002815467194,
+    "d_success_points": -6.0
+   },
+   {
+    "rule": "errors=1",
+    "deadline_exact_s": null,
+    "stopped": 19,
+    "stopped_that_succeeded": 7,
+    "success_n": 22,
+    "usd_total": 0.06880853999999999,
+    "usd_per_task": 0.0013761707999999997,
+    "usd_per_success": 0.0031276609090909084,
+    "d_usd_per_task_pct": -20.699203310305148,
+    "d_usd_per_success_pct": 4.532868363688669,
+    "d_success_points": -14.0
+   },
+   {
+    "rule": "errors=2",
+    "deadline_exact_s": null,
+    "stopped": 6,
+    "stopped_that_succeeded": 4,
+    "success_n": 25,
+    "usd_total": 0.08129965,
+    "usd_per_task": 0.001625993,
+    "usd_per_success": 0.003251986,
+    "d_usd_per_task_pct": -6.303388858514481,
+    "d_usd_per_success_pct": 8.688068924123193,
+    "d_success_points": -8.0
+   },
+   {
+    "rule": "deadline=16s",
+    "deadline_exact_s": 15.976434707641602,
+    "stopped": 7,
+    "stopped_that_succeeded": 2,
+    "success_n": 27,
+    "usd_total": 0.08425311999999999,
+    "usd_per_task": 0.0016850623999999997,
+    "usd_per_success": 0.0031204859259259254,
+    "d_usd_per_task_pct": -2.89955956640755,
+    "d_usd_per_success_pct": 4.2930656508956,
+    "d_success_points": -4.0
+   },
+   {
+    "rule": "deadline=13s",
+    "deadline_exact_s": 13.229650259017944,
+    "stopped": 15,
+    "stopped_that_succeeded": 4,
+    "success_n": 25,
+    "usd_total": 0.08000619499999999,
+    "usd_per_task": 0.0016001238999999998,
+    "usd_per_success": 0.0032002477999999997,
+    "d_usd_per_task_pct": -7.794076089812663,
+    "d_usd_per_success_pct": 6.958871735817307,
+    "d_success_points": -8.0
+   }
+  ],
+  "failed_vs_ok": {
+   "median_failed_run_usd": 0.00215967,
+   "median_successful_run_usd": 0.0015818249999999996
+  },
+  "dollar_budgets": {
+   "q=0.5": {
+    "budget_usd": 0.00154455,
+    "success": 0.34,
+    "stopped": 27,
+    "stopped_that_succeeded": 12,
+    "d_usd_per_task_pct": -15.992034716530235,
+    "d_usd_per_success_pct": 43.30770548356606
+   },
+   "q=0.75": {
+    "budget_usd": 0.0019448249999999999,
+    "success": 0.52,
+    "stopped": 13,
+    "stopped_that_succeeded": 3,
+    "d_usd_per_task_pct": -5.783312803737351,
+    "d_usd_per_success_pct": 5.08784341121602
+   },
+   "q=0.9": {
+    "budget_usd": 0.001985385,
+    "success": 0.52,
+    "stopped": 13,
+    "stopped_that_succeeded": 3,
+    "d_usd_per_task_pct": -5.662422910291475,
+    "d_usd_per_success_pct": 5.22268213852104
+   }
+  }
+ },
+ "aggregate": {
+  "large": {
+   "settings": 14,
+   "stopped": 144,
+   "stopped_that_succeeded": 123,
+   "share": 0.8541666666666666
+  },
+  "small": {
+   "settings": 14,
+   "stopped": 173,
+   "stopped_that_succeeded": 69,
+   "share": 0.3988439306358382
+  }
+ }
+}

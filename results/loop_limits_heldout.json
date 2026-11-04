@@ -1,0 +1,646 @@
+{
+ "large": {
+  "overrun": {
+   "deadline_p90": {
+    "threshold": 18.235453128814697,
+    "stopped": 6,
+    "median_excess": 0.566260576248169,
+    "max_excess": 0.7925608158111572,
+    "median_excess_share_of_budget": null,
+    "max_excess_share_of_budget": null
+   },
+   "deadline_p75": {
+    "threshold": 16.317445993423462,
+    "stopped": 9,
+    "median_excess": 0.7092170715332031,
+    "max_excess": 1.0900681018829346,
+    "median_excess_share_of_budget": null,
+    "max_excess_share_of_budget": null
+   },
+   "budget_p50": {
+    "threshold": 0.11948399999999998,
+    "stopped": 21,
+    "median_excess": 0.0069200000000000095,
+    "max_excess": 0.01636000000000004,
+    "median_excess_share_of_budget": 0.05791570419470398,
+    "max_excess_share_of_budget": 0.13692209835626565
+   },
+   "budget_p75": {
+    "threshold": 0.15487599999999999,
+    "stopped": 7,
+    "median_excess": 0.0068000000000000005,
+    "max_excess": 0.012674000000000019,
+    "median_excess_share_of_budget": 0.04390609261602831,
+    "max_excess_share_of_budget": 0.08183320850228583
+   },
+   "budget_p90": {
+    "threshold": 0.17596599999999998,
+    "stopped": 4,
+    "median_excess": 0.00965500000000001,
+    "max_excess": 0.01324800000000001,
+    "median_excess_share_of_budget": 0.0548685541525068,
+    "max_excess_share_of_budget": 0.07528727140470325
+   }
+  },
+  "heldout": {
+   "deadline_p90": {
+    "in_sample": {
+     "success": 0.76,
+     "usd_per_success": 0.1603976842105263,
+     "d_usd_per_success_pct": 4.93332595287006
+    },
+    "heldout_success": {
+     "mean": 0.7667,
+     "p05": 0.74,
+     "p95": 0.78
+    },
+    "heldout_d_success_points": {
+     "mean": -7.33,
+     "p05": -10.0,
+     "p95": -6.0
+    },
+    "heldout_d_usd_per_success_pct": {
+     "mean": 4.534982198263501,
+     "p05": 2.5282305999516863,
+     "p95": 7.284329006999979
+    },
+    "in_sample_d_success_points": -8.0
+   },
+   "deadline_p75": {
+    "in_sample": {
+     "success": 0.7,
+     "usd_per_success": 0.17014011428571432,
+     "d_usd_per_success_pct": 11.306894222789388
+    },
+    "heldout_success": {
+     "mean": 0.7001,
+     "p05": 0.66,
+     "p95": 0.74
+    },
+    "heldout_d_success_points": {
+     "mean": -13.99,
+     "p05": -18.0,
+     "p95": -10.0
+    },
+    "heldout_d_usd_per_success_pct": {
+     "mean": 11.391796784958522,
+     "p05": 6.291489957742091,
+     "p95": 17.318587483310655
+    },
+    "in_sample_d_success_points": -14.0
+   },
+   "budget_p50": {
+    "in_sample": {
+     "success": 0.54,
+     "usd_per_success": 0.20107874074074072,
+     "d_usd_per_success_pct": 31.547167580341508
+    },
+    "heldout_success": {
+     "mean": 0.5065000000000001,
+     "p05": 0.42,
+     "p95": 0.56
+    },
+    "heldout_d_success_points": {
+     "mean": -33.35,
+     "p05": -42.0,
+     "p95": -28.0
+    },
+    "heldout_d_usd_per_success_pct": {
+     "mean": 39.568917254310506,
+     "p05": 27.479990604337967,
+     "p95": 63.52208977467857
+    },
+    "in_sample_d_success_points": -30.0
+   },
+   "budget_p75": {
+    "in_sample": {
+     "success": 0.74,
+     "usd_per_success": 0.16372718918918916,
+     "d_usd_per_success_pct": 7.111512208534254
+    },
+    "heldout_success": {
+     "mean": 0.6774,
+     "p05": 0.62,
+     "p95": 0.72
+    },
+    "heldout_d_success_points": {
+     "mean": -16.26,
+     "p05": -22.0,
+     "p95": -12.0
+    },
+    "heldout_d_usd_per_success_pct": {
+     "mean": 14.640571914735155,
+     "p05": 7.111512208534276,
+     "p95": 23.176460132269284
+    },
+    "in_sample_d_success_points": -10.0
+   },
+   "budget_p90": {
+    "in_sample": {
+     "success": 0.78,
+     "usd_per_success": 0.15898789743589742,
+     "d_usd_per_success_pct": 4.01103324101264
+    },
+    "heldout_success": {
+     "mean": 0.7752,
+     "p05": 0.74,
+     "p95": 0.78
+    },
+    "heldout_d_success_points": {
+     "mean": -6.48,
+     "p05": -10.0,
+     "p95": -6.0
+    },
+    "heldout_d_usd_per_success_pct": {
+     "mean": 4.197236491584465,
+     "p05": 3.2296414062474854,
+     "p95": 7.9264776141902304
+    },
+    "in_sample_d_success_points": -6.0
+   }
+  }
+ },
+ "large+cache": {
+  "overrun": {
+   "deadline_p90": {
+    "threshold": 23.380197048187256,
+    "stopped": 5,
+    "median_excess": 0.5136904716491699,
+    "max_excess": 1.2422232627868652,
+    "median_excess_share_of_budget": null,
+    "max_excess_share_of_budget": null
+   },
+   "deadline_p75": {
+    "threshold": 17.90451169013977,
+    "stopped": 9,
+    "median_excess": 0.710484504699707,
+    "max_excess": 1.911498785018921,
+    "median_excess_share_of_budget": null,
+    "max_excess_share_of_budget": null
+   },
+   "budget_p50": {
+    "threshold": 0.023114000000000003,
+    "stopped": 22,
+    "median_excess": 0.0008571499999999958,
+    "max_excess": 0.003167599999999996,
+    "median_excess_share_of_budget": 0.03708358570563276,
+    "max_excess_share_of_budget": 0.13704248507398095
+   },
+   "budget_p75": {
+    "threshold": 0.028590400000000002,
+    "stopped": 13,
+    "median_excess": 0.0008147000000000015,
+    "max_excess": 0.0020276999999999934,
+    "median_excess_share_of_budget": 0.02849557893558682,
+    "max_excess_share_of_budget": 0.07092240752140555
+   },
+   "budget_p90": {
+    "threshold": 0.035040699999999994,
+    "stopped": 3,
+    "median_excess": 0.002013000000000008,
+    "max_excess": 0.0022271000000000027,
+    "median_excess_share_of_budget": 0.05744748249892292,
+    "max_excess_share_of_budget": 0.06355752025501782
+   }
+  },
+  "heldout": {
+   "deadline_p90": {
+    "in_sample": {
+     "success": 0.78,
+     "usd_per_success": 0.030343587179487177,
+     "d_usd_per_success_pct": 8.018678188716555
+    },
+    "heldout_success": {
+     "mean": 0.7736000000000001,
+     "p05": 0.74,
+     "p95": 0.8
+    },
+    "heldout_d_success_points": {
+     "mean": -8.64,
+     "p05": -12.0,
+     "p95": -6.0
+    },
+    "heldout_d_usd_per_success_pct": {
+     "mean": 8.052406193656704,
+     "p05": 4.30801424503735,
+     "p95": 12.814238883357621
+    },
+    "in_sample_d_success_points": -8.0
+   },
+   "deadline_p75": {
+    "in_sample": {
+     "success": 0.72,
+     "usd_per_success": 0.03169309444444444,
+     "d_usd_per_success_pct": 12.822724266211916
+    },
+    "heldout_success": {
+     "mean": 0.6993,
+     "p05": 0.66,
+     "p95": 0.72
+    },
+    "heldout_d_success_points": {
+     "mean": -16.07,
+     "p05": -20.0,
+     "p95": -14.0
+    },
+    "heldout_d_usd_per_success_pct": {
+     "mean": 16.045754521962948,
+     "p05": 12.492518331811775,
+     "p95": 22.534807662954883
+    },
+    "in_sample_d_success_points": -14.0
+   },
+   "budget_p50": {
+    "in_sample": {
+     "success": 0.52,
+     "usd_per_success": 0.040185830769230775,
+     "d_usd_per_success_pct": 43.055608288206535
+    },
+    "heldout_success": {
+     "mean": 0.4808,
+     "p05": 0.44,
+     "p95": 0.54
+    },
+    "heldout_d_success_points": {
+     "mean": -37.92,
+     "p05": -42.0,
+     "p95": -32.0
+    },
+    "heldout_d_usd_per_success_pct": {
+     "mean": 53.132573013385766,
+     "p05": 38.35621729432004,
+     "p95": 65.40829462364361
+    },
+    "in_sample_d_success_points": -34.0
+   },
+   "budget_p75": {
+    "in_sample": {
+     "success": 0.68,
+     "usd_per_success": 0.0334664794117647,
+     "d_usd_per_success_pct": 19.13571221178916
+    },
+    "heldout_success": {
+     "mean": 0.6637000000000001,
+     "p05": 0.62,
+     "p95": 0.7
+    },
+    "heldout_d_success_points": {
+     "mean": -19.63,
+     "p05": -24.0,
+     "p95": -16.0
+    },
+    "heldout_d_usd_per_success_pct": {
+     "mean": 20.0661352550498,
+     "p05": 13.881128713862868,
+     "p95": 27.35123481490134
+    },
+    "in_sample_d_success_points": -18.0
+   },
+   "budget_p90": {
+    "in_sample": {
+     "success": 0.82,
+     "usd_per_success": 0.029125843902439028,
+     "d_usd_per_success_pct": 3.6836924013782912
+    },
+    "heldout_success": {
+     "mean": 0.7764,
+     "p05": 0.76,
+     "p95": 0.8
+    },
+    "heldout_d_success_points": {
+     "mean": -8.36,
+     "p05": -10.0,
+     "p95": -6.0
+    },
+    "heldout_d_usd_per_success_pct": {
+     "mean": 8.127533291746326,
+     "p05": 5.100099104622724,
+     "p95": 11.29507104815277
+    },
+    "in_sample_d_success_points": -4.0
+   }
+  }
+ },
+ "small": {
+  "overrun": {
+   "deadline_p90": {
+    "threshold": 17.21166181564331,
+    "stopped": 5,
+    "median_excess": 0.5667405128479004,
+    "max_excess": 4.4655866622924805,
+    "median_excess_share_of_budget": null,
+    "max_excess_share_of_budget": null
+   },
+   "deadline_p75": {
+    "threshold": 13.773991823196411,
+    "stopped": 14,
+    "median_excess": 0.8596920967102051,
+    "max_excess": 2.670271635055542,
+    "median_excess_share_of_budget": null,
+    "max_excess_share_of_budget": null
+   },
+   "budget_p50": {
+    "threshold": 0.0056208000000000004,
+    "stopped": 28,
+    "median_excess": 0.0002680999999999994,
+    "max_excess": 0.0006807999999999988,
+    "median_excess_share_of_budget": 0.04769783660688859,
+    "max_excess_share_of_budget": 0.12112154853401629
+   },
+   "budget_p75": {
+    "threshold": 0.0068146000000000005,
+    "stopped": 15,
+    "median_excess": 0.00027370000000000085,
+    "max_excess": 0.0008141000000000008,
+    "median_excess_share_of_budget": 0.04016376603175547,
+    "max_excess_share_of_budget": 0.11946409180289388
+   },
+   "budget_p90": {
+    "threshold": 0.009331400000000002,
+    "stopped": 4,
+    "median_excess": 0.0003780999999999984,
+    "max_excess": 0.0004221999999999993,
+    "median_excess_share_of_budget": 0.04051910752941663,
+    "max_excess_share_of_budget": 0.045245086482199805
+   }
+  },
+  "heldout": {
+   "deadline_p90": {
+    "in_sample": {
+     "success": 0.56,
+     "usd_per_success": 0.011653914285714285,
+     "d_usd_per_success_pct": -0.5530452927633323
+    },
+    "heldout_success": {
+     "mean": 0.5338,
+     "p05": 0.5,
+     "p95": 0.56
+    },
+    "heldout_d_success_points": {
+     "mean": -4.62,
+     "p05": -8.0,
+     "p95": -2.0
+    },
+    "heldout_d_usd_per_success_pct": {
+     "mean": 2.657813003328052,
+     "p05": -0.7923753447495185,
+     "p95": 8.571307338977107
+    },
+    "in_sample_d_success_points": -2.0
+   },
+   "deadline_p75": {
+    "in_sample": {
+     "success": 0.5,
+     "usd_per_success": 0.012219371999999996,
+     "d_usd_per_success_pct": 4.27220451796857
+    },
+    "heldout_success": {
+     "mean": 0.4774,
+     "p05": 0.38,
+     "p95": 0.5
+    },
+    "heldout_d_success_points": {
+     "mean": -10.26,
+     "p05": -20.0,
+     "p95": -8.0
+    },
+    "heldout_d_usd_per_success_pct": {
+     "mean": 8.469299224902613,
+     "p05": 3.46798727647768,
+     "p95": 28.88101425162737
+    },
+    "in_sample_d_success_points": -8.0
+   },
+   "budget_p50": {
+    "in_sample": {
+     "success": 0.38,
+     "usd_per_success": 0.014116963157894739,
+     "d_usd_per_success_pct": 20.46501813453492
+    },
+    "heldout_success": {
+     "mean": 0.3431,
+     "p05": 0.28,
+     "p95": 0.4
+    },
+    "heldout_d_success_points": {
+     "mean": -23.69,
+     "p05": -30.0,
+     "p95": -18.0
+    },
+    "heldout_d_usd_per_success_pct": {
+     "mean": 33.42697763650844,
+     "p05": 14.318460289015844,
+     "p95": 52.295833244006396
+    },
+    "in_sample_d_success_points": -20.0
+   },
+   "budget_p75": {
+    "in_sample": {
+     "success": 0.46,
+     "usd_per_success": 0.013144065217391303,
+     "d_usd_per_success_pct": 12.162937387072216
+    },
+    "heldout_success": {
+     "mean": 0.4566,
+     "p05": 0.42,
+     "p95": 0.48
+    },
+    "heldout_d_success_points": {
+     "mean": -12.34,
+     "p05": -16.0,
+     "p95": -10.0
+    },
+    "heldout_d_usd_per_success_pct": {
+     "mean": 11.461816162872044,
+     "p05": 8.350458248687476,
+     "p95": 18.301599492090382
+    },
+    "in_sample_d_success_points": -12.0
+   },
+   "budget_p90": {
+    "in_sample": {
+     "success": 0.54,
+     "usd_per_success": 0.012193244444444442,
+     "d_usd_per_success_pct": 4.049248885187828
+    },
+    "heldout_success": {
+     "mean": 0.5093,
+     "p05": 0.46,
+     "p95": 0.54
+    },
+    "heldout_d_success_points": {
+     "mean": -7.07,
+     "p05": -12.0,
+     "p95": -4.0
+    },
+    "heldout_d_usd_per_success_pct": {
+     "mean": 8.131747667338294,
+     "p05": 4.0492488851878505,
+     "p95": 15.938463400426993
+    },
+    "in_sample_d_success_points": -4.0
+   }
+  }
+ },
+ "small+cache": {
+  "overrun": {
+   "deadline_p90": {
+    "threshold": 15.976434707641602,
+    "stopped": 7,
+    "median_excess": 0.5644857883453369,
+    "max_excess": 1.6957623958587646,
+    "median_excess_share_of_budget": null,
+    "max_excess_share_of_budget": null
+   },
+   "deadline_p75": {
+    "threshold": 13.229650259017944,
+    "stopped": 15,
+    "median_excess": 0.6091170310974121,
+    "max_excess": 1.757082223892212,
+    "median_excess_share_of_budget": null,
+    "max_excess_share_of_budget": null
+   },
+   "budget_p50": {
+    "threshold": 0.00154455,
+    "stopped": 27,
+    "median_excess": 7.708999999999971e-05,
+    "max_excess": 0.00026177000000000014,
+    "median_excess_share_of_budget": 0.04991097730730615,
+    "max_excess_share_of_budget": 0.16947978375578657
+   },
+   "budget_p75": {
+    "threshold": 0.0019448249999999999,
+    "stopped": 13,
+    "median_excess": 0.00011203999999999988,
+    "max_excess": 0.00036672500000000004,
+    "median_excess_share_of_budget": 0.05760929646626298,
+    "max_excess_share_of_budget": 0.18856452380034197
+   },
+   "budget_p90": {
+    "threshold": 0.001985385,
+    "stopped": 13,
+    "median_excess": 7.151499999999986e-05,
+    "max_excess": 0.0003261649999999998,
+    "median_excess_share_of_budget": 0.03602072142178966,
+    "max_excess_share_of_budget": 0.16428299800794294
+   }
+  },
+  "heldout": {
+   "deadline_p90": {
+    "in_sample": {
+     "success": 0.54,
+     "usd_per_success": 0.0031204859259259254,
+     "d_usd_per_success_pct": 4.2930656508956
+    },
+    "heldout_success": {
+     "mean": 0.5201,
+     "p05": 0.48,
+     "p95": 0.54
+    },
+    "heldout_d_success_points": {
+     "mean": -5.99,
+     "p05": -10.0,
+     "p95": -4.0
+    },
+    "heldout_d_usd_per_success_pct": {
+     "mean": 6.8907560204615494,
+     "p05": 3.1137806671511115,
+     "p95": 12.864755437730668
+    },
+    "in_sample_d_success_points": -4.0
+   },
+   "deadline_p75": {
+    "in_sample": {
+     "success": 0.5,
+     "usd_per_success": 0.0032002477999999997,
+     "d_usd_per_success_pct": 6.958871735817307
+    },
+    "heldout_success": {
+     "mean": 0.4828,
+     "p05": 0.46,
+     "p95": 0.52
+    },
+    "heldout_d_success_points": {
+     "mean": -9.72,
+     "p05": -12.0,
+     "p95": -6.0
+    },
+    "heldout_d_usd_per_success_pct": {
+     "mean": 11.035279727262926,
+     "p05": 4.557788832727239,
+     "p95": 16.821729571826083
+    },
+    "in_sample_d_success_points": -8.0
+   },
+   "budget_p50": {
+    "in_sample": {
+     "success": 0.34,
+     "usd_per_success": 0.004287817941176469,
+     "d_usd_per_success_pct": 43.30770548356606
+    },
+    "heldout_success": {
+     "mean": 0.3274,
+     "p05": 0.26,
+     "p95": 0.38
+    },
+    "heldout_d_success_points": {
+     "mean": -25.26,
+     "p05": -32.0,
+     "p95": -20.0
+    },
+    "heldout_d_usd_per_success_pct": {
+     "mean": 50.73419534364358,
+     "p05": 30.71938204541258,
+     "p95": 80.96853484216886
+    },
+    "in_sample_d_success_points": -24.0
+   },
+   "budget_p75": {
+    "in_sample": {
+     "success": 0.52,
+     "usd_per_success": 0.003144265961538461,
+     "d_usd_per_success_pct": 5.08784341121602
+    },
+    "heldout_success": {
+     "mean": 0.4592,
+     "p05": 0.42,
+     "p95": 0.52
+    },
+    "heldout_d_success_points": {
+     "mean": -12.08,
+     "p05": -16.0,
+     "p95": -6.0
+    },
+    "heldout_d_usd_per_success_pct": {
+     "mean": 15.994489200383839,
+     "p05": 3.416701882465145,
+     "p95": 26.082458729080148
+    },
+    "in_sample_d_success_points": -6.0
+   },
+   "budget_p90": {
+    "in_sample": {
+     "success": 0.52,
+     "usd_per_success": 0.003148300384615385,
+     "d_usd_per_success_pct": 5.22268213852104
+    },
+    "heldout_success": {
+     "mean": 0.5207,
+     "p05": 0.52,
+     "p95": 0.54
+    },
+    "heldout_d_success_points": {
+     "mean": -5.93,
+     "p05": -6.0,
+     "p95": -4.0
+    },
+    "heldout_d_usd_per_success_pct": {
+     "mean": 6.163289176896871,
+     "p05": 3.697088440932572,
+     "p95": 7.376091128285478
+    },
+    "in_sample_d_success_points": -6.0
+   }
+  }
+ }
+}

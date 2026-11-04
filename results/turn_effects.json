@@ -1,0 +1,34 @@
+{
+ "large": {
+  "turns": 188,
+  "calls_per_turn_mean": 2.015957446808511,
+  "calls_per_turn_max": 8,
+  "share_turns_2plus_calls": 0.4574468085106383,
+  "share_turns_exposed": 0.9893617021276596,
+  "exposed_calls_max": 8
+ },
+ "large+cache": {
+  "turns": 188,
+  "calls_per_turn_mean": 2.026595744680851,
+  "calls_per_turn_max": 8,
+  "share_turns_2plus_calls": 0.4787234042553192,
+  "share_turns_exposed": 1.0,
+  "exposed_calls_max": 8
+ },
+ "small": {
+  "turns": 188,
+  "calls_per_turn_mean": 2.0106382978723403,
+  "calls_per_turn_max": 9,
+  "share_turns_2plus_calls": 0.4574468085106383,
+  "share_turns_exposed": 0.9840425531914894,
+  "exposed_calls_max": 9
+ },
+ "small+cache": {
+  "turns": 188,
+  "calls_per_turn_mean": 1.9627659574468086,
+  "calls_per_turn_max": 5,
+  "share_turns_2plus_calls": 0.46808510638297873,
+  "share_turns_exposed": 0.9840425531914894,
+  "exposed_calls_max": 5
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "config": "large",
+ "task_id": "multi_turn_base_39",
+ "turn": 1,
+ "model_steps": 4,
+ "step_kinds": [
+  "act",
+  "act",
+  "act",
+  "final"
+ ],
+ "calls_per_step": [
+  1,
+  3,
+  3,
+  0
+ ],
+ "total_calls": 7,
+ "turn_cost_usd": 0.040458,
+ "calls_left_applied_by_stop_after_step": {
+  "0": 1,
+  "1": 4,
+  "2": 7
+ },
+ "error_free_turns_considered": 175
+}
