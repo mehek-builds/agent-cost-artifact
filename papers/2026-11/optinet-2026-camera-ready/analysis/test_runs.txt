@@ -1,0 +1,11 @@
+# Unit tests, Nov 17 2026 (python3 -I -m unittest discover -s optinet, in the repository root at commit 575ce09, rerun after loop 3)
+Ran 11 tests in 0.205s
+OK
+
+# Mutation check on a scratch copy: _reserve multiplied by 0.5 (artifact itself untouched)
+FAIL: test_library_reproduces_the_replay (test_budget_pacer.ReplayEquivalence.test_library_reproduces_the_replay)
+FAIL: test_library_reproduces_the_replay_with_causal_estimates (test_budget_pacer.ReplayEquivalence.test_library_reproduces_the_replay_with_causal_estimates)
+FAIL: test_cap_forecasts_the_next_step_from_the_previous_one (test_budget_pacer.Rules.test_cap_forecasts_the_next_step_from_the_previous_one)
+FAIL: test_reserve_refuses_escalation_that_would_starve_later_tasks (test_budget_pacer.Rules.test_reserve_refuses_escalation_that_would_starve_later_tasks)
+Ran 11 tests in 0.014s
+FAILED (failures=4)

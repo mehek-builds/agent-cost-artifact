@@ -1,0 +1,45 @@
+[cached] small-run tasks with any tool error: 19 of 50; of the 21 small failures, 12 had a tool error
+--- budget 20%
+           small mean500 29.00 boot95 (22, 36) spent $0.0868 esc 0.00 unstarted 0.00
+          hybrid mean500 31.54 boot95 (25, 38) spent $0.2328 esc 6.36 unstarted 0.34
+           retry mean500 15.90 boot95 (8, 28) spent $0.2439 esc 8.14 unstarted 30.71
+     retry-paced mean500 31.92 boot95 (24, 40) spent $0.2325 esc 5.49 unstarted 0.68
+       retry-err mean500 16.51 boot95 (9, 27) spent $0.2436 esc 8.76 unstarted 27.46
+ retry-err-paced mean500 31.41 boot95 (25, 38) spent $0.2325 esc 6.08 unstarted 0.33
+  paired        retry-err-paced - retry-err: mean +14.53 95% [6, 23]
+  paired           retry-err-paced - hybrid: mean -0.13 95% [-2, 2]
+  paired            retry-err-paced - small: mean +2.50 95% [-1, 6]
+  paired      retry-paced - retry-err-paced: mean +0.57 95% [-4, 4]
+--- budget 40%
+           small mean500 29.00 boot95 (22, 36) spent $0.0868 esc 0.00 unstarted 0.00
+          hybrid mean500 36.65 boot95 (30, 43) spent $0.4723 esc 16.46 unstarted 0.01
+           retry mean500 31.13 boot95 (20, 46) spent $0.4852 esc 15.88 unstarted 12.95
+     retry-paced mean500 38.29 boot95 (30, 46) spent $0.4716 esc 14.24 unstarted 0.10
+       retry-err mean500 32.56 boot95 (22, 42) spent $0.4850 esc 17.09 unstarted 6.20
+ retry-err-paced mean500 36.36 boot95 (29, 43) spent $0.4714 esc 15.82 unstarted 0.01
+  paired        retry-err-paced - retry-err: mean +3.39 95% [0, 11]
+  paired           retry-err-paced - hybrid: mean -0.28 95% [-2, 1]
+  paired            retry-err-paced - small: mean +7.23 95% [3, 12]
+  paired      retry-paced - retry-err-paced: mean +2.06 95% [-2, 6]
+--- budget 80%
+           small mean500 29.00 boot95 (22, 36) spent $0.0868 esc 0.00 unstarted 0.00
+          hybrid mean500 40.78 boot95 (35, 46) spent $0.9046 esc 36.08 unstarted 0.00
+           retry mean500 43.00 boot95 (38, 47) spent $0.6564 esc 21.00 unstarted 0.00
+     retry-paced mean500 43.00 boot95 (38, 47) spent $0.6564 esc 21.00 unstarted 0.00
+       retry-err mean500 38.00 boot95 (32, 44) spent $0.5488 esc 19.00 unstarted 0.00
+ retry-err-paced mean500 38.00 boot95 (32, 44) spent $0.5488 esc 19.00 unstarted 0.00
+  paired        retry-err-paced - retry-err: mean +0.00 95% [0, 0]
+  paired           retry-err-paced - hybrid: mean -2.71 95% [-6, 0]
+  paired            retry-err-paced - small: mean +8.98 95% [4, 15]
+  paired      retry-paced - retry-err-paced: mean +4.93 95% [1, 9]
+--- budget 100%
+           small mean500 29.00 boot95 (22, 36) spent $0.0868 esc 0.00 unstarted 0.00
+          hybrid mean500 42.19 boot95 (37, 47) spent $1.0943 esc 44.76 unstarted 0.00
+           retry mean500 43.00 boot95 (38, 47) spent $0.6564 esc 21.00 unstarted 0.00
+     retry-paced mean500 43.00 boot95 (38, 47) spent $0.6564 esc 21.00 unstarted 0.00
+       retry-err mean500 38.00 boot95 (32, 44) spent $0.5488 esc 19.00 unstarted 0.00
+ retry-err-paced mean500 38.00 boot95 (32, 44) spent $0.5488 esc 19.00 unstarted 0.00
+  paired        retry-err-paced - retry-err: mean +0.00 95% [0, 0]
+  paired           retry-err-paced - hybrid: mean -4.04 95% [-8, -1]
+  paired            retry-err-paced - small: mean +8.98 95% [4, 15]
+  paired      retry-paced - retry-err-paced: mean +4.93 95% [1, 9]

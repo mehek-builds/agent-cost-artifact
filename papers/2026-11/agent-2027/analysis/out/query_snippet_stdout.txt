@@ -1,0 +1,3 @@
+failure-cost share (pooled five step-logged configs): 0.213
+share of failed-run spend after the flag turn: 0.308
+per config failure share: {'frontier': 0.191, 'frontier_cache': 0.167, 'small': 0.493, 'small_cache_budget': 0.475, 'small_low': 0.446}

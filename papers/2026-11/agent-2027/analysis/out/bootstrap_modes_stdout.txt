@@ -1,0 +1,74 @@
+{
+ "resamples": 10000,
+ "n_tasks": 50,
+ "modes": {
+  "fail_state_mismatch": {
+   "ratio": {
+    "point": 1.23,
+    "ci95": [
+     1.1,
+     1.53
+    ]
+   },
+   "after_flag_median": {
+    "point": 0.16,
+    "ci95": [
+     0.0,
+     0.32
+    ]
+   }
+  },
+  "fail_response_mismatch": {
+   "ratio": {
+    "point": 1.29,
+    "ci95": [
+     0.88,
+     1.62
+    ]
+   },
+   "after_flag_median": {
+    "point": 0.48,
+    "ci95": [
+     0.0,
+     0.73
+    ]
+   }
+  },
+  "hit_tool_call_cap": {
+   "ratio": {
+    "point": 1.35,
+    "ci95": [
+     0.96,
+     1.71
+    ]
+   },
+   "after_flag_median": {
+    "point": 0.38,
+    "ci95": [
+     0.3,
+     0.46
+    ]
+   }
+  },
+  "success_after_tool_error": {
+   "ratio": {
+    "point": 1.18,
+    "ci95": [
+     0.97,
+     1.43
+    ]
+   },
+   "after_flag_median": null
+  },
+  "success_clean": {
+   "ratio": {
+    "point": 0.96,
+    "ci95": [
+     0.88,
+     1.0
+    ]
+   },
+   "after_flag_median": null
+  }
+ }
+}

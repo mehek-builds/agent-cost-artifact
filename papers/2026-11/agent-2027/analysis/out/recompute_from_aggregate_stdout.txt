@@ -1,0 +1,16 @@
+packages 258 accepted 229 spend 62.64
+accepted median 0.268 p90 0.447 fail share % 0.6
+cost per accepted package 0.274  top-10% share % 21.0
+research calls % 3.9 used by 134 spend % 32.6 median usd if used 0.121
+rewrite calls % 26.2 used by 204 spend % 19.9 median usd if used 0.056
+retry calls % 20.5 used by 194 spend % 19.0 median usd if used 0.052
+judge calls % 41.9 used by 204 spend % 15.4 median usd if used 0.044
+spec calls % 7.1 used by 204 spend % 13.0 median usd if used 0.039
+other calls % 0.4 used by 8 spend % 0.1 median usd if used 0.007
+rewrite+judge+retry share % 54.3  searches 306
+accepted with retry 194 no retry with calls 21 zero-call accepted 14
+retry share of accepted-with-retry spend % 20.3
+medians retry/no-retry 0.284 0.188 ratio 1.51
+judge-loop no-retry n 10 median 0.228 ratio 1.25 ci 0.96 1.92
+in-sample alert thr 0.447 flagged 22 not accepted 0 with retry 22 with research 18 accepted with research 134
+hold-out: first half accepted 114 thr 0.4693 flagged 8 not accepted 0 with retry 8 accepted-with-retry in later half 88 of accepted 115 later-half failures with zero calls 14

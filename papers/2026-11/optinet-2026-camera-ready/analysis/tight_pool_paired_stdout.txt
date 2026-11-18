@@ -1,0 +1,6 @@
+uncached 5%: 500-order means hybrid 20.78 small 27.06
+  paired hybrid - small at 5%: mean -6.07 95% [-21, 0] share<=0 1.000; resamples with difference > 0: 0 of 2000
+uncached 8%: 500-order means hybrid 26.56 small 29.00
+  paired hybrid - small at 8%: mean -2.52 95% [-14, 1] share<=0 0.741; resamples with difference > 0: 518 of 2000
+uncached 10%: 500-order means hybrid 28.05 small 29.00
+  paired hybrid - small at 10%: mean -0.90 95% [-11, 2] share<=0 0.585; resamples with difference > 0: 830 of 2000

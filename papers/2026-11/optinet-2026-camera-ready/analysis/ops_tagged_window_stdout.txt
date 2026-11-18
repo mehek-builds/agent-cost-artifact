@@ -1,0 +1,5 @@
+operation-tagged window: 2026-10-23T14:59 .. 2026-10-27T14:45 UTC
+usage records kept: 3705; without operation key: 32
+completeness flags: {'reported': 3693, 'partial': 12} cost-unknown events: {'stream_incomplete': 12, 'provider_error': 17}
+(B) calls without complete usage: 29 of 3722 = 0.0078
+(C) timeout restarts skipped: 1; outcomes of their operations: ['failed']

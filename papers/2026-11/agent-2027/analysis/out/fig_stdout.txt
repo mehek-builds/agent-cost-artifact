@@ -1,0 +1,16 @@
+task {'task_id': 'multi_turn_base_62', 'config': 'frontier', 'success': False, 'grade_error': 'state_mismatch@turn0', 'turns': 4, 'llm_steps': 13, 'failed_steps': 1, 'budget_denied_calls': 0, 'cost_usd': 0.182552, 'failed_step_cost_usd': 0.013944, 'per_turn_cost_usd': [0.052986, 0.041004, 0.057976, 0.030586], 'stop_reason': 'end_turn'}
+turn 0 step 0 act     calls=4 err=0 start=0.0s lat=1.34s prompt=5355 out=168 usd=0.0124 cum=0.0124
+turn 0 step 1 act     calls=2 err=0 start=1.3s lat=1.15s prompt=5714 out=125 usd=0.0127 cum=0.0251
+turn 0 step 2 act     calls=1 err=0 start=2.5s lat=2.32s prompt=5922 out=255 usd=0.0144 cum=0.0395
+turn 0 step 3 final   calls=0 err=0 start=4.8s lat=1.39s prompt=6227 out=107 usd=0.0135 cum=0.0530
+turn 1 step 4 act     calls=1 err=0 start=6.2s lat=1.09s prompt=6369 out=52 usd=0.0133 cum=0.0662
+turn 1 step 5 act     calls=1 err=0 start=7.3s lat=1.14s prompt=6482 out=103 usd=0.0140 cum=0.0802
+turn 1 step 6 final   calls=0 err=0 start=8.4s lat=0.92s prompt=6621 out=51 usd=0.0138 cum=0.0940
+turn 2 step 7 failed  calls=1 err=1 start=9.3s lat=1.08s prompt=6707 out=53 usd=0.0139 cum=0.1079
+turn 2 step 8 repair  calls=1 err=0 start=10.4s lat=0.76s prompt=6797 out=57 usd=0.0142 cum=0.1221
+turn 2 step 9 act     calls=2 err=0 start=11.2s lat=0.99s prompt=6890 out=103 usd=0.0148 cum=0.1369
+turn 2 step 10 final   calls=0 err=0 start=12.2s lat=1.14s prompt=7104 out=85 usd=0.0151 cum=0.1520
+turn 3 step 11 act     calls=1 err=0 start=13.3s lat=1.02s prompt=7219 out=30 usd=0.0147 cum=0.1667
+turn 3 step 12 final   calls=0 err=0 start=14.3s lat=1.62s prompt=7344 out=116 usd=0.0158 cum=0.1826
+total 0.182552 after turn0 share 0.71
+packet total 0.7228 calls 34

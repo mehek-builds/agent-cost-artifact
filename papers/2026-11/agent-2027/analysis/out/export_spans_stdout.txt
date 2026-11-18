@@ -1,0 +1,21 @@
+spans exported: 2531
+spans with an inferred retry link: 117
+max |exported cost.usd - logged cost_usd| (USD): 3.469446951953614e-18
+example (frontier, multi_turn_base_62, step 8, the repair of the errored step 7):
+{
+ "cost.unit_id": "multi_turn_base_62",
+ "span_id": "multi_turn_base_62/t2/s8",
+ "parent_span_id": "multi_turn_base_62/t2",
+ "step.kind": "act",
+ "tool.error": false,
+ "gen_ai.request.model": "claude-sonnet-5-5",
+ "cost.price_version": "list-2026-10-14",
+ "latency_s": 0.759,
+ "retry.of_span_id": "multi_turn_base_62/t2/s7",
+ "gen_ai.usage.input_tokens": 6797,
+ "gen_ai.usage.cache_creation.input_tokens": 0,
+ "gen_ai.usage.cache_read.input_tokens": 0,
+ "gen_ai.usage.output_tokens": 57,
+ "cost.usd": 0.014164,
+ "cost.usage_status": "reported"
+}

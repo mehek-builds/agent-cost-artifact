@@ -1,0 +1,18 @@
+console daily: 90 days 2026-07-30..2026-10-27, tokens 113,227,431 (113.2 M), token usd 389.38
+(five keys incl. testing key; superseded by the four-key lines) usd per 1k requests by period: {'Jun': 32.62, 'Jul': 26.16, 'Aug': 31.74, 'Sep': 7.63, 'Oct': 14.47}
+month-to-month ratios: [0.8, 1.21, 0.24, 1.9] min 0.24 max 1.9
+highest over lowest month: 32.62 / 7.63 = 4.28
+four keys P1 2026-06-01..2026-06-30: requests 662, usd 21.59, usd per 1k requests 32.62
+four keys P2 2026-07-01..2026-07-29: requests 593, usd 16.21, usd per 1k requests 27.34
+four keys P3 2026-07-30..2026-08-28: requests 2836, usd 90.01, usd per 1k requests 31.74
+four keys P4 2026-08-29..2026-09-27: requests 2953, usd 22.53, usd per 1k requests 7.63
+four keys P5 2026-09-28..2026-10-27: requests 19731, usd 285.46, usd per 1k requests 14.47
+four-key period-to-period ratios: [0.84, 1.16, 0.24, 1.9] min 0.24 max 1.9
+four-key highest over lowest 30-day period: 32.62 / 7.63 = 4.28
+models in logged window: ['claude-haiku-4-5-20251001', 'claude-sonnet-5']
+model share of spend by key-model export, four Litos product keys ['first-1k-apps', 'litos-first-100', 'litos-trial-subs', 'student-outreach-extension'], windows 2026-06-02..2026-10-27, total $435.81: claude-sonnet-5 91.48%, claude-sonnet-4-6 4.93%, claude-haiku-4-5-20251001 2.67%; other models 0.92%
+keys left out of the share (research, testing and non-Litos keys): 4 keys, $24.32
+per-key usd columns (four Litos product keys), Jul 30..Oct 27: {'litos_trial_subs': 63.29, 'student_outreach_extension': 45.64, 'litos_first_100': 19.76, 'first_1k_apps': 261.05}
+other key columns in the daily file (research and non-Litos keys): 2, $19.91
+study key (benchmark runs), 90-day spend in the daily file: $18.49
+per-day |token usd - four Litos key columns|: total 0.68, max 0.34; four-key sum 389.74 vs token usd 389.38, signed difference 0.36

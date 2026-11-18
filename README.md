@@ -74,7 +74,7 @@ python3 edge/sustainability.py edge/runs/NEW   # energy with cloud PUE, carbon, 
   - Configs: `small`, `small_cache_budget` (cached small model; this run also capped tool calls at five per turn), `frontier`, `frontier_cache`. `small_low` and `frontier_low` repeat the uncached runs at low reasoning effort; the `frontier_low` step log was cut short (74 of about 500 steps), so only its task-level records are complete.
 - `prices.json`: list prices per million tokens, verified on the run date (2026-10-14), including the small model's prompt-length price tiers.
 
-The logs contain task identifiers and usage counters only, not BFCL task text or model outputs. Costs are token counts times list prices. Checked against the provider's billing console for the study's dedicated API key, all logged runs (including runs not in this package) account for 95.8% of the billed amount, with cache-write and cache-read dollars within 0.4%; the remainder is one run whose step log was cut short and one stopped by a credit limit. Tools in BFCL are simulated, so tool charges are zero.
+The logs contain task identifiers and usage counters only, not BFCL task text or model outputs. Costs are token counts times list prices. Checked against the provider's billing console for the study's dedicated API key, all logged runs (including runs not in this package) account for 95.8% of the billed amount, with cache-write and cache-read dollars within 0.4%; the remainder includes one run whose step log was cut short, one stopped by a credit limit, and billed requests that the logs cannot itemize. Tools in BFCL are simulated, so tool charges are zero.
 
 ## Checks
 

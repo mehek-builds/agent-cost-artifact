@@ -1,0 +1,117 @@
+{
+ "resamples": 10000,
+ "packages": 258,
+ "seed": 2027,
+ "role_share_of_package_spend": {
+  "research (web search)": {
+   "pct": 32.6,
+   "ci95": [
+    29.0,
+    36.1
+   ]
+  },
+  "rewrite": {
+   "pct": 19.9,
+   "ci95": [
+    18.9,
+    21.1
+   ]
+  },
+  "retry": {
+   "pct": 19.0,
+   "ci95": [
+    17.5,
+    20.5
+   ]
+  },
+  "judge": {
+   "pct": 15.4,
+   "ci95": [
+    14.4,
+    16.4
+   ]
+  },
+  "spec": {
+   "pct": 13.0,
+   "ci95": [
+    12.4,
+    13.7
+   ]
+  },
+  "other": {
+   "pct": 0.1,
+   "ci95": [
+    0.0,
+    0.2
+   ]
+  }
+ },
+ "loop_share": {
+  "pct": 54.3,
+  "ci95": [
+   51.2,
+   57.4
+  ]
+ },
+ "table_v": {
+  "retry_ratio": 1.06,
+  "retry_ratio_ci95": [
+   1.02,
+   1.13
+  ],
+  "no_retry_ratio": 0.7,
+  "no_retry_ratio_ci95": [
+   0.45,
+   0.98
+  ],
+  "retry_share_within_retry_packages_pct": 20.3,
+  "retry_share_within_retry_packages_ci95": [
+   18.9,
+   21.7
+  ]
+ },
+ "w1_fail_share": {
+  "frontier": {
+   "fail_share_pct": 19.1,
+   "ci95": [
+    7.7,
+    31.8
+   ]
+  },
+  "frontier_cache": {
+   "fail_share_pct": 16.7,
+   "ci95": [
+    6.1,
+    28.6
+   ]
+  },
+  "frontier_low": {
+   "fail_share_pct": 19.0,
+   "ci95": [
+    8.1,
+    31.5
+   ]
+  },
+  "small": {
+   "fail_share_pct": 49.3,
+   "ci95": [
+    34.2,
+    63.7
+   ]
+  },
+  "small_cache_budget": {
+   "fail_share_pct": 47.5,
+   "ci95": [
+    32.6,
+    61.5
+   ]
+  },
+  "small_low": {
+   "fail_share_pct": 44.6,
+   "ci95": [
+    29.2,
+    59.2
+   ]
+  }
+ }
+}

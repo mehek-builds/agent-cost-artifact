@@ -1,0 +1,1 @@
+step 7 turn 2 P 6707 prevP 6621 cost_usd 0.013944 in_usd 0.013414 carried_usd 0.013242 new_input_usd 0.000172 billed_carried_usd (no cache => equal) 0.013242

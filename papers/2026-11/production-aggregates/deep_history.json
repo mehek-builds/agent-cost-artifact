@@ -1,0 +1,134 @@
+{
+ "timeline": {
+  "Jun": {
+   "active_days": 6,
+   "requests": 662.0,
+   "requests_per_active_day": 110.33333333333333,
+   "input_tokens_per_request": 5708.791540785499,
+   "output_tokens_per_request": 1061.3761329305137,
+   "cache_read_share_of_input": 0.0,
+   "reads_per_written_token": null,
+   "usd": 21.594,
+   "usd_per_1k_requests": 32.61933534743203
+  },
+  "Jul": {
+   "active_days": 15,
+   "requests": 786.0,
+   "requests_per_active_day": 52.4,
+   "input_tokens_per_request": 3667.2557251908397,
+   "output_tokens_per_request": 1960.5407124681933,
+   "cache_read_share_of_input": 0.22043856243774856,
+   "reads_per_written_token": 0.36041322909393286,
+   "usd": 20.5646,
+   "usd_per_1k_requests": 26.163613231552162
+  },
+  "Aug": {
+   "active_days": 28,
+   "requests": 2836.0,
+   "requests_per_active_day": 101.28571428571429,
+   "input_tokens_per_request": 5767.466149506347,
+   "output_tokens_per_request": 2167.4213681241185,
+   "cache_read_share_of_input": 0.2664637874992343,
+   "reads_per_written_token": 0.5079104188186859,
+   "usd": 90.0101,
+   "usd_per_1k_requests": 31.738399153737657
+  },
+  "Sep": {
+   "active_days": 30,
+   "requests": 2953.0,
+   "requests_per_active_day": 98.43333333333334,
+   "input_tokens_per_request": 1803.380629867931,
+   "output_tokens_per_request": 440.51574669827295,
+   "cache_read_share_of_input": 0.08691712877740437,
+   "reads_per_written_token": 0.2232022475161012,
+   "usd": 22.5308,
+   "usd_per_1k_requests": 7.629800203183203
+  },
+  "Oct": {
+   "active_days": 30,
+   "requests": 19731.0,
+   "requests_per_active_day": 657.7,
+   "input_tokens_per_request": 4106.3265419897625,
+   "output_tokens_per_request": 782.6967715777204,
+   "cache_read_share_of_input": 0.24989886380019413,
+   "reads_per_written_token": 1.1680827360265755,
+   "usd": 285.4604,
+   "usd_per_1k_requests": 14.467609345699659
+  }
+ },
+ "ttl_model": {
+  "key_days_with_cache_writes": 89,
+  "concentration_c": 0.16205141441606521,
+  "r2_log1p": 0.09737345044762757,
+  "spearman_requests_vs_rpw": 0.3617977528089888,
+  "breakeven_0.28": {
+   "prefix_rate_per_hour_needed": 2.96232093517831,
+   "requests_per_day_needed": 438.72312192068875,
+   "key_days_paying": 35,
+   "loo_accuracy_ttl_model": 0.6966292134831461,
+   "loo_accuracy_volume_rule": 0.7640449438202247,
+   "majority_baseline": 0.6067415730337078,
+   "binomial_p_ttl_vs_majority": 0.05013293483659327
+  },
+  "breakeven_0.39": {
+   "prefix_rate_per_hour_needed": 3.9516449657112047,
+   "requests_per_day_needed": 585.2431434727845,
+   "key_days_paying": 32,
+   "loo_accuracy_ttl_model": 0.7191011235955056,
+   "loo_accuracy_volume_rule": 0.6292134831460674,
+   "majority_baseline": 0.6404494382022472,
+   "binomial_p_ttl_vs_majority": 0.07366585996505243
+  }
+ },
+ "models": {
+  "claude-sonnet-5": {
+   "usd_share": 0.9156576962144894,
+   "requests": 17403.0,
+   "cache_read_share_of_input": 0.2500022025941631,
+   "output_tokens_per_request": 1300.740332126645
+  },
+  "claude-haiku-4-5-20251001": {
+   "usd_share": 0.026448342977177155,
+   "requests": 8688.0,
+   "cache_read_share_of_input": 0.003375581470101677,
+   "output_tokens_per_request": 173.84944751381215
+  },
+  "claude-sonnet-4-6": {
+   "usd_share": 0.04881203399037486,
+   "requests": 536.0,
+   "cache_read_share_of_input": 0.0,
+   "output_tokens_per_request": 1304.7518656716418
+  },
+  "claude-sonnet-4-5-20250929": {
+   "usd_share": 2.2719016430165493e-07,
+   "requests": 2.0,
+   "cache_read_share_of_input": 0.0,
+   "output_tokens_per_request": 2.0
+  },
+  "claude-opus-5": {
+   "usd_share": 0.006266359111768246,
+   "requests": 73.0,
+   "cache_read_share_of_input": 0.0,
+   "output_tokens_per_request": 1105.986301369863
+  },
+  "claude-opus-4-8": {
+   "usd_share": 0.0010023630048989016,
+   "requests": 26.0,
+   "cache_read_share_of_input": 0.054816927400075495,
+   "output_tokens_per_request": 317.46153846153845
+  },
+  "claude-haiku-5-5": {
+   "usd_share": 0.00025081794138902703,
+   "requests": 134.0,
+   "cache_read_share_of_input": 0.5761132501069498,
+   "output_tokens_per_request": 1263.9626865671642
+  },
+  "claude-sonnet-5-5": {
+   "usd_share": 0.0015621595697381792,
+   "requests": 106.0,
+   "cache_read_share_of_input": 0.62071968532699,
+   "output_tokens_per_request": 280.70754716981133
+  }
+ },
+ "litos_usd_jun_oct": 440.1599
+}

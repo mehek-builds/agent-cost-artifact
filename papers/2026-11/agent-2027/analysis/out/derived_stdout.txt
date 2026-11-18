@@ -1,0 +1,38 @@
+step spans in the five complete step logs: 2531 {'frontier': 501, 'frontier_cache': 505, 'small': 507, 'small_cache_budget': 516, 'small_low': 502}
+frontier_low step records: 74
+max |sum(step) - task| USD: 4.999999999970306e-09
+max |reprice - logged| USD: 3.469446951953614e-18
+frontier error+repair share: 0.078 reread+first_read: 0.906
+frontier_cache error+repair share: 0.069 reread+first_read: 0.603
+small error+repair share: 0.091 reread+first_read: 0.882
+small_cache_budget error+repair share: 0.095 reread+first_read: 0.616
+small_low error+repair share: 0.098 reread+first_read: 0.891
+task62 cost 0.182552 vs median successful large run 0.12135 ratio 1.5
+task62 share after turn 0: 0.71
+task62 errored step cost 0.013944 share 0.076
+successes large/small (uncached): 42 29
+cache cut in USD per success, large: 0.816 small (cache+cap): 0.745
+packet spend share retry+judge+rewrite: 0.543
+packet calls share judge: 0.419 spend share judge: 0.154
+search share of packet spend: 0.049
+surge Oct18-22 total: 159.39
+Oct 20 vs Oct1-14 median daily: 89.4
+surge share of 90-day console spend: 0.409
+worst packet usd 0.7226 calls 34 elapsed 149.3 ratio 2.69 {'spec': 2, 'rewrite': 8, 'judge': 15, 'retry': 8, 'research (web search)': 1}
+retry vs no-retry accepted medians: 0.284 0.1878 ratio 1.51
+unattributed share of window spend: 0.006
+application_run share of window: 0.034
+window days: 3.99
+frontier succ p90/median: 1.45
+frontier_cache succ p90/median: 1.52
+frontier_low succ p90/median: 1.43
+small succ p90/median: 1.64
+small_cache_budget succ p90/median: 1.38
+small_low succ p90/median: 1.39
+packet p90/median: 1.67
+total recorded runs W1: 300
+failures per config: {'frontier': 8, 'frontier_cache': 7, 'frontier_low': 9, 'small': 21, 'small_cache_budget': 21, 'small_low': 19}
+step kinds in five step logs (a 'limit' kind marks the per-turn step limit): {'act': 1474, 'final': 940, 'failed': 117}
+small cached+cap vs large cached USD per success cut: 0.894
+turns per task min/max: 1 6
+Sonnet 5 share of first-1k-apps token cost, 2026-09-29~2026-10-27: 97.0 % of 263.3166

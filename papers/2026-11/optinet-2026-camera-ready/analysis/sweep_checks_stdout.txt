@@ -1,0 +1,36 @@
+5%: retry+reserve 20.04 paced+spend-down 20.04 gap +0.00
+8%: retry+reserve 29.00 paced+spend-down 29.00 gap +0.00
+10%: retry+reserve 29.00 paced+spend-down 29.00 gap +0.00
+15%: retry+reserve 29.01 paced+spend-down 29.10 gap -0.09
+20%: retry+reserve 31.92 paced+spend-down 31.54 gap +0.39
+30%: retry+reserve 35.23 paced+spend-down 34.17 gap +1.06
+40%: retry+reserve 38.29 paced+spend-down 36.65 gap +1.64
+45%: retry+reserve 39.79 paced+spend-down 37.92 gap +1.87
+50%: retry+reserve 41.26 paced+spend-down 38.34 gap +2.92
+60%: retry+reserve 43.00 paced+spend-down 39.20 gap +3.80
+70%: retry+reserve 43.00 paced+spend-down 40.01 gap +2.99
+80%: retry+reserve 43.00 paced+spend-down 40.78 gap +2.22
+85%: retry+reserve 43.00 paced+spend-down 41.22 gap +1.78
+88%: retry+reserve 43.00 paced+spend-down 41.40 gap +1.60
+90%: retry+reserve 43.00 paced+spend-down 41.54 gap +1.46
+95%: retry+reserve 43.00 paced+spend-down 41.85 gap +1.15
+100%: retry+reserve 43.00 paced+spend-down 42.19 gap +0.81
+110%: retry+reserve 43.00 paced+spend-down 42.54 gap +0.46
+first budget where Retry + reserve reaches 43: 60%; budgets run 18
+largest mean gap Retry + reserve minus Paced + spend-down: +3.80 at 60%
+leads at every budget from 20% to 110%: True
+paired 20%: Paced + SD minus Retry + reserve mean -0.45 95% [-4, 4] resamples with Paced + SD ahead 475 of 2000; interval upper end >= 0: True
+paired 30%: Paced + SD minus Retry + reserve mean -1.04 95% [-4, 3] resamples with Paced + SD ahead 394 of 2000; interval upper end >= 0: True
+paired 40%: Paced + SD minus Retry + reserve mean -1.78 95% [-5, 2] resamples with Paced + SD ahead 251 of 2000; interval upper end >= 0: True
+paired 45%: Paced + SD minus Retry + reserve mean -2.25 95% [-6, 2] resamples with Paced + SD ahead 171 of 2000; interval upper end >= 0: True
+paired 50%: Paced + SD minus Retry + reserve mean -2.78 95% [-6, 1] resamples with Paced + SD ahead 91 of 2000; interval upper end >= 0: True
+paired 60%: Paced + SD minus Retry + reserve mean -3.31 95% [-7, 0] resamples with Paced + SD ahead 13 of 2000; interval upper end >= 0: True
+paired 70%: Paced + SD minus Retry + reserve mean -2.94 95% [-6, 0] resamples with Paced + SD ahead 2 of 2000; interval upper end >= 0: True
+paired 80%: Paced + SD minus Retry + reserve mean -2.22 95% [-5, 0] resamples with Paced + SD ahead 0 of 2000; interval upper end >= 0: True
+paired 85%: Paced + SD minus Retry + reserve mean -1.85 95% [-5, 0] resamples with Paced + SD ahead 0 of 2000; interval upper end >= 0: True
+paired 88%: Paced + SD minus Retry + reserve mean -1.64 95% [-5, 0] resamples with Paced + SD ahead 0 of 2000; interval upper end >= 0: True
+paired 90%: Paced + SD minus Retry + reserve mean -1.51 95% [-4, 0] resamples with Paced + SD ahead 0 of 2000; interval upper end >= 0: True
+paired 95%: Paced + SD minus Retry + reserve mean -1.16 95% [-4, 0] resamples with Paced + SD ahead 0 of 2000; interval upper end >= 0: True
+paired 100%: Paced + SD minus Retry + reserve mean -0.89 95% [-4, 0] resamples with Paced + SD ahead 0 of 2000; interval upper end >= 0: True
+paired 110%: Paced + SD minus Retry + reserve mean -0.54 95% [-3, 0] resamples with Paced + SD ahead 0 of 2000; interval upper end >= 0: True
+Retry + reserve never significantly ahead (every interval upper end >= 0, 20% to 110%): True

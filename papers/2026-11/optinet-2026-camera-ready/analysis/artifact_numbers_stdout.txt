@@ -1,0 +1,67 @@
+[workload] cached batch cost large $1.2079, small $0.0868; small/large = 0.072; large solves 43, small 29; trigger rate 0.38
+[workload] uncached batch cost large $6.4200 = 5.31x cached; large solves 42
+[workload] tasks 50; trigger fires on 19; small solves 7 of them, large solves 16
+[workload] user turns over the 50 tasks: 188
+[priors] cached: prior/true small 3.92, large 5.31
+[priors] uncached: prior/true small 0.26, large 0.19
+[Table I] mean over 500 orders [task-bootstrap 95% percentile interval]
+          small: 29.0 [22, 36] | 29.0 [22, 36] | 29.0 [22, 36] | 29.0 [22, 36]
+          large: 8.3 [5, 11] | 16.8 [13, 21] | 34.0 [28, 41] | 43.0 [36, 47]
+           stop: 0.0 [0, 0] | 1.5 [0, 5] | 20.9 [14, 28] | 31.8 [25, 39]
+  stop-fallback: 15.1 [9, 22] | 24.5 [18, 32] | 35.5 [29, 42] | 38.5 [32, 44]
+          route: 17.1 [9, 28] | 33.7 [22, 42] | 38.0 [32, 44] | 38.0 [32, 44]
+          admit: 28.5 [19, 37] | 32.2 [24, 39] | 39.5 [34, 45] | 42.6 [37, 47]
+   random-paced: 30.4 [24, 37] | 33.4 [27, 40] | 34.3 [28, 40] | 34.3 [28, 40]
+         hybrid: 31.5 [25, 38] | 36.6 [30, 43] | 40.8 [35, 46] | 42.2 [37, 47]
+   oracle-paced: 32.3 [25, 40] | 39.1 [31, 47] | 43.0 [38, 47] | 43.0 [38, 47]
+[paired, causal cached]
+  20%: hybrid-large +23.35 [16, 30]; hybrid-route +14.09 [6, 22]; hybrid-stop-fallback +16.57 [10, 23]; hybrid-paced-abandon +4.15 [0, 9]; hybrid-random +1.19 [-2, 5]; hybrid-admit +3.13 [-2, 12]
+  40%: hybrid-large +19.62 [14, 25]; hybrid-route +2.87 [-1, 11]; hybrid-stop-fallback +11.80 [7, 17]; hybrid-paced-abandon +1.01 [-1, 4]; hybrid-random +3.03 [-1, 8]; hybrid-admit +4.30 [-1, 12]
+  80%: hybrid-large +6.59 [2, 11]; hybrid-route +2.71 [0, 6]; hybrid-stop-fallback +5.16 [1, 9]; hybrid-paced-abandon +2.71 [0, 6]; hybrid-random +6.44 [2, 12]; hybrid-admit +1.30 [-3, 5]
+  100%: hybrid-large +0.07 [-3, 3]; hybrid-route +4.04 [1, 8]; hybrid-stop-fallback +3.48 [0, 7]; hybrid-paced-abandon +4.04 [1, 8]; hybrid-random +7.77 [3, 13]; hybrid-admit -0.44 [-3, 2]
+[paired, causal uncached]
+  20%: hybrid-admit +12.82 [4, 22]; hybrid 31.24; admit 18.73 unstarted 20.86
+  40%: hybrid-admit +10.28 [3, 18]; hybrid 35.93; admit 25.45 unstarted 13.62
+  80%: hybrid-admit +1.71 [-3, 8]; hybrid 39.79; admit 37.79 unstarted 1.66
+  100%: hybrid-admit -0.47 [-4, 2]; hybrid 41.04; admit 41.72 unstarted 0.00
+[work] 20% large-model tokens per solved: paced 14.0k, Large 73.6k, reduction 0.810; total tokens per solved paced 106.5k vs Large 73.6k
+[starvation] Large at 20%: unstarted 39.4, model 1.4, pool 0.9
+[cap] cheapest cached large-model task $0.00761; per-task share pool/50 at 20% $0.00483, at 30% $0.00725
+[starvation] Route only at 20%: 17.11 solved, unstarted 26.7
+[cap] Stop only at 20% solved 0, at 30% 0; at 100% capped 14.2 of 50
+[spend-down] paced w/o spend-down at 45%: spent $0.5297 = 0.439 of need, solved 37.94; at 100% 38.00
+[spend-down held-out] hybrid minus best of admit and paced+cap over 24 pairing-budget cells: -0.0, -0.0, 1.1, 0.1, 0.0, -0.0, 1.2, -0.1, 0.0, 0.0, 1.2, 0.1, -0.0, -0.0, 1.3, 0.2, 0.0, -0.0, 1.3, 0.1, 0.0, -0.0, 1.7, 0.1
+[spend-down held-out] unrounded min over cells -0.0550 (cells above are rounded to 0.1); worst shortfall 0.055 tasks
+[pairings] 0.20      large min 8.0 max 8.3 mean 8.1; 0.20     hybrid min 20.4 max 33.5 mean 28.6; 0.40      large min 16.4 max 16.8 mean 16.6; 0.40     hybrid min 31.8 max 37.9 mean 35.5
+[repricing] re-pricing check, max per-step gap vs recorded cost: 3.469446951953614e-18
+[wrong estimates] est {'scale': 0.25, 'online': False, 'frac': 0.2, 'succ': 20.24, 'unstarted': 20.09, 'overdraw_max': 0.0008089599999998273}
+[Table II] large/small batch usd, Large / Paced+SD
+  sonnet-5.5/haiku-5.5 small share 0.072 frac 0.2: 8.2 / 31.8
+  sonnet-5.5/haiku-5.5 small share 0.072 frac 0.4: 16.9 / 36.6
+  sonnet-5.5/haiku-5.5 small share 0.072 frac 0.8: 34.0 / 41.0
+  sonnet-5.5/haiku-5.5 small share 0.072 frac 1.0: 43.0 / 42.9
+  opus-5.5/haiku-5.5 small share 0.036 frac 0.2: 8.2 / 32.6
+  opus-5.5/haiku-5.5 small share 0.036 frac 0.4: 16.9 / 37.3
+  opus-5.5/haiku-5.5 small share 0.036 frac 0.8: 34.0 / 41.1
+  opus-5.5/haiku-5.5 small share 0.036 frac 1.0: 43.0 / 42.9
+  sonnet-5/haiku-4.5 small share 0.583 frac 0.2: 8.2 / 9.6
+  sonnet-5/haiku-4.5 small share 0.583 frac 0.4: 16.8 / 19.7
+  sonnet-5/haiku-4.5 small share 0.583 frac 0.8: 33.9 / 35.8
+  sonnet-5/haiku-4.5 small share 0.583 frac 1.0: 43.0 / 42.5
+  sonnet-4.6/haiku-4.5 small share 0.389 frac 0.2: 8.2 / 14.7
+  sonnet-4.6/haiku-4.5 small share 0.389 frac 0.4: 16.8 / 28.8
+  sonnet-4.6/haiku-4.5 small share 0.389 frac 0.8: 33.9 / 39.3
+  sonnet-4.6/haiku-4.5 small share 0.389 frac 1.0: 43.0 / 42.7
+  opus-5/haiku-4.5 small share 0.233 frac 0.2: 8.2 / 24.6
+  opus-5/haiku-4.5 small share 0.233 frac 0.4: 16.8 / 33.0
+  opus-5/haiku-4.5 small share 0.233 frac 0.8: 33.9 / 40.4
+  opus-5/haiku-4.5 small share 0.233 frac 1.0: 43.0 / 42.8
+[single-turn] keys: ['meta', 'rows']
+[restart vs handoff] tally {'restart': 17, 'full': 2} succ [74%,76%] q:75%-75%  $0.0105/task  $0.0138
+[billing] account for 95.8% of the billed amount
+[low-effort log] cut short (74 of about 500 steps)
+[spend-down held-out five] hybrid minus best of admit and paced+cap over 20 cells of the five pairings other than (small_cache_budget, frontier_cache): unrounded min -0.0550; worst shortfall 0.055 tasks
+[work-all] 20% large-model tokens per solved: paced 14.0k, Large 73.6k, reduction 0.810; total per solved paced 106.5k vs Large 73.6k
+[work-all] 40% large-model tokens per solved: paced 31.4k, Large 72.5k, reduction 0.567; total per solved paced 99.4k vs Large 72.5k
+[work-all] 80% large-model tokens per solved: paced 55.8k, Large 71.6k, reduction 0.220; total per solved paced 82.0k vs Large 71.6k
+[work-all] 100% large-model tokens per solved: paced 65.4k, Large 70.9k, reduction 0.078; total per solved paced 74.9k vs Large 70.9k

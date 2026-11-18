@@ -1,0 +1,66 @@
+{
+ "n_tasks": 50,
+ "resamples": 10000,
+ "configs": {
+  "frontier": {
+   "proportional_pct": 82.5,
+   "proportional_ci95": [
+    81.2,
+    83.6
+   ],
+   "billed_pct": 82.5,
+   "billed_ci95": [
+    81.2,
+    83.6
+   ]
+  },
+  "frontier_cache": {
+   "proportional_pct": 35.2,
+   "proportional_ci95": [
+    32.2,
+    38.2
+   ],
+   "billed_pct": 22.3,
+   "billed_ci95": [
+    20.3,
+    24.4
+   ]
+  },
+  "small": {
+   "proportional_pct": 80.5,
+   "proportional_ci95": [
+    79.3,
+    81.7
+   ],
+   "billed_pct": 80.5,
+   "billed_ci95": [
+    79.3,
+    81.7
+   ]
+  },
+  "small_cache_budget": {
+   "proportional_pct": 43.3,
+   "proportional_ci95": [
+    40.6,
+    45.9
+   ],
+   "billed_pct": 32.7,
+   "billed_ci95": [
+    30.4,
+    34.9
+   ]
+  },
+  "small_low": {
+   "proportional_pct": 81.2,
+   "proportional_ci95": [
+    79.9,
+    82.3
+   ],
+   "billed_pct": 81.2,
+   "billed_ci95": [
+    79.9,
+    82.3
+   ]
+  }
+ }
+}

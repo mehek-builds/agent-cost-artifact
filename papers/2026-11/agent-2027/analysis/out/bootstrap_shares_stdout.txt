@@ -1,0 +1,145 @@
+{
+ "resamples": 10000,
+ "n_tasks": 50,
+ "w1": {
+  "frontier": {
+   "err_repair_pct": 7.7,
+   "err_repair_ci95": [
+    4.3,
+    11.2
+   ],
+   "top10_pct": 17.8,
+   "top10_ci95": [
+    14.9,
+    19.6
+   ]
+  },
+  "frontier_cache": {
+   "err_repair_pct": 6.9,
+   "err_repair_ci95": [
+    4.1,
+    10.0
+   ],
+   "top10_pct": 16.1,
+   "top10_ci95": [
+    14.5,
+    17.6
+   ]
+  },
+  "small": {
+   "err_repair_pct": 9.1,
+   "err_repair_ci95": [
+    5.4,
+    12.9
+   ],
+   "top10_pct": 17.2,
+   "top10_ci95": [
+    14.6,
+    18.9
+   ]
+  },
+  "small_cache_budget": {
+   "err_repair_pct": 9.5,
+   "err_repair_ci95": [
+    6.0,
+    13.2
+   ],
+   "top10_pct": 15.3,
+   "top10_ci95": [
+    14.1,
+    16.5
+   ]
+  },
+  "small_low": {
+   "err_repair_pct": 9.8,
+   "err_repair_ci95": [
+    6.2,
+    13.5
+   ],
+   "top10_pct": 18.1,
+   "top10_ci95": [
+    15.4,
+    19.8
+   ]
+  }
+ },
+ "w1_envelope": {
+  "err_repair_lo": 4.1,
+  "err_repair_hi": 13.5,
+  "top10_lo": 14.1,
+  "top10_hi": 19.8
+ },
+ "litos_top10": {
+  "packages": 258,
+  "top10_pct": 21.0,
+  "ci95": [
+   19.4,
+   22.6
+  ]
+ },
+ "table_iii_all": {
+  "frontier": {
+   "n": 42,
+   "median": 0.1213,
+   "median_lo": 0.1053,
+   "median_hi": 0.133,
+   "p90": 0.176,
+   "p90_lo": 0.1561,
+   "p90_hi": 0.2493
+  },
+  "frontier_cache": {
+   "n": 43,
+   "median": 0.0231,
+   "median_lo": 0.0205,
+   "median_hi": 0.025,
+   "p90": 0.035,
+   "p90_lo": 0.03,
+   "p90_hi": 0.0408
+  },
+  "frontier_low": {
+   "n": 41,
+   "median": 0.1228,
+   "median_lo": 0.111,
+   "median_hi": 0.1491,
+   "p90": 0.1759,
+   "p90_lo": 0.1672,
+   "p90_hi": 0.2451
+  },
+  "small": {
+   "n": 29,
+   "median": 0.0057,
+   "median_lo": 0.005,
+   "median_hi": 0.0066,
+   "p90": 0.0093,
+   "p90_lo": 0.0069,
+   "p90_hi": 0.0129
+  },
+  "small_cache_budget": {
+   "n": 29,
+   "median": 0.0016,
+   "median_lo": 0.0015,
+   "median_hi": 0.0018,
+   "p90": 0.0022,
+   "p90_lo": 0.002,
+   "p90_hi": 0.0027
+  },
+  "small_low": {
+   "n": 31,
+   "median": 0.0061,
+   "median_lo": 0.005,
+   "median_hi": 0.0068,
+   "p90": 0.0085,
+   "p90_lo": 0.0074,
+   "p90_hi": 0.0095
+  },
+  "litos_resume_parse": {
+   "n": 186,
+   "median": 0.0093,
+   "median_lo": 0.0089,
+   "median_hi": 0.0098,
+   "p90": 0.0144,
+   "p90_lo": 0.0126,
+   "p90_hi": 0.0151
+  }
+ }
+}

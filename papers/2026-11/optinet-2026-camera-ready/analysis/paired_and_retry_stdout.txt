@@ -1,0 +1,140 @@
+===== cached: recorded Table I brackets and means reproduced (assertions passed)
+full large-model need: $1.2079
+--- budget 20%
+       small mean500 29.00 boot95 (22, 36) spent $0.0868 esc 0.00 unstarted 0.00
+       large mean500   -   boot95 (5, 11)
+      hybrid mean500 31.54 boot95 (25, 38) spent $0.2328 esc 6.36 unstarted 0.34
+   paced+cap mean500   -   boot95 (25, 38)
+       admit mean500   -   boot95 (19, 37)
+       retry mean500 15.90 boot95 (8, 28) spent $0.2439 esc 8.14 unstarted 30.71
+ retry-paced mean500 31.92 boot95 (24, 40) spent $0.2325 esc 5.49 unstarted 0.68
+  paired         hybrid - small: mean +2.62 95% [-1, 6] share<=0 0.080
+  paired      paced+cap - small: mean +2.62 95% [-1, 6] share<=0 0.079
+  paired          retry - small: mean -12.63 95% [-21, -4] share<=0 0.998
+  paired    retry-paced - small: mean +3.07 95% [-1, 6] share<=0 0.066
+  paired         hybrid - retry: mean +15.25 95% [6, 24] share<=0 0.002
+  paired   hybrid - retry-paced: mean -0.45 95% [-4, 4] share<=0 0.762
+  paired          admit - small: mean -0.51 95% [-10, 4] share<=0 0.475
+  paired    retry-paced - retry: mean +15.70 95% [8, 24] share<=0 0.000
+  order-level hybrid - small over 500 orders: mean +2.54 p05..p95 [0, 5] min -3 share<=0 0.064
+--- budget 40%
+       small mean500 29.00 boot95 (22, 36) spent $0.0868 esc 0.00 unstarted 0.00
+       large mean500   -   boot95 (13, 21)
+      hybrid mean500 36.65 boot95 (30, 43) spent $0.4723 esc 16.46 unstarted 0.01
+   paced+cap mean500   -   boot95 (30, 43)
+       admit mean500   -   boot95 (24, 39)
+       retry mean500 31.13 boot95 (20, 46) spent $0.4852 esc 15.88 unstarted 12.95
+ retry-paced mean500 38.29 boot95 (30, 46) spent $0.4716 esc 14.24 unstarted 0.10
+  paired         hybrid - small: mean +7.51 95% [3, 12] share<=0 0.001
+  paired      paced+cap - small: mean +7.47 95% [3, 12] share<=0 0.001
+  paired          retry - small: mean +2.99 95% [-6, 12] share<=0 0.303
+  paired    retry-paced - small: mean +9.29 95% [5, 14] share<=0 0.000
+  paired         hybrid - retry: mean +4.52 95% [-4, 14] share<=0 0.206
+  paired   hybrid - retry-paced: mean -1.78 95% [-5, 2] share<=0 0.875
+  paired          admit - small: mean +3.21 95% [-4, 8] share<=0 0.149
+  paired    retry-paced - retry: mean +6.29 95% [0, 14] share<=0 0.086
+  order-level hybrid - small over 500 orders: mean +7.65 p05..p95 [6, 9] min 5 share<=0 0.000
+--- budget 80%
+       small mean500 29.00 boot95 (22, 36) spent $0.0868 esc 0.00 unstarted 0.00
+       large mean500   -   boot95 (28, 41)
+      hybrid mean500 40.78 boot95 (35, 46) spent $0.9046 esc 36.08 unstarted 0.00
+   paced+cap mean500   -   boot95 (32, 44)
+       admit mean500   -   boot95 (34, 45)
+       retry mean500 43.00 boot95 (38, 47) spent $0.6564 esc 21.00 unstarted 0.00
+ retry-paced mean500 43.00 boot95 (38, 47) spent $0.6564 esc 21.00 unstarted 0.00
+  paired         hybrid - small: mean +11.69 95% [6, 18] share<=0 0.000
+  paired      paced+cap - small: mean +8.98 95% [4, 15] share<=0 0.000
+  paired          retry - small: mean +13.91 95% [8, 20] share<=0 0.000
+  paired    retry-paced - small: mean +13.91 95% [8, 20] share<=0 0.000
+  paired         hybrid - retry: mean -2.22 95% [-5, 0] share<=0 1.000
+  paired   hybrid - retry-paced: mean -2.22 95% [-5, 0] share<=0 1.000
+  paired          admit - small: mean +10.39 95% [5, 16] share<=0 0.000
+  paired    retry-paced - retry: mean +0.00 95% [0, 0] share<=0 0.999
+  order-level hybrid - small over 500 orders: mean +11.78 p05..p95 [10, 13] min 9 share<=0 0.000
+--- budget 100%
+       small mean500 29.00 boot95 (22, 36) spent $0.0868 esc 0.00 unstarted 0.00
+       large mean500   -   boot95 (36, 47)
+      hybrid mean500 42.19 boot95 (37, 47) spent $1.0943 esc 44.76 unstarted 0.00
+   paced+cap mean500   -   boot95 (32, 44)
+       admit mean500   -   boot95 (37, 47)
+       retry mean500 43.00 boot95 (38, 47) spent $0.6564 esc 21.00 unstarted 0.00
+ retry-paced mean500 43.00 boot95 (38, 47) spent $0.6564 esc 21.00 unstarted 0.00
+  paired         hybrid - small: mean +13.02 95% [7, 19] share<=0 0.000
+  paired      paced+cap - small: mean +8.98 95% [4, 15] share<=0 0.000
+  paired          retry - small: mean +13.91 95% [8, 20] share<=0 0.000
+  paired    retry-paced - small: mean +13.91 95% [8, 20] share<=0 0.000
+  paired         hybrid - retry: mean -0.89 95% [-4, 0] share<=0 1.000
+  paired   hybrid - retry-paced: mean -0.89 95% [-4, 0] share<=0 1.000
+  paired          admit - small: mean +13.46 95% [8, 20] share<=0 0.000
+  paired    retry-paced - retry: mean +0.00 95% [0, 0] share<=0 1.000
+  order-level hybrid - small over 500 orders: mean +13.19 p05..p95 [12, 14] min 9 share<=0 0.000
+===== uncached: recorded Table I brackets and means reproduced (assertions passed)
+full large-model need: $6.4200
+--- budget 20%
+       small mean500 29.00 boot95 (22, 36) spent $0.3398 esc 0.00 unstarted 0.00
+       large mean500   -   boot95 (5, 11)
+      hybrid mean500 31.24 boot95 (23, 38) spent $1.2340 esc 6.58 unstarted 0.63
+   paced+cap mean500   -   boot95 (24, 38)
+       admit mean500   -   boot95 (10, 28)
+       retry mean500 15.88 boot95 (8, 28) spent $1.2906 esc 8.09 unstarted 30.75
+ retry-paced mean500 32.34 boot95 (23, 40) spent $1.2372 esc 5.99 unstarted 0.77
+  paired         hybrid - small: mean +2.30 95% [-2, 5] share<=0 0.136
+  paired      paced+cap - small: mean +2.49 95% [-2, 6] share<=0 0.108
+  paired          retry - small: mean -12.75 95% [-21, -5] share<=0 1.000
+  paired    retry-paced - small: mean +3.19 95% [-2, 6] share<=0 0.095
+  paired         hybrid - retry: mean +15.05 95% [5, 24] share<=0 0.002
+  paired   hybrid - retry-paced: mean -0.89 95% [-6, 6] share<=0 0.775
+  paired          admit - small: mean -10.51 95% [-19, -3] share<=0 0.998
+  paired    retry-paced - retry: mean +15.94 95% [8, 24] share<=0 0.000
+  order-level hybrid - small over 500 orders: mean +2.24 p05..p95 [0, 4] min -11 share<=0 0.104
+--- budget 40%
+       small mean500 29.00 boot95 (22, 36) spent $0.3398 esc 0.00 unstarted 0.00
+       large mean500   -   boot95 (12, 21)
+      hybrid mean500 35.93 boot95 (29, 42) spent $2.5047 esc 15.64 unstarted 0.01
+   paced+cap mean500   -   boot95 (29, 42)
+       admit mean500   -   boot95 (17, 35)
+       retry mean500 31.21 boot95 (19, 46) spent $2.5744 esc 15.84 unstarted 12.84
+ retry-paced mean500 38.42 boot95 (30, 46) spent $2.5050 esc 14.40 unstarted 0.08
+  paired         hybrid - small: mean +6.84 95% [3, 11] share<=0 0.001
+  paired      paced+cap - small: mean +6.83 95% [3, 11] share<=0 0.001
+  paired          retry - small: mean +2.87 95% [-6, 11] share<=0 0.304
+  paired    retry-paced - small: mean +9.40 95% [5, 13] share<=0 0.000
+  paired         hybrid - retry: mean +3.97 95% [-6, 13] share<=0 0.264
+  paired   hybrid - retry-paced: mean -2.56 95% [-7, 2] share<=0 0.917
+  paired          admit - small: mean -3.44 95% [-12, 5] share<=0 0.814
+  paired    retry-paced - retry: mean +6.53 95% [0, 14] share<=0 0.086
+  order-level hybrid - small over 500 orders: mean +6.93 p05..p95 [6, 8] min 4 share<=0 0.000
+--- budget 80%
+       small mean500 29.00 boot95 (22, 36) spent $0.3398 esc 0.00 unstarted 0.00
+       large mean500   -   boot95 (27, 40)
+      hybrid mean500 39.79 boot95 (34, 45) spent $4.6479 esc 34.21 unstarted 0.00
+   paced+cap mean500   -   boot95 (31, 43)
+       admit mean500   -   boot95 (31, 44)
+       retry mean500 43.00 boot95 (38, 47) spent $3.5001 esc 21.00 unstarted 0.00
+ retry-paced mean500 43.00 boot95 (38, 47) spent $3.5001 esc 21.00 unstarted 0.00
+  paired         hybrid - small: mean +10.64 95% [5, 16] share<=0 0.001
+  paired      paced+cap - small: mean +7.99 95% [3, 13] share<=0 0.001
+  paired          retry - small: mean +13.91 95% [8, 20] share<=0 0.000
+  paired    retry-paced - small: mean +13.92 95% [8, 20] share<=0 0.000
+  paired         hybrid - retry: mean -3.27 95% [-7, 0] share<=0 1.000
+  paired   hybrid - retry-paced: mean -3.27 95% [-7, 0] share<=0 1.000
+  paired          admit - small: mean +8.93 95% [2, 15] share<=0 0.013
+  paired    retry-paced - retry: mean +0.00 95% [0, 0] share<=0 0.999
+  order-level hybrid - small over 500 orders: mean +10.79 p05..p95 [9, 13] min 7 share<=0 0.000
+--- budget 100%
+       small mean500 29.00 boot95 (22, 36) spent $0.3398 esc 0.00 unstarted 0.00
+       large mean500   -   boot95 (34, 47)
+      hybrid mean500 41.04 boot95 (36, 46) spent $5.7017 esc 43.60 unstarted 0.00
+   paced+cap mean500   -   boot95 (31, 43)
+       admit mean500   -   boot95 (36, 47)
+       retry mean500 43.00 boot95 (38, 47) spent $3.5001 esc 21.00 unstarted 0.00
+ retry-paced mean500 43.00 boot95 (38, 47) spent $3.5001 esc 21.00 unstarted 0.00
+  paired         hybrid - small: mean +12.01 95% [6, 18] share<=0 0.001
+  paired      paced+cap - small: mean +7.99 95% [3, 13] share<=0 0.001
+  paired          retry - small: mean +13.92 95% [8, 20] share<=0 0.000
+  paired    retry-paced - small: mean +13.92 95% [8, 20] share<=0 0.000
+  paired         hybrid - retry: mean -1.91 95% [-5, 0] share<=0 1.000
+  paired   hybrid - retry-paced: mean -1.91 95% [-5, 0] share<=0 1.000
+  paired          admit - small: mean +12.48 95% [6, 19] share<=0 0.001
+  paired    retry-paced - retry: mean +0.00 95% [0, 0] share<=0 1.000
+  order-level hybrid - small over 500 orders: mean +12.04 p05..p95 [10, 13] min 8 share<=0 0.000

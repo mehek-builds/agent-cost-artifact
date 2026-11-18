@@ -1,0 +1,431 @@
+{
+ "table_a": {
+  "frontier": {
+   "runs": 50,
+   "successes": 42,
+   "total_usd": 6.42,
+   "usd_per_success": 0.15286,
+   "succ_run_median": 0.12135,
+   "succ_run_p90": 0.17597,
+   "failed_run_median": 0.14742,
+   "failed_share_of_spend": 0.191,
+   "task_records_from_console_log": 0
+  },
+  "frontier_cache": {
+   "runs": 50,
+   "successes": 43,
+   "total_usd": 1.2079,
+   "usd_per_success": 0.02809,
+   "succ_run_median": 0.02311,
+   "succ_run_p90": 0.03504,
+   "failed_run_median": 0.03197,
+   "failed_share_of_spend": 0.167,
+   "task_records_from_console_log": 0
+  },
+  "frontier_low": {
+   "runs": 50,
+   "successes": 41,
+   "total_usd": 6.4232,
+   "usd_per_success": 0.15666,
+   "succ_run_median": 0.12282,
+   "succ_run_p90": 0.17587,
+   "failed_run_median": 0.1189,
+   "failed_share_of_spend": 0.19,
+   "task_records_from_console_log": 42
+  },
+  "small": {
+   "runs": 50,
+   "successes": 29,
+   "total_usd": 0.3398,
+   "usd_per_success": 0.01172,
+   "succ_run_median": 0.0057,
+   "succ_run_p90": 0.00934,
+   "failed_run_median": 0.00757,
+   "failed_share_of_spend": 0.493,
+   "task_records_from_console_log": 0
+  },
+  "small_cache_budget": {
+   "runs": 50,
+   "successes": 29,
+   "total_usd": 0.0868,
+   "usd_per_success": 0.00299,
+   "succ_run_median": 0.00158,
+   "succ_run_p90": 0.00218,
+   "failed_run_median": 0.00216,
+   "failed_share_of_spend": 0.475,
+   "task_records_from_console_log": 0
+  },
+  "small_low": {
+   "runs": 50,
+   "successes": 31,
+   "total_usd": 0.3329,
+   "usd_per_success": 0.01074,
+   "succ_run_median": 0.00611,
+   "succ_run_p90": 0.00849,
+   "failed_run_median": 0.00727,
+   "failed_share_of_spend": 0.446,
+   "task_records_from_console_log": 0
+  }
+ },
+ "table_b": {
+  "frontier": {
+   "total_usd": 6.42,
+   "kind_share": {
+    "tool_call_step": 0.539,
+    "final_step": 0.383,
+    "error_step": 0.041,
+    "repair_step": 0.037
+   },
+   "kind_steps": {
+    "tool_call_step": 276,
+    "final_step": 188,
+    "error_step": 20,
+    "repair_step": 17
+   },
+   "role_share": {
+    "first_read": 0.081,
+    "output": 0.073,
+    "reread": 0.825,
+    "new_input": 0.021
+   },
+   "role_share_billed_rate": {
+    "first_read": 0.081,
+    "output": 0.073,
+    "reread": 0.825,
+    "new_input": 0.021
+   },
+   "turn_share": {
+    "turn0": 0.289,
+    "turn1": 0.232,
+    "turn2": 0.216,
+    "turn3": 0.164,
+    "turn4+": 0.099
+   }
+  },
+  "frontier_cache": {
+   "total_usd": 1.2079,
+   "kind_share": {
+    "tool_call_step": 0.64,
+    "final_step": 0.291,
+    "error_step": 0.038,
+    "repair_step": 0.031
+   },
+   "kind_steps": {
+    "tool_call_step": 273,
+    "final_step": 187,
+    "error_step": 24,
+    "repair_step": 21
+   },
+   "role_share": {
+    "first_read": 0.251,
+    "output": 0.387,
+    "reread": 0.352,
+    "new_input": 0.01
+   },
+   "role_share_billed_rate": {
+    "first_read": 0.251,
+    "output": 0.387,
+    "reread": 0.223,
+    "new_input": 0.138
+   },
+   "turn_share": {
+    "turn0": 0.453,
+    "turn1": 0.185,
+    "turn2": 0.17,
+    "turn3": 0.125,
+    "turn4+": 0.067
+   }
+  },
+  "small": {
+   "total_usd": 0.3398,
+   "kind_share": {
+    "tool_call_step": 0.531,
+    "final_step": 0.378,
+    "error_step": 0.045,
+    "repair_step": 0.046
+   },
+   "kind_steps": {
+    "tool_call_step": 274,
+    "final_step": 188,
+    "error_step": 23,
+    "repair_step": 22
+   },
+   "role_share": {
+    "first_read": 0.077,
+    "output": 0.094,
+    "reread": 0.805,
+    "new_input": 0.024
+   },
+   "role_share_billed_rate": {
+    "first_read": 0.077,
+    "output": 0.094,
+    "reread": 0.805,
+    "new_input": 0.024
+   },
+   "turn_share": {
+    "turn0": 0.285,
+    "turn1": 0.252,
+    "turn2": 0.21,
+    "turn3": 0.155,
+    "turn4+": 0.098
+   }
+  },
+  "small_cache_budget": {
+   "total_usd": 0.0868,
+   "kind_share": {
+    "tool_call_step": 0.604,
+    "final_step": 0.301,
+    "error_step": 0.048,
+    "repair_step": 0.047
+   },
+   "kind_steps": {
+    "tool_call_step": 279,
+    "final_step": 188,
+    "error_step": 25,
+    "repair_step": 24
+   },
+   "role_share": {
+    "first_read": 0.183,
+    "output": 0.37,
+    "reread": 0.433,
+    "new_input": 0.014
+   },
+   "role_share_billed_rate": {
+    "first_read": 0.183,
+    "output": 0.37,
+    "reread": 0.327,
+    "new_input": 0.12
+   },
+   "turn_share": {
+    "turn0": 0.4,
+    "turn1": 0.201,
+    "turn2": 0.181,
+    "turn3": 0.136,
+    "turn4+": 0.081
+   }
+  },
+  "small_low": {
+   "total_usd": 0.3329,
+   "kind_share": {
+    "tool_call_step": 0.523,
+    "final_step": 0.379,
+    "error_step": 0.049,
+    "repair_step": 0.049
+   },
+   "kind_steps": {
+    "tool_call_step": 266,
+    "final_step": 188,
+    "error_step": 25,
+    "repair_step": 23
+   },
+   "role_share": {
+    "first_read": 0.079,
+    "output": 0.087,
+    "reread": 0.812,
+    "new_input": 0.023
+   },
+   "role_share_billed_rate": {
+    "first_read": 0.079,
+    "output": 0.087,
+    "reread": 0.812,
+    "new_input": 0.023
+   },
+   "turn_share": {
+    "turn0": 0.292,
+    "turn1": 0.233,
+    "turn2": 0.221,
+    "turn3": 0.156,
+    "turn4+": 0.098
+   }
+  }
+ },
+ "table_c": {
+  "fail_response_mismatch": {
+   "runs": 15,
+   "configs": [
+    "frontier",
+    "frontier_cache",
+    "small",
+    "small_cache_budget",
+    "small_low"
+   ],
+   "median_cost_vs_median_success": 1.29,
+   "share_of_large_family_spend": 0.05,
+   "share_of_small_family_spend": 0.078,
+   "median_share_at_or_after_flagged_turn": 1.0,
+   "median_share_after_flagged_turn": 0.48,
+   "n_with_flagged_turn": 15
+  },
+  "fail_state_mismatch": {
+   "runs": 61,
+   "configs": [
+    "frontier",
+    "frontier_cache",
+    "small",
+    "small_cache_budget",
+    "small_low"
+   ],
+   "median_cost_vs_median_success": 1.23,
+   "share_of_large_family_spend": 0.137,
+   "share_of_small_family_spend": 0.393,
+   "median_share_at_or_after_flagged_turn": 0.53,
+   "median_share_after_flagged_turn": 0.16,
+   "n_with_flagged_turn": 61
+  },
+  "hit_tool_call_cap": {
+   "runs": 10,
+   "configs": [
+    "small_cache_budget"
+   ],
+   "median_cost_vs_median_success": 1.35,
+   "share_of_large_family_spend": 0.0,
+   "share_of_small_family_spend": 0.028,
+   "median_share_at_or_after_flagged_turn": 1.0,
+   "median_share_after_flagged_turn": 0.38,
+   "n_with_flagged_turn": 7
+  },
+  "success_after_tool_error": {
+   "runs": 45,
+   "configs": [
+    "frontier",
+    "frontier_cache",
+    "small",
+    "small_cache_budget",
+    "small_low"
+   ],
+   "median_cost_vs_median_success": 1.18,
+   "share_of_large_family_spend": 0.279,
+   "share_of_small_family_spend": 0.163,
+   "median_share_at_or_after_flagged_turn": null,
+   "median_share_after_flagged_turn": null,
+   "n_with_flagged_turn": 0
+  },
+  "success_clean": {
+   "runs": 129,
+   "configs": [
+    "frontier",
+    "frontier_cache",
+    "small",
+    "small_cache_budget",
+    "small_low"
+   ],
+   "median_cost_vs_median_success": 0.96,
+   "share_of_large_family_spend": 0.534,
+   "share_of_small_family_spend": 0.367,
+   "median_share_at_or_after_flagged_turn": null,
+   "median_share_after_flagged_turn": null,
+   "n_with_flagged_turn": 0
+  }
+ },
+ "checks": {
+  "frontier": {
+   "steps": 501,
+   "tasks_with_steps": 50,
+   "max_abs_step_sum_minus_task_cost": 5.551115123125783e-17,
+   "max_abs_reprice_minus_logged": 3.469446951953614e-18
+  },
+  "frontier_cache": {
+   "steps": 505,
+   "tasks_with_steps": 50,
+   "max_abs_step_sum_minus_task_cost": 6.938893903907228e-18,
+   "max_abs_reprice_minus_logged": 3.469446951953614e-18
+  },
+  "small": {
+   "steps": 507,
+   "tasks_with_steps": 50,
+   "max_abs_step_sum_minus_task_cost": 1.734723475976807e-18,
+   "max_abs_reprice_minus_logged": 2.168404344971009e-19
+  },
+  "small_cache_budget": {
+   "steps": 516,
+   "tasks_with_steps": 50,
+   "max_abs_step_sum_minus_task_cost": 4.999999999970306e-09,
+   "max_abs_reprice_minus_logged": 1.0842021724855044e-19
+  },
+  "small_low": {
+   "steps": 502,
+   "tasks_with_steps": 50,
+   "max_abs_step_sum_minus_task_cost": 1.734723475976807e-18,
+   "max_abs_reprice_minus_logged": 2.168404344971009e-19
+  }
+ },
+ "concentration": {
+  "frontier": {
+   "top10pct_tasks_share": 0.178,
+   "n_top": 5
+  },
+  "frontier_cache": {
+   "top10pct_tasks_share": 0.161,
+   "n_top": 5
+  },
+  "small": {
+   "top10pct_tasks_share": 0.172,
+   "n_top": 5
+  },
+  "small_cache_budget": {
+   "top10pct_tasks_share": 0.153,
+   "n_top": 5
+  },
+  "small_low": {
+   "top10pct_tasks_share": 0.181,
+   "n_top": 5
+  }
+ },
+ "table_c_family_total_usd": {
+  "large": 7.6279,
+  "small": 0.7595
+ },
+ "failed_runs_usd_after_flagged_turn_share": 0.308,
+ "alerts": {
+  "frontier": {
+   "threshold_usd": 0.17597,
+   "flagged": 6,
+   "flagged_failed": 2,
+   "base_failed": 8,
+   "runs": 50,
+   "flagged_with_error_step": 5
+  },
+  "frontier_cache": {
+   "threshold_usd": 0.03504,
+   "flagged": 5,
+   "flagged_failed": 1,
+   "base_failed": 7,
+   "runs": 50,
+   "flagged_with_error_step": 3
+  },
+  "small": {
+   "threshold_usd": 0.00934,
+   "flagged": 4,
+   "flagged_failed": 2,
+   "base_failed": 21,
+   "runs": 50,
+   "flagged_with_error_step": 3
+  },
+  "small_cache_budget": {
+   "threshold_usd": 0.00218,
+   "flagged": 11,
+   "flagged_failed": 9,
+   "base_failed": 21,
+   "runs": 50,
+   "flagged_with_error_step": 6
+  },
+  "small_low": {
+   "threshold_usd": 0.00849,
+   "flagged": 9,
+   "flagged_failed": 6,
+   "base_failed": 19,
+   "runs": 50,
+   "flagged_with_error_step": 6
+  },
+  "pooled": {
+   "flagged": 35,
+   "flagged_failed": 20,
+   "precision": 0.571,
+   "base_failure_rate": 0.304,
+   "runs": 250,
+   "failed": 76,
+   "recall": 0.263,
+   "flagged_with_error_step": 23
+  }
+ }
+}

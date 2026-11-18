@@ -1,0 +1,6 @@
+claude-sonnet-5-5: logged 16.7139 billed 17.4636 share 95.7%
+claude-haiku-5-5: logged 0.9922 billed 1.0296 share 96.4%
+total: logged 17.7061 billed 18.4932 share 95.7%
+requests claude-sonnet-5-5: logged 2259 billed 2344 unlogged 85 (3.6% of billed)
+requests claude-haiku-5-5: logged 2725 billed 2827 unlogged 102 (3.6% of billed)
+requests total: logged 4984 billed 5171 unlogged 187 (3.6% of billed)

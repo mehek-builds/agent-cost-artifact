@@ -1,0 +1,20 @@
+{
+ "splits": 10000,
+ "train_tasks": 25,
+ "test_tasks": 25,
+ "precision": {
+  "median": 0.5,
+  "mean": 0.512,
+  "p2.5": 0.276,
+  "p97.5": 0.833,
+  "n_defined": 9934
+ },
+ "recall": {
+  "median": 0.29,
+  "mean": 0.294,
+  "p2.5": 0.049,
+  "p97.5": 0.579
+ },
+ "flag_rate_mean": 0.18,
+ "base_failure_rate_mean": 0.304
+}

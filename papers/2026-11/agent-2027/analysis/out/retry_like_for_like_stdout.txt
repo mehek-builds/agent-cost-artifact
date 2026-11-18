@@ -1,0 +1,46 @@
+{
+ "all_with_calls": {
+  "retry": {
+   "n": 194,
+   "median_usd": 0.284,
+   "median_calls": 16.0,
+   "median_usd_excluding_retry": 0.23
+  },
+  "no_retry": {
+   "n": 21,
+   "median_usd": 0.1878,
+   "median_calls": 4,
+   "median_usd_excluding_retry": 0.1878
+  },
+  "ratio": 1.51,
+  "ratio_ci95_from_prod_py": [
+   1.08,
+   2.38
+  ]
+ },
+ "no_retry_packages_with_no_judge_call": 11,
+ "judge_loop_only": {
+  "retry": {
+   "n": 194,
+   "median_usd": 0.284,
+   "median_calls": 16.0,
+   "median_usd_excluding_retry": 0.23
+  },
+  "no_retry": {
+   "n": 10,
+   "median_usd": 0.2277,
+   "median_calls": 7.0,
+   "median_usd_excluding_retry": 0.2277
+  },
+  "ratio": 1.25,
+  "ratio_ci95": [
+   0.96,
+   1.92
+  ]
+ },
+ "retry_role_usd_per_package": {
+  "median": 0.0522,
+  "share_of_package_spend": 0.19,
+  "share_within_retry_packages": 0.203
+ }
+}

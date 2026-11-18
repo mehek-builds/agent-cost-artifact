@@ -1,0 +1,32 @@
+[tight pool] Paced+SD (causal estimates) minus Small, mean over 500 orders
+  uncached 5%: paced 20.78 small 27.06 difference -6.280
+  uncached 8%: paced 26.56 small 29.00 difference -2.438
+  uncached 10%: paced 28.05 small 29.00 difference -0.948
+  uncached 15%: paced 29.92 small 29.00 difference +0.916
+  uncached 20%: paced 31.24 small 29.00 difference +2.244
+  cached 5%: paced 20.04 small 20.04 difference +0.000
+  cached 8%: paced 29.00 small 29.00 difference +0.000
+  cached 10%: paced 29.00 small 29.00 difference +0.000
+  cached 15%: paced 29.10 small 29.00 difference +0.096
+  cached 20%: paced 31.54 small 29.00 difference +2.536
+[full pool] Paced+SD vs Large, mean over 500 orders on the full task set (cached, causal)
+  80%: paced 40.78 large 34.01 difference +6.77
+  100%: paced 42.19 large 43.00 difference -0.81
+[bootstrap] 100% Paced+SD - Large: {"mean": 0.0705, "ci95": [-3, 3], "share_le0": 0.714}
+[cascade cost] cached 80%: retry spent $0.6564 = 0.543 of Large's need $1.2079
+[cascade cost] cached 100%: retry spent $0.6564 = 0.543 of Large's need $1.2079
+[retry uncached] 20% retry: mean500 15.88 boot95 [8, 28]
+[retry uncached] 20% retry-paced: mean500 32.34 boot95 [23, 40]
+[retry uncached] 40% retry: mean500 31.21 boot95 [19, 46]
+[retry uncached] 40% retry-paced: mean500 38.42 boot95 [30, 46]
+[retry uncached] 80% retry: mean500 43.00 boot95 [38, 47]
+[retry uncached] 80% retry-paced: mean500 43.00 boot95 [38, 47]
+[retry uncached] 100% retry: mean500 43.00 boot95 [38, 47]
+[retry uncached] 100% retry-paced: mean500 43.00 boot95 [38, 47]
+[bootstrap share] cached 20% hybrid - small: share of resamples with difference <= 0 = 0.080
+[order share] cached 20% hybrid - small: share of orders with difference <= 0 = 0.064
+[single-turn] tasks 150, small rollouts 8, large rollouts 5; first-error trigger cannot fire (extras.py: single-turn tasks execute no tools)
+  20%: small 136.5 (spent 0.0291), large 28.11, paced 136.5 (spent 0.0291), paced+SD 136.6625, admission 132.42625 min 66
+  40%: small 136.5 (spent 0.0291), large 54.81, paced 136.5 (spent 0.0291), paced+SD 136.6975, admission 133.1175 min 66
+  80%: small 136.5 (spent 0.0291), large 109.11, paced 136.5 (spent 0.0291), paced+SD 136.4625, admission 134.85 min 113
+  100%: small 136.5 (spent 0.0291), large 136, paced 136.5 (spent 0.0291), paced+SD 136.02125, admission 135.99125 min 133

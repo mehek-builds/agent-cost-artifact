@@ -1,0 +1,52 @@
+{
+ "n_tasks": 50,
+ "resamples": 10000,
+ "after_flag_share": {
+  "point": 0.308,
+  "ci95": [
+   0.152,
+   0.473,
+   10000
+  ]
+ },
+ "alert_precision": {
+  "point": 0.571,
+  "ci95": [
+   0.32,
+   0.804,
+   10000
+  ]
+ },
+ "alert_recall": {
+  "point": 0.263,
+  "ci95": [
+   0.071,
+   0.533,
+   10000
+  ]
+ },
+ "precision_minus_base_rate": {
+  "point": 0.267,
+  "ci95": [
+   0.033,
+   0.46,
+   10000
+  ]
+ },
+ "after_flag_share_large_two_step_logged_configs": {
+  "point": 0.322,
+  "ci95": [
+   0.136,
+   0.527,
+   10000
+  ]
+ },
+ "after_flag_share_small_three_configs": {
+  "point": 0.253,
+  "ci95": [
+   0.155,
+   0.355,
+   10000
+  ]
+ }
+}
