@@ -6,8 +6,9 @@ are pooled over the five configurations on the held-out half. The interval is th
 of the 10,000 splits (split-to-split spread), not a sampling interval.
 python3 -I alert_holdout.py -> out/alert_holdout.json"""
 import json, math, random
+import os
 from pathlib import Path
-LOGS = Path(__file__).resolve().parents[4] / "logs"  # repository logs/
+LOGS = Path(os.environ.get("AGENT_ARTIFACT_ROOT") or Path(__file__).resolve().parents[4]) / "logs"
 CFG = ["frontier", "frontier_cache", "small", "small_cache_budget", "small_low"]
 OUT = Path(__file__).resolve().parent / "out"
 T = {c: {t["task_id"]: t for t in map(json.loads, open(LOGS / f"tasks_{c}.jsonl"))} for c in CFG}

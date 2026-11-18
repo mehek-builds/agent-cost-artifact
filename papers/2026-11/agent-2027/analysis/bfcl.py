@@ -1,7 +1,7 @@
 """Workload 1: recorded BFCL v4 multi-turn runs. Fresh cuts for the AGENT 2027 paper.
 
 python3 -I bfcl.py  -> prints every number and writes out/bfcl.json
-Reads only the repository's logs/ and prices.json (no API calls).
+Reads only the logs/ folder at the repository root (no API calls).
 
 Table A: cost per successful task (all runs in the numerator), median and p90 cost of a
          successful run, share of spend on failed runs.
@@ -16,9 +16,10 @@ Spans:   per-step span checks (step costs sum to task cost; re-pricing reproduce
 import json
 import statistics as st
 from collections import defaultdict
+import os
 from pathlib import Path
 
-LOGS = Path(__file__).resolve().parents[4] / "logs"  # repository logs/
+LOGS = Path(os.environ.get("AGENT_ARTIFACT_ROOT") or Path(__file__).resolve().parents[4]) / "logs"
 PRICES = json.load(open(LOGS.parent / "prices.json"))["models"]
 OUT = Path(__file__).resolve().parent / "out"
 OUT.mkdir(exist_ok=True)

@@ -5,6 +5,7 @@ accepted median. Also task-level intervals (seed 42) for the Table III fail-shar
 python3 -I bootstrap_litos_shares.py -> out/bootstrap_litos_shares.json  (the Litos part needs the private event stream)"""
 import io, json, random, statistics as st, contextlib, sys
 from collections import defaultdict
+import os
 from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
@@ -44,7 +45,7 @@ res["table_v"] = {"retry_ratio": round(st.median(U[o] for o in ret) / med, 2), "
                   "retry_share_within_retry_packages_pct": round(100 * sum(R[o]["retry"] for o in ret) / sum(U[o] for o in ret), 1),
                   "retry_share_within_retry_packages_ci95": ci(rw)}
 # Workload 1 fail share per configuration (task ids resampled, seed 42)
-LOGS = Path(__file__).resolve().parents[4] / "logs"  # repository logs/
+LOGS = Path(os.environ.get("AGENT_ARTIFACT_ROOT") or Path(__file__).resolve().parents[4]) / "logs"
 ALL = ["frontier", "frontier_cache", "frontier_low", "small", "small_cache_budget", "small_low"]
 fs = {}
 for c in ALL:

@@ -1,12 +1,13 @@
 """Numbers quoted in the text that combine outputs of bfcl.py, prod.py and fig_waterfall.py.
 python3 -I derived.py  (run after bfcl.py and prod.py)"""
 import json
+import os
 from pathlib import Path
 
 O = Path(__file__).resolve().parent / "out"
 b = json.load(open(O / "bfcl.json"))
 p = json.load(open(O / "prod.json"))
-LOGS = Path(__file__).resolve().parents[4] / "logs"  # repository logs/
+LOGS = Path(os.environ.get("AGENT_ARTIFACT_ROOT") or Path(__file__).resolve().parents[4]) / "logs"
 
 steps = {k: v["steps"] for k, v in b["checks"].items()}
 print("step spans in the five complete step logs:", sum(steps.values()), steps)
@@ -71,7 +72,7 @@ print("turns per task min/max:", min(turns), max(turns))
 
 # Sonnet 5 share of the backend key's token cost, monthly by-model report (no per-day model column exists)
 import csv
-rows = [r for r in csv.DictReader(open(Path(__file__).resolve().parents[2] / "production-aggregates" / "console-cost-by-key-model.csv"))
+rows = [r for r in csv.DictReader(open(Path(os.environ.get("AGENT_AGGREGATES_DIR") or Path(os.environ.get("AGENT_ARTIFACT_ROOT") or Path(__file__).resolve().parents[4]) / "papers" / "2026-11" / "production-aggregates") / "console-cost-by-key-model.csv"))
         if r["api_key_name"] == "first-1k-apps" and r["window"] == "2026-09-29~2026-10-27" and r["cost_type"] == "tokens"]
 tot = sum(float(r["usd"]) for r in rows)
 son = sum(float(r["usd"]) for r in rows if r["model"] == "claude-sonnet-5")

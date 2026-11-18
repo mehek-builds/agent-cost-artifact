@@ -51,7 +51,7 @@ def rows_for(name):
     return rows
 
 
-fig, axes = plt.subplots(1, 2, figsize=(5.3, 2.35), sharey=True)
+fig, axes = plt.subplots(1, 2, figsize=(4.6, 2.15), sharey=True)
 for ax, name in zip(axes, ["cached", "uncached"]):
     rows = rows_for(name)
     for p, label, color, ls, mk, lw in STYLE:
@@ -81,7 +81,7 @@ POL = [("large", "Large"), ("stop", "Stop only"), ("route", "Route only"), ("hyb
 FR = [0.2, 0.4, 1.0]
 CAT = [("solved", "Solved", "#1f77b4", ""), ("model", "Model failed", "#9ecae1", "////"), ("cap", "Stopped by policy", "#e8a0a0", "\\\\"),
        ("pool", "Pool ran out mid-task", "#111111", ""), ("unstarted", "Never started", "#dddddd", "xxxx")]
-fig, ax = plt.subplots(figsize=(3.5, 2.2))
+fig, ax = plt.subplots(figsize=(3.5, 2.0))
 x, xs, labels = 0, [], []
 for f in FR:
     for p, name in POL:
@@ -95,12 +95,12 @@ for f in FR:
         x += 1
     x += 0.6
 ax.set_xticks(xs)
-ax.set_xticklabels(labels, rotation=90, fontsize=8.5)
+ax.set_xticklabels(labels, rotation=90, fontsize=9)
 for i, f in enumerate(FR):
     ax.text(xs[i * 4] + 1.5, 62, f"{int(f * 100)}% budget", ha="center", fontsize=8)
 ax.set_ylim(0, 60)
 ax.set_ylabel("Tasks (of 50)", fontsize=9)
-ax.tick_params(axis="y", labelsize=7)
+ax.tick_params(axis="y", labelsize=8)
 h, l = ax.get_legend_handles_labels()
 fig.legend(h, l, fontsize=7.2, loc="lower center", bbox_to_anchor=(0.5, -0.01), ncol=3, frameon=False, handlelength=1.2, columnspacing=0.8)
 fig.tight_layout(rect=(0, 0.11, 1, 1))

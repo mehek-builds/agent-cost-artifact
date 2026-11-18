@@ -1,9 +1,10 @@
 """Runs the group-by shown in Section II of the paper over the recorded Workload 1 logs and prints its result.
 python3 -I query_snippet.py   (needs pandas)"""
 import json
+import os
 from pathlib import Path
 import pandas as pd
-LOGS = Path(__file__).resolve().parents[4] / "logs"  # repository logs/
+LOGS = Path(os.environ.get("AGENT_ARTIFACT_ROOT") or Path(__file__).resolve().parents[4]) / "logs"
 CFG = ["frontier", "frontier_cache", "small", "small_cache_budget", "small_low"]
 spans = pd.concat([pd.read_json(LOGS / f"steps_{c}.jsonl", lines=True) for c in CFG])
 units = pd.concat([pd.read_json(LOGS / f"tasks_{c}.jsonl", lines=True) for c in CFG])

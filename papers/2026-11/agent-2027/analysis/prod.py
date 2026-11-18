@@ -1,13 +1,12 @@
 """Workload 2: the deployed Litos agent. Fresh cuts for the AGENT 2027 paper.
 
 python3 -I prod.py  -> prints every number and writes out/prod.json
-Reads the private Litos event stream (not published: it holds per-user operation records; set LITOS_EVENTS to its
-path) and the published daily aggregate in papers/2026-11/production-aggregates/ (no network, no API calls).
-Without the private stream the script stops with a message; its full output, out/prod.json (counts and dollars
-only), is published and is the starting point for derived.py and fig_waterfall.py.
+Reads only the recorded files in 2-content/publications/production-data (no network, no API calls).
 
 Window: the instrumented operations from roll-out onward. Operation attribution merged 2026-10-23 14:57:08 UTC;
-only events at or after 14:58 UTC are read, and every usage record in that window is priced from its own fields.
+only events at or after 14:58 UTC are read, and every usage record in that window is priced from its own
+fields (the script asserts that its cache-creation tokens equal its 5-minute plus 1-hour split and that no
+1-hour writes occur).
 
 Prices: dated list prices per million tokens (input, 5-minute cache write, cache read, output),
 checked on the provider pricing page on 2026-11-17 and equal to the rates the backend's price
@@ -19,17 +18,12 @@ import math
 import statistics as st
 from collections import Counter, defaultdict
 from datetime import datetime
+import os
 from pathlib import Path
 
-import os
-import sys
-
-AGG = Path(__file__).resolve().parents[2] / "production-aggregates"
-EVENTS = Path(os.environ.get("LITOS_EVENTS", "ops-events-2026-10-23_27.ndjson"))  # private raw input
-DAILY = AGG / "litos-console-daily-2026-07-30_2026-10-27.csv"
-if not EVENTS.exists():
-    sys.exit(f"private input {EVENTS} not found: the Litos event stream is not published; set LITOS_EVENTS to its path, "
-             "or use the published out/prod.json (see papers/2026-11/README.md)")
+PUB = Path(os.environ.get("LITOS_PRIVATE_DIR") or Path(os.environ.get("AGENT_ARTIFACT_ROOT") or Path(__file__).resolve().parents[4]) / "private-litos-stream")
+EVENTS = PUB / "ops-events-2026-10-23_27.ndjson"
+DAILY = Path(os.environ.get("AGENT_AGGREGATES_DIR") or Path(__file__).resolve().parents[4] / "papers" / "2026-11" / "production-aggregates") / "litos-console-daily-2026-07-30_2026-10-27.csv"
 OUT = Path(__file__).resolve().parent / "out"
 OUT.mkdir(exist_ok=True)
 PR = {"claude-sonnet-5": (2.0, 2.5, 0.20, 10.0), "claude-haiku-4-5-20251001": (1.0, 1.25, 0.10, 5.0)}
@@ -68,6 +62,8 @@ for line in open(EVENTS):
     seen.add(k)
     rows.append(r)
 use = [r for r in rows if r["event"] == "anthropic_response_usage"]
+for r in use:  # every record in the window is fully priced from its own fields
+    assert not r.get("cacheWrite1hTokens"), r.get("requestId")
 unk = [r for r in rows if r["event"] == "litos_cost_unknown"]
 out = {"events_after_dedup": len(rows), "duplicate_events_dropped": dup, "responses": len(use)}
 
@@ -88,6 +84,8 @@ op_usd = defaultdict(float)
 op_calls = Counter()
 op_role_usd = defaultdict(lambda: defaultdict(float))
 op_role_calls = defaultdict(Counter)
+out_usd_role = defaultdict(float)  # output-token dollars by call role, every priced response in the window
+out_tok_role = defaultdict(int)
 search_n = 0
 search_usd_total = 0.0
 tok_total = 0.0
@@ -106,9 +104,16 @@ for r in use:
     op_usd[o] += c
     op_calls[o] += 1
     role = ROLE.get(r.get("workload"), "other")
+    out_usd_role[role] += r.get("outputTokens", 0) * PR[r["model"]][3] / 1e6
+    out_tok_role[role] += r.get("outputTokens", 0)
     op_role_usd[o][role] += c
     op_role_calls[o][role] += 1
 out["priced_token_usd"] = round(tok_total, 2)
+_ot = sum(out_usd_role.values())
+out["window_output_usd_by_role"] = {"output_usd_total": round(_ot, 2), "output_share_of_token_usd": round(_ot / tok_total, 3),
+    "role_output_usd": {k: round(v, 2) for k, v in sorted(out_usd_role.items(), key=lambda kv: -kv[1])},
+    "role_share_of_output_usd": {k: round(v / _ot, 3) for k, v in sorted(out_usd_role.items(), key=lambda kv: -kv[1])},
+    "role_output_tokens": dict(out_tok_role)}
 out["web_searches"] = search_n
 out["web_search_usd"] = round(search_usd_total, 2)
 out["total_usd_with_search"] = round(tok_total + search_usd_total, 2)

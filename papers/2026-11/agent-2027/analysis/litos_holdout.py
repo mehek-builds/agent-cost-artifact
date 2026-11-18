@@ -5,13 +5,10 @@ nearest-rank p90 of accepted-package cost; packages of the second half above it 
 Reads only recorded files; python3 -I litos_holdout.py -> out/litos_holdout.json"""
 import json, math, random, statistics as st
 from collections import Counter, defaultdict
+import os
 from pathlib import Path
-import os, sys
-EVENTS = Path(os.environ.get("LITOS_EVENTS", "ops-events-2026-10-23_27.ndjson"))  # private raw input
-if not EVENTS.exists():
-    sys.exit(f"private input {EVENTS} not found: the Litos event stream is not published; set LITOS_EVENTS to its path, "
-             "or start from the published outputs in out/ (see papers/2026-11/README.md)")
-LOGS = Path(__file__).resolve().parents[4] / "logs"  # repository logs/
+PUB = Path(os.environ.get("LITOS_PRIVATE_DIR") or Path(os.environ.get("AGENT_ARTIFACT_ROOT") or Path(__file__).resolve().parents[4]) / "private-litos-stream")
+LOGS = Path(os.environ.get("AGENT_ARTIFACT_ROOT") or Path(__file__).resolve().parents[4]) / "logs"
 OUT = Path(__file__).resolve().parent / "out"
 PR = {"claude-sonnet-5": (2.0, 2.5, 0.20, 10.0), "claude-haiku-4-5-20251001": (1.0, 1.25, 0.10, 5.0)}
 SEARCH = 10.0 / 1000
@@ -25,7 +22,7 @@ def tok(r):
             + (r.get("cacheReadInputTokens", 0) or 0) * p[2] + r.get("outputTokens", 0) * p[3]) / 1e6
 
 rows, seen = [], set()
-for line in open(EVENTS):
+for line in open(PUB / "ops-events-2026-10-23_27.ndjson"):
     r = json.loads(line); k = r.get("eventId") or json.dumps(r, sort_keys=True)
     if (r.get("occurredAt") or r["timestamp"])[:16] < "2026-10-23T14:58": continue  # window: from operation roll-out onward, as in prod.py
     if k in seen: continue

@@ -4,8 +4,9 @@ Resamples the 50 task ids with replacement, shared across configurations (as boo
 python3 -I bootstrap_carried.py -> out/bootstrap_carried.json"""
 import json, math, random
 from collections import defaultdict
+import os
 from pathlib import Path
-LOGS = Path(__file__).resolve().parents[4] / "logs"  # repository logs/
+LOGS = Path(os.environ.get("AGENT_ARTIFACT_ROOT") or Path(__file__).resolve().parents[4]) / "logs"
 PRICES = json.load(open(LOGS.parent / "prices.json"))["models"]
 CFG = ["frontier", "frontier_cache", "small", "small_cache_budget", "small_low"]
 OUT = Path(__file__).resolve().parent / "out"

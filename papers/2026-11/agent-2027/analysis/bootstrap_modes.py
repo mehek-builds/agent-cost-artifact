@@ -3,8 +3,9 @@ median cost ratio (run cost / median successful run of the same configuration, r
 median after-flag share per failure mode. Same task resampling as bootstrap_bfcl.py (50 task ids shared across the five step-logged configurations).
 python3 -I bootstrap_modes.py -> out/bootstrap_modes.json"""
 import json, math, random, statistics as st
+import os
 from pathlib import Path
-LOGS = Path(__file__).resolve().parents[4] / "logs"  # repository logs/
+LOGS = Path(os.environ.get("AGENT_ARTIFACT_ROOT") or Path(__file__).resolve().parents[4]) / "logs"
 CFG = ["frontier", "frontier_cache", "small", "small_cache_budget", "small_low"]
 OUT = Path(__file__).resolve().parent / "out"
 T = {c: {t["task_id"]: t for t in map(json.loads, open(LOGS / f"tasks_{c}.jsonl"))} for c in CFG}

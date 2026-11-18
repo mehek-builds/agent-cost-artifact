@@ -1,8 +1,9 @@
 """Input split (first read / carried / new) for step 7 of multi_turn_base_62 (config frontier).
 python3 -I span_split.py"""
 import json
+import os
 from pathlib import Path
-LOGS = Path(__file__).resolve().parents[4] / "logs"  # repository logs/
+LOGS = Path(os.environ.get("AGENT_ARTIFACT_ROOT") or Path(__file__).resolve().parents[4]) / "logs"
 PRICES = json.load(open(LOGS.parent / "prices.json"))["models"]
 S = sorted([json.loads(l) for l in open(LOGS / "steps_frontier.jsonl")
             if json.loads(l)["task_id"] == "multi_turn_base_62"], key=lambda s: s["step"])

@@ -2,6 +2,7 @@
 with the operation-attributed window marked.
 python3 fig_daily.py -> ../fig-daily.pdf; prints the plotted daily values."""
 import csv
+import os
 from pathlib import Path
 
 import matplotlib
@@ -9,7 +10,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 HERE = Path(__file__).resolve().parent
-DAILY = HERE.parents[1] / "production-aggregates" / "litos-console-daily-2026-07-30_2026-10-27.csv"
+DAILY = Path(os.environ.get("AGENT_AGGREGATES_DIR") or Path(os.environ.get("AGENT_ARTIFACT_ROOT") or Path(__file__).resolve().parents[4]) / "papers" / "2026-11" / "production-aggregates") / "litos-console-daily-2026-07-30_2026-10-27.csv"
 plt.rcParams.update({"font.family": "serif", "font.serif": ["Times New Roman", "Times"], "font.size": 7.5, "pdf.fonttype": 42, "ps.fonttype": 42})
 rows = [r for r in csv.DictReader(open(DAILY)) if r["date"] >= "2026-09-28"]
 cats = [("usd_in", "uncached input", "#4C72B0"), ("usd_cache_write", "cache write", "#55A868"),

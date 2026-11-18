@@ -3,6 +3,34 @@
  "duplicate_events_dropped": 0,
  "responses": 3706,
  "priced_token_usd": 64.29,
+ "window_output_usd_by_role": {
+  "output_usd_total": 22.87,
+  "output_share_of_token_usd": 0.356,
+  "role_output_usd": {
+   "retry": 5.56,
+   "judge": 5.21,
+   "rewrite": 4.24,
+   "spec": 3.37,
+   "other": 2.38,
+   "research (web search)": 2.12
+  },
+  "role_share_of_output_usd": {
+   "retry": 0.243,
+   "judge": 0.228,
+   "rewrite": 0.185,
+   "spec": 0.147,
+   "other": 0.104,
+   "research (web search)": 0.093
+  },
+  "role_output_tokens": {
+   "spec": 336506,
+   "rewrite": 424018,
+   "judge": 521249,
+   "retry": 555594,
+   "research (web search)": 212212,
+   "other": 360680
+  }
+ },
  "web_searches": 306,
  "web_search_usd": 3.06,
  "total_usd_with_search": 67.35,

@@ -4,8 +4,9 @@ Resamples the 50 task ids with replacement, shared across configurations (cluste
 the p90 threshold is recomputed in every resample (in-sample alert, as in the point estimate).
 python3 -I bootstrap_bfcl.py"""
 import json, math, random
+import os
 from pathlib import Path
-LOGS = Path(__file__).resolve().parents[4] / "logs"  # repository logs/
+LOGS = Path(os.environ.get("AGENT_ARTIFACT_ROOT") or Path(__file__).resolve().parents[4]) / "logs"
 CFG = ["frontier", "frontier_cache", "small", "small_cache_budget", "small_low"]
 OUT = Path(__file__).resolve().parent / "out"
 T = {c: {t["task_id"]: t for t in map(json.loads, open(LOGS / f"tasks_{c}.jsonl"))} for c in CFG}

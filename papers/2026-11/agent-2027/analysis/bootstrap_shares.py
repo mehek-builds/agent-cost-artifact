@@ -5,13 +5,10 @@ packages seed 2027). 10,000 resamples, percentile 95% intervals.
 python3 -I bootstrap_shares.py -> out/bootstrap_shares.json  (the Litos part needs the private event stream)"""
 import json, math, random, statistics as st
 from collections import defaultdict
+import os
 from pathlib import Path
-import os, sys
-EVENTS = Path(os.environ.get("LITOS_EVENTS", "ops-events-2026-10-23_27.ndjson"))  # private raw input
-if not EVENTS.exists():
-    sys.exit(f"private input {EVENTS} not found: the Litos event stream is not published; set LITOS_EVENTS to its path, "
-             "or start from the published outputs in out/ (see papers/2026-11/README.md)")
-LOGS = Path(__file__).resolve().parents[4] / "logs"  # repository logs/
+PUB = Path(os.environ.get("LITOS_PRIVATE_DIR") or Path(os.environ.get("AGENT_ARTIFACT_ROOT") or Path(__file__).resolve().parents[4]) / "private-litos-stream")
+LOGS = Path(os.environ.get("AGENT_ARTIFACT_ROOT") or Path(__file__).resolve().parents[4]) / "logs"
 OUT = Path(__file__).resolve().parent / "out"
 CFG = ["frontier", "frontier_cache", "small", "small_cache_budget", "small_low"]
 ALL = ["frontier", "frontier_cache", "frontier_low", "small", "small_cache_budget", "small_low"]
@@ -76,7 +73,7 @@ def tok(r):
     return (r.get("inputTokens", 0) * p[0] + (r.get("cacheWrite5mTokens", 0) or 0) * p[1]
             + (r.get("cacheReadInputTokens", 0) or 0) * p[2] + r.get("outputTokens", 0) * p[3]) / 1e6
 rows, seen = [], set()
-for line in open(EVENTS):
+for line in open(PUB / "ops-events-2026-10-23_27.ndjson"):
     r = json.loads(line); k = r.get("eventId") or json.dumps(r, sort_keys=True)
     if (r.get("occurredAt") or r["timestamp"])[:16] < "2026-10-23T14:58": continue  # window: from operation roll-out onward, as in prod.py
     if k in seen: continue

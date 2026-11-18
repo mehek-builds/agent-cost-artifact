@@ -5,8 +5,9 @@ Pooled precision (share of flagged runs that failed) and recall (share of failed
 task-level cluster bootstrap (seed 42, 10,000 resamples, threshold recomputed in every resample).
 python3 -I bootstrap_error_alert.py -> out/bootstrap_error_alert.json"""
 import json, math, random
+import os
 from pathlib import Path
-LOGS = Path(__file__).resolve().parents[4] / "logs"  # repository logs/
+LOGS = Path(os.environ.get("AGENT_ARTIFACT_ROOT") or Path(__file__).resolve().parents[4]) / "logs"
 CFG = ["frontier", "frontier_cache", "small", "small_cache_budget", "small_low"]
 OUT = Path(__file__).resolve().parent / "out"
 T = {c: {t["task_id"]: t for t in map(json.loads, open(LOGS / f"tasks_{c}.jsonl"))} for c in CFG}

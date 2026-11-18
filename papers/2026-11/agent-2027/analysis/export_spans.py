@@ -10,9 +10,10 @@ Reads only the Workload 1 logs and prices.json at the repository root (no API ca
 """
 import json
 from collections import defaultdict
+import os
 from pathlib import Path
 
-LOGS = Path(__file__).resolve().parents[4] / "logs"  # repository logs/
+LOGS = Path(os.environ.get("AGENT_ARTIFACT_ROOT") or Path(__file__).resolve().parents[4]) / "logs"
 PRICES = json.load(open(LOGS.parent / "prices.json"))
 MODELS = PRICES["models"]
 PRICE_VERSION = "list-" + PRICES["_meta"]["verified_date"]

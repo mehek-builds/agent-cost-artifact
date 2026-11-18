@@ -6,6 +6,7 @@ Bar start = sum of the recorded latencies of earlier steps (the harness runs ste
 tools are local simulators, so the gaps between model calls are not recorded and are drawn as zero).
 """
 import json
+import os
 from pathlib import Path
 
 import matplotlib
@@ -13,7 +14,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 HERE = Path(__file__).resolve().parent
-LOGS = Path(__file__).resolve().parents[4] / "logs"  # repository logs/
+LOGS = Path(os.environ.get("AGENT_ARTIFACT_ROOT") or Path(__file__).resolve().parents[4]) / "logs"
 plt.rcParams.update({"font.family": "serif", "font.serif": ["Times New Roman", "Times"], "font.size": 7.5, "pdf.fonttype": 42, "ps.fonttype": 42})
 
 CFG, TASK = "frontier", "multi_turn_base_62"
@@ -23,7 +24,7 @@ task = [json.loads(l) for l in open(LOGS / f"tasks_{CFG}.jsonl") if json.loads(l
 print("task", task)
 
 COL = {"act": "#4C72B0", "final": "#8C8C8C", "failed": "#C44E52", "repair": "#DD8452"}
-fig, ax = plt.subplots(figsize=(3.45, 2.05))
+fig, ax = plt.subplots(figsize=(3.45, 2.15))
 t = 0.0
 cum = 0.0
 prev_failed = False
@@ -59,7 +60,7 @@ ax.text(1.27, n - 0.2, "cum.", transform=ax.get_yaxis_transform(), fontsize=7.5,
 ax.set_ylim(-0.6, n + 0.4)
 for sp in ("top", "right"):
     ax.spines[sp].set_visible(False)
-fig.subplots_adjust(left=0.24, right=0.72, top=0.97, bottom=0.14)
+fig.subplots_adjust(left=0.24, right=0.72, top=0.97, bottom=0.2)
 fig.savefig(HERE.parent / "fig-waterfall.pdf")
 print("total", round(cum, 6), "after turn0 share", round(sum(task["per_turn_cost_usd"][1:]) / task["cost_usd"], 3))
 
